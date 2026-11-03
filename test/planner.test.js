@@ -76,3 +76,12 @@ test("Musang King preset is ~90 days and timeline includes the fruit-care window
   const an = tl.find((t) => t.id === "anthesis");
   assert.equal((fc.date - an.date) / 86400000, 30);
 });
+
+test("Kho Qua Xanh preset reproduces book Table 5.2 (spray ≈31 Aug → harvest mid-Feb)", async () => {
+  const { CULTIVAR_PRESETS } = await import("../src/planner.js");
+  const stages = { ...DEFAULT_STAGES, pbzToAnthesis: { min: 60, typ: 69, max: 122 }, anthesisToHarvest: CULTIVAR_PRESETS.khoquaxanh.anthesisToHarvest };
+  // Table 5.2: buds 19/09 at 19 days ⇒ spray ≈ 31/08; flowering 08/11 (69 days); harvest 14–16/02
+  const r = planFromSpray("2000-08-31", stages);
+  assert.equal(isoDate(r.anthesis.typical), "2000-11-08");
+  assert.ok(isoDate(r.harvest.typical) >= "2001-02-13" && isoDate(r.harvest.typical) <= "2001-02-17", isoDate(r.harvest.typical));
+});

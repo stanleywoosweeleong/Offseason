@@ -221,20 +221,23 @@ export const SOURCES = {
       "14 and 7 days before anthesis, at full bloom, and 7 days after.",
   },
   tran2023book: {
-    short: "Tran & Tran (book), Ch. 5",
+    short: "Tran & Tran 2026 (book), Ch. 5",
     cite:
-      "Trần Văn Hâu & Trần Sỹ Hiếu. Flower Induction in Durian (English edition of Xử lý ra hoa cây sầu riêng; " +
-      "3rd Vietnamese ed. 2023, 263 pp.). Viet Nam National University Ho Chi Minh City Press. " +
-      "Chapter 5, Flowering Induction Techniques, pp. 135–159 (selected pages scanned by the app author).",
+      "Tran Van Hau (lead author) & Tran Sy Hieu (2026). Flower Induction in Durian. Viet Nam National University " +
+      "Ho Chi Minh City Press. English edition of Xử lý ra hoa cây sầu riêng (3rd Vietnamese ed. 2023, 263 pp.). " +
+      "Chapter 5, Flowering Induction Techniques, pp. 135–159 (pages photographed by the app author).",
     url: null,
     type: "Book · Can Tho Univ. (print only)",
     finding:
       "The standard reference on durian flower induction, by Prof. Tran Van Hau (Can Tho University). Chapter 5 " +
-      "reviews flowering seasons by region and the factors that drive flowering. Drought is the trigger: 7–14 dry days, " +
-      "leaf water potential −0.7 to −0.8 MPa. Ideal conditions are night temperatures of 20–22 °C and humidity of 50–60%. " +
-      "The chapter covers PBZ (foliar or drench; 1,000–1,500 ppm in Vietnam), thiourea after PBZ, uniconazole, " +
-      "mulching and ditch drainage, trenching, and re-watering. It includes Can Tho trial data for 'Sua Hat Lep' " +
-      "(Table 5.3) and 'Kho Qua Xanh'. Findings from other authors are cited in the app as reported in the book.",
+      "reviews flowering seasons and the drivers of flowering. Drought is the trigger: 7–14 dry days, leaf water " +
+      "potential −0.7 to −0.8 MPa. The chapter covers PBZ, thiourea, uniconazole, mulching and ditch drainage, " +
+      "trenching and re-watering. It reports Can Tho University trials: Table 5.2/5.4/5.6 on 'Kho Qua Xanh' " +
+      "(Hau 2000; Hau et al. 2001, off-season, Cai Lay) and Table 5.3/5.5/5.7 on 'Sua Hat Lep' (Hau et al. 2001, " +
+      "two years, CTU farm). It concludes that PBZ with raised-bed mulching does not affect fruit quality. Findings " +
+      "from other authors are cited in the app as reported in the book. Note: the book cites the Vietnamese PBZ " +
+      "survey as 'Duong et al. (2022)', which is the same paper listed here as Pham et al. 2022 (first author " +
+      "Pham Thi Thuy Duong).",
   },
   subhadrabandhu1998: {
     short: "Subhadrabandhu & Kaiviparkbunyay 1998",

@@ -138,6 +138,11 @@ export const STAGES = [
         sources: ["hau2017"],
       },
       {
+        text: "PBZ makes flowering more even across the tree, which makes flower and fruit thinning easier. With raised-bed mulching, PBZ did not affect fruit quality in 'Kho Qua Xanh' or 'Sua Hat Lep'.",
+        level: "evidence",
+        sources: ["tran2023book", "tri2011", "subhadrabandhu1998"],
+      },
+      {
         text: "Results are not guaranteed. In a 2-year Thai trial on 'Chanee', 500–1,000 ppm sprays raised flowering intensity but did NOT advance flowering or raise yield, and fruit were smaller. The JIRCAS trial also saw a weak effect.",
         level: "evidence",
         sources: ["subhadrabandhu1998", "kozai2024"],
@@ -193,14 +198,14 @@ export const STAGES = [
         sources: [],
       },
       {
-        text: "Spray PBZ before laying the plastic. Spray that lands on impermeable mulch washes into the ditches and is wasted. Spray that falls on bare soil before mulching can be taken up by the roots.",
+        text: "Spray PBZ before laying the plastic. Spray that lands on impermeable mulch washes into the ditches and is wasted. Spray that falls on bare soil before mulching can be taken up by the roots. Surveyed orchards had PBZ residue only at the canopy drip line (0–20 cm deep), consistent with spray running off plastic laid beforehand.",
         level: "expert",
         sources: ["tran2023book"],
       },
       {
-        text: "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree, so the tree gets too small a dose and the treatment fails. Check the litres per tree in the PBZ mix tab.",
+        text: "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree. Surveyed growers sprayed 1,816 ppm but delivered only 11.8 g a.i. per tree (Tien Giang), or 1,240 ppm and 10.5 g (Ben Tre). The successful trials gave 20–32 g a.i. per tree (1,000–1,600 ppm × 20 L). Check the grams per tree in the PBZ mix tab.",
         level: "expert",
-        sources: ["tran2023book"],
+        sources: ["tran2023book", "pham2022", "tri2011"],
       },
       {
         text: "Grower technique for even flowering: inner primary branches are harder to induce than outer branches. Growers lightly mist the outer canopy at a low concentration and spray the inner primary branches at a higher one. No trial has tested specific rates for this yet.",
@@ -208,7 +213,7 @@ export const STAGES = [
         sources: ["tran2023book"],
       },
       {
-        text: "Cultivars differ in how they respond. In Can Tho trials, 'Kho Qua Xanh' flowered 7 days earlier than with mulch alone, and in a tight, even flush, with 1.5–2 times more flowering branches and twice as many flower clusters. 'Sua Hat Lep' flowered 4–22 days earlier, but in several drawn-out flushes running into the main season (Hau 2000, as reported in the book).",
+        text: "Cultivars differ in how they respond. 'Kho Qua Xanh' (off-season, Cai Lay): with PBZ, buds appeared 19 days after spraying instead of 26, but flowering came only 3–4 days earlier. Flower clusters roughly doubled (72 → 152–163 per tree), and yield rose from 120 to 186–191 kg per tree, although fruit were lighter (2.2 vs 2.5 kg). 'Sua Hat Lep' responded 4–22 days earlier, in several drawn-out flushes. In year 1 its off-season yield rose from 24.6 to 41.5–55.5 kg per tree, but in year 2 the off-season gain was not significant (Hau 2000; Hau et al. 2001; book Tables 5.2–5.7).",
         level: "evidence",
         sources: ["tran2023book"],
       },
@@ -436,16 +441,16 @@ export const PBZ_TRIALS = [
     effect: "positive",
   },
   {
-    source: "tran2023book", place: "Can Tho, VN", cultivar: "Sua Hat Lep", age: "—",
-    method: "Foliar + ditch drainage", rate: "1,000–1,500 ppm", timing: "2 seasons",
-    result: "Yr 1: buds 58 vs 80 days, harvest about 9 days earlier. Yr 2 off-season: 68.5–72 vs 74.7 days (not significant) (Hau et al. 2001, Table 5.3 in the book)",
-    effect: "mixed",
+    source: "tran2023book", place: "Tien Giang, VN", cultivar: "Kho Qua Xanh", age: "—",
+    method: "Foliar + root-zone mulch + ditch drainage", rate: "1,000–1,500 ppm", timing: "Off-season (spray ≈ end Aug)",
+    result: "Buds 19 vs 26 days; flowering 3–4 days earlier; flower clusters 72 → 152–163/tree; yield 120 → 186–191 kg/tree; fruit 2.2 vs 2.5 kg (Hau 2000; Hau et al. 2001; Tables 5.2, 5.4, 5.6)",
+    effect: "positive",
   },
   {
-    source: "tran2023book", place: "Tien Giang, VN", cultivar: "Kho Qua Xanh", age: "—",
-    method: "Foliar + mulch + drainage", rate: "1,000–1,500 ppm", timing: "Rainy season",
-    result: "7 days earlier than mulch alone, even flowering; flowering branches 1.5–2×; flower clusters doubled (Hau 2000, as reported in the book)",
-    effect: "positive",
+    source: "tran2023book", place: "Can Tho, VN", cultivar: "Sua Hat Lep", age: "—",
+    method: "Foliar + ditch drainage", rate: "1,000–1,500 ppm", timing: "2 years",
+    result: "Yr 1 off-season: buds 58 vs 80 days, yield 24.6 → 41.5–55.5 kg/tree. Yr 2 off-season: clusters up, but yield not significant (12.2 vs 8.7–17.3 kg) (Hau et al. 2001; Tables 5.3, 5.5, 5.7)",
+    effect: "mixed",
   },
   {
     source: "kozai2024", place: "Chanthaburi, TH", cultivar: "Monthong", age: "9 yr",
