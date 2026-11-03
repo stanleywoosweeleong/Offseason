@@ -1,0 +1,11 @@
+{
+  "name": "offseason-durian",
+  "version": "1.0.0",
+  "description": "Evidence-based guide and planner for off-season durian production",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "python3 -m http.server 8080"
+  }
+}

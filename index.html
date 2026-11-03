@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offseason Durian</title>
+  <meta name="description" content="Evidence-based guide and planner for off-season durian production, with every figure linked to its source." />
+  <meta name="theme-color" content="#2f5d34" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Offseason <span>Durian</span></h1>
+      <p class="tag">How to produce durian outside the main season, using only figures from published research.</p>
+    </div>
+    <nav class="tabs wrap" role="tablist">
+      <button role="tab" data-tab="guide" aria-selected="true">Guide</button>
+      <button role="tab" data-tab="planner">Planner</button>
+      <button role="tab" data-tab="mix">PBZ mix</button>
+      <button role="tab" data-tab="checklist">Checklist</button>
+      <button role="tab" data-tab="sources">Sources</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="tab-guide" role="tabpanel">
+      <div class="legend">
+        <span class="lvl evidence">Trial evidence</span>
+        <span class="lvl survey">Grower survey</span>
+        <span class="lvl practice">Common practice, untested</span>
+      </div>
+      <ol id="stages" class="stages"></ol>
+      <aside class="card gaps">
+        <h2>What the evidence does not tell us</h2>
+        <ul id="gaps"></ul>
+      </aside>
+    </section>
+
+    <section id="tab-planner" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Plan from a target harvest</h2>
+        <div class="mode">
+          <label><input type="radio" name="mode" value="harvest" checked /> I know when I want to harvest</label>
+          <label><input type="radio" name="mode" value="spray" /> I know when I'll spray</label>
+        </div>
+        <label class="field"><span id="dateLabel">Target harvest date</span>
+          <input type="date" id="planDate" />
+        </label>
+        <details class="adv">
+          <summary>Adjust stage lengths (days)</summary>
+          <p class="hint">Defaults: PBZ to flowering is 60–122 days (Kozai 2024; Wiangsamut 2022). Flowering to harvest for 'Monthong' is 120–127 days (Sangwanangkul 1998). Change these if you have your own orchard records or grow another cultivar.</p>
+          <div class="grid3">
+            <span></span><b>min</b><b>typ</b><b>max</b>
+            <span>PBZ to flowering</span>
+            <input type="number" id="p_min" value="60" min="1" /><input type="number" id="p_typ" value="90" min="1" /><input type="number" id="p_max" value="122" min="1" />
+            <span>Flowering to harvest</span>
+            <input type="number" id="a_min" value="120" min="1" /><input type="number" id="a_typ" value="124" min="1" /><input type="number" id="a_max" value="127" min="1" />
+          </div>
+        </details>
+        <fieldset class="months">
+          <legend>Your heavy-rain months (to flag risky spray dates)</legend>
+          <div id="rainMonths"></div>
+        </fieldset>
+      </div>
+      <div id="planOut" aria-live="polite"></div>
+    </section>
+
+    <section id="tab-mix" role="tabpanel" hidden>
+      <div class="card">
+        <h2>PBZ spray-tank calculator</h2>
+        <div class="grid2">
+          <label class="field">Target concentration (ppm a.i.)
+            <input type="number" id="m_ppm" value="1000" min="1" step="50" />
+          </label>
+          <label class="field">Spray volume (litres)
+            <input type="number" id="m_l" value="20" min="0.1" step="0.5" />
+          </label>
+          <label class="field">Product strength (% a.i. on label)
+            <input type="number" id="m_ai" value="25" min="0.1" max="100" step="0.5" />
+          </label>
+          <label class="field">Number of trees
+            <input type="number" id="m_trees" value="1" min="1" step="1" />
+          </label>
+        </div>
+        <p class="hint">Common labels: 10% WP, 15% WP, 20% WP, 25% WP or SC. Volume per tree in the studies: about 20 L (JIRCAS) and 7–9.5 L (Vietnam survey).</p>
+      </div>
+      <div id="mixOut" aria-live="polite"></div>
+    </section>
+
+    <section id="tab-checklist" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Pre-induction checklist</h2>
+        <p class="hint">Saved on this device only.</p>
+        <ul id="checklist" class="checklist"></ul>
+        <button id="resetChecklist" class="ghost">Reset</button>
+      </div>
+    </section>
+
+    <section id="tab-sources" role="tabpanel" hidden>
+      <p class="hint">Every figure in this app comes from one of these sources. Open the original before you rely on a number.</p>
+      <ol id="sourceList" class="sources"></ol>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Educational summary of published research, not agronomic advice for your orchard. Follow local regulations and product labels, and talk to your agricultural extension office before using plant growth regulators.</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

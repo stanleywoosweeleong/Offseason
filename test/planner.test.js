@@ -1,0 +1,49 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { pbzMix, planFromHarvest, planFromSpray, isoDate, rainRisk, DEFAULT_STAGES } from "../src/planner.js";
+
+test("pbzMix reproduces the Wiangsamut 2022 recipe (750 ppm, 20 L, 25% WP → 60 g)", () => {
+  const r = pbzMix({ ppm: 750, litres: 20, aiPercent: 25 });
+  assert.equal(r.gramsAI, 15);
+  assert.equal(r.gramsProduct, 60);
+  assert.equal(r.status, "low");
+});
+
+test("pbzMix reproduces Kozai 2024 dose (1,000 ppm × 20 L = 20 g a.i.)", () => {
+  const r = pbzMix({ ppm: 1000, litres: 20, aiPercent: 10 });
+  assert.equal(r.gramsAI, 20);
+  assert.equal(r.gramsProduct, 200);
+  assert.equal(r.status, "ok");
+});
+
+test("pbzMix flags above-recommendation rates", () => {
+  assert.equal(pbzMix({ ppm: 1816, litres: 7, aiPercent: 15 }).status, "high");
+});
+
+test("pbzMix rejects bad input", () => {
+  assert.throws(() => pbzMix({ ppm: 0, litres: 20, aiPercent: 25 }));
+  assert.throws(() => pbzMix({ ppm: 1000, litres: 20, aiPercent: 120 }));
+});
+
+test("planFromSpray matches Kozai 2024 anthesis (15 Aug → 15 Dec at max)", () => {
+  const r = planFromSpray("2007-08-15");
+  assert.equal(isoDate(r.anthesis.latest), "2007-12-15");
+});
+
+test("planFromHarvest and planFromSpray are inverse on typical values", () => {
+  const plan = planFromHarvest("2027-06-15");
+  const back = planFromSpray(plan.spray.typical);
+  assert.equal(isoDate(back.harvest.typical), "2027-06-15");
+  assert.ok(plan.spray.earliest < plan.spray.typical && plan.spray.typical < plan.spray.latest);
+});
+
+test("planFromHarvest gives a December spray window for a June harvest (consistent with Wiangsamut 2022)", () => {
+  const { spray } = planFromHarvest("2023-06-10", DEFAULT_STAGES);
+  // 5 Dec 2022 must sit inside the window
+  assert.ok(isoDate(spray.earliest) <= "2022-12-05" && "2022-12-05" <= isoDate(spray.latest));
+});
+
+test("rainRisk", () => {
+  assert.equal(rainRisk("2026-09-01", [8, 9]), true);
+  assert.equal(rainRisk("2026-01-01", [8, 9]), false);
+});
