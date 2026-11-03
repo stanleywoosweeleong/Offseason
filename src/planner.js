@@ -30,6 +30,10 @@ export const CULTIVAR_PRESETS = {
   ri6: { label: "Ri6", anthesisToHarvest: { min: 90, typ: 97, max: 104 }, sources: ["tran2019"] },
   // Musang King: about 90 days after fruit set (Duong et al. 2025). The ±5-day band is our planning buffer.
   musangking: { label: "Musang King", anthesisToHarvest: { min: 85, typ: 90, max: 95 }, sources: ["duong2025"] },
+  // Sua Hat Lep: 103–114 days flowering → harvest across two seasons (Hau et al. 2001, book Table 5.3).
+  suahatlep: { label: "Sua Hat Lep", anthesisToHarvest: { min: 103, typ: 108, max: 114 }, sources: ["tran2023book"] },
+  // Monthong in the cooler Central Highlands: 135–150 days anthesis → harvest (Cuong & Van 2020, via the book).
+  monthonghighland: { label: "Monthong (Central Highlands)", anthesisToHarvest: { min: 135, typ: 142, max: 150 }, sources: ["tran2023book"] },
 };
 
 /** PBZ concentration band recommended in Vietnam (Tran et al. 2001, via Pham et al. 2022). */

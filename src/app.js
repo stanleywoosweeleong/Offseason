@@ -56,7 +56,7 @@ $("#stages").innerHTML = STAGES.map(
 $("#gaps").innerHTML = GAPS.map((g) => `<li>${esc(g)}</li>`).join("");
 
 // ---------- PBZ evidence ----------
-const EFFECT_LABEL = { positive: "Clear benefit", mixed: "Timing effect", none: "Little / no effect" };
+const EFFECT_LABEL = { positive: "Clear benefit", mixed: "Mixed", none: "Little / no effect" };
 const tally = PBZ_TRIALS.reduce((t, r) => ((t[r.effect] = (t[r.effect] || 0) + 1), t), {});
 $("#pbzTally").innerHTML = Object.keys(EFFECT_LABEL)
   .filter((k) => tally[k])

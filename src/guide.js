@@ -26,6 +26,11 @@ export const STAGES = [
         level: "evidence",
         sources: ["kozai2024", "chandraparnik1993", "wiangsamut2022"],
       },
+      {
+        text: "Drainage comes before any flowering treatment. Waterlogged roots run short of oxygen, take up less calcium, and produce ethylene that blocks flower-bud formation. Sprays such as thiourea cannot fix this. Restore drainage first.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
     ],
   },
   {
@@ -84,6 +89,21 @@ export const STAGES = [
         text: "Use the Planner tab to turn a target harvest date into a spray window.",
         level: "practice",
         sources: [],
+      },
+      {
+        text: "Avoid inducing during heavy-rain months. Fruit set suffers. Durian can be induced year-round in the Mekong Delta and Malaysia, but timing the rain matters.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "The hardest window is an August–September harvest in the Mekong Delta. It needs flowering in February–March while suppressing the natural cool, dry-season bloom of December–January. Prices are high then, but the authors note the success rate is low, so few growers try it.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Regional calendars in Vietnam: the Mekong Delta flowers in Dec–Jan and harvests in Apr–May; the Southeast flowers Jan–Mar and harvests Jun–Aug; the Central Highlands mostly flowers Jan–Mar and harvests Jul–Aug. Only the Mekong Delta, with controllable irrigation and drainage, does full off-season induction. The other regions mainly support natural flowering.",
+        level: "expert",
+        sources: ["tran2023book"],
       },
     ],
   },
@@ -172,6 +192,36 @@ export const STAGES = [
         level: "practice",
         sources: [],
       },
+      {
+        text: "Spray PBZ before laying the plastic. Spray that lands on impermeable mulch washes into the ditches and is wasted. Spray that falls on bare soil before mulching can be taken up by the roots.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree, so the tree gets too small a dose and the treatment fails. Check the litres per tree in the PBZ mix tab.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Grower technique for even flowering: inner primary branches are harder to induce than outer branches. Growers lightly mist the outer canopy at a low concentration and spray the inner primary branches at a higher one. No trial has tested specific rates for this yet.",
+        level: "practice",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Cultivars differ in how they respond. In Can Tho trials, 'Kho Qua Xanh' flowered 7 days earlier than with mulch alone, and in a tight, even flush, with 1.5–2 times more flowering branches and twice as many flower clusters. 'Sua Hat Lep' flowered 4–22 days earlier, but in several drawn-out flushes running into the main season (Hau 2000, as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992, as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Other options: uniconazole at 100–500 ppm brought flowering forward on 'Monthong' without reducing fruit size. At 2,500 ppm it shortened fruit stalks and made fruit smaller (Jutamanee et al. 2014). Ethephon, daminozide and NAA have no flowering effect, gibberellins push leaf growth, and root pruning harms or kills trees (as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
     ],
   },
   {
@@ -208,6 +258,36 @@ export const STAGES = [
         text: "Once flower buds are clearly visible, bring the tree back to steady, moderate watering so the buds develop. Ask local extension staff for exact amounts.",
         level: "practice",
         sources: [],
+      },
+      {
+        text: "How much drought is enough: a continuous dry spell of about 7–14 days, bringing leaf water potential to about −0.7 to −0.8 MPa (Salakpetch 2005). Compare the JIRCAS trial, where plastic mulch reached −0.9 MPa and flowering was suppressed. The useful range is narrow.",
+        level: "evidence",
+        sources: ["tran2023book", "kozai2024"],
+      },
+      {
+        text: "Other drought benchmarks: in Chanthaburi, trees flowered about 50 days after the rain stopped, at a soil moisture of −100 kPa at 15 cm depth. Temperatures below 20 °C were not needed. 'Musang King' growers in Raub, Malaysia, say at least 14 dry days are needed (as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Re-watering after the dry spell (Salakpetch 2005): when leaves droop, give about 10 mm of water (10 L per m² of canopy). After 7 days, water every 3 days until flower buds appear.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Don't over-dry during flowering. On 'D24' in Malaysia, 50–75 L per tree per day gave the best flowering. At 25 L per day, all young fruit dropped within 5 weeks of fruit set, and 100 L per day was too wet (Masri 1999, as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Mulch style: tent-style plastic over the raised bed lowers soil moisture more than plastic laid flat, because condensation runs off the bed instead of back into it. In Cai Lay, where trees grow on individual mounds, growers wrap each tree's root zone instead.",
+        level: "practice",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Trenching 30–40 cm deep near the trunk, as done in Cai Lay, is a grower practice with no durian trials behind it. It may encourage root disease. Treat it as unproven.",
+        level: "practice",
+        sources: ["tran2023book"],
       },
     ],
   },
@@ -250,6 +330,21 @@ export const STAGES = [
         text: "Off-season fruit often grows through wetter months. Keep drainage and Phytophthora controls in place until harvest.",
         level: "evidence",
         sources: ["aciar2022"],
+      },
+      {
+        text: "Flower buds ('crab eyes') can go dormant if even light rain (about 10 mm a day) falls while they develop. Some buds then resume and others stall, giving several waves of fruit. Buds take 6–8 weeks to develop, and some up to 32 weeks.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Cool nights at flowering: around 15 °C at night causes flower drop in 'Monthong', which has fewer fertile ovules. 'Chanee' still sets fruit at 15 °C, and Central Highlands orchards flower well at similar night temperatures.",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "In the cooler Central Highlands, 'Monthong' can take 135–150 days from flowering to harvest, much longer than in the lowlands. The Planner has a preset for this.",
+        level: "evidence",
+        sources: ["tran2023book"],
       },
     ],
   },
@@ -341,6 +436,18 @@ export const PBZ_TRIALS = [
     effect: "positive",
   },
   {
+    source: "tran2023book", place: "Can Tho, VN", cultivar: "Sua Hat Lep", age: "—",
+    method: "Foliar + ditch drainage", rate: "1,000–1,500 ppm", timing: "2 seasons",
+    result: "Yr 1: buds 58 vs 80 days, harvest about 9 days earlier. Yr 2 off-season: 68.5–72 vs 74.7 days (not significant) (Hau et al. 2001, Table 5.3 in the book)",
+    effect: "mixed",
+  },
+  {
+    source: "tran2023book", place: "Tien Giang, VN", cultivar: "Kho Qua Xanh", age: "—",
+    method: "Foliar + mulch + drainage", rate: "1,000–1,500 ppm", timing: "Rainy season",
+    result: "7 days earlier than mulch alone, even flowering; flowering branches 1.5–2×; flower clusters doubled (Hau 2000, as reported in the book)",
+    effect: "positive",
+  },
+  {
     source: "kozai2024", place: "Chanthaburi, TH", cultivar: "Monthong", age: "9 yr",
     method: "Foliar ± mulch", rate: "1,000–1,500 ppm (20–30 g a.i.)", timing: "15 Aug, 2nd flush",
     result: "Effect not significant (heavy rain after spray); mulch drought suppressed flowering",
@@ -367,7 +474,7 @@ export const PBZ_TRIALS = [
 ];
 
 export const GAPS = [
-  "The trials do not all agree. Of 9 trial sites across 8 studies, 6 found a clear benefit, 2 found little or no effect (Rayong 1988–89, Chanthaburi 2007), and 1 tested timing only. The weak results point to weather and application factors.",
+  "The trials do not all agree (see the tally on the PBZ evidence tab). Two found little or no effect (Rayong 1988–89, Chanthaburi 2007), and a Can Tho trial worked in its first year but not in its second off-season. The weak results point to weather, cultivar and application factors.",
   "No published trial compares soil drench with foliar spray on durian at matched doses. Foliar spraying is the only method with durian evidence.",
   "No codified durian MRL for paclobutrazol was found in the EU review. Check each destination market's current rules, for example China's GB 2763 or Codex.",
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian.",
@@ -385,6 +492,8 @@ export const CHECKLIST = [
   { id: "product", text: "Registered PBZ product bought; a.i.% read from the label", stage: "spray" },
   { id: "dose", text: "Dose weighed for 1,000–1,500 ppm (750 for young trees)", stage: "spray" },
   { id: "forecast", text: "Forecast shows no heavy rain for at least 7 days", stage: "spray" },
+  { id: "spraybefore", text: "PBZ sprayed BEFORE laying plastic, with enough litres per tree for the full dose", stage: "spray" },
+  { id: "rewater", text: "Re-watering plan ready: about 10 mm when leaves droop, then every 3 days after day 7 until buds show", stage: "water" },
   { id: "drywatch", text: "Irrigation held back for a short (3–7 day) dry spell only", stage: "water" },
   { id: "tag", text: "Flower clusters tagged with their opening date", stage: "fruit" },
   { id: "fruitcare", text: "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled", stage: "quality" },

@@ -8,7 +8,7 @@ An evidence-based guide and planner for producing durian outside the main season
 |---|---|
 | **Guide** | A 6-stage protocol: orchard readiness, post-harvest leaf flushes, choosing a market window, paclobutrazol (PBZ) application, water management, and flowering to harvest. Each point is labelled *trial evidence*, *grower survey* or *common practice* and links to its source. |
 | **Planner** | Cultivar presets (Monthong, Ri6, Musang King). Works backwards from a target harvest date to a PBZ spray window, or forwards from a spray date to an expected harvest. It flags spray dates in months you mark as rainy, and you can edit the stage lengths. |
-| **PBZ evidence** | All 9 durian paclobutrazol trial sites (8 studies, from Thailand, Vietnam and Indonesia) side by side, labelled clear benefit, timing effect or little/no effect, plus a safety, residue and sustainability summary. |
+| **PBZ evidence** | All 11 durian paclobutrazol trial sites (from Thailand, Vietnam and Indonesia) side by side, labelled clear benefit, mixed, or little/no effect, plus a safety, residue and sustainability summary. |
 | **PBZ mix** | Grams of product per tank for a target ppm, tank volume and label a.i.%. It warns when the rate is outside the recommended 1,000–1,500 ppm. |
 | **Checklist** | A pre-induction checklist, saved in the browser. |
 | **Sources** | Full citations with key findings and links. |
@@ -28,6 +28,7 @@ An evidence-based guide and planner for producing durian outside the main season
 - **Mekong Delta practice (Vietnam).** Growers combine plastic mulch, ditch drainage for 30–40 days, and a 1,000–1,500 ppm spray once leaves turn dark green (2–3 months old). Ri6 and Monthong take 30–35 days or more to flower, and heavy rain can split flowering into 2–3 waves (Hau & Hieu 2017).
 - **Ri6 is fast.** It matures about 97 days after fruit set, with 82% fruit set, but most young-fruit drop happens in the first 14 days (Tran et al. 2019).
 - **Protect off-season fruit quality (Musang King).** Applying NPK 2:1:1 → 2:1:3 → 1:1:3 at 30 / 45 / 60 days after fruit set (0.75 kg per tree), plus Ca(NO₃)₂ 0.4% at 40 days and MgSO₄ 0.2% at 50 days, gave 0% flesh disorders against 19.7% for growers' high-N practice, using 25% less fertiliser (main-season: Duong et al. 2025 HUAF, Duong & Thuc 2026; off-season: Hau 2026 conference slides). The [Tiger Stripe app](https://stanleywoosweeleong.github.io/Tigerstripe/) has the full dated schedule.
+- **Flower Induction in Durian (Tran & Tran), Ch. 5.** Drought is the trigger: 7–14 dry days, leaf water potential −0.7 to −0.8 MPa. Spray PBZ before laying plastic, and with enough volume. Thiourea after PBZ can wake dormant buds (it fails above 35 mm of rain a day). Re-water with about 10 mm, then every 3 days. Trenching is unproven. Regional calendars and planner presets for Sua Hat Lep and Central Highlands Monthong.
 - **Manage Phytophthora** with drainage, mounding, organic matter and phosphonate (ACIAR HORT/2007/067).
 
 The full reference list is in [`src/sources.js`](src/sources.js) and in the app's **Sources** tab.
