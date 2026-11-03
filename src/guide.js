@@ -213,7 +213,7 @@ export const STAGES = [
         sources: ["tran2023book"],
       },
       {
-        text: "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992, as reported in the book).",
+        text: "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992a, as reported in the book, p. 141; checked against a clear rescan).",
         level: "evidence",
         sources: ["tran2023book"],
       },
@@ -332,7 +332,7 @@ export const STAGES = [
         sources: ["aciar2022"],
       },
       {
-        text: "Flower buds ('crab eyes') can go dormant if even light rain (about 10 mm a day) falls while they develop. Some buds then resume and others stall, giving several waves of fruit. Buds take 6–8 weeks to develop, and some up to 32 weeks.",
+        text: "Flower buds ('crab eyes') can go dormant if even light rain (about 10 mm a day) falls while they develop. Some buds then resume and others stall, giving several waves of fruit (Chandraparnik et al. 1992b; Janick & Paull 2008, as reported in the book). Buds take 6–8 weeks to develop, and some up to 32 weeks.",
         level: "expert",
         sources: ["tran2023book"],
       },
