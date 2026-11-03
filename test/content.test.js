@@ -17,7 +17,8 @@ test("every cited source ID exists in sources.js", () => {
 
 test("every source has a URL and a finding", () => {
   for (const [id, s] of Object.entries(SOURCES)) {
-    assert.match(s.url, /^https:\/\//, id);
+    if (s.url !== null) assert.match(s.url, /^https:\/\//, id);
+    else assert.match(s.type, /print only/i, `${id}: null url only allowed for print-only sources`);
     assert.ok(s.finding.length > 40, id);
   }
 });

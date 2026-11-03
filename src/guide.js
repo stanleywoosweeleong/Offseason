@@ -259,6 +259,11 @@ export const STAGES = [
     summary: "Getting flowers out of season is half the job. Off-season fruit is prone to flesh disorders such as 'tiger stripe', hardened pulp and tip burn. Can Tho University tested a fix on 'Musang King'.",
     points: [
       {
+        text: "Season matters for the evidence too. The two published Ca/NPK trials ran in the Mekong Delta main season (Dec–May, induced in the dry season). The off-season results so far come from conference slides. The authors themselves call for more seasons and sites.",
+        level: "evidence",
+        sources: ["duong2025huaf", "duong2026swj", "hau2026talk"],
+      },
+      {
         text: "Flesh disorders are a big off-season risk. In surveyed 'Musang King' orchards, 19% had disorders only in the off-season and 78% in both seasons. Management, not just weather, is the main driver.",
         level: "survey",
         sources: ["duong2025"],
@@ -269,24 +274,29 @@ export const STAGES = [
         sources: ["duong2025"],
       },
       {
-        text: "Cut the nitrogen as the fruit grows. Applying soil NPK 2:1:1 at 30 DAFS, then 2:1:3 at 45, then 1:1:3 at 60 (0.75 kg per tree each time) gave 10% disordered fruit off-season. Steady high nitrogen (3:1:1) gave 45%.",
+        text: "Cut the nitrogen as the fruit grows. In off-season trials, soil NPK 2:1:1 at 30 DAFS, then 2:1:3 at 45, then 1:1:3 at 60 (0.75 kg per tree each time) gave 10% disordered fruit, while steady high nitrogen (3:1:1) gave 45%. These figures are from conference slides and are not yet in a full paper.",
         level: "evidence",
-        sources: ["duong2026crop"],
+        sources: ["hau2026talk"],
       },
       {
-        text: "Don't over-fertilise. Raising NPK from 0.5 to 1.25 kg per tree per application lifted disordered fruit from 12% to 36% off-season, for only about 8 kg more yield per tree.",
+        text: "Don't over-fertilise; 0.75 kg per tree per application is about the sweet spot. In the published main-season trial, going from 0.75 to 1.25 kg raised disordered fruit from 12% to 24% for about 2 kg more yield, and lowered sugar. The off-season slides show the same pattern (12% at 0.5 kg, 36% at 1.25 kg).",
         level: "evidence",
-        sources: ["duong2026crop"],
+        sources: ["duong2025huaf", "duong2026crop", "hau2026talk"],
       },
       {
-        text: "Spray calcium, then magnesium. Ca(NO₃)₂ at 0.4% (40 DAFS) and MgSO₄ at 0.2% (50 DAFS), at 10 L per tree in the early morning on a dry, sunny day, cut hardened and discoloured pulp. The Ca spray also raised off-season yield from 85 to 93 kg per tree.",
+        text: "Spray calcium, then magnesium: Ca(NO₃)₂ at 0.4% at 40 DAFS and MgSO₄ at 0.2% at 50 DAFS, 10 L per tree, early morning on a dry, sunny day. In the published main-season trial this gave 0% affected fruit, against 30% for unsprayed trees, and Ca raised yield 4–9%. Off-season slides show Ca raising yield from 85 to 93 kg per tree.",
         level: "evidence",
-        sources: ["duong2026swj"],
+        sources: ["duong2026swj", "hau2026talk"],
       },
       {
         text: "The combined protocol gave 0% disordered off-season fruit, against 19.7% for the growers' high-N programme. It used 25% less fertiliser for a statistically similar yield.",
         level: "evidence",
-        sources: ["hau2026talk", "duong2026crop", "duong2026swj"],
+        sources: ["hau2026talk"],
+      },
+      {
+        text: "Protect fruit set. In the Can Tho trials, every tree got a Ca (1%) + boron (100 ppm) spray 14 and 7 days before flowers opened, at full bloom, and 7 days after. This was routine care, not a tested treatment, and fruit set reached about 91%.",
+        level: "expert",
+        sources: ["duong2025huaf"],
       },
       {
         text: "Calcium all season: lime to pH 5.8–6.5 after harvest. Apply soluble Ca to the root zone 2–3 times in the first 40–50 DAFS, then spray Ca every 15–20 days during long rain, hot dry spells or cold weather. For a dated spray and fertiliser schedule with a mix calculator, use the Tiger Stripe app.",

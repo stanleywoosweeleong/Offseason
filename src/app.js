@@ -85,7 +85,7 @@ $("#sourceList").innerHTML = Object.entries(SOURCES)
     <span class="type">${esc(s.type)}</span>
     <p class="cite">${esc(s.cite)}</p>
     <p class="finding">${esc(s.finding)}</p>
-    <a href="${esc(s.url)}" target="_blank" rel="noopener">Open source ↗</a>
+    ${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source ↗</a>` : `<span class="hint">Print edition, no online copy</span>`}
   </li>`
   )
   .join("");

@@ -134,8 +134,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       date: addDays(anthesis, 30),
       endDate: addDays(anthesis, 60),
       label: "Fruit-care window (30–60 days after fruit set)",
-      detail: "Reduce nitrogen as the fruit grows: NPK 2:1:1 → 2:1:3 → 1:1:3 at 30 / 45 / 60 days, 0.75 kg per tree each time. Spray Ca(NO₃)₂ 0.4% at 40 days and MgSO₄ 0.2% at 50 days. Tested on off-season 'Musang King'.",
-      sources: ["duong2026crop", "duong2026swj"],
+      detail: "Reduce nitrogen as the fruit grows: NPK 2:1:1 → 2:1:3 → 1:1:3 at 30 / 45 / 60 days, 0.75 kg per tree each time. Spray Ca(NO₃)₂ 0.4% at 40 days and MgSO₄ 0.2% at 50 days. Tested on 'Musang King' (main-season papers; off-season results so far from conference slides).",
+      sources: ["duong2025huaf", "duong2026swj", "hau2026talk"],
     },
     {
       id: "harvest",

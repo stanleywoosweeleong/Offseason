@@ -156,7 +156,7 @@ export const SOURCES = {
       "3% only in season, and 78% in both, which points to management rather than weather alone.",
   },
   duong2026crop: {
-    short: "Duong, Hau & Thuc 2026 (NPK)",
+    short: "Duong, Hau & Thuc 2026 (NPK rate)",
     cite:
       "Duong, N.H., Hau, T.V. & Thuc, L.V. (2026). Effects of macronutrient application rates during fruit development " +
       "on the yield, quality, and physiological disorders of Musang King durian (Durio zibethinus Murr.). " +
@@ -164,10 +164,10 @@ export const SOURCES = {
     url: "https://doi.org/10.31830/2454-1761.2026.CR-1091",
     type: "Peer-reviewed · Can Tho Univ.",
     finding:
-      "Off-season trials on 7-year-old 'Musang King'. Soil NPK was applied at 30, 45 and 60 DAFS, at 0.75 kg per tree " +
-      "each time. A ratio of 2:1:1 → 2:1:3 → 1:1:3 (N:P₂O₅:K₂O) gave 91.5 kg per tree with only 10% of fruit showing " +
-      "disorders. High nitrogen throughout (3:1:1) gave 95.5 kg but 45% disordered fruit. More fertiliser meant more " +
-      "disorders: 0.5 kg gave 12% and 1.25 kg gave 36%, for only about 8 kg more yield per tree.",
+      "A 2024 trial at Can Tho on 7-year-old 'Musang King' tested four NPK rates (0.5, 0.75, 1.0 and 1.25 kg per tree " +
+      "per application), using 2:1:1 at 30 DAFS, 2:1:3 at 45 and 1:1:3 at 60. Rates of 1.0–1.25 kg raised fruit " +
+      "weight and yield but also increased disorders. 0.75 kg cut disorders by 43–55% while keeping yield and " +
+      "quality high. (Abstract checked; full text not seen. The HUAF 2025 paper reports the same experiment's tables.)",
   },
   duong2026swj: {
     short: "Duong & Thuc 2026 (Ca/Mg)",
@@ -178,10 +178,12 @@ export const SOURCES = {
     url: "https://doi.org/10.1155/tswj/1153166",
     type: "Peer-reviewed · Can Tho Univ.",
     finding:
-      "Off-season 'Musang King' was sprayed with 10 L of solution per tree, early morning in sunny weather. " +
-      "Ca(NO₃)₂ at 0.4% raised yield from 85.4 to 92.6 kg per tree and cut hardened and discoloured pulp from 13.3% " +
-      "to 5.8%. MgSO₄ at 0.2% also cut disorders, from 10.0% to 6.8%, but did not change yield. Ca and Mg in the " +
-      "fruit pulp rose with the spray concentration.",
+      "MAIN-SEASON trial, Nov 2024 to Apr 2025, Tan Binh (Can Tho), on 64 trees aged 7 years, all on the 0.75 kg NPK " +
+      "programme. Ca(NO₃)₂ at 0.2–0.6% sprayed at 40 DAFS raised yield 4.4–9.4% (from 83.9 to 91.8 kg per tree). " +
+      "MgSO₄ at 50 DAFS did not change yield. Affected fruit averaged 26.3% without Ca and 6.3% with 0.4% Ca. " +
+      "Combining 0.4% Ca(NO₃)₂ with 0.2–0.4% MgSO₄ gave 0% affected fruit, against 30% for unsprayed trees. " +
+      "Spray volume was 10 L per tree, early morning, sunny, no rain. The authors suggest the same programme for main " +
+      "and off seasons, but say other seasons and sites still need testing.",
   },
   hau2026talk: {
     short: "Hau 2026 (AGRI Malaysia talk)",
@@ -190,13 +192,45 @@ export const SOURCES = {
       "2026, MITEC, 11 Sep 2026. Can Tho University. Transcribed in the Tiger Stripe study app by S. Woo, which " +
       "includes the original slide photos.",
     url: "https://stanleywoosweeleong.github.io/Tigerstripe/",
-    type: "Conference talk · Can Tho Univ.",
+    type: "Conference talk · Can Tho Univ. (off-season data)",
     finding:
-      "The combined off-season protocol was soil NPK 2:1:1 / 2:1:3 / 1:1:3 at 30 / 45 / 60 DAFS (0.75 kg per tree), " +
-      "plus foliar Ca(NO₃)₂ 0.4% at 40 DAFS and MgSO₄ 0.2% at 50 DAFS. It gave 0% disordered fruit, against 19.7% for " +
-      "the growers' high-N programme at 1 kg. Yield was not significantly different (93.8 vs 96.8 kg per tree), and the " +
-      "protocol used 25% less fertiliser. Calcium advice: lime to pH 5.8–6.5 after harvest; apply soluble Ca to the " +
-      "root zone 2–3 times in the first 40–50 DAFS; then spray Ca every 15–20 days in bad weather.",
+      "This is the only source here with OFF-SEASON 'Musang King' trial tables, presented as slides and not yet " +
+      "published as a full paper. Effect of NPK ratio (0.75 kg per application): 2:1:1 → 2:1:3 → 1:1:3 gave 91.5 kg " +
+      "per tree and 10% disordered fruit, while high N (3:1:1) gave 95.5 kg and 45%. Effect of NPK rate: disordered " +
+      "fruit rose from 12% at 0.5 kg to 36% at 1.25 kg. Effect of Ca(NO₃)₂ at 0.4%: yield rose from 85.4 to 92.6 kg " +
+      "per tree. The combined protocol gave 0% disordered fruit against 19.7% for the growers' programme (NPK " +
+      "3:1:1 / 3:1:1 / 3:1:2 at 1 kg), using 25% less fertiliser for a statistically similar yield (93.8 vs 96.8 kg). " +
+      "Calcium advice: lime to pH 5.8–6.5 after harvest; apply soluble Ca to the root zone 2–3 times in the first " +
+      "40–50 DAFS; then spray Ca every 15–20 days in bad weather.",
+  },
+  duong2025huaf: {
+    short: "Duong et al. 2025 (HUAF, NPK rate)",
+    cite:
+      "Nguyễn Huỳnh Dương, Trịnh Anh Quân, Lê Vĩnh Thúc & Trần Văn Hâu (2025). Ảnh hưởng của liều lượng phân NPK đến " +
+      "năng suất và hiện tượng rối loạn sinh lý cơm trái sầu riêng Musang King tại huyện Phong Điền, thành phố Cần Thơ " +
+      "[Effect of NPK fertilizer dosage on yield and physiological disorders of Musang King durian in Phong Dien, " +
+      "Can Tho]. HUAF Journal of Agricultural Science and Technology 9(3): 5036–5045.",
+    url: "https://doi.org/10.46826/huaf-jasat.v9n3y2025.1257",
+    type: "Peer-reviewed · Can Tho Univ. / HUAF",
+    finding:
+      "MAIN-SEASON trial, Dec 2023 to May 2024, Phong Dien (Can Tho), 7-year-old trees at 7 × 7 m. Floral induction and " +
+      "flowering both fell in the dry season, with under 100 mm of rain near harvest. At 0.5 / 0.75 / 1.0 / 1.25 kg NPK " +
+      "per application: yield was 89.7 / 95.4 / 99.0 / 97.1 kg per tree, and fruit with disorders were 8 / 12 / 16 / 24%. " +
+      "Flowering (92–93%) and fruit set (91%) did not differ. At 1.25 kg, total sugar fell (12.2% vs 13.1%) and starch " +
+      "rose. Flesh burn appeared only at 1.0 kg and above. All trees got a fruit-set spray of Ca (1%) + boron (100 ppm) " +
+      "14 and 7 days before anthesis, at full bloom, and 7 days after.",
+  },
+  tran2023book: {
+    short: "Tran & Tran 2023 (book)",
+    cite:
+      "Trần Văn Hâu & Trần Sỹ Hiếu (2023). Xử lý ra hoa cây sầu riêng [Flower induction in durian], 3rd ed. " +
+      "Nhà xuất bản Đại học Quốc gia Thành phố Hồ Chí Minh (VNU-HCM Press). 263 pp.",
+    url: null,
+    type: "Book · Can Tho Univ. (print only)",
+    finding:
+      "The standard Vietnamese reference on durian flower induction, by Prof. Tran Van Hau, who led several of the " +
+      "trials cited here. The citation is confirmed from the HUAF 2025 paper's reference list. Its contents have not yet " +
+      "been added to this app; photos of the PBZ, water-management and cultivar chapters are pending.",
   },
   subhadrabandhu1998: {
     short: "Subhadrabandhu & Kaiviparkbunyay 1998",
