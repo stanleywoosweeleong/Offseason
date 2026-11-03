@@ -45,12 +45,19 @@
           <label><input type="radio" name="mode" value="harvest" checked /> I know when I want to harvest</label>
           <label><input type="radio" name="mode" value="spray" /> I know when I'll spray</label>
         </div>
+        <label class="field">Cultivar
+          <select id="cultivar">
+            <option value="monthong">Monthong: 120–127 days flower to harvest</option>
+            <option value="ri6">Ri6: about 97 days fruit set to harvest</option>
+            <option value="custom">Custom (set below)</option>
+          </select>
+        </label>
         <label class="field"><span id="dateLabel">Target harvest date</span>
           <input type="date" id="planDate" />
         </label>
         <details class="adv">
           <summary>Adjust stage lengths (days)</summary>
-          <p class="hint">Defaults: PBZ to flowering is 60–122 days, typically 78 (Kozai 2024; Wiangsamut 2022; Tri 2011, where spray to harvest was 191–212 days). Flowering to harvest for 'Monthong' is 120–127 days (Sangwanangkul 1998). Change these if you have your own orchard records or grow another cultivar.</p>
+          <p class="hint">Defaults: PBZ to flowering is 60–122 days, typically 78 (Kozai 2024; Wiangsamut 2022; Tri 2011, where spray to harvest was 191–212 days). Flowering to harvest is 120–127 days for 'Monthong' (Sangwanangkul 1998) and about 97 for 'Ri6' (Tran et al. 2019; the ±7 days is a planning buffer we added). Change these if you have your own orchard records or grow another cultivar.</p>
           <div class="grid3">
             <span></span><b>min</b><b>typ</b><b>max</b>
             <span>PBZ to flowering</span>

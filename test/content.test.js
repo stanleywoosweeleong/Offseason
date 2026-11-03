@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { SOURCES } from "../src/sources.js";
 import { STAGES, PBZ_TRIALS, PBZ_SAFETY } from "../src/guide.js";
-import { buildTimeline } from "../src/planner.js";
+import { buildTimeline, CULTIVAR_PRESETS } from "../src/planner.js";
 
 test("every cited source ID exists in sources.js", () => {
   const ids = [
@@ -10,6 +10,7 @@ test("every cited source ID exists in sources.js", () => {
     ...PBZ_TRIALS.map((t) => t.source),
     ...PBZ_SAFETY.flatMap((p) => p.sources),
     ...buildTimeline("2026-01-01").flatMap((t) => t.sources),
+    ...Object.values(CULTIVAR_PRESETS).flatMap((c) => c.sources),
   ];
   for (const id of ids) assert.ok(SOURCES[id], `missing source: ${id}`);
 });

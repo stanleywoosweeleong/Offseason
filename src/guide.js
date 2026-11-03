@@ -43,6 +43,11 @@ export const STAGES = [
         sources: ["kozai2024", "tri2011"],
       },
       {
+        text: "A practical sign from Mekong Delta growers: spray when the new leaves have turned from light green to dark green, about 2–3 months old.",
+        level: "evidence",
+        sources: ["hau2017"],
+      },
+      {
         text: "The late-flowering method used a fertiliser and watering programme first, then sprayed PBZ on mature leaves.",
         level: "evidence",
         sources: ["jantee"],
@@ -70,6 +75,11 @@ export const STAGES = [
         sources: ["wiangsamut2022"],
       },
       {
+        text: "In Vietnam's Mekong Delta, good irrigation and drainage let growers induce flowering year-round. Natural flowering is Dec–Jan, with harvest in May–Jun. Growers aiming for off-season fruit usually induce in June–July.",
+        level: "evidence",
+        sources: ["hau2017", "pham2022"],
+      },
+      {
         text: "Use the Planner tab to turn a target harvest date into a spray window.",
         level: "practice",
         sources: [],
@@ -95,6 +105,16 @@ export const STAGES = [
         text: "In Vietnam, 1,000–1,600 ppm (20–32 g a.i. in 20 L per tree) brought flower buds 15–22 days earlier and the harvest 19–24 days earlier, and raised yield by 25–60%. Individual fruit were somewhat lighter at the highest rates, and quality (Brix, flesh ratio) was unchanged.",
         level: "evidence",
         sources: ["tri2011"],
+      },
+      {
+        text: "An earlier Can Tho University trial on 'Sua Hat Lep' found that 1,000–1,500 ppm brought flowering 7–15 days earlier and raised yield by about 22.5%. This is the source of Vietnam's 1,000–1,500 ppm recommendation, reported here as cited in Pham et al.",
+        level: "evidence",
+        sources: ["pham2022"],
+      },
+      {
+        text: "Cultivars respond differently. 'Kho qua xanh' flowers 20–25 days after induction. 'Ri6', 'Monthong' and 'Sua hat lep' are harder to induce and take 30–35 days or more.",
+        level: "evidence",
+        sources: ["hau2017"],
       },
       {
         text: "Results are not guaranteed. In a 2-year Thai trial on 'Chanee', 500–1,000 ppm sprays raised flowering intensity but did NOT advance flowering or raise yield, and fruit were smaller. The JIRCAS trial also saw a weak effect.",
@@ -174,6 +194,11 @@ export const STAGES = [
         sources: ["tri2011"],
       },
       {
+        text: "In Mekong Delta raised-bed orchards, growers drain the ditches for 30–40 days during induction. If heavy rain refills the ditches, trees can flower in 2–3 separate waves, which complicates harvest timing.",
+        level: "evidence",
+        sources: ["hau2017"],
+      },
+      {
         text: "About a third of surveyed Vietnamese growers cover the root zone with plastic before spraying. Given the JIRCAS result, do not leave a cover on for weeks. The mulched trees in that study were covered for about 8 weeks.",
         level: "survey",
         sources: ["pham2022", "kozai2024"],
@@ -199,6 +224,16 @@ export const STAGES = [
         text: "'Monthong' fruit matures 120–127 days after anthesis. Tag each flower cluster with its opening date.",
         level: "evidence",
         sources: ["sangwanangkul1998"],
+      },
+      {
+        text: "'Ri6' is much faster: fruit matures about 97 days after fruit set. Flowering on one tree lasts about 25 days, so tag clusters as they open. Choose the cultivar in the Planner.",
+        level: "evidence",
+        sources: ["tran2019"],
+      },
+      {
+        text: "In 'Ri6', 82% of flowers set fruit, but 71.7% of young-fruit drop happens in the first 14 days. Physiological disorders appear from 70 to 97 days, so keep water and nutrition steady late in fruit growth.",
+        level: "evidence",
+        sources: ["tran2019"],
       },
       {
         text: "Fruit cut at 120 days ripened in 6–9 days, and fruit cut at 127 days ripened in 4–6 days with peak sugars. Choose the cut date to suit how far the fruit has to travel.",
@@ -247,6 +282,12 @@ export const PBZ_TRIALS = [
     effect: "positive",
   },
   {
+    source: "pham2022", place: "Can Tho, VN", cultivar: "Sua Hat Lep", age: "—",
+    method: "Spray", rate: "1,000–1,500 ppm", timing: "—",
+    result: "Flowered 7–15 days earlier; yield +22.5% (Tran et al. 2001, reported secondhand in Pham 2022)",
+    effect: "positive",
+  },
+  {
     source: "kozai2024", place: "Chanthaburi, TH", cultivar: "Monthong", age: "9 yr",
     method: "Foliar ± mulch", rate: "1,000–1,500 ppm (20–30 g a.i.)", timing: "15 Aug, 2nd flush",
     result: "Effect not significant (heavy rain after spray); mulch drought suppressed flowering",
@@ -273,7 +314,7 @@ export const PBZ_TRIALS = [
 ];
 
 export const GAPS = [
-  "The trials do not all agree. Of 8 trial sites across 7 studies, 5 found a clear benefit, 2 found little or no effect (Rayong 1988–89, Chanthaburi 2007), and 1 tested timing only. The weak results point to weather and application factors.",
+  "The trials do not all agree. Of 9 trial sites across 8 studies, 6 found a clear benefit, 2 found little or no effect (Rayong 1988–89, Chanthaburi 2007), and 1 tested timing only. The weak results point to weather and application factors.",
   "No published trial compares soil drench with foliar spray on durian at matched doses. Foliar spraying is the only method with durian evidence.",
   "No codified durian MRL for paclobutrazol was found in the EU review. Check each destination market's current rules, for example China's GB 2763 or Codex.",
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian.",

@@ -59,3 +59,11 @@ test("pbzMix reproduces Tri et al. 2011 (1,400 ppm × 20 L = 28 g a.i. = 280 g o
   assert.equal(r.gramsAI, 28);
   assert.equal(r.gramsProduct, 280);
 });
+
+test("cultivar presets are valid and Ri6 harvests sooner than Monthong", async () => {
+  const { CULTIVAR_PRESETS } = await import("../src/planner.js");
+  const spray = "2026-06-15";
+  const h = (k) => planFromSpray(spray, { ...DEFAULT_STAGES, anthesisToHarvest: CULTIVAR_PRESETS[k].anthesisToHarvest }).harvest.typical;
+  assert.equal(CULTIVAR_PRESETS.ri6.anthesisToHarvest.typ, 97);
+  assert.ok(h("ri6") < h("monthong"));
+});

@@ -18,6 +18,17 @@ export const DEFAULT_STAGES = {
   anthesisToHarvest: { min: 120, typ: 124, max: 127 },
 };
 
+/**
+ * Cultivar presets for flowering → harvest (days).
+ *  - Monthong: 120–127 days from anthesis to maturity (Sangwanangkul 1998).
+ *  - Ri6: 97 days from fruit set (Tran et al. 2019; 6 trees, one season). The ±7-day band is a planning buffer
+ *    we added, not a measured range.
+ */
+export const CULTIVAR_PRESETS = {
+  monthong: { label: "Monthong", anthesisToHarvest: { min: 120, typ: 124, max: 127 }, sources: ["sangwanangkul1998"] },
+  ri6: { label: "Ri6", anthesisToHarvest: { min: 90, typ: 97, max: 104 }, sources: ["tran2019"] },
+};
+
 /** PBZ concentration band recommended in Vietnam (Tran et al. 2001, via Pham et al. 2022). */
 export const PBZ_RECOMMENDED_PPM = { min: 1000, max: 1500 };
 
@@ -119,8 +130,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       id: "harvest",
       date: addDays(anthesis, a.typ),
       label: "Harvest maturity",
-      detail: `'Monthong' takes ${a.min}–${a.max} days from anthesis to maturity. Count the days from each tagged flower cluster, not from the spray date.`,
-      sources: ["sangwanangkul1998"],
+      detail: `In this plan, fruit matures ${a.min}–${a.max} days after flowering ('Monthong' 120–127; 'Ri6' about 97 from fruit set). Count the days from each tagged flower cluster, not from the spray date.`,
+      sources: ["sangwanangkul1998", "tran2019"],
     },
   ];
 }

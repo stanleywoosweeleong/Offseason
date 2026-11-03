@@ -110,6 +110,36 @@ export const SOURCES = {
       "unchanged. Plastic mulch on its own 'is not effective'. The authors advise pausing PBZ for 1–2 seasons after " +
       "every 3–4 seasons of use because residue builds up in soil.",
   },
+  hau2017: {
+    short: "Hau & Hieu 2017 (Can Tho Univ.)",
+    cite:
+      "Hau, T.V. & Hieu, T.S. (2017). Off-season production of durian in the Mekong Delta, Viet Nam. " +
+      "Acta Horticulturae 1186: 85–98. ISHS International Symposium on Durian and Other Humid Tropical Fruits.",
+    url: "https://doi.org/10.17660/ActaHortic.2017.1186.13",
+    type: "Peer-reviewed · ISHS / Can Tho Univ.",
+    finding:
+      "The Mekong Delta makes up almost half of Vietnam's durian area (24,573 ha in 2012). Natural flowering there is " +
+      "in Dec–Jan, with harvest in May–Jun, but good irrigation and drainage let growers induce flowering year-round. " +
+      "Their method combines plastic mulch on raised beds, draining the ditches for 30–40 days, and a 1,000–1,500 ppm " +
+      "PBZ foliar spray once leaves turn from light to dark green (2–3 months old). 'Kho qua xanh' flowers 20–25 days " +
+      "after induction. 'Ri6', 'Monthong' and 'Sua hat lep' take 30–35 days or more, and can flower in 2–3 waves if " +
+      "heavy rain falls and the ditches are not fully drained.",
+  },
+  tran2019: {
+    short: "Tran et al. 2019 (Ri-6, Can Tho Univ.)",
+    cite:
+      "Trần Văn Hâu, Lê Thị Yến Như & Trần Sỹ Hiếu (2019). Đặc tính sự ra hoa và phát triển trái sầu riêng Ri-6 " +
+      "(Durio zibethinus Murr.) tại huyện Cai Lậy, tỉnh Tiền Giang [Characterization of flowering and fruit " +
+      "development of durian Ri-6 in Cai Lay, Tien Giang]. Can Tho University Journal of Science 55(6B): 47–55.",
+    url: "https://doi.org/10.22144/ctu.jvn.2019.167",
+    type: "Peer-reviewed · Can Tho Univ.",
+    finding:
+      "Six 7-year-old 'Ri-6' trees in Cai Lay, observed Apr 2017 to Jan 2018. Flowering on a tree lasted 25 days and " +
+      "peaked on day 6. Flowers opened at 4–5 PM. 82% of flowers set fruit. Fruit matured 97 days after fruit set, much " +
+      "faster than 'Monthong'. 71.7% of young-fruit drop happened in the first 14 days after set. Physiological " +
+      "disorders (about 14% of locules and pulp units) appeared from 70 to 97 days after set. Mean fruit weight was " +
+      "2.99 kg, with 31.6% edible.",
+  },
   subhadrabandhu1998: {
     short: "Subhadrabandhu & Kaiviparkbunyay 1998",
     cite:

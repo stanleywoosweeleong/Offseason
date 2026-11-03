@@ -1,6 +1,6 @@
 import { SOURCES } from "./sources.js";
 import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY } from "./guide.js";
-import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM } from "./planner.js";
+import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -104,6 +104,19 @@ const defaultDate = (() => {
 $("#planDate").value = store.get("planDate", defaultDate);
 const savedMode = store.get("mode", "harvest");
 document.querySelector(`input[name=mode][value=${savedMode}]`).checked = true;
+
+function applyCultivar(key) {
+  const preset = CULTIVAR_PRESETS[key];
+  if (!preset) return;
+  const a = preset.anthesisToHarvest;
+  $("#a_min").value = a.min; $("#a_typ").value = a.typ; $("#a_max").value = a.max;
+}
+$("#cultivar").value = store.get("cultivar", "monthong");
+if ($("#cultivar").value !== "custom") applyCultivar($("#cultivar").value);
+$("#cultivar").addEventListener("change", (e) => { store.set("cultivar", e.target.value); applyCultivar(e.target.value); renderPlan(); });
+["#a_min", "#a_typ", "#a_max"].forEach((id) =>
+  $(id).addEventListener("input", () => { $("#cultivar").value = "custom"; store.set("cultivar", "custom"); })
+);
 
 function readStages() {
   const n = (id) => Number($(id).value);

@@ -7,8 +7,8 @@ An evidence-based guide and planner for producing durian outside the main season
 | Tab | What it does |
 |---|---|
 | **Guide** | A 6-stage protocol: orchard readiness, post-harvest leaf flushes, choosing a market window, paclobutrazol (PBZ) application, water management, and flowering to harvest. Each point is labelled *trial evidence*, *grower survey* or *common practice* and links to its source. |
-| **Planner** | Works backwards from a target harvest date to a PBZ spray window, or forwards from a spray date to an expected harvest. It flags spray dates in months you mark as rainy, and you can edit the stage lengths. |
-| **PBZ evidence** | All 8 durian paclobutrazol trial sites (7 studies, from Thailand, Vietnam and Indonesia) side by side, labelled clear benefit, timing effect or little/no effect, plus a safety, residue and sustainability summary. |
+| **Planner** | Cultivar presets (Monthong, Ri6). Works backwards from a target harvest date to a PBZ spray window, or forwards from a spray date to an expected harvest. It flags spray dates in months you mark as rainy, and you can edit the stage lengths. |
+| **PBZ evidence** | All 9 durian paclobutrazol trial sites (8 studies, from Thailand, Vietnam and Indonesia) side by side, labelled clear benefit, timing effect or little/no effect, plus a safety, residue and sustainability summary. |
 | **PBZ mix** | Grams of product per tank for a target ppm, tank volume and label a.i.%. It warns when the rate is outside the recommended 1,000–1,500 ppm. |
 | **Checklist** | A pre-induction checklist, saved in the browser. |
 | **Sources** | Full citations with key findings and links. |
@@ -25,6 +25,8 @@ An evidence-based guide and planner for producing durian outside the main season
 - **Use a foliar spray, not a soil drench.** Durian is more sensitive to PBZ than mango (Subhadrabandhu & Kaiviparkbunyay 1998).
 - **Rest the trees.** Pause PBZ for 1–2 seasons after every 3–4 seasons of use (Tri et al. 2011). PBZ persists in soil, with a half-life from about 2 months to over a year (Kishore et al. 2015; Singh et al. 2024).
 - **Check residue limits.** In the EU, durian has no specific PBZ limit, so the 0.01 mg/kg default may apply. ADI is 0.022 mg/kg bw/day (EFSA 2017).
+- **Mekong Delta practice (Vietnam).** Growers combine plastic mulch, ditch drainage for 30–40 days, and a 1,000–1,500 ppm spray once leaves turn dark green (2–3 months old). Ri6 and Monthong take 30–35 days or more to flower, and heavy rain can split flowering into 2–3 waves (Hau & Hieu 2017).
+- **Ri6 is fast.** It matures about 97 days after fruit set, with 82% fruit set, but most young-fruit drop happens in the first 14 days (Tran et al. 2019).
 - **Manage Phytophthora** with drainage, mounding, organic matter and phosphonate (ACIAR HORT/2007/067).
 
 The full reference list is in [`src/sources.js`](src/sources.js) and in the app's **Sources** tab.
