@@ -58,6 +58,11 @@ export const STAGES = [
         level: "evidence",
         sources: ["jantee"],
       },
+      {
+        text: "Prune to open the canopy. Thai trials found well-pruned trees with open, light-filled canopies flowered more than dense ones. Sunlit outer branches store more starch and form flower buds more readily than shaded inner branches (Salakpetch 2005, as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
     ],
   },
   {
@@ -102,6 +107,21 @@ export const STAGES = [
       },
       {
         text: "Regional calendars in Vietnam: the Mekong Delta flowers in Dec–Jan and harvests in Apr–May; the Southeast flowers Jan–Mar and harvests Jun–Aug; the Central Highlands mostly flowers Jan–Mar and harvests Jul–Aug. Only the Mekong Delta, with controllable irrigation and drainage, does full off-season induction. The other regions mainly support natural flowering.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Pick a flowering-friendly weather window. Best conditions: nights of 20–22 °C with about an 8 °C day-night swing (around 30/22 °C) and air humidity of 50–60%. Nights staying above 26 °C burn up the tree's starch. Nights below 18–19 °C can 'burn' young buds.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Watch the monsoon. In the Mekong Delta, the dry Northeast monsoon (humidity 50–60%) favours flowering, and the wet Southwest monsoon (80–90%) pushes leaf growth. In transition periods, treatments applied a few days apart can give different results, so check wind direction and humidity forecasts before inducing.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Light changes through the year. Mekong Delta radiation is about 17–21 MJ/m²/day and dips in the rainy Sep–Nov. The Central Highlands get about 18–22, with a bigger seasonal swing. High dry-season light helps flowering, but the heat of late April–May works against it, and the dull, rainy Aug–Oct favours leaves.",
         level: "expert",
         sources: ["tran2023book"],
       },
@@ -265,7 +285,7 @@ export const STAGES = [
         sources: [],
       },
       {
-        text: "How much drought is enough: a continuous dry spell of about 7–14 days, bringing leaf water potential to about −0.7 to −0.8 MPa (Salakpetch 2005). Compare the JIRCAS trial, where plastic mulch reached −0.9 MPa and flowering was suppressed. The useful range is narrow.",
+        text: "How much drought is enough (Thai benchmark): a continuous dry spell of about 7–14 days (the book's summary says 10–14), bringing leaf water potential to about −0.7 to −0.8 MPa (Salakpetch 2005). Compare the JIRCAS trial, where plastic mulch reached −0.9 MPa and flowering was suppressed. The useful range is narrow.",
         level: "evidence",
         sources: ["tran2023book", "kozai2024"],
       },
@@ -293,6 +313,21 @@ export const STAGES = [
         text: "Trenching 30–40 cm deep near the trunk, as done in Cai Lay, is a grower practice with no durian trials behind it. It may encourage root disease. Treat it as unproven.",
         level: "practice",
         sources: ["tran2023book"],
+      },
+      {
+        text: "Drought needs differ by cultivar in the Mekong Delta. 'Kho Qua Xanh' flowers after about 26 days of mulching and withheld water. 'Ri6' and 'Monthong' need 30–35 days and still flower unevenly, in 2–3 waves. 'Sua Hat Lep' flowers reliably only in the dry season; with incomplete drought its buds take about 3 months and few appear. This is much longer than the 10–14 days quoted from Thai 'Chanee' work.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Measure soil moisture, don't guess. On the Can Tho University farm soil (0–30 cm: field capacity 57.3%, wilting point 18.9%), trees flowered at 30% soil moisture in the first flush and well at 28.6% in the second. That is roughly a quarter of the available water left. The book's rule of thumb is 30–40% moisture held for 3–4 weeks, adjusted for soil texture (Hau et al. 2001, book Table 5.1).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Plastic mulch is expensive and makes tree care awkward during induction, but Mekong Delta growers keep using it because it works.",
+        level: "expert",
+        sources: ["tran2023book", "hau2017"],
       },
     ],
   },
@@ -348,6 +383,16 @@ export const STAGES = [
       },
       {
         text: "In the cooler Central Highlands, 'Monthong' can take 135–150 days from flowering to harvest, much longer than in the lowlands. The Planner has a preset for this.",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Wind at flowering: light wind (0.5–2 m/s) dries leaves and flowers and limits fungal disease. Strong wind above 5 m/s, as in storms, breaks branches and knocks off flowers. Hot, dry winds can scorch flowers and weaken buds. Windbreaks help in exposed orchards.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "In Darwin, cool 15 °C nights triggered 'Monthong' flowering within 1–2 weeks (Lim & Luder 2000, as reported in the book). Cool nights can help flowers form but cause 'Monthong' flowers to drop once open.",
         level: "evidence",
         sources: ["tran2023book"],
       },
@@ -499,6 +544,8 @@ export const CHECKLIST = [
   { id: "forecast", text: "Forecast shows no heavy rain for at least 7 days", stage: "spray" },
   { id: "spraybefore", text: "PBZ sprayed BEFORE laying plastic, with enough litres per tree for the full dose", stage: "spray" },
   { id: "rewater", text: "Re-watering plan ready: about 10 mm when leaves droop, then every 3 days after day 7 until buds show", stage: "water" },
+  { id: "weather", text: "Forecast checked: dry Northeast-monsoon conditions, humidity about 50–60%, nights about 20–22 °C (not >26 °C)", stage: "timing" },
+  { id: "soilmeter", text: "Soil moisture at 0–30 cm being measured; drought length set for the cultivar (Ri6 / Monthong 30–35 days in the Mekong Delta)", stage: "water" },
   { id: "drywatch", text: "Irrigation held back for a short (3–7 day) dry spell only", stage: "water" },
   { id: "tag", text: "Flower clusters tagged with their opening date", stage: "fruit" },
   { id: "fruitcare", text: "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled", stage: "quality" },

@@ -232,7 +232,7 @@ export const SOURCES = {
       "The standard reference on durian flower induction, by Prof. Tran Van Hau (Can Tho University). Chapter 5 " +
       "reviews flowering seasons and the drivers of flowering. Drought is the trigger: 7–14 dry days, leaf water " +
       "potential −0.7 to −0.8 MPa. The chapter covers PBZ, thiourea, uniconazole, mulching and ditch drainage, " +
-      "trenching and re-watering. It reports Can Tho University trials: Table 5.2/5.4/5.6 on 'Kho Qua Xanh' " +
+      "trenching and re-watering. It also covers weather (nights 20–22 °C, 50–60% humidity, monsoon direction), cultivar drought needs in the Mekong Delta (Ri6 and Monthong 30–35 days) and soil-moisture targets (Table 5.1). It reports Can Tho University trials: Table 5.2/5.4/5.6 on 'Kho Qua Xanh' " +
       "(Hau 2000; Hau et al. 2001, off-season, Cai Lay) and Table 5.3/5.5/5.7 on 'Sua Hat Lep' (Hau et al. 2001, " +
       "two years, CTU farm). It concludes that PBZ with raised-bed mulching does not affect fruit quality. Findings " +
       "from other authors are cited in the app as reported in the book. Note: the book cites the Vietnamese PBZ " +
