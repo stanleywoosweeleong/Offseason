@@ -21,12 +21,15 @@ export const DEFAULT_STAGES = {
 /**
  * Cultivar presets for flowering → harvest (days).
  *  - Monthong: 120–127 days from anthesis to maturity (Sangwanangkul 1998).
+ *  - Musang King: about 90 days from fruit set (Duong et al. 2025).
  *  - Ri6: 97 days from fruit set (Tran et al. 2019; 6 trees, one season). The ±7-day band is a planning buffer
  *    we added, not a measured range.
  */
 export const CULTIVAR_PRESETS = {
   monthong: { label: "Monthong", anthesisToHarvest: { min: 120, typ: 124, max: 127 }, sources: ["sangwanangkul1998"] },
   ri6: { label: "Ri6", anthesisToHarvest: { min: 90, typ: 97, max: 104 }, sources: ["tran2019"] },
+  // Musang King: about 90 days after fruit set (Duong et al. 2025). The ±5-day band is our planning buffer.
+  musangking: { label: "Musang King", anthesisToHarvest: { min: 85, typ: 90, max: 95 }, sources: ["duong2025"] },
 };
 
 /** PBZ concentration band recommended in Vietnam (Tran et al. 2001, via Pham et al. 2022). */
@@ -127,11 +130,19 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       sources: ["kozai2024", "wiangsamut2022", "tri2011"],
     },
     {
+      id: "fruitcare",
+      date: addDays(anthesis, 30),
+      endDate: addDays(anthesis, 60),
+      label: "Fruit-care window (30–60 days after fruit set)",
+      detail: "Reduce nitrogen as the fruit grows: NPK 2:1:1 → 2:1:3 → 1:1:3 at 30 / 45 / 60 days, 0.75 kg per tree each time. Spray Ca(NO₃)₂ 0.4% at 40 days and MgSO₄ 0.2% at 50 days. Tested on off-season 'Musang King'.",
+      sources: ["duong2026crop", "duong2026swj"],
+    },
+    {
       id: "harvest",
       date: addDays(anthesis, a.typ),
       label: "Harvest maturity",
-      detail: `In this plan, fruit matures ${a.min}–${a.max} days after flowering ('Monthong' 120–127; 'Ri6' about 97 from fruit set). Count the days from each tagged flower cluster, not from the spray date.`,
-      sources: ["sangwanangkul1998", "tran2019"],
+      detail: `In this plan, fruit matures ${a.min}–${a.max} days after flowering ('Monthong' 120–127; 'Ri6' about 97 and 'Musang King' about 90 from fruit set). Count the days from each tagged flower cluster, not from the spray date.`,
+      sources: ["sangwanangkul1998", "tran2019", "duong2025"],
     },
   ];
 }

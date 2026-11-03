@@ -6,7 +6,7 @@ const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const fmt = (d) => d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
-const LEVEL_LABEL = { evidence: "Trial evidence", survey: "Grower survey", practice: "Common practice" };
+const LEVEL_LABEL = { evidence: "Trial evidence", survey: "Grower survey", expert: "Expert advice", practice: "Common practice" };
 
 const store = {
   get(key, fallback) {

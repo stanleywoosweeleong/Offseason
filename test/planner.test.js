@@ -67,3 +67,12 @@ test("cultivar presets are valid and Ri6 harvests sooner than Monthong", async (
   assert.equal(CULTIVAR_PRESETS.ri6.anthesisToHarvest.typ, 97);
   assert.ok(h("ri6") < h("monthong"));
 });
+
+test("Musang King preset is ~90 days and timeline includes the fruit-care window", async () => {
+  const { CULTIVAR_PRESETS, buildTimeline } = await import("../src/planner.js");
+  assert.equal(CULTIVAR_PRESETS.musangking.anthesisToHarvest.typ, 90);
+  const tl = buildTimeline("2026-06-01");
+  const fc = tl.find((t) => t.id === "fruitcare");
+  const an = tl.find((t) => t.id === "anthesis");
+  assert.equal((fc.date - an.date) / 86400000, 30);
+});

@@ -62,6 +62,7 @@ h3 { font-size: 1rem; margin: 0 0 6px; }
 .lvl.evidence { color: var(--evidence); background: var(--evidence-bg); }
 .lvl.survey { color: var(--survey); background: var(--survey-bg); }
 .lvl.practice { color: var(--practice); background: var(--practice-bg); }
+.lvl.expert { color: var(--brand); background: transparent; border: 1px solid var(--brand); padding: 1px 7px; }
 
 .stages { list-style: none; padding: 0; margin: 0; }
 .stage h2 { display: flex; align-items: center; gap: 10px; }

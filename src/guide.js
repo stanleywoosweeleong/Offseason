@@ -2,6 +2,7 @@
 // Each item has a `level`:
 //   "evidence" – measured in a cited trial
 //   "survey"   – what growers report doing, not a controlled trial
+//   "expert"   – a researcher's recommendation built on their trials, not itself tested as stated
 //   "practice" – common practice that the cited trials did not test; check with local extension staff
 
 export const STAGES = [
@@ -252,6 +253,48 @@ export const STAGES = [
       },
     ],
   },
+  {
+    id: "quality",
+    title: "Protect off-season fruit quality",
+    summary: "Getting flowers out of season is half the job. Off-season fruit is prone to flesh disorders such as 'tiger stripe', hardened pulp and tip burn. Can Tho University tested a fix on 'Musang King'.",
+    points: [
+      {
+        text: "Flesh disorders are a big off-season risk. In surveyed 'Musang King' orchards, 19% had disorders only in the off-season and 78% in both seasons. Management, not just weather, is the main driver.",
+        level: "survey",
+        sources: ["duong2025"],
+      },
+      {
+        text: "Know the fruit clock. 'Musang King' is harvested about 90 days after fruit set (DAFS). Growth is fastest at 28–70 DAFS, and disorders show up from about 70 DAFS. Expect about 35% fruit drop in the first 14 days, rising to about 48.5% by 42 DAFS.",
+        level: "evidence",
+        sources: ["duong2025"],
+      },
+      {
+        text: "Cut the nitrogen as the fruit grows. Applying soil NPK 2:1:1 at 30 DAFS, then 2:1:3 at 45, then 1:1:3 at 60 (0.75 kg per tree each time) gave 10% disordered fruit off-season. Steady high nitrogen (3:1:1) gave 45%.",
+        level: "evidence",
+        sources: ["duong2026crop"],
+      },
+      {
+        text: "Don't over-fertilise. Raising NPK from 0.5 to 1.25 kg per tree per application lifted disordered fruit from 12% to 36% off-season, for only about 8 kg more yield per tree.",
+        level: "evidence",
+        sources: ["duong2026crop"],
+      },
+      {
+        text: "Spray calcium, then magnesium. Ca(NO₃)₂ at 0.4% (40 DAFS) and MgSO₄ at 0.2% (50 DAFS), at 10 L per tree in the early morning on a dry, sunny day, cut hardened and discoloured pulp. The Ca spray also raised off-season yield from 85 to 93 kg per tree.",
+        level: "evidence",
+        sources: ["duong2026swj"],
+      },
+      {
+        text: "The combined protocol gave 0% disordered off-season fruit, against 19.7% for the growers' high-N programme. It used 25% less fertiliser for a statistically similar yield.",
+        level: "evidence",
+        sources: ["hau2026talk", "duong2026crop", "duong2026swj"],
+      },
+      {
+        text: "Calcium all season: lime to pH 5.8–6.5 after harvest. Apply soluble Ca to the root zone 2–3 times in the first 40–50 DAFS, then spray Ca every 15–20 days during long rain, hot dry spells or cold weather. For a dated spray and fertiliser schedule with a mix calculator, use the Tiger Stripe app.",
+        level: "expert",
+        sources: ["hau2026talk"],
+      },
+    ],
+  },
 ];
 
 // Every durian PBZ field trial cited in the app, for the "PBZ evidence" comparison table.
@@ -334,6 +377,8 @@ export const CHECKLIST = [
   { id: "forecast", text: "Forecast shows no heavy rain for at least 7 days", stage: "spray" },
   { id: "drywatch", text: "Irrigation held back for a short (3–7 day) dry spell only", stage: "water" },
   { id: "tag", text: "Flower clusters tagged with their opening date", stage: "fruit" },
+  { id: "fruitcare", text: "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled", stage: "quality" },
+  { id: "lime", text: "After harvest: soil pH checked and limed to 5.8–6.5", stage: "quality" },
 ];
 
 export const PBZ_SAFETY = [

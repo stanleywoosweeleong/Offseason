@@ -140,6 +140,64 @@ export const SOURCES = {
       "disorders (about 14% of locules and pulp units) appeared from 70 to 97 days after set. Mean fruit weight was " +
       "2.99 kg, with 31.6% edible.",
   },
+  duong2025: {
+    short: "Duong et al. 2025 (Musang King)",
+    cite:
+      "Duong, N.H., Ngan, H.T.T., Linh, B.K., Thang, L.C., Thuc, L.V. & Hau, T.V. (2025). Investigation of biological " +
+      "characteristics of fruit development and physiological disorders of Musang King durian (Durio zibethinus Murr.). " +
+      "Open Agriculture 10(1): 20250422. Can Tho University.",
+    url: "https://doi.org/10.1515/opag-2025-0422",
+    type: "Peer-reviewed · Can Tho Univ.",
+    finding:
+      "In the Mekong Delta, 'Musang King' fruit is harvested about 90 days after fruit set (DAFS). Growth is slow from " +
+      "0–28 DAFS, rapid from 28–70 and ripening from 70–90. Flesh forms from 42 DAFS. 35% of young fruit dropped in the " +
+      "first 14 days, rising to about 48.5% by 42 DAFS. Flesh disorders ('tiger stripe', hardened or discoloured pulp, " +
+      "tip burn) first appear around 70 DAFS. In the orchard survey, 19% of orchards saw disorders only off-season, " +
+      "3% only in season, and 78% in both, which points to management rather than weather alone.",
+  },
+  duong2026crop: {
+    short: "Duong, Hau & Thuc 2026 (NPK)",
+    cite:
+      "Duong, N.H., Hau, T.V. & Thuc, L.V. (2026). Effects of macronutrient application rates during fruit development " +
+      "on the yield, quality, and physiological disorders of Musang King durian (Durio zibethinus Murr.). " +
+      "Crop Research 61(1–2). Can Tho University.",
+    url: "https://doi.org/10.31830/2454-1761.2026.CR-1091",
+    type: "Peer-reviewed · Can Tho Univ.",
+    finding:
+      "Off-season trials on 7-year-old 'Musang King'. Soil NPK was applied at 30, 45 and 60 DAFS, at 0.75 kg per tree " +
+      "each time. A ratio of 2:1:1 → 2:1:3 → 1:1:3 (N:P₂O₅:K₂O) gave 91.5 kg per tree with only 10% of fruit showing " +
+      "disorders. High nitrogen throughout (3:1:1) gave 95.5 kg but 45% disordered fruit. More fertiliser meant more " +
+      "disorders: 0.5 kg gave 12% and 1.25 kg gave 36%, for only about 8 kg more yield per tree.",
+  },
+  duong2026swj: {
+    short: "Duong & Thuc 2026 (Ca/Mg)",
+    cite:
+      "Duong, N.H. & Thuc, L.V. (2026). Effects of calcium nitrate and magnesium sulfate concentrations on fruit " +
+      "quality and physiological disorders of Musang King durian in the Mekong Delta, Vietnam. " +
+      "The Scientific World Journal 2026: 1153166.",
+    url: "https://doi.org/10.1155/tswj/1153166",
+    type: "Peer-reviewed · Can Tho Univ.",
+    finding:
+      "Off-season 'Musang King' was sprayed with 10 L of solution per tree, early morning in sunny weather. " +
+      "Ca(NO₃)₂ at 0.4% raised yield from 85.4 to 92.6 kg per tree and cut hardened and discoloured pulp from 13.3% " +
+      "to 5.8%. MgSO₄ at 0.2% also cut disorders, from 10.0% to 6.8%, but did not change yield. Ca and Mg in the " +
+      "fruit pulp rose with the spray concentration.",
+  },
+  hau2026talk: {
+    short: "Hau 2026 (AGRI Malaysia talk)",
+    cite:
+      "Tran Van Hau (2026). Management of 'Tiger stripe' symptoms in Musang King in Vietnam. AgriTalk, AGRI Malaysia " +
+      "2026, MITEC, 11 Sep 2026. Can Tho University. Transcribed in the Tiger Stripe study app by S. Woo, which " +
+      "includes the original slide photos.",
+    url: "https://stanleywoosweeleong.github.io/Tigerstripe/",
+    type: "Conference talk · Can Tho Univ.",
+    finding:
+      "The combined off-season protocol was soil NPK 2:1:1 / 2:1:3 / 1:1:3 at 30 / 45 / 60 DAFS (0.75 kg per tree), " +
+      "plus foliar Ca(NO₃)₂ 0.4% at 40 DAFS and MgSO₄ 0.2% at 50 DAFS. It gave 0% disordered fruit, against 19.7% for " +
+      "the growers' high-N programme at 1 kg. Yield was not significantly different (93.8 vs 96.8 kg per tree), and the " +
+      "protocol used 25% less fertiliser. Calcium advice: lime to pH 5.8–6.5 after harvest; apply soluble Ca to the " +
+      "root zone 2–3 times in the first 40–50 DAFS; then spray Ca every 15–20 days in bad weather.",
+  },
   subhadrabandhu1998: {
     short: "Subhadrabandhu & Kaiviparkbunyay 1998",
     cite:
