@@ -92,6 +92,100 @@ export const SOURCES = {
       "'Monthong' fruit took 120–127 days from anthesis to maturity. Fruit cut at 120 days ripened in 6–9 days and " +
       "fruit cut at 127 days in 4–6 days. Sugars and soluble solids peaked at 127 days.",
   },
+  tri2011: {
+    short: "Tri et al. 2011 (SOFRI/JIRCAS)",
+    cite:
+      "Tri, M.V., Tan, H.V., Chau, N.M., Honsho, C., Ogata, T. & Yonemoto, Y. (2011). Paclobutrazol application for " +
+      "early fruit production of durian in Vietnam. Tropical Agriculture and Development 55(3): 122–126. " +
+      "Southern Fruit Research Institute (SOFRI) with JIRCAS.",
+    url: "https://www.jstage.jst.go.jp/article/jsta/55/3/55_3_122/_pdf/-char/en",
+    type: "Peer-reviewed · Govt. research institute",
+    finding:
+      "Two-year trials in Vietnam. 'Dona' (Ben Tre lowland, 9 years old) and 'Sua Hat Lep' (Ba Ria upland, 12 years " +
+      "old) were sprayed with 1,000–1,600 ppm PBZ (Super Cultar Mix 10 WP, 20 L per tree = 20–32 g a.i.) when the " +
+      "second flush was fully expanded, in late August. Flower buds appeared after 31–45 days, against 53–60 for " +
+      "controls. Harvest came 19–24 days earlier, and buds took 160–167 days to reach harvest. Yield rose from " +
+      "135 to 176–215 kg per tree ('Dona') and from 156 to 195–227 kg per tree ('Sua Hat Lep'). The best 'Dona' yields " +
+      "came at 1,400–1,600 ppm, but individual fruit were lighter (2.6 vs 3.0 kg). Brix and flesh ratio were " +
+      "unchanged. Plastic mulch on its own 'is not effective'. The authors advise pausing PBZ for 1–2 seasons after " +
+      "every 3–4 seasons of use because residue builds up in soil.",
+  },
+  subhadrabandhu1998: {
+    short: "Subhadrabandhu & Kaiviparkbunyay 1998",
+    cite:
+      "Subhadrabandhu, S. & Kaiviparkbunyay, K. (1998). Effect of paclobutrazol on flowering, fruit setting and fruit " +
+      "quality of durian (Durio zibethinus Murr.) cv. Chanee. Kasetsart Journal (Natural Science) 32: 73–83.",
+    url: "https://li01.tci-thaijo.org/index.php/anres/article/download/240556/164038",
+    type: "Peer-reviewed · Kasetsart Univ.",
+    finding:
+      "Two seasons (1988–89) of foliar sprays at 500–1,000 ppm on 'Chanee' trees aged 5–20 years, in Rayong. PBZ " +
+      "did NOT bring flowering forward, and did not raise fruit number or yield. It did raise flowering intensity. " +
+      "Fruit were smaller, with shorter stalks, and quality was unchanged. The authors note that durian is more " +
+      "sensitive to PBZ than mango, and that growers avoid soil drenches because treated trees may decline or " +
+      "recover slowly.",
+  },
+  sakhidin2019: {
+    short: "Sakhidin et al. 2019",
+    cite:
+      "Sakhidin, Darjanto & Suparto, S.R. (2019). Flowering of two cultivars of durian (Durio zibethinus) treated by " +
+      "paclobutrazol. KnE Life Sciences 4(11): 288–294. Universitas Jenderal Soedirman, Indonesia.",
+    url: "https://doi.org/10.18502/kls.v4i11.3875",
+    type: "Peer-reviewed · University (Indonesia)",
+    finding:
+      "10-year-old 'Kani' and 'Monthong' trees in Central Java were treated in June, July or August. The August " +
+      "treatment brought flowering on faster than June or July, and 'Kani' responded faster than 'Monthong'. " +
+      "Timing mattered more than cultivar, which shows that the time of application decides the result.",
+  },
+  desta2021: {
+    short: "Desta & Amare 2021 (review)",
+    cite:
+      "Desta, B. & Amare, G. (2021). Paclobutrazol as a plant growth regulator. Chemical and Biological Technologies " +
+      "in Agriculture 8: 1. Springer, open access.",
+    url: "https://doi.org/10.1186/s40538-020-00199-z",
+    type: "Review · Peer-reviewed",
+    finding:
+      "PBZ is a triazole that blocks gibberellin biosynthesis and raises cytokinin levels, which slows shoot " +
+      "elongation and moves the tree's resources from leaf growth into flowering. It is also a systemic fungicide " +
+      "and can protect plants against stress.",
+  },
+  kishore2015: {
+    short: "Kishore et al. 2015 (ICAR review)",
+    cite:
+      "Kishore, K., Singh, H.S. & Kurian, R.M. (2015). Paclobutrazol use in perennial fruit crops and its residual " +
+      "effects: a review. Indian Journal of Agricultural Sciences 85(7): 863–872.",
+    url: "https://doi.org/10.56093/ijas.v85i7.50091",
+    type: "Review · ICAR",
+    finding:
+      "PBZ is persistent: its half-life in soil and water is over a year under both aerobic and anaerobic conditions. " +
+      "At optimised rates, residues in soil and fruit stayed below 0.01 ppm. Groundwater risk is low, but the risk to " +
+      "aquatic life is high. It is rated moderately hazardous to humans. The authors recommend optimised, minimal use.",
+  },
+  singh2024: {
+    short: "Singh et al. 2024 (ICAR-CISH)",
+    cite:
+      "Singh, V.K., Shukla, P.K., Bhattacherjee, A.K. & Rajan, S. (2024). Paclobutrazol persistence dynamics in mango " +
+      "(Mangifera indica) orchard soil using HPLC and LC-MS/MS analysis. Indian Journal of Agricultural Sciences " +
+      "94(7): 732–737.",
+    url: "https://doi.org/10.56093/ijas.v94i7.134331",
+    type: "Peer-reviewed · ICAR",
+    finding:
+      "Mango, soil-applied at 2–10 g a.i. per tree. Soil residue started at 10–62 µg/g and was 0.14–2.38 µg/g after " +
+      "300 days, a field half-life of 58–77 days. Higher doses left more residue. No PBZ was detected in mature " +
+      "fruit. Mango is the closest crop with good residue data.",
+  },
+  efsa2017: {
+    short: "EFSA 2017",
+    cite:
+      "European Food Safety Authority (2017). Review of the existing maximum residue levels for paclobutrazol " +
+      "according to Article 12 of Regulation (EC) No 396/2005. EFSA Journal 15(8): e04974.",
+    url: "https://doi.org/10.2903/j.efsa.2017.4974",
+    type: "Regulatory · EFSA",
+    finding:
+      "Acceptable daily intake (ADI) 0.022 mg/kg bw/day; acute reference dose (ARfD) 0.10 mg/kg bw. The validated " +
+      "limit of quantification (LOQ) is 0.01 mg/kg, and the 0.01 mg/kg default MRL may be considered for other " +
+      "commodities. No tropical fruit, durian included, has a specific EU MRL in the review, and fruit-crop " +
+      "metabolism data were missing.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

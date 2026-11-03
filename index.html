@@ -17,6 +17,7 @@
     <nav class="tabs wrap" role="tablist">
       <button role="tab" data-tab="guide" aria-selected="true">Guide</button>
       <button role="tab" data-tab="planner">Planner</button>
+      <button role="tab" data-tab="pbz">PBZ evidence</button>
       <button role="tab" data-tab="mix">PBZ mix</button>
       <button role="tab" data-tab="checklist">Checklist</button>
       <button role="tab" data-tab="sources">Sources</button>
@@ -49,11 +50,11 @@
         </label>
         <details class="adv">
           <summary>Adjust stage lengths (days)</summary>
-          <p class="hint">Defaults: PBZ to flowering is 60–122 days (Kozai 2024; Wiangsamut 2022). Flowering to harvest for 'Monthong' is 120–127 days (Sangwanangkul 1998). Change these if you have your own orchard records or grow another cultivar.</p>
+          <p class="hint">Defaults: PBZ to flowering is 60–122 days, typically 78 (Kozai 2024; Wiangsamut 2022; Tri 2011, where spray to harvest was 191–212 days). Flowering to harvest for 'Monthong' is 120–127 days (Sangwanangkul 1998). Change these if you have your own orchard records or grow another cultivar.</p>
           <div class="grid3">
             <span></span><b>min</b><b>typ</b><b>max</b>
             <span>PBZ to flowering</span>
-            <input type="number" id="p_min" value="60" min="1" /><input type="number" id="p_typ" value="90" min="1" /><input type="number" id="p_max" value="122" min="1" />
+            <input type="number" id="p_min" value="60" min="1" /><input type="number" id="p_typ" value="78" min="1" /><input type="number" id="p_max" value="122" min="1" />
             <span>Flowering to harvest</span>
             <input type="number" id="a_min" value="120" min="1" /><input type="number" id="a_typ" value="124" min="1" /><input type="number" id="a_max" value="127" min="1" />
           </div>
@@ -64,6 +65,19 @@
         </fieldset>
       </div>
       <div id="planOut" aria-live="polite"></div>
+    </section>
+
+    <section id="tab-pbz" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Paclobutrazol in durian: every trial side by side</h2>
+        <p class="hint">PBZ is the most widely used off-season tool, but the trial results are not uniform. Positive results came from foliar sprays at 1,000–1,600 ppm on fully expanded second-flush leaves, followed by dry weather.</p>
+        <div class="tally" id="pbzTally"></div>
+      </div>
+      <div id="pbzTrials" class="trials"></div>
+      <div class="card">
+        <h2>Safety, residue &amp; sustainability</h2>
+        <ul id="pbzSafety" class="plain"></ul>
+      </div>
     </section>
 
     <section id="tab-mix" role="tabpanel" hidden>
@@ -83,7 +97,7 @@
             <input type="number" id="m_trees" value="1" min="1" step="1" />
           </label>
         </div>
-        <p class="hint">Common labels: 10% WP, 15% WP, 20% WP, 25% WP or SC. Volume per tree in the studies: about 20 L (JIRCAS) and 7–9.5 L (Vietnam survey).</p>
+        <p class="hint">Common labels: 10% WP, 15% WP, 20% WP, 25% WP or SC. Volume per tree in the studies: about 20 L (JIRCAS; SOFRI with Super Cultar Mix 10 WP) and 7–9.5 L (Vietnam grower survey).</p>
       </div>
       <div id="mixOut" aria-live="polite"></div>
     </section>

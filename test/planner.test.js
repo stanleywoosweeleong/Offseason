@@ -47,3 +47,15 @@ test("rainRisk", () => {
   assert.equal(rainRisk("2026-09-01", [8, 9]), true);
   assert.equal(rainRisk("2026-01-01", [8, 9]), false);
 });
+
+test("typical spray-to-harvest sits inside Tri et al. 2011 observed 191–212 days", () => {
+  const { pbzToAnthesis: p, anthesisToHarvest: a } = DEFAULT_STAGES;
+  const total = p.typ + a.typ;
+  assert.ok(total >= 191 && total <= 212, `got ${total}`);
+});
+
+test("pbzMix reproduces Tri et al. 2011 (1,400 ppm × 20 L = 28 g a.i. = 280 g of 10% WP)", () => {
+  const r = pbzMix({ ppm: 1400, litres: 20, aiPercent: 10 });
+  assert.equal(r.gramsAI, 28);
+  assert.equal(r.gramsProduct, 280);
+});

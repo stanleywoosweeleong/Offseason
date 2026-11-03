@@ -9,10 +9,12 @@ const DAY = 86_400_000;
  *   - Kozai et al. 2024: spray 15 Aug, first flower 15 Dec = 122 days, after a very wet fortnight.
  *   - Wiangsamut 2022: a 5 Dec spray gave a June harvest. Subtracting about 124 days of fruit growth
  *     puts anthesis about 60–85 days after the spray.
+ *   - Tri et al. 2011 (Vietnam): buds appeared 31–45 days after the spray and took 160–167 days from bud to
+ *     harvest, so spray to harvest was 191–212 days. The typical value of 78 + 124 = 202 days sits in that range.
  * anthesisToHarvest ('Monthong'): Sangwanangkul 1998 measured 120–127 days.
  */
 export const DEFAULT_STAGES = {
-  pbzToAnthesis: { min: 60, typ: 90, max: 122 },
+  pbzToAnthesis: { min: 60, typ: 78, max: 122 },
   anthesisToHarvest: { min: 120, typ: 124, max: 127 },
 };
 
@@ -95,8 +97,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       id: "spray",
       date: s,
       label: "PBZ foliar spray",
-      detail: "Pick a dry forecast. Spray all leaves, and keep the rate inside 1,000–1,500 ppm (750 ppm was used on young trees).",
-      sources: ["pham2022", "wiangsamut2022", "jantee"],
+      detail: "Pick a dry forecast. Spray all leaves (foliar, not soil drench), and keep the rate inside 1,000–1,500 ppm (750 ppm was used on young trees).",
+      sources: ["pham2022", "tri2011", "wiangsamut2022"],
     },
     {
       id: "dry",
@@ -111,7 +113,7 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       date: anthesis,
       label: "Flowering (anthesis)",
       detail: `About ${p.typ} days after spraying in this plan (observed range ${p.min}–${p.max}). Weather moves this date more than anything else.`,
-      sources: ["kozai2024", "wiangsamut2022"],
+      sources: ["kozai2024", "wiangsamut2022", "tri2011"],
     },
     {
       id: "harvest",

@@ -1,5 +1,5 @@
 import { SOURCES } from "./sources.js";
-import { STAGES, GAPS, CHECKLIST } from "./guide.js";
+import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY } from "./guide.js";
 import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
@@ -54,6 +54,28 @@ $("#stages").innerHTML = STAGES.map(
   </li>`
 ).join("");
 $("#gaps").innerHTML = GAPS.map((g) => `<li>${esc(g)}</li>`).join("");
+
+// ---------- PBZ evidence ----------
+const EFFECT_LABEL = { positive: "Clear benefit", mixed: "Timing effect", none: "Little / no effect" };
+const tally = PBZ_TRIALS.reduce((t, r) => ((t[r.effect] = (t[r.effect] || 0) + 1), t), {});
+$("#pbzTally").innerHTML = Object.keys(EFFECT_LABEL)
+  .filter((k) => tally[k])
+  .map((k) => `<span class="eff ${k}"><b>${tally[k]}</b> ${EFFECT_LABEL[k]}</span>`)
+  .join("");
+$("#pbzTrials").innerHTML = PBZ_TRIALS.map(
+  (t) => `
+  <article class="card trial ${t.effect}">
+    <header><span class="eff ${t.effect}">${EFFECT_LABEL[t.effect]}</span> ${cites([t.source])}</header>
+    <dl>
+      <dt>Where</dt><dd>${esc(t.place)}</dd>
+      <dt>Cultivar</dt><dd>${esc(t.cultivar)} · ${esc(t.age)}</dd>
+      <dt>Method</dt><dd>${esc(t.method)} · ${esc(t.rate)}</dd>
+      <dt>Timing</dt><dd>${esc(t.timing)}</dd>
+    </dl>
+    <p>${esc(t.result)}</p>
+  </article>`
+).join("");
+$("#pbzSafety").innerHTML = PBZ_SAFETY.map((p) => `<li>${esc(p.text)} ${cites(p.sources)}</li>`).join("");
 
 // ---------- Sources ----------
 $("#sourceList").innerHTML = Object.entries(SOURCES)

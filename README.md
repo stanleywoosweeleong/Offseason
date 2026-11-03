@@ -8,6 +8,7 @@ An evidence-based guide and planner for producing durian outside the main season
 |---|---|
 | **Guide** | A 6-stage protocol: orchard readiness, post-harvest leaf flushes, choosing a market window, paclobutrazol (PBZ) application, water management, and flowering to harvest. Each point is labelled *trial evidence*, *grower survey* or *common practice* and links to its source. |
 | **Planner** | Works backwards from a target harvest date to a PBZ spray window, or forwards from a spray date to an expected harvest. It flags spray dates in months you mark as rainy, and you can edit the stage lengths. |
+| **PBZ evidence** | All 8 durian paclobutrazol trial sites (7 studies, from Thailand, Vietnam and Indonesia) side by side, labelled clear benefit, timing effect or little/no effect, plus a safety, residue and sustainability summary. |
 | **PBZ mix** | Grams of product per tank for a target ppm, tank volume and label a.i.%. It warns when the rate is outside the recommended 1,000–1,500 ppm. |
 | **Checklist** | A pre-induction checklist, saved in the browser. |
 | **Sources** | Full citations with key findings and links. |
@@ -20,6 +21,10 @@ An evidence-based guide and planner for producing durian outside the main season
 - **Overdosing is common.** 65% of surveyed Tien Giang growers sprayed above 1,500 ppm, and residue builds up in the soil (Pham et al. 2022).
 - **'Monthong' fruit matures 120–127 days after anthesis** (Sangwanangkul 1998).
 - **Spray timing should follow price, not just earliness.** On young 'Monthong' trees, a December spray (June harvest) earned more than a November spray (Wiangsamut & Wiangsamut 2022).
+- **The PBZ results are not uniform.** In Vietnam, 1,000–1,600 ppm sprays brought the harvest 19–24 days earlier and raised yield by 25–60% (Tri et al. 2011, SOFRI/JIRCAS). A 2-season Thai trial on 'Chanee' found no earlier flowering (Subhadrabandhu & Kaiviparkbunyay 1998), and the JIRCAS 2007 trial was weak after heavy rain.
+- **Use a foliar spray, not a soil drench.** Durian is more sensitive to PBZ than mango (Subhadrabandhu & Kaiviparkbunyay 1998).
+- **Rest the trees.** Pause PBZ for 1–2 seasons after every 3–4 seasons of use (Tri et al. 2011). PBZ persists in soil, with a half-life from about 2 months to over a year (Kishore et al. 2015; Singh et al. 2024).
+- **Check residue limits.** In the EU, durian has no specific PBZ limit, so the 0.01 mg/kg default may apply. ADI is 0.022 mg/kg bw/day (EFSA 2017).
 - **Manage Phytophthora** with drainage, mounding, organic matter and phosphonate (ACIAR HORT/2007/067).
 
 The full reference list is in [`src/sources.js`](src/sources.js) and in the app's **Sources** tab.

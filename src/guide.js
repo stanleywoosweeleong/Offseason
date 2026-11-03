@@ -38,9 +38,9 @@ export const STAGES = [
         sources: ["chandraparnik1993"],
       },
       {
-        text: "In the JIRCAS trial, the spray date matched the full expansion of the second flush after harvest.",
+        text: "In the JIRCAS trials in Thailand and the SOFRI trials in Vietnam, spraying was timed to the full expansion of the second flush after harvest.",
         level: "evidence",
-        sources: ["kozai2024"],
+        sources: ["kozai2024", "tri2011"],
       },
       {
         text: "The late-flowering method used a fertiliser and watering programme first, then sprayed PBZ on mature leaves.",
@@ -82,9 +82,34 @@ export const STAGES = [
     summary: "PBZ is a triazole growth regulator that blocks gibberellin. More is not better.",
     points: [
       {
+        text: "How it works: PBZ blocks gibberellin, the hormone that drives shoot growth, and raises cytokinin. The tree puts its resources into flower buds instead of new leaves.",
+        level: "evidence",
+        sources: ["desta2021"],
+      },
+      {
         text: "The recommended concentration for mature trees is 1,000–1,500 ppm as a foliar spray. Treated trees flowered 14–45 days earlier, with 29–64% more flowers. Higher rates gave a stronger response, but fruit set was not improved.",
         level: "evidence",
         sources: ["chandraparnik1993", "pham2022"],
+      },
+      {
+        text: "In Vietnam, 1,000–1,600 ppm (20–32 g a.i. in 20 L per tree) brought flower buds 15–22 days earlier and the harvest 19–24 days earlier, and raised yield by 25–60%. Individual fruit were somewhat lighter at the highest rates, and quality (Brix, flesh ratio) was unchanged.",
+        level: "evidence",
+        sources: ["tri2011"],
+      },
+      {
+        text: "Results are not guaranteed. In a 2-year Thai trial on 'Chanee', 500–1,000 ppm sprays raised flowering intensity but did NOT advance flowering or raise yield, and fruit were smaller. The JIRCAS trial also saw a weak effect.",
+        level: "evidence",
+        sources: ["subhadrabandhu1998", "kozai2024"],
+      },
+      {
+        text: "Use a foliar spray, not a soil drench. Every durian trial cited here sprayed the leaves. Durian is more sensitive to PBZ than mango, and drenched trees may decline or recover slowly. Soil drenches also leave much more residue in the soil, as mango data show.",
+        level: "evidence",
+        sources: ["subhadrabandhu1998", "singh2024"],
+      },
+      {
+        text: "Timing within the season matters. In Indonesia, an August application flowered faster than June or July. In Thailand, a December spray earned more than a November one.",
+        level: "evidence",
+        sources: ["sakhidin2019", "wiangsamut2022"],
       },
       {
         text: "For young 'Monthong' trees, the trial used 750 ppm (60 ml of 25% WP in 20 L per tree).",
@@ -107,6 +132,21 @@ export const STAGES = [
         sources: ["kozai2024", "chandraparnik1992"],
       },
       {
+        text: "Rest the trees. SOFRI recommends pausing PBZ for 1–2 seasons after every 3–4 seasons of use, because residue builds up in the soil. PBZ's soil half-life ranges from about 2 months in mango orchard fields to over a year in regulatory tests.",
+        level: "evidence",
+        sources: ["tri2011", "kishore2015", "singh2024"],
+      },
+      {
+        text: "Check the residue limit in your destination market before you spray. In the EU, durian has no specific PBZ limit, so the default of 0.01 mg/kg may apply. In mango, no residue was found in fruit at optimised rates.",
+        level: "evidence",
+        sources: ["efsa2017", "singh2024", "kishore2015"],
+      },
+      {
+        text: "PBZ is rated moderately hazardous to people and highly toxic to aquatic life. Keep sprays and rinse water out of ditches and ponds. This matters most in Mekong-style raised-bed orchards.",
+        level: "evidence",
+        sources: ["kishore2015"],
+      },
+      {
         text: "Use only PBZ products registered for fruit trees in your country, and follow the label for protective equipment and pre-harvest intervals.",
         level: "practice",
         sources: [],
@@ -127,6 +167,11 @@ export const STAGES = [
         text: "Severe drought blocks flowering. Plastic mulch dropped leaf water potential to −0.9 MPa, delayed flowering, and cut flower clusters from about 9 to under 1 per metre of branch, whether or not PBZ was used.",
         level: "evidence",
         sources: ["kozai2024"],
+      },
+      {
+        text: "In the Vietnamese trials, plastic mulch went down 1 week before spraying and was removed gradually when buds broke, 3–4 weeks after the spray. Normal fertiliser and irrigation resumed after that. Mulch alone, without PBZ, was 'not effective'.",
+        level: "evidence",
+        sources: ["tri2011"],
       },
       {
         text: "About a third of surveyed Vietnamese growers cover the root zone with plastic before spraying. Given the JIRCAS result, do not leave a cover on for weeks. The mulched trees in that study were covered for about 8 weeks.",
@@ -174,7 +219,63 @@ export const STAGES = [
   },
 ];
 
+// Every durian PBZ field trial cited in the app, for the "PBZ evidence" comparison table.
+// effect: "positive" | "mixed" | "none"
+export const PBZ_TRIALS = [
+  {
+    source: "subhadrabandhu1998", place: "Rayong, TH", cultivar: "Chanee", age: "5–20 yr",
+    method: "Foliar", rate: "500–1,000 ppm", timing: "Jul–Sep",
+    result: "No earlier flowering, no yield gain; more flowering branches; smaller fruit",
+    effect: "none",
+  },
+  {
+    source: "chandraparnik1993", place: "Chanthaburi, TH", cultivar: "Chanee", age: "12 yr",
+    method: "Foliar", rate: "750–1,500 ppm", timing: "Flush fully expanded",
+    result: "Flowered 14–45 days earlier; 29–64% more flowers; fruit set unchanged",
+    effect: "positive",
+  },
+  {
+    source: "tri2011", place: "Ben Tre, VN", cultivar: "Dona", age: "9 yr",
+    method: "Foliar + mulch", rate: "1,000–1,600 ppm (20–32 g a.i.)", timing: "Late Aug, 2nd flush",
+    result: "Buds 20–22 days earlier; harvest 19–24 days earlier; yield 135 → 176–215 kg/tree",
+    effect: "positive",
+  },
+  {
+    source: "tri2011", place: "Ba Ria, VN", cultivar: "Sua Hat Lep", age: "12 yr",
+    method: "Foliar + mulch", rate: "1,000–1,500 ppm", timing: "Late Aug, 2nd flush",
+    result: "Buds 15–17 days earlier; harvest 19–21 days earlier; yield 156 → 195–227 kg/tree",
+    effect: "positive",
+  },
+  {
+    source: "kozai2024", place: "Chanthaburi, TH", cultivar: "Monthong", age: "9 yr",
+    method: "Foliar ± mulch", rate: "1,000–1,500 ppm (20–30 g a.i.)", timing: "15 Aug, 2nd flush",
+    result: "Effect not significant (heavy rain after spray); mulch drought suppressed flowering",
+    effect: "none",
+  },
+  {
+    source: "jantee", place: "Chanthaburi, TH", cultivar: "Not stated in abstract", age: "Bearing",
+    method: "Foliar", rate: "1,000 ppm", timing: "Early & late programmes",
+    result: "Flowered 9–36 days early; 108.6 vs 93.4 kg/tree; late method delayed 28–43 days",
+    effect: "positive",
+  },
+  {
+    source: "sakhidin2019", place: "Central Java, ID", cultivar: "Kani, Monthong", age: "10 yr",
+    method: "Method & rate", rate: "not in abstract", timing: "Jun / Jul / Aug",
+    result: "August application flowered fastest; Kani faster than Monthong",
+    effect: "mixed",
+  },
+  {
+    source: "wiangsamut2022", place: "Chanthaburi, TH", cultivar: "Monthong", age: "Juvenile",
+    method: "Foliar", rate: "750 ppm", timing: "5 Nov vs 5 Dec",
+    result: "93.6–97% flowered; Dec spray gave June harvest and higher returns",
+    effect: "positive",
+  },
+];
+
 export const GAPS = [
+  "The trials do not all agree. Of 8 trial sites across 7 studies, 5 found a clear benefit, 2 found little or no effect (Rayong 1988–89, Chanthaburi 2007), and 1 tested timing only. The weak results point to weather and application factors.",
+  "No published trial compares soil drench with foliar spray on durian at matched doses. Foliar spraying is the only method with durian evidence.",
+  "No codified durian MRL for paclobutrazol was found in the EU review. Check each destination market's current rules, for example China's GB 2763 or Codex.",
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Most trials are on Thai 'Monthong' and 'Chanee'. Timings for Musang King, Ri6 and other cultivars need local validation.",
@@ -192,4 +293,13 @@ export const CHECKLIST = [
   { id: "forecast", text: "Forecast shows no heavy rain for at least 7 days", stage: "spray" },
   { id: "drywatch", text: "Irrigation held back for a short (3–7 day) dry spell only", stage: "water" },
   { id: "tag", text: "Flower clusters tagged with their opening date", stage: "fruit" },
+];
+
+export const PBZ_SAFETY = [
+  { text: "Persistence: the soil half-life is over a year in regulatory tests, and 58–77 days in mango orchard fields. Residue builds up with yearly use.", sources: ["kishore2015", "singh2024", "tri2011"] },
+  { text: "Measured in durian orchards: up to about 1.04 mg/kg in the topsoil at the canopy edge after 5 or more years. Most growers were overdosing.", sources: ["pham2022"] },
+  { text: "Rotation: pause for 1–2 seasons after every 3–4 seasons of PBZ use.", sources: ["tri2011"] },
+  { text: "Food safety: ADI 0.022 mg/kg bw/day and ARfD 0.10 mg/kg bw. The EU has no durian-specific MRL, so the 0.01 mg/kg default may apply. No residue was found in mango fruit at optimised rates.", sources: ["efsa2017", "singh2024"] },
+  { text: "Environment and handling: highly toxic to aquatic life and moderately hazardous to people. Wear protective equipment and keep it out of irrigation ditches.", sources: ["kishore2015"] },
+  { text: "Method: use a foliar spray only. Soil drenches risk tree decline in durian and leave far more soil residue.", sources: ["subhadrabandhu1998", "singh2024"] },
 ];

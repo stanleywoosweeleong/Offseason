@@ -118,3 +118,23 @@ input[type="date"], input[type="number"] {
 
 .foot { color: var(--muted); font-size: 0.82rem; padding-bottom: 32px; }
 @media (max-width: 600px) { .top { position: static; } }
+
+/* PBZ evidence */
+.tally { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.eff { display: inline-block; font-size: 0.78rem; font-weight: 700; padding: 2px 10px; border-radius: 99px; }
+.eff b { font-size: 0.95rem; }
+.eff.positive { color: var(--evidence); background: var(--evidence-bg); }
+.eff.mixed { color: var(--survey); background: var(--survey-bg); }
+.eff.none { color: var(--warn); background: var(--warn-bg); }
+.trials { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 14px; }
+.trial { border-top: 4px solid var(--line); }
+.trial.positive { border-top-color: var(--evidence); }
+.trial.mixed { border-top-color: var(--survey); }
+.trial.none { border-top-color: var(--warn); }
+.trial header { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 8px; }
+.trial dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 0 0 8px; font-size: 0.88rem; }
+.trial dt { color: var(--muted); }
+.trial dd { margin: 0; }
+.trial p { margin: 0; font-size: 0.92rem; }
+.plain { padding-left: 18px; margin: 0; }
+.plain li { margin: 6px 0; }
