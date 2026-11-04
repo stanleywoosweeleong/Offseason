@@ -15,31 +15,30 @@ One topic: **how to produce durian off-season.** That means inducing flowering o
 | 7. Harvest | ≈ 90–120 days after fruit set (+20–30 in highlands) | Thin in 2–3 passes 4–6 weeks after set, keeping fruit mid-branch, 1–2 per cluster, with the load matched to leaves and branch size; overloading costs next year's crop. Cut nitrogen as fruit grows. Ca/Mg sprays. KNO₃ 1% a month before harvest. Cut water 15–20 days before. Mulch and drain against rain. Export fruit picked at about 85% maturity; ethephon 0.1–0.2% if needed. |
 | 8. Reset for next year | After harvest → step 2 | PBZ persists, and repeated use faded and killed mango trees after 5 years. Rest 1–2 seasons after every 3–4 (SOFRI); mango kept yields with 3 years on, 3 off. Dose by canopy, spray foliar, and feed soil microbes, which break PBZ down (lab studies in Vietnam, India and Brazil). No proven antidote. |
 
-## Other tabs
+## App layout (mobile first)
 
-- **Planner:** includes **Your dated protocol**, the book's day-by-day Table 9.2 converted to calendar dates. Pick a cultivar and work backwards from a target harvest date to a PBZ spray window, or forwards from a spray date. The timeline follows the same steps. Presets cover Monthong, Ri6, Musang King, Kho Qua Xanh, Sua Hat Lep and Central Highlands Monthong.
-- **PBZ evidence:** every durian PBZ trial side by side, plus residue and safety notes.
-- **PBZ mix:** grams of product per tank for a target ppm.
-- **Checklist:** in cycle order, saved on the device.
-- **Sources:** peer-reviewed papers, Thai DOA, JIRCAS, SOFRI, Can Tho University, ACIAR and EFSA, plus *Flower Induction in Durian* (Tran & Tran 2026).
+The app is built for phones first. A bottom tab bar holds five sections, and it moves to the top on wide screens. The app installs to the home screen and works offline (service worker), so it can be used in the orchard without signal. Tapping a grey source tag opens the reference in a bottom sheet.
 
-## Related apps
-
-- [Tiger Stripe](https://stanleywoosweeleong.github.io/Tigerstripe/): Musang King flesh-disorder management (Can Tho University).
-- [Crop Hormones](https://stanleywoosweeleong.github.io/crophormone/): hormone changes and regulator data for 13 tropical fruits; source of the durian hormone study, China MRL check and PBZ soil-persistence figures used here.
+- **Guide:** the 8-step cycle above, as collapsible steps with a scrollable step strip and "next step" links.
+- **Plan:** pick a cultivar and a target harvest (or spray) date to get the spray window, a timeline, and **Your dated protocol**, the book's day-by-day Table 9.2 converted to calendar dates. It flags rainy months.
+- **PBZ:** every durian PBZ trial side by side (Evidence), a spray-tank calculator that warns on overdosing and on doses below the book's 12–15 g a.i. per tree (Mix), and residue and safety notes (Safety).
+- **Checklist:** grouped by step, with a progress bar, saved on the device.
+- **Library:** everything else the research found, organised by topic: pollination and fruit set, flowering seasons and weather, fruit quality and ripening, tree health, more on PBZ in soil, residue limits for other chemicals, other flowering chemicals, markets, and sources still to recover. It is searchable, along with the full source list (70 sources). Unverified leads are labelled and never appear in the Guide.
 
 ## Run it
 
 ```bash
 npm start        # http://localhost:8080
-npm test         # planner maths + content checks (every citation resolves, every source is used)
+npm test         # planner maths + content checks (every citation resolves, every source is used, leads stay out of the Guide, offline cache complete)
 ```
 
 ## Project layout
 
 ```
-index.html          app shell
-src/guide.js        the 7-step off-season cycle, PBZ trials, gaps, checklist
+index.html          app shell (bottom tab bar, bottom sheet)
+manifest.webmanifest, sw.js, icons/   install + offline support
+src/library.js      Library topics (everything outside the 8 steps, incl. unverified leads)
+src/guide.js        the 8-step off-season cycle, Table 9.2 protocol, PBZ trials, gaps, checklist
 src/sources.js      reference list
 src/planner.js      date and dose calculations (unit-tested)
 src/app.js          UI rendering

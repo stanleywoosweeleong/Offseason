@@ -2,63 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Offseason Durian</title>
-  <meta name="description" content="Evidence-based guide and planner for off-season durian production, with every figure linked to its source." />
-  <meta name="theme-color" content="#2f5d34" />
+  <meta name="description" content="Evidence-based guide and planner for producing durian off-season, with every figure linked to its source." />
+  <meta name="theme-color" content="#2f5d34" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141a14" media="(prefers-color-scheme: dark)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Offseason" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <link rel="stylesheet" href="src/styles.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <h1>Offseason <span>Durian</span></h1>
-      <p class="tag">How to make durian flower and fruit outside the main season, using only figures from published research.</p>
+  <header class="appbar">
+    <div class="appbar-inner">
+      <div class="brand">
+        <h1>Offseason <span>Durian</span></h1>
+        <p id="sectionTitle">Guide</p>
+      </div>
     </div>
-    <nav class="tabs wrap" role="tablist">
-      <button role="tab" data-tab="guide" aria-selected="true">Guide</button>
-      <button role="tab" data-tab="planner">Planner</button>
-      <button role="tab" data-tab="pbz">PBZ evidence</button>
-      <button role="tab" data-tab="mix">PBZ mix</button>
-      <button role="tab" data-tab="checklist">Checklist</button>
-      <button role="tab" data-tab="sources">Sources</button>
-    </nav>
   </header>
 
-  <main class="wrap">
-    <section id="tab-guide" role="tabpanel">
-      <div class="card overview">
-        <h2>The off-season cycle at a glance</h2>
-        <p class="hint">Eight steps, from choosing a harvest month to picking off-season fruit, then resetting the trees so they flower again next year. Tap a step to jump to it.</p>
-        <ol id="cycle" class="cycle"></ol>
+  <nav class="tabbar" role="tablist" aria-label="Sections">
+    <button role="tab" data-tab="guide" aria-selected="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5zM4 5.5v16M8 7h8M8 11h6"/></svg><span>Guide</span>
+    </button>
+    <button role="tab" data-tab="planner">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>Plan</span>
+    </button>
+    <button role="tab" data-tab="pbz">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21.5h11.6a2 2 0 0 0 1.7-3L14 9V3M7 15h10"/></svg><span>PBZ</span>
+    </button>
+    <button role="tab" data-tab="checklist">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg><span>Checklist</span>
+    </button>
+    <button role="tab" data-tab="library">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4v16H4zM10 4h4v16h-4zM16 5l3.5-1 3 15.5-3.5 1z"/></svg><span>Library</span>
+    </button>
+  </nav>
+
+  <main class="wrap" id="main">
+    <!-- GUIDE -->
+    <section id="tab-guide" role="tabpanel" aria-label="Guide">
+      <div class="hero">
+        <p class="hero-kicker">The off-season cycle</p>
+        <h2>Eight steps from choosing a harvest month to picking off-season fruit, then resetting the trees for next year.</h2>
+        <ol id="cycle" class="cycle" aria-label="Steps"></ol>
       </div>
-      <div class="legend">
-        <span class="lvl evidence">Trial evidence</span>
-        <span class="lvl survey">Grower survey</span>
-        <span class="lvl expert">Expert advice</span>
-        <span class="lvl practice">Common practice, untested</span>
-      </div>
-      <ol id="stages" class="stages"></ol>
-      <aside class="card gaps">
-        <h2>What the evidence does not tell us</h2>
+      <details class="card legend-card">
+        <summary>What the labels mean</summary>
+        <ul class="legend-list">
+          <li><span class="lvl evidence">Trial evidence</span> measured in a cited study</li>
+          <li><span class="lvl survey">Grower survey</span> what growers report doing</li>
+          <li><span class="lvl expert">Expert advice</span> a researcher's recommendation, not itself tested as stated</li>
+          <li><span class="lvl practice">Common practice</span> untested; check locally</li>
+          <li><span class="lvl lead">Unverified lead</span> found but not checked at the original (Library only)</li>
+        </ul>
+        <p class="hint">Tap any grey source tag to see the reference.</p>
+      </details>
+      <div id="stages" class="stages"></div>
+      <details class="card gaps">
+        <summary>What the evidence does not tell us</summary>
         <ul id="gaps"></ul>
-      </aside>
+      </details>
     </section>
 
-    <section id="tab-planner" role="tabpanel" hidden>
-      <div class="card">
-        <h2>Plan from a target harvest</h2>
-        <div class="mode">
-          <label><input type="radio" name="mode" value="harvest" checked /> I know when I want to harvest</label>
-          <label><input type="radio" name="mode" value="spray" /> I know when I'll spray</label>
+    <!-- PLANNER -->
+    <section id="tab-planner" role="tabpanel" aria-label="Planner" hidden>
+      <div class="card form">
+        <div class="seg" role="radiogroup" aria-label="Plan from">
+          <label><input type="radio" name="mode" value="harvest" checked /><span>From harvest date</span></label>
+          <label><input type="radio" name="mode" value="spray" /><span>From spray date</span></label>
         </div>
         <label class="field">Cultivar
           <select id="cultivar">
-            <option value="monthong">Monthong: 120–127 days flower to harvest</option>
-            <option value="ri6">Ri6: about 97 days fruit set to harvest</option>
-            <option value="musangking">Musang King: about 90–100 days fruit set to harvest</option>
-            <option value="khoquaxanh">Kho Qua Xanh: 94–102 days flower to harvest</option>
-            <option value="suahatlep">Sua Hat Lep: 103–114 days flower to harvest</option>
-            <option value="monthonghighland">Monthong, Central Highlands: 135–150 days</option>
+            <option value="monthong">Monthong · 120–127 days flower → harvest</option>
+            <option value="ri6">Ri6 · about 97 days</option>
+            <option value="musangking">Musang King · 90–100 days</option>
+            <option value="khoquaxanh">Kho Qua Xanh · 94–102 days</option>
+            <option value="suahatlep">Sua Hat Lep · 103–114 days</option>
+            <option value="monthonghighland">Monthong, Central Highlands · 135–150 days</option>
             <option value="custom">Custom (set below)</option>
           </select>
         </label>
@@ -66,77 +90,105 @@
           <input type="date" id="planDate" />
         </label>
         <details class="adv">
-          <summary>Adjust stage lengths (days)</summary>
-          <p class="hint">Defaults: PBZ to flowering is 60–122 days, typically 78 (Kozai 2024; Wiangsamut 2022; Tri 2011, where spray to harvest was 191–212 days). Flowering to harvest is 120–127 days for 'Monthong' (Sangwanangkul 1998) about 97 for 'Ri6' (Tran et al. 2019) and about 90 for 'Musang King' (Duong et al. 2025). The ± bands on Ri6 and Musang King are planning buffers we added. Change these if you have your own orchard records or grow another cultivar.</p>
+          <summary>Rainy months</summary>
+          <p class="hint">Mark your heavy-rain months to flag risky spray dates.</p>
+          <div id="rainMonths" class="chips"></div>
+        </details>
+        <details class="adv">
+          <summary>Stage lengths (days)</summary>
+          <p class="hint">PBZ → flowering 60–122 days, typically 78 (Kozai 2024; Wiangsamut 2022; Tri 2011). Flowering → harvest from the cultivar preset. Edit to match your own records.</p>
           <div class="grid3">
             <span></span><b>min</b><b>typ</b><b>max</b>
-            <span>PBZ to flowering</span>
-            <input type="number" id="p_min" value="60" min="1" /><input type="number" id="p_typ" value="78" min="1" /><input type="number" id="p_max" value="122" min="1" />
-            <span>Flowering to harvest</span>
-            <input type="number" id="a_min" value="120" min="1" /><input type="number" id="a_typ" value="124" min="1" /><input type="number" id="a_max" value="127" min="1" />
+            <span>PBZ → flowering</span>
+            <input type="number" inputmode="numeric" id="p_min" value="60" min="1" /><input type="number" inputmode="numeric" id="p_typ" value="78" min="1" /><input type="number" inputmode="numeric" id="p_max" value="122" min="1" />
+            <span>Flowering → harvest</span>
+            <input type="number" inputmode="numeric" id="a_min" value="120" min="1" /><input type="number" inputmode="numeric" id="a_typ" value="124" min="1" /><input type="number" inputmode="numeric" id="a_max" value="127" min="1" />
           </div>
         </details>
-        <fieldset class="months">
-          <legend>Your heavy-rain months (to flag risky spray dates)</legend>
-          <div id="rainMonths"></div>
-        </fieldset>
       </div>
       <div id="planOut" aria-live="polite"></div>
     </section>
 
-    <section id="tab-pbz" role="tabpanel" hidden>
-      <div class="card">
-        <h2>Paclobutrazol in durian: every trial side by side</h2>
-        <p class="hint">PBZ is the most widely used off-season tool, but the trial results are not uniform. Positive results came from foliar sprays at 1,000–1,600 ppm on fully expanded second-flush leaves, followed by dry weather.</p>
-        <div class="tally" id="pbzTally"></div>
+    <!-- PBZ -->
+    <section id="tab-pbz" role="tabpanel" aria-label="PBZ" hidden>
+      <div class="seg subnav" role="tablist" aria-label="PBZ sections">
+        <button data-sub="evidence" aria-selected="true">Evidence</button>
+        <button data-sub="mix">Mix</button>
+        <button data-sub="safety">Safety</button>
       </div>
-      <div id="pbzTrials" class="trials"></div>
-      <div class="card">
-        <h2>Safety, residue &amp; sustainability</h2>
-        <ul id="pbzSafety" class="plain"></ul>
-      </div>
-    </section>
-
-    <section id="tab-mix" role="tabpanel" hidden>
-      <div class="card">
-        <h2>PBZ spray-tank calculator</h2>
-        <div class="grid2">
-          <label class="field">Target concentration (ppm a.i.)
-            <input type="number" id="m_ppm" value="1000" min="1" step="50" />
-          </label>
-          <label class="field">Spray volume (litres)
-            <input type="number" id="m_l" value="20" min="0.1" step="0.5" />
-          </label>
-          <label class="field">Product strength (% a.i. on label)
-            <input type="number" id="m_ai" value="25" min="0.1" max="100" step="0.5" />
-          </label>
-          <label class="field">Number of trees
-            <input type="number" id="m_trees" value="1" min="1" step="1" />
-          </label>
+      <div data-subpanel="evidence">
+        <div class="card">
+          <h2>Every durian PBZ trial</h2>
+          <p class="hint">PBZ is the main off-season tool, but results vary. The positive results came from foliar sprays at 1,000–1,600 ppm on fully expanded leaves, followed by dry weather.</p>
+          <div class="tally" id="pbzTally"></div>
         </div>
-        <p class="hint">Common labels: 10% WP, 15% WP, 20% WP, 25% WP or SC. Volume per tree in the studies: about 20 L (JIRCAS; SOFRI with Super Cultar Mix 10 WP) and 7–9.5 L (Vietnam grower survey).</p>
+        <div id="pbzTrials" class="trials"></div>
       </div>
-      <div id="mixOut" aria-live="polite"></div>
+      <div data-subpanel="mix" hidden>
+        <div class="card form">
+          <h2>Spray-tank calculator</h2>
+          <div class="grid2">
+            <label class="field">Target (ppm a.i.)<input type="number" inputmode="decimal" id="m_ppm" value="1000" min="1" step="50" /></label>
+            <label class="field">Litres per tree<input type="number" inputmode="decimal" id="m_l" value="12" min="0.1" step="0.5" /></label>
+            <label class="field">Label strength (% a.i.)<input type="number" inputmode="decimal" id="m_ai" value="25" min="0.1" max="100" step="0.5" /></label>
+            <label class="field">Number of trees<input type="number" inputmode="numeric" id="m_trees" value="1" min="1" step="1" /></label>
+          </div>
+          <p class="hint">Book minimum for an 8–10-year tree: 10–12 L, about 12–15 g a.i. Trials used about 20 L (JIRCAS, SOFRI); Vietnamese growers sprayed 7–9.5 L. Common labels: 10, 15, 20 or 25% WP, or SC.</p>
+        </div>
+        <div id="mixOut" aria-live="polite"></div>
+      </div>
+      <div data-subpanel="safety" hidden>
+        <div class="card">
+          <h2>Safety, residue and sustainability</h2>
+          <ul id="pbzSafety" class="plain"></ul>
+        </div>
+      </div>
     </section>
 
-    <section id="tab-checklist" role="tabpanel" hidden>
-      <div class="card">
-        <h2>Off-season checklist</h2>
+    <!-- CHECKLIST -->
+    <section id="tab-checklist" role="tabpanel" aria-label="Checklist" hidden>
+      <div class="card progress-card">
+        <div class="progress-head"><b id="progressText">0 of 0 done</b><button id="resetChecklist" class="ghost small">Reset</button></div>
+        <div class="progress"><span id="progressBar"></span></div>
         <p class="hint">In cycle order. Saved on this device only.</p>
-        <ul id="checklist" class="checklist"></ul>
-        <button id="resetChecklist" class="ghost">Reset</button>
       </div>
+      <div id="checklist"></div>
     </section>
 
-    <section id="tab-sources" role="tabpanel" hidden>
-      <p class="hint">Every figure in this app comes from one of these sources. Open the original before you rely on a number.</p>
-      <ol id="sourceList" class="sources"></ol>
+    <!-- LIBRARY -->
+    <section id="tab-library" role="tabpanel" aria-label="Library" hidden>
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="libSearch" placeholder="Search the library and sources" aria-label="Search the library and sources" />
+      </div>
+      <p class="hint lib-intro">Everything else the research turned up: background for the 8 steps, other chemicals, export limits and sources still to recover. Unverified leads are labelled.</p>
+      <div id="library"></div>
+      <details class="card" id="sourcesBlock">
+        <summary>All sources (<span id="sourceCount"></span>)</summary>
+        <ol id="sourceList" class="sources"></ol>
+      </details>
     </section>
+
+    <footer class="foot">
+      <p>Educational summary of published research, not agronomic advice for your orchard. Follow local regulations and product labels, and talk to your agricultural extension office before using plant growth regulators.</p>
+    </footer>
   </main>
 
-  <footer class="wrap foot">
-    <p>Educational summary of published research, not agronomic advice for your orchard. Follow local regulations and product labels, and talk to your agricultural extension office before using plant growth regulators.</p>
-  </footer>
+  <!-- Citation bottom sheet -->
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-body">
+      <span class="type" id="sheetType"></span>
+      <h3 id="sheetTitle" tabindex="-1"></h3>
+      <p class="cite" id="sheetCite"></p>
+      <p class="finding" id="sheetFinding"></p>
+      <div class="sheet-actions">
+        <a id="sheetLink" class="btn" target="_blank" rel="noopener">Open source ↗</a>
+        <button class="ghost" id="sheetClose">Close</button>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="src/app.js"></script>
 </body>

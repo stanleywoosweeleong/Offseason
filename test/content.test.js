@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { SOURCES } from "../src/sources.js";
 import { STAGES, PBZ_TRIALS, PBZ_SAFETY, CHECKLIST } from "../src/guide.js";
 import { buildTimeline, CULTIVAR_PRESETS } from "../src/planner.js";
+import { LIBRARY } from "../src/library.js";
 
 test("every cited source ID exists in sources.js", () => {
   const ids = [
@@ -11,6 +12,7 @@ test("every cited source ID exists in sources.js", () => {
     ...PBZ_SAFETY.flatMap((p) => p.sources),
     ...buildTimeline("2026-01-01").flatMap((t) => t.sources),
     ...Object.values(CULTIVAR_PRESETS).flatMap((c) => c.sources),
+    ...LIBRARY.flatMap((t) => t.points.flatMap((p) => p.sources)),
   ];
   for (const id of ids) assert.ok(SOURCES[id], `missing source: ${id}`);
 });
@@ -30,9 +32,25 @@ test("one topic: every source is cited somewhere, every point and checklist item
     ...PBZ_SAFETY.flatMap((p) => p.sources),
     ...buildTimeline("2026-01-01").flatMap((t) => t.sources),
     ...Object.values(CULTIVAR_PRESETS).flatMap((c) => c.sources),
+    ...LIBRARY.flatMap((t) => t.points.flatMap((p) => p.sources)),
   ]);
   for (const id of Object.keys(SOURCES)) assert.ok(cited.has(id), `source ${id} is not cited anywhere`);
   const stageIds = new Set(STAGES.map((s) => s.id));
   for (const c of CHECKLIST) assert.ok(stageIds.has(c.stage), `checklist ${c.id} -> ${c.stage}`);
   for (const s of STAGES) { assert.ok(s.when && s.summary, s.id); for (const p of s.points) assert.equal(p.general, undefined); }
+});
+
+test("library: valid levels, unverified leads only in the library, every topic non-empty", () => {
+  const levels = new Set(["evidence", "survey", "expert", "practice", "lead"]);
+  for (const t of LIBRARY) {
+    assert.ok(t.id && t.title && t.summary && t.points.length, t.id);
+    for (const p of t.points) { assert.ok(levels.has(p.level), `${t.id}: ${p.level}`); assert.ok(p.sources.length, `${t.id}: point without source`); }
+  }
+  for (const s of STAGES) for (const p of s.points) assert.notEqual(p.level, "lead", `guide step ${s.id} contains an unverified lead`);
+});
+
+test("offline: service worker caches every app module", async () => {
+  const { readFileSync, readdirSync } = await import("node:fs");
+  const sw = readFileSync(new URL("../sw.js", import.meta.url), "utf8");
+  for (const f of readdirSync(new URL("../src/", import.meta.url))) assert.ok(sw.includes(`src/${f}`), `sw.js missing src/${f}`);
 });
