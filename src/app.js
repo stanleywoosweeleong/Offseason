@@ -1,7 +1,7 @@
 import { SOURCES } from "./sources.js";
 import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "./guide.js";
 import { LIBRARY } from "./library.js";
-import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS } from "./cleanup.js";
+import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS, TRIAZOLES, TRIAZOLE_ADVICE } from "./cleanup.js";
 import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
@@ -153,6 +153,21 @@ function renderCleanup() {
     ${cites(m.sources)}
   </article>`
   ).join("");
+}
+const TRI_LABEL = { similar: ["Similar to PBZ", "none"], mild: ["Mild PBZ-like effect", "mixed"], weak: ["Weak, short-lived", "positive"], different: ["Stunts by another route", "mixed"] };
+function renderTriazoles() {
+  $("#triazoles").innerHTML = TRIAZOLES.map((t) => {
+    const [lab, cls] = TRI_LABEL[t.effect];
+    return `
+  <article class="card trial microbe">
+    <div class="m-tags"><span class="eff ${cls}">${lab}</span> <span class="lvl ${t.malaysia.startsWith("Sold") ? "evidence" : "practice"}">${esc(t.malaysia)}</span></div>
+    <h3 class="m-name" style="font-style:normal">${esc(t.name)}</h3>
+    <p><b>Like PBZ?</b> ${esc(t.likePBZ)}</p>
+    <p class="hint">${esc(t.evidence)}</p>
+    ${cites(t.sources)}
+  </article>`;
+  }).join("");
+  $("#triazoleAdvice").innerHTML = TRIAZOLE_ADVICE.map((a) => `<li>${esc(a)}</li>`).join("");
 }
 function renderOtherCrops() {
   $("#noFungi").textContent = NO_FUNGI;
@@ -374,6 +389,7 @@ renderGuide();
 renderPBZ();
 renderCleanup();
 renderOtherCrops();
+renderTriazoles();
 renderPlan();
 renderMix();
 renderChecklist();

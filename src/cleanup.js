@@ -131,3 +131,39 @@ export const OTHER_CROPS = [
   { group: "lasts", text: "Residue from one crop can stunt the next: taro and potato were severely inhibited by carry-over in soil.", level: "evidence", sources: ["jiang2019"] },
   { group: "lasts", text: "In durian orchards, residue sits where it is applied: highest at the canopy edge in the top 20 cm (up to about 1 mg/kg), none detected deeper at half the canopy radius. That top layer is where clean-up efforts should go.", level: "evidence", sources: ["pham2022"] },
 ];
+
+// Triazole fungicides compared with PBZ (PBZ › Safety). effect: "similar" | "mild" | "weak" | "different"
+export const TRIAZOLES = [
+  {
+    name: "Tebuconazole", malaysia: "Sold in Malaysia", effect: "mild",
+    likePBZ: "Partly. It also blocks gibberellin, the hormone PBZ blocks.",
+    evidence: "Oilseed rape, Poland: plants 13–18% shorter in one year, about as much as a commercial growth retardant; no effect alone in the other year. Sold partly as a growth regulator in that crop.",
+    sources: ["matysiak2013"],
+  },
+  {
+    name: "Hexaconazole", malaysia: "Sold in Malaysia", effect: "weak",
+    likePBZ: "Weakly, and only for a short time.",
+    evidence: "Rice, Korea: lowered gibberellin less than true growth retardants did, and the effect faded quickly. Watermelon, Korea: a leaf spray shortened plants at 7 days but they had caught up by 42 days; a soil drench had little or no effect.",
+    sources: ["na2011", "kim1998"],
+  },
+  {
+    name: "Propiconazole", malaysia: "Sold in Malaysia", effect: "different",
+    likePBZ: "It can stunt, but by a different route, so gibberellin does not reverse it.",
+    evidence: "It blocks brassinosteroids (another growth hormone), not gibberellin: maize seedlings were 29–45% shorter in the lab. At label rates on turf, it and five other triazole fungicides did not noticeably slow growth, while PBZ did.",
+    sources: ["hartwig2012", "mitkowski2013"],
+  },
+  {
+    name: "Metconazole", malaysia: "Not common in Malaysia", effect: "similar",
+    likePBZ: "Closest to PBZ: it cut gibberellin in mango.",
+    evidence: "Mango, Brazil: inhibited gibberellin biosynthesis; the authors say it may help flowering management but no protocol exists yet. Listed for completeness.",
+    sources: ["cavalcante2020"],
+  },
+];
+
+export const TRIAZOLE_ADVICE = [
+  "None of these has been shown to make durian flower. Do not use them in place of PBZ.",
+  "The risk is stacking: several strong or frequent triazole sprays on top of PBZ add growth suppression. Avoid them on the post-harvest flush, when the tree needs strong new leaves.",
+  "Use label rates only, and rotate with fungicides from other groups (this also slows fungicide resistance).",
+  "Triazoles do not control Phytophthora, durian's main root and trunk disease; that needs phosphonates (phosphorous acid, fosetyl-aluminium) or metalaxyl.",
+  "Check product registration for durian with the Pesticides Board of Malaysia (Lembaga Racun Perosak) before use.",
+];

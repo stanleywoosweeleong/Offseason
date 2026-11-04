@@ -4,7 +4,7 @@ import { SOURCES } from "../src/sources.js";
 import { STAGES, PBZ_TRIALS, PBZ_SAFETY, CHECKLIST } from "../src/guide.js";
 import { buildTimeline, CULTIVAR_PRESETS } from "../src/planner.js";
 import { LIBRARY } from "../src/library.js";
-import { MICROBES, OTHER_CROPS, CLEANUP_GROUPS } from "../src/cleanup.js";
+import { MICROBES, OTHER_CROPS, CLEANUP_GROUPS, TRIAZOLES } from "../src/cleanup.js";
 
 test("every cited source ID exists in sources.js", () => {
   const ids = [
@@ -16,6 +16,7 @@ test("every cited source ID exists in sources.js", () => {
     ...LIBRARY.flatMap((t) => t.points.flatMap((p) => p.sources)),
     ...MICROBES.flatMap((m) => m.sources),
     ...OTHER_CROPS.flatMap((p) => p.sources),
+    ...TRIAZOLES.flatMap((t) => t.sources),
   ];
   for (const id of ids) assert.ok(SOURCES[id], `missing source: ${id}`);
 });
@@ -38,6 +39,7 @@ test("one topic: every source is cited somewhere, every point and checklist item
     ...LIBRARY.flatMap((t) => t.points.flatMap((p) => p.sources)),
     ...MICROBES.flatMap((m) => m.sources),
     ...OTHER_CROPS.flatMap((p) => p.sources),
+    ...TRIAZOLES.flatMap((t) => t.sources),
   ]);
   for (const id of Object.keys(SOURCES)) assert.ok(cited.has(id), `source ${id} is not cited anywhere`);
   const stageIds = new Set(STAGES.map((s) => s.id));

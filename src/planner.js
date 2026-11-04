@@ -110,8 +110,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       id: "flush",
       date: null,
       label: "Before spraying: reset and prime the tree",
-      detail: "After harvest: prune, lime (3–5 kg per tree), add compost, and push 2–3 even leaf flushes. Harden the last flush with MKP 0.5–1%, give high-P NPK 7–10 days later, then phosphorous acid 15–20 days after that. Spray once the leaves are mature.",
-      sources: ["tran2023book", "chandraparnik1993", "kozai2024"],
+      detail: "After harvest: prune, lime (3–5 kg per tree), add compost, and push 2–3 even leaf flushes. Harden the last flush with MKP 0.5–1%, give high-P NPK 7–10 days later, then phosphorous acid 15–20 days after that. Spray once the leaves are mature. Avoid stacking triazole fungicides (hexaconazole, propiconazole, tebuconazole) on these flushes: some add mild growth suppression on top of PBZ.",
+      sources: ["tran2023book", "chandraparnik1993", "kozai2024", "matysiak2013"],
     },
     {
       id: "spray",
