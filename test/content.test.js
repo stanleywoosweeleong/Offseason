@@ -70,3 +70,26 @@ test("clean-up: valid test types, groups and levels", () => {
   for (const p of OTHER_CROPS) { assert.ok(groups.has(p.group), p.text); assert.ok(levels.has(p.level), p.text); }
   for (const g of groups) assert.ok(OTHER_CROPS.some((p) => p.group === g), `empty group ${g}`);
 });
+
+test("languages: every language file covers every app string, with placeholders intact", async () => {
+  const { readFileSync, existsSync } = await import("node:fs");
+  const { allStrings } = await import("../scripts/i18n-strings.mjs");
+  const { LANGS } = await import("../src/i18n.js");
+  const strings = allStrings();
+  const ph = (s) => (s.match(/\{\w+\}/g) || []).sort().join(",");
+  for (const lang of LANGS.filter((l) => l !== "en")) {
+    const file = new URL(`../src/i18n/${lang}.json`, import.meta.url);
+    assert.ok(existsSync(file), `missing src/i18n/${lang}.json`);
+    const d = JSON.parse(readFileSync(file, "utf8"));
+    const missing = strings.filter((s) => !d[s]);
+    assert.equal(missing.length, 0, `${lang}: ${missing.length} untranslated, e.g. ${missing.slice(0, 3).join(" | ")}`);
+    for (const [k, v] of Object.entries(d)) assert.equal(ph(v), ph(k), `${lang}: placeholders differ in "${k.slice(0, 60)}"`);
+  }
+});
+
+test("languages: service worker caches every language file", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { LANGS } = await import("../src/i18n.js");
+  const sw = readFileSync(new URL("../sw.js", import.meta.url), "utf8");
+  for (const l of LANGS.filter((x) => x !== "en")) assert.ok(sw.includes(`src/i18n/${l}.json`), l);
+});

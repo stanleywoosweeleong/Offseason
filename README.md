@@ -21,9 +21,17 @@ The app is built for phones first. A bottom tab bar holds five sections, and it 
 
 - **Guide:** the 8-step cycle above, as collapsible steps with a scrollable step strip and "next step" links.
 - **Plan:** pick a cultivar and a target harvest (or spray) date to get the spray window, a timeline, and **Your dated protocol**, the book's day-by-day Table 9.2 converted to calendar dates. It flags rainy months.
-- **PBZ:** every durian PBZ trial side by side (Evidence), a spray-tank calculator that warns on overdosing and on doses below the book's 12–15 g a.i. per tree (Mix), and residue and safety notes (Safety).
+- **PBZ:** every durian PBZ trial side by side (Evidence); a farmer's tank calculator (16 L knapsack, 20 L container, 200 L drum or 1000 L tank; liquid or powder product) that gives mL or g per tank, trees per tank and tanks per orchard, with a Scientist view in ppm (Mix); residue and safety notes, including how triazole fungicides compare with PBZ (Safety); and every microbe known to break PBZ down, plus residue lessons from other crops (Clean-up).
 - **Checklist:** grouped by step, with a progress bar, saved on the device.
 - **Library:** everything else the research found, organised by topic: pollination and fruit set, flowering seasons and weather, fruit quality and ripening, tree health, more on PBZ in soil, residue limits for other chemicals, other flowering chemicals, markets, and sources still to recover. It is searchable, along with the full source list (70 sources). Unverified leads are labelled and never appear in the Guide.
+
+## Languages
+
+Like the Tigerstripe app, the app speaks English, 中文 (Simplified Chinese), Bahasa Malaysia, Tiếng Việt and ភាសាខ្មែរ (Khmer). A language picker opens on the first visit, and the button at the top right changes it later. Translations live in `src/i18n/<lang>.json`, keyed by the exact English text; anything missing falls back to English. Bibliographic citations stay in their original form.
+
+The translations were drafted by AI and should be reviewed by native speakers (for Vietnamese, ideally Prof. Trần Văn Hâu's group) before the app is used for extension work.
+
+To update after changing any text: `node scripts/i18n-strings.mjs > strings.json` lists every English string; add the new ones to each `src/i18n/<lang>.json`. `npm test` fails until every language covers every string with its `{placeholders}` intact.
 
 ## Run it
 
@@ -42,6 +50,11 @@ src/guide.js        the 8-step off-season cycle, Table 9.2 protocol, PBZ trials,
 src/sources.js      reference list
 src/planner.js      date and dose calculations (unit-tested)
 src/app.js          UI rendering
+src/i18n.js         language picker support and translation lookup
+src/i18n/*.json     translations (zh, ms, vi, km), keyed by English text
+src/labels.js       short shared labels
+src/cleanup.js      PBZ Clean-up (microbes, other-crop lessons) and triazole fungicide comparison
+scripts/i18n-strings.mjs   lists every string that needs translating
 src/styles.css      styles (light and dark)
 test/               node:test unit tests
 ```

@@ -148,7 +148,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       id: "anthesis",
       date: anthesis,
       label: "Flowering (anthesis)",
-      detail: `About ${p.typ} days after spraying in this plan (observed range ${p.min}–${p.max}). Weather moves this date more than anything else.`,
+      detail: "About {typ} days after spraying in this plan (observed range {min}–{max}). Weather moves this date more than anything else.",
+      vars: { typ: p.typ, min: p.min, max: p.max },
       sources: ["kozai2024", "wiangsamut2022", "tri2011"],
     },
     {
@@ -187,7 +188,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       id: "harvest",
       date: addDays(anthesis, a.typ),
       label: "Harvest maturity",
-      detail: `In this plan, fruit matures ${a.min}–${a.max} days after flowering ('Monthong' 120–127; 'Ri6' about 97 and 'Musang King' about 90 from fruit set). Count the days from each tagged flower cluster, not from the spray date.`,
+      detail: "In this plan, fruit matures {min}–{max} days after flowering ('Monthong' 120–127; 'Ri6' about 97 and 'Musang King' about 90 from fruit set). Count the days from each tagged flower cluster, not from the spray date.",
+      vars: { min: a.min, max: a.max },
       sources: ["sangwanangkul1998", "tran2019", "duong2025"],
     },
   ];

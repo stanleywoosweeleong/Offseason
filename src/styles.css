@@ -308,3 +308,21 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
 .picks.four .wide span { min-height: 44px; }
 .picks.four span { white-space: nowrap; padding: 8px 4px; }
 @media (max-width: 379px) { .picks.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Language */
+.appbar-inner { display: flex; align-items: center; gap: 12px; }
+.appbar-inner .brand { flex: 1; min-width: 0; }
+.langbtn { flex: none; min-width: 48px; min-height: 40px; padding: 0 12px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface); color: var(--brand); font-weight: 700; font-size: 0.9rem; cursor: pointer; }
+.langmodal { position: fixed; inset: 0; z-index: 60; background: rgba(0, 0, 0, 0.45); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.langbox { width: 100%; max-width: 380px; background: var(--surface); color: var(--ink); border-radius: 18px; padding: 20px 16px; box-shadow: var(--shadow); text-align: center; }
+.langbox h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.langbox .hello { font-size: 0.9rem; color: var(--muted); margin: 0 0 14px; line-height: 1.4; }
+.langbox .opts { display: flex; flex-direction: column; gap: 8px; }
+.langbox .opts button { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); font: inherit; font-size: 1.02rem; font-weight: 700; text-align: left; cursor: pointer; }
+.langbox .opts button[aria-pressed="true"] { border-color: var(--brand); background: var(--evidence-bg); }
+.langbox .opts .tag { flex: none; min-width: 46px; padding: 3px 8px; border-radius: 6px; background: var(--brand); color: #fff; font-size: 0.8rem; text-align: center; }
+.langbox .opts .nm { flex: 1; }
+.langbox .opts .nm small { display: block; font-weight: 400; font-size: 0.8rem; color: var(--muted); }
+body[data-lang="km"], .langbox [lang="km"] { font-family: "Khmer UI", "Leelawadee UI", "Noto Sans Khmer", "Khmer OS System", "Khmer OS", "Khmer Sangam MN", system-ui, sans-serif; }
+body[data-lang="km"] { line-height: 1.7; }
+body[data-lang="zh"] { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
