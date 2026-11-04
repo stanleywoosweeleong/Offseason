@@ -221,11 +221,11 @@ export const SOURCES = {
       "14 and 7 days before anthesis, at full bloom, and 7 days after.",
   },
   tran2023book: {
-    short: "Tran & Tran 2026 (book), Ch. 5",
+    short: "Tran & Tran 2026 (book)",
     cite:
       "Tran Van Hau (lead author) & Tran Sy Hieu (2026). Flower Induction in Durian. Viet Nam National University " +
       "Ho Chi Minh City Press. English edition of Xử lý ra hoa cây sầu riêng (3rd Vietnamese ed. 2023, 263 pp.). " +
-      "Chapter 5, Flowering Induction Techniques, pp. 135–159 (pages photographed by the app author).",
+      "Chapter 5, Flowering Induction Techniques, pp. 135–159, and Chapter 6, Improving Fruit Set and Limiting Young Fruit Drop, pp. 161–174 (pages photographed by the app author).",
     url: null,
     type: "Book · Can Tho Univ. (print only)",
     finding:
@@ -235,7 +235,7 @@ export const SOURCES = {
       "trenching and re-watering. It also covers weather (nights 20–22 °C, 50–60% humidity, monsoon direction), cultivar drought needs in the Mekong Delta (Ri6 and Monthong 30–35 days) and soil-moisture targets (Table 5.1). It reports Can Tho University trials: Table 5.2/5.4/5.6 on 'Kho Qua Xanh' " +
       "(Hau 2000; Hau et al. 2001, off-season, Cai Lay) and Table 5.3/5.5/5.7 on 'Sua Hat Lep' (Hau et al. 2001, " +
       "two years, CTU farm). It concludes that PBZ with raised-bed mulching does not affect fruit quality. Findings " +
-      "from other authors are cited in the app as reported in the book. Note: the book cites the Vietnamese PBZ " +
+      "from other authors are cited in the app as reported in the book. Chapter 6 covers hand pollination, cultivar mixes, boron, NAA, GA₃, flush control and 'matchstick' fruit drop. Note: the book cites the Vietnamese PBZ " +
       "survey as 'Duong et al. (2022)', which is the same paper listed here as Pham et al. 2022 (first author " +
       "Pham Thi Thuy Duong).",
   },

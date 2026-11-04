@@ -404,6 +404,78 @@ export const STAGES = [
     ],
   },
   {
+    id: "fruitset",
+    title: "Set more fruit and stop young-fruit drop",
+    summary: "Most young fruit are lost in the first month after fruit set. Hand pollination, boron, steady water, calcium and stopping leaf flushes protect the crop you worked to induce.",
+    points: [
+      {
+        text: "Why fruit set needs help: durian's male and female flower parts mature at different times, and many cultivars are partly or fully self-incompatible. 'Musang King' specifically needs cross-pollination. Poorly pollinated fruit end up misshapen, with empty locules, and have little market value.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Which cultivars need hand pollination (Vietnam): 'Kho Qua Xanh', 'Chuong Bo Hat Lep' and 'Sau Huu' set well on their own. 'Sua Hat Lep' and 'Ri6' need supplemental pollination to set well and give evenly shaped fruit. 'Monthong' may not strictly need it, but hand pollination raises set and cuts young-fruit drop. Orchards grown from seed are genetically mixed and usually don't need it.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "What hand pollination achieves: in Thailand it raised fruit set in 'Chanee' from 0–6% to 30–64% and in 'Kanyao' from 21% to 87–90%. Self-pollinated set was only 7.7% in 'Monthong' and 3.6% in 'Chanee'; with 'Kradumthong' pollen it rose to 27.2% and 16.3% (Honsho et al. 2004). In Vietnam, 'Sua Hat Lep' set rose from 13.3% to 60–90% and evenly shaped fruit from 0% to 50–93%, with 'Monthong' a good pollen source (Hau & Lam 2008; Van 2001; as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "How to hand-pollinate: work between 18:00 and 21:00, when flowers open. Collect pollen from a DIFFERENT cultivar with a nylon brush and sweep it gently onto the stigmas. Use one brush for only 2–3 trees, then clean or replace it so pollen sources don't mix.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Plant a cultivar mix for pollination and a longer season. Malaysia recommends D24 50%, D99 30% and D98 or D114 20% (D99 ripens 90–100 days after anthesis, D24 105–115, D98/D114 120–130). Thailand pairs 'Chanee', 'Kradumthong', 'Kanyao' and 'Monthong', with 'Kradumthong' as the pollen donor ('Chanee'/'Kradumthong' 103–105 days, 'Monthong'/'Kanyao' 127–130). Staggered ripening also avoids peak-season gluts.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Boron for pollen: pollen germination needs Ca 50–90 ppm, B 30–60 ppm, Mg 15–30 ppm and K 15–30 ppm, and boron is the one usually short. Salakpetch (2005) advises a Ca + B spray in the 6th week after flower buds appear. On 'Sua Hat Lep', 'Monthong' and 'Kho Qua Xanh', 100 ppm boric acid raised pollen germination 2.8–4.8 times and pollen-tube length 4–8.9 times (Van 2001, as reported in the book). The Can Tho Musang King trials used a similar Ca 1% + B 100 ppm spray around bloom.",
+        level: "evidence",
+        sources: ["tran2023book", "duong2025huaf"],
+      },
+      {
+        text: "When fruit drop happens: unpollinated flowers fall 7–10 days after opening. Young-fruit drop peaks about 3 weeks after fruit set and settles by about 6 weeks. In 'Sua Hat Lep' fewer than 10% of fruit remained after the 3-week drop (Hau & Lam 2008, as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "NAA can raise fruit set. One NAA spray at 20–60 ppm before flowering raised 'Sua Hat Lep' set from 70% to 87%, but did nothing for 'Kho Qua Xanh', which already sets 95.7% (Thuy 2001). The book's practical advice is 20–40 ppm shortly after fruit set; too much NAA easily causes misshapen fruit.",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Gibberellin (GA₃) can hold young fruit. 5 ppm sprayed onto the fruit stalks at about 6 weeks reduced drop and increased fruit size by 20–30% (Mamat & Wahab 1990, 1992). On 'Kho Qua Xanh', 5–10 ppm raised the share of fruit reaching harvest to 43.6–45.8%, against 11.2% untreated. Timing mattered: sprays at 30–45 days after fruit set worked (40.6–45.9%), but at 15 days they did not (6.1%) (Thuy 2001). The book suggests 5–10 ppm at 3–6 weeks; it works best in cultivars with many aborted seeds, such as 'Sua Hat Lep' and 'Monthong'.",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Stop new leaf flushes from competing with young fruit. Flushes 3–8 weeks after fruit set increase drop and cause misshapen fruit with hard, brownish, uneven flesh (Salakpetch et al. 1992). Daminozide or mepiquat chloride at 630 ppm delayed leaf buds by 3 weeks. KNO₃ 1.5% or MKP 2.5% delayed new leaves by 14 days despite some leaf burn, and KNO₃ also improved fruit retention, fruit weight and pulp ratio (Punnachit et al. 1992). The book's advice: spray KNO₃ 1.5% or mepiquat chloride 600 ppm if fruit set is low or flushes come in waves.",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "'Matchstick' drop from bad weather: drought, cold snaps, extreme heat or unseasonal heavy rain can strip flowers and matchstick-sized fruit within 1–2 days. Water stress cuts calcium flow to the young fruit; waterlogging suffocates roots and triggers ethylene. Both activate the abscission layer.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "So do NOT cut irrigation after fruit set. Keep soil moisture steady with good drainage and regular watering. Spray calcium (CaCl₂ or Ca-chelate) at 7–21 days after fruit set to strengthen cell walls, and keep potassium and silicon balanced. This is the opposite of the induction drought, which must end once flower buds are visible.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Plant growth regulators such as NAA, GA₃, daminozide and mepiquat chloride must be registered for fruit use in your country, and some export markets restrict them. Check labels and local rules before using them.",
+        level: "practice",
+        sources: [],
+      },
+    ],
+  },
+  {
     id: "quality",
     title: "Protect off-season fruit quality",
     summary: "Getting flowers out of season is half the job. Off-season fruit is prone to flesh disorders such as 'tiger stripe', hardened pulp and tip burn. Can Tho University tested a fix on 'Musang King'.",
@@ -553,6 +625,8 @@ export const CHECKLIST = [
   { id: "soilmeter", text: "Soil moisture at 0–30 cm being measured; drought length set for the cultivar (Ri6 / Monthong 30–35 days in the Mekong Delta)", stage: "water" },
   { id: "drywatch", text: "Irrigation held back for a short (3–7 day) dry spell only", stage: "water" },
   { id: "tag", text: "Flower clusters tagged with their opening date", stage: "fruit" },
+  { id: "pollen", text: "Pollen-donor cultivar identified; brushes ready for hand pollination at 18:00–21:00 (essential for Ri6, Sua Hat Lep, Musang King)", stage: "fruitset" },
+  { id: "noWaterCut", text: "Irrigation steady after fruit set (no water cut-off); Ca spray planned for 7–21 days after set; leaf flushes watched for 3–8 weeks", stage: "fruitset" },
   { id: "fruitcare", text: "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled", stage: "quality" },
   { id: "lime", text: "After harvest: soil pH checked and limed to 5.8–6.5", stage: "quality" },
 ];

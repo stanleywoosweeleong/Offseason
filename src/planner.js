@@ -136,6 +136,14 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       sources: ["kozai2024", "wiangsamut2022", "tri2011"],
     },
     {
+      id: "fruitset",
+      date: anthesis,
+      endDate: addDays(anthesis, 42),
+      label: "Fruit-set window (first 6 weeks)",
+      detail: "Hand-pollinate 18:00–21:00 with another cultivar's pollen. Keep irrigation steady, with no water cut-off. Spray Ca (7–21 days after set) and watch for leaf flushes. Young-fruit drop peaks about 3 weeks after set.",
+      sources: ["tran2023book"],
+    },
+    {
       id: "fruitcare",
       date: addDays(anthesis, 30),
       endDate: addDays(anthesis, 60),
