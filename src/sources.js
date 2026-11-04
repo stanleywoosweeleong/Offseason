@@ -315,6 +315,62 @@ export const SOURCES = {
       "commodities. No tropical fruit, durian included, has a specific EU MRL in the review, and fruit-crop " +
       "metabolism data were missing.",
   },
+  grewal2023: {
+    short: "Grewal et al. 2023 (13-yr mango)",
+    cite: "Grewal, A.G., Zafar, M.S., Ahmad, M., Iqbal, A., Khan, A.H., Mustafa, G., Raza, S. & Ahmed, N. (2023). Interactive effect of nitrogen and paclobutrazol on annually pruned Sammar Bahisht Chaunsa. Pakistan Journal of Botany 55(6): 2119–2129. Mango Research Institute, Multan.",
+    url: "https://pakbs.org/pjbot/papers/1689660728.pdf",
+    type: "Peer-reviewed · Govt. research institute",
+    finding: "A 13-year trial on 25-year-old, annually pruned 'Chaunsa' mango. PBZ, alone or with nitrogen, boosted yield for the first five years, then yields fell and trees gradually died. The best long-term yields came from 1 kg of nitrogen per tree per year without PBZ.",
+  },
+  reddy2008: {
+    short: "Reddy & Kurian 2008 (Alphonso)",
+    cite: "Reddy, Y.T.N. & Kurian, R.M. (2008). Cumulative and residual effects of paclobutrazol on growth, yield and fruit quality of 'Alphonso' mango. Journal of Horticultural Sciences 3(2): 119–122. ICAR-IIHR, Bangalore.",
+    url: "https://jhs.iihr.res.in/index.php/jhs/article/view/570",
+    type: "Peer-reviewed · ICAR",
+    finding: "17-year-old 'Alphonso' mango, 1996–2002. PBZ was applied for three consecutive years (foliar 500–2,000 ppm or soil drench 5–10 g a.i. per tree), then stopped for three years. Soil drench doubled yield over the six years, and its effect lasted three years after the last application. Fruit were lighter. The authors recommend 5 g a.i. per tree for three years on, then three years off.",
+  },
+  protacio2002: {
+    short: "Protacio et al. 2002 (Carabao mango)",
+    cite: "Protacio, C.M., Magat, V.S.H., Agbing, L.C. & Quinto, J.E. (2002). Paclobutrazol application and GA3-like levels in relation to flowering in 'Carabao' mango. Philippine Journal of Crop Science 27 (Suppl. 1). University of the Philippines Los Baños.",
+    url: "https://agris.fao.org/search/en/records/647239f8e17b74d2224ef1e6",
+    type: "Conference abstract · UPLB",
+    finding: "Soil drench at 0.5–1.5 g PBZ per metre of canopy diameter, with KNO₃ sprays. Gibberellin-like levels fell from one month after application, more so at higher doses, and low gibberellin went with more flowering. The authors advise starting at no more than 1 g PBZ per metre of canopy diameter.",
+  },
+  vaz2015: {
+    short: "Vaz et al. 2015 (Brazil, soil biodegradation)",
+    cite: "Vaz, F., Santos-Filho, E., Silva, S., Araújo, S., Stamford-Arnaud, T., Bandeira, A., Brasileiro-Vidal, A.C., Stamford, N.P., Mouco, M.A. & Gouveia, E. (2015). Biodegradation of paclobutrazol – a plant growth regulator used in irrigated mango orchard soil. In: Biodegradation and Bioremediation of Polluted Systems. IntechOpen.",
+    url: "https://doi.org/10.5772/60818",
+    type: "Book chapter · Embrapa / UFPE (lab study)",
+    finding: "Mango orchard soils from Brazil's São Francisco valley. Soil with a history of PBZ use broke PBZ down much faster than unexposed soil: about 1% remained after 63 days, against 64% remaining after 14 days. The authors credit native microbes, mainly Pseudomonas, that had adapted to PBZ, and a diverse soil microbiota. The work was done in the laboratory.",
+  },
+  kumar2021: {
+    short: "Kumar et al. 2021 (Klebsiella M6)",
+    cite: "Kumar, G., Lal, S., Maurya, S.K., Bhattacherjee, A.K., Chaudhary, P., Gangola, S. & Rajan, S. (2021). Exploration of Klebsiella pneumoniae M6 for paclobutrazol degradation, plant growth attributes, and biocontrol action under subtropical ecosystem. PLOS ONE 16(12): e0261338. ICAR-CISH.",
+    url: "https://doi.org/10.1371/journal.pone.0261338",
+    type: "Peer-reviewed · ICAR (lab study)",
+    finding: "A bacterium isolated from mango soil broke down 98% of PBZ (50 mg/L) in 15 days in liquid culture, and gave a theoretical half-life of 4.5 days in soil. It also promoted plant growth and suppressed some pathogens. The authors propose it for restoring land affected by persistent PBZ use. No orchard field trial has been reported.",
+  },
+  pham2023: {
+    short: "Pham et al. 2023 (Mekong Delta bacteria)",
+    cite: "Pham, D.T.T., Bui, T.M., Thai, H.D.N., Vo, H.T.T., Vo, D.T. & Vu, L.M.T. (2023). Paclobutrazol biodegradation of native bacteria in mango orchards in Mekong Delta, Vietnam. Indian Journal of Agricultural Research 57(6): 796–801. Nong Lam University.",
+    url: "https://doi.org/10.18805/IJARe.AF-773",
+    type: "Peer-reviewed · Nong Lam Univ. (lab study)",
+    finding: "90 bacterial strains from 30 Mekong Delta mango orchards were screened. The four best (Pseudomonas fluorescens, P. nitroreducens, Burkholderia cepacia, Acinetobacter seifertii) broke down 33.6–36.5% of 60 ppm PBZ in 30 days. These are the same research group's follow-up to their durian soil-residue survey (Pham et al. 2022).",
+  },
+  thao2014: {
+    short: "Thao et al. 2014 (Can Tho, Burkholderia)",
+    cite: "Đặng Phạm Thu Thảo, Đỗ Thị Xuân, Dương Minh Viễn & Nguyễn Khởi Nghĩa (2014). Isolation of native bacterial strains having a degradation capacity for paclobutrazol from orchard gardens in some provinces of the Mekong Delta. Can Tho University Journal of Science 32: 80–86.",
+    url: "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/download/171/3648",
+    type: "Peer-reviewed · Can Tho Univ. (lab study)",
+    finding: "Soil came from long-term PBZ-treated orchards in Cho Lach (Ben Tre), Cai Lay (Tien Giang) and Phong Dien (Can Tho), the main durian districts. Of 30 isolates, two Burkholderia strains (CT2-29, B. cepacia CT3-18) broke down 15.5–16.4% of 15 ppm PBZ in 15 days.",
+  },
+  grant2018: {
+    short: "Grant et al. 2018 (activated carbon)",
+    cite: "Grant, G.A., Fisher, P.R., Barrett, J.E. & Wilson, P.C. (2018). Removal of paclobutrazol from irrigation water using granular-activated carbon. Irrigation Science 36(3): 159–166. University of Florida.",
+    url: "https://doi.org/10.1007/s00271-018-0572-1",
+    type: "Peer-reviewed · University",
+    finding: "Granular activated carbon filters removed 90–99% of PBZ from irrigation water within 12–59 seconds of contact. This works for water; no study was found that tested activated carbon or biochar against PBZ residue in orchard soil.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

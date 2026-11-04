@@ -2,7 +2,7 @@
 
 One topic: **how to produce durian off-season.** That means inducing flowering out of season, timing it to the market, and carrying that crop through the rains to a good harvest. Every figure links to a published source. The app is a static web app with no build step, no tracking and no backend.
 
-## The off-season cycle (Guide tab)
+## The off-season cycle (Guide tab, 8 steps)
 
 | Step | When | What the evidence says |
 |---|---|---|
@@ -13,10 +13,11 @@ One topic: **how to produce durian off-season.** That means inducing flowering o
 | 5. From flower buds to bloom | ≈ 50–57 days | Re-water once buds show, feed one leaf flush about 10 days after buds, and protect buds from rain-induced dormancy. |
 | 6. Hold the off-season crop | First 6 weeks after set | Don't cut water after fruit set. Calcium at 7–21 days. Stop new leaf flushes (KNO₃ 1.5% or MKP 0.5–1%). |
 | 7. Harvest | ≈ 90–150 days after bloom | Timing by cultivar. Cut nitrogen as fruit grows (NPK 2:1:1 → 2:1:3 → 1:1:3 at 0.75 kg). Ca(NO₃)₂ 0.4% + MgSO₄ 0.2%. Drain ditches and mulch before an off-season harvest. |
+| 8. Reset for next year | After harvest → step 2 | PBZ persists, and repeated use faded and killed mango trees after 5 years. Rest 1–2 seasons after every 3–4 (SOFRI); mango kept yields with 3 years on, 3 off. Dose by canopy, spray foliar, and feed soil microbes, which break PBZ down (lab studies in Vietnam, India and Brazil). No proven antidote. |
 
 ## Other tabs
 
-- **Planner:** pick a cultivar and work backwards from a target harvest date to a PBZ spray window, or forwards from a spray date. The timeline follows the same 7 steps. Presets cover Monthong, Ri6, Musang King, Kho Qua Xanh, Sua Hat Lep and Central Highlands Monthong.
+- **Planner:** pick a cultivar and work backwards from a target harvest date to a PBZ spray window, or forwards from a spray date. The timeline follows the same steps. Presets cover Monthong, Ri6, Musang King, Kho Qua Xanh, Sua Hat Lep and Central Highlands Monthong.
 - **PBZ evidence:** every durian PBZ trial side by side, plus residue and safety notes.
 - **PBZ mix:** grams of product per tank for a target ppm.
 - **Checklist:** in cycle order, saved on the device.

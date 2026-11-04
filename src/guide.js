@@ -643,6 +643,83 @@ export const STAGES = [
         ]
       }
     ]
+  },
+  {
+    "id": "reset",
+    "title": "Reset for next year: keep PBZ from building up",
+    "when": "After harvest → back to step 2",
+    "summary": "PBZ stays in the soil, and a tree pushed every year can fade. Growers elsewhere keep harvests coming year after year by resting trees, dosing by canopy size, and helping soil microbes break PBZ down.",
+    "points": [
+      {
+        "text": "Why this matters: in a 13-year mango trial, PBZ raised yields for the first five years, then yields fell and trees gradually died; the best long-term yields came from nitrogen without PBZ. In durian, trees given PBZ as a soil drench may decline or recover slowly, and heavily dosed trees struggle to push the pre-bloom leaf flush.",
+        "level": "evidence",
+        "sources": [
+          "grewal2023",
+          "subhadrabandhu1998",
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "PBZ lingers. Its soil half-life ranges from about 2 months in mango orchard fields to more than a year in regulatory tests, and surveyed durian orchards held residue in the topsoil at the canopy edge after 5 or more years of use.",
+        "level": "evidence",
+        "sources": [
+          "singh2024",
+          "kishore2015",
+          "pham2022"
+        ]
+      },
+      {
+        "text": "Build rest years into the plan. SOFRI advises pausing PBZ for 1–2 seasons after every 3–4 seasons in durian. In 'Alphonso' mango, three years of PBZ followed by three years off kept yields doubled across all six years, because the soil-applied dose kept working for three years after it stopped. With foliar-only durian sprays the carry-over is likely smaller, so expect a lighter rest-year crop.",
+        "level": "evidence",
+        "sources": [
+          "tri2011",
+          "reddy2008"
+        ]
+      },
+      {
+        "text": "Dose for the tree in front of you, not by habit. Gibberellin falls in proportion to the PBZ dose, so larger doses suppress growth longer. Philippine mango work advises starting at no more than 1 g PBZ per metre of canopy diameter. For durian, stay within 1,000–1,500 ppm as a foliar spray and record the grams of a.i. each tree receives every year.",
+        "level": "evidence",
+        "sources": [
+          "protacio2002",
+          "pham2022"
+        ]
+      },
+      {
+        "text": "Keep PBZ off the soil where you can. Foliar spraying puts far less into the soil than a soil drench; drenched mango soil started with 10–62 µg/g. Spray in dry weather so it stays on the leaves. If you spray before laying plastic, you accept some PBZ reaching the drip-line soil.",
+        "level": "evidence",
+        "sources": [
+          "singh2024",
+          "subhadrabandhu1998",
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Soil microbes are the natural clean-up crew. Orchard soils with a PBZ history broke it down much faster (about 1% left after 63 days) than unexposed soil (64% left after 14 days), thanks to adapted bacteria such as Pseudomonas. Bacteria isolated from Mekong Delta orchards (Burkholderia, Pseudomonas, Acinetobacter) degraded 15–37% of PBZ in 15–30 days in the lab. An Indian Klebsiella strain degraded 98% in 15 days, with a 4.5-day soil half-life.",
+        "level": "evidence",
+        "sources": [
+          "vaz2015",
+          "thao2014",
+          "pham2023",
+          "kumar2021"
+        ]
+      },
+      {
+        "text": "Feed the soil biology after harvest. A diverse soil microbiota speeds PBZ breakdown, and organic mulch and manure also reduced Phytophthora in durian. Adding organic matter after harvest serves both. Microbial products sold in the Mekong Delta to 'detox' PBZ have no published durian field trial yet, so treat their claims with care.",
+        "level": "expert",
+        "sources": [
+          "vaz2015",
+          "aciar2022"
+        ]
+      },
+      {
+        "text": "There is no proven antidote. Activated carbon strips PBZ from irrigation water (90–99% removal), but nobody has tested it, or biochar, on orchard soil. Gibberellin sprays push leaf growth, but no durian trial shows they safely reverse a PBZ overdose. Prevention, through correct dose, foliar application and rest years, is the only tested approach.",
+        "level": "evidence",
+        "sources": [
+          "grant2018",
+          "tran2023book"
+        ]
+      }
+    ]
   }
 ];
 
@@ -779,7 +856,7 @@ export const GAPS = [
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
-  "The long-term effects of repeated yearly PBZ use on tree vigour and soil are not well studied beyond residue surveys."
+  "No field trial has yet tested PBZ-degrading microbes, activated carbon or biochar in a durian orchard. Every degradation result so far comes from laboratory or mango studies.",
 ];
 
 export const CHECKLIST = [
@@ -867,7 +944,17 @@ export const CHECKLIST = [
     "id": "ditch",
     "text": "Ditch water held 60–80 cm below the bed after fruit set; ditches drained and beds mulched before an off-season harvest",
     "stage": "harvest"
-  }
+  },
+  {
+    "id": "pbzlog",
+    "text": "PBZ log kept per tree (year, ppm, litres, grams a.i.); rest season planned after every 3–4 seasons of use",
+    "stage": "reset"
+  },
+  {
+    "id": "organic",
+    "text": "After harvest: organic matter or manure returned to the root zone to support soil microbes",
+    "stage": "reset"
+  },
 ];
 
 export const PBZ_SAFETY = [
