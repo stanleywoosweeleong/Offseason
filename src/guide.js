@@ -381,16 +381,16 @@ export const STAGES = [
         "sources": []
       },
       {
-        "text": "Before or after the plastic? The book recommends spraying BEFORE mulching. PBZ is readily taken up by roots, so spray that drips onto bare soil still works, whereas spray landing on plastic washes into the ditches. If PBZ is applied to the soil, irrigate for 2–3 days so the roots take it up. Many growers spray over the plastic precisely to avoid soil residue. This is a real trade-off: more soil uptake means more PBZ building up in the soil (see step 8, and the warning against soil drenches in durian). Surveyed orchards held residue only at the drip line. Where the plastic stays on all season, as many growers do, the order no longer matters: spray never reaches the soil directly. Every spray's runoff then drains off the plastic into the ditches instead (see the next point).",
-        "level": "expert",
+        "text": "Order of plastic and spray: this app follows the tested SOFRI/JIRCAS trial. Lay the plastic over the beds about 1 week before spraying, then spray PBZ on the leaves with the plastic already down, and lift it gradually at bud break, 3–4 weeks after spraying. Over two years this brought harvest forward 19–24 days and raised yield 25–60%. It also keeps spray off the soil, which matters because surveyed orchards held PBZ residue only at the uncovered drip line. The book instead suggests spraying before mulching, so roots can take up the drip. That is expert advice, not a tested comparison, and it adds to soil residue (see step 8).",
+        "level": "evidence",
         "sources": [
-          "tran2023book",
+          "tri2011",
           "pham2022",
-          "subhadrabandhu1998"
+          "tran2023book"
         ]
       },
       {
-        "text": "Runoff under a permanent cover ends up in the ditches. PBZ does not break down in water (half-life about 164 days in water and 787 days in water with sediment) and is very toxic to aquatic plants and fish. With several sprays a season, spray until leaves are wet but not dripping, and don't release the first ditch water after spraying into canals or fish ponds.",
+        "text": "Spray over plastic drains into the ditches. PBZ does not break down in water (half-life about 164 days in water and 787 days in water with sediment) and is very toxic to aquatic plants and fish. Spray until leaves are wet but not dripping, and don't release the first ditch water after spraying into canals or fish ponds.",
         "level": "evidence",
         "sources": [
           "ppdb",
@@ -462,15 +462,6 @@ export const STAGES = [
         "level": "expert",
         "sources": [
           "tran2023book"
-        ]
-      },
-      {
-        "text": "Season-long cover (grower practice): many growers leave the plastic on through the whole season, spraying several times, and lift it only when preparing for the next season. Two things then matter. (1) The tree still needs water and feed from bud emergence onwards, so irrigation and fertiliser must reach the roots under or through the cover, by drip or fertigation, or through opened edges. The published protocols lift the plastic at bud break for this reason, and in the JIRCAS trial a cover kept dry for about 8 weeks caused severe drought that suppressed flowering. (2) The cover keeps rain off the roots all season, which also helps against bud dormancy after rain and soggy flesh at harvest.",
-        "level": "practice",
-        "sources": [
-          "tran2023book",
-          "tri2011",
-          "kozai2024"
         ]
       },
       {
@@ -956,7 +947,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Keep PBZ off the soil where you can. Foliar spraying puts far less into the soil than a soil drench; drenched mango soil started with 10–62 µg/g. Spray in dry weather so it stays on the leaves. If you spray before laying plastic, you accept some PBZ reaching the drip-line soil.",
+        "text": "Keep PBZ off the soil where you can. Foliar spraying puts far less into the soil than a soil drench; drenched mango soil started with 10–62 µg/g. Spray in dry weather so it stays on the leaves. Spraying with the plastic already down (step 3) keeps drip off the soil. Spraying before laying it lets drip reach the drip-line soil.",
         "level": "evidence",
         "sources": [
           "singh2024",
@@ -1226,7 +1217,7 @@ export const CHECKLIST = [
   },
   {
     "id": "spraybefore",
-    "text": "PBZ sprayed BEFORE laying plastic, with enough litres per tree for the full dose",
+    "text": "Plastic laid over the beds about a week before PBZ; leaves sprayed until wet, not dripping, with enough litres per tree for the full dose",
     "stage": "spray"
   },
   {
@@ -1408,7 +1399,7 @@ export const PROTOCOL = [
     "from": -7,
     "to": -7,
     "title": "7 days before PBZ",
-    "actions": "Spray MKP 0.5–1.0% on both leaf surfaces. Start the drought: pump the ditches completely dry and keep them dry until flower buds clearly show."
+    "actions": "Spray MKP 0.5–1.0% on both leaf surfaces. Start the drought: pump the ditches completely dry and keep them dry until flower buds clearly show. Lay the plastic over the beds now, about a week before spraying, as in the SOFRI/JIRCAS trial."
   },
   {
     "step": "spray",
@@ -1416,7 +1407,7 @@ export const PROTOCOL = [
     "from": 0,
     "to": 0,
     "title": "PBZ day",
-    "actions": "Spray PBZ at 1,000–1,500 ppm (lower in the natural season), early morning or late afternoon, on both leaf surfaces. Use a 20–30% stronger mix on the trunk and main branches. An 8–10-year tree needs at least 10–12 L, about 12–15 g a.i. Stop all irrigation and cover the beds fully with plastic. Do not induce very young trees or trees defoliated by Phytophthora."
+    "actions": "Spray PBZ at 1,000–1,500 ppm (lower in the natural season), early morning or late afternoon, on both leaf surfaces. Use a 20–30% stronger mix on the trunk and main branches. An 8–10-year tree needs at least 10–12 L, about 12–15 g a.i. Spray with the plastic already down, until leaves are wet but not dripping. Stop all irrigation. Do not induce very young trees or trees defoliated by Phytophthora."
   },
   {
     "step": "bloom",
@@ -1424,7 +1415,7 @@ export const PROTOCOL = [
     "from": 0,
     "to": 0,
     "title": "Buds clearly visible (usually 20–30 days after PBZ)",
-    "actions": "Remove the mulch, or if your cover stays on all season, restart water and fertiliser under it (drip, fertigation or opened edges). Refill the ditches to 60–80 cm and resume watering gradually, every 2–3 days, aiming for 50–60% soil moisture and no waterlogging. If rain over 10 mm hits, or buds develop unevenly, spray KNO₃ 1.0–1.5% directly on the buds, and repeat if needed. Spray micronutrients and Ca on the buds."
+    "actions": "Lift the plastic, gradually as in the SOFRI trial. Don't leave it on longer: about 8 weeks under plastic caused severe drought that suppressed flowering (JIRCAS). Refill the ditches to 60–80 cm and resume watering gradually, every 2–3 days, aiming for 50–60% soil moisture and no waterlogging. If rain over 10 mm hits, or buds develop unevenly, spray KNO₃ 1.0–1.5% directly on the buds, and repeat if needed. Spray micronutrients and Ca on the buds."
   },
   {
     "step": "bloom",
