@@ -88,6 +88,7 @@ export const LIBRARY = [
       P("Application method decides soil residue in mango: soil drenching left the most and longest residue, a foliar spray left soil residue for about 3 months, and a foliar spray with the tree base covered, or trunk injection, left none detectable. If confirmed, this would favour spraying over covered beds, the opposite of the book's root-uptake advice.", "lead", ["iamsap1992"]),
       P("Lucknow mango: repeating the full dose in year 2 raised soil residue (about 2–7 µg/g after 150 days), while with no year-2 dose only the highest rates left traces (0.05–0.10 µg/g). Residue still regulated flowering in year 2 at half dose. Konkan 'Alphonso': 20 g a.i. per tree left 0.34 ppm the next year (compiled in Crop Hormones).", "evidence", ["crophormone", "singh2024"]),
       P("In mango studies cited by SOFRI, soil-applied PBZ persisted up to 11 months and foliar spray without soil cover about 3 months (Subhadrabandhu et al. 1999), and consecutive yearly use increased residue in proportion to the number of years (Sharma & Awasthi 2005).", "evidence", ["tri2011"]),
+      P("Vietnam (Nong Lam University, 2024) has isolated more PBZ-degrading bacteria from Mekong Delta and South-East orchard soils; the strain names and rates were not readable.", "lead", ["duong2024bact"]),
       P("A Thai study tested spraying PBZ at the fruit stage to stop new leaf flushes in 'Monthong'.", "lead", ["rrbr2020"]),
       P("Early Chanthaburi work (1987) on 'Chanee' reported PBZ sprays brought flowering forward by about 30–40 days in farmers' orchards.", "lead", ["chanthaburi1987"]),
       P("A Kasetsart record on using PBZ to control durian fruit set exists but was not read.", "lead", ["ku_durian_set"]),
@@ -110,6 +111,7 @@ export const LIBRARY = [
     title: "Other flowering chemicals",
     summary: "Alternatives to PBZ that came up in research. None has durian field evidence comparable to PBZ.",
     points: [
+      P("Philippines (DA Southern Mindanao): press reports say PBZ or the foliar product Multi-K, on bearing trees with mature flushes, brought off-season flowering 10–21 days after application. The original report was not found.", "lead", ["smiarc_ph"]),
       P("Potassium chlorate (KClO₃) is standard for off-season longan (in Dong Thap, 24 g per metre of canopy gave 72.4% flowering, and trunk cincturing brought flowering about 30 days earlier), but its mechanism is still unclear and no durian trial was found. Chlorate persists in soil, and the EU withdrew it for crop use in 2008.", "lead", ["kclo3_longan", "ppdb"]),
       P("Ethephon, daminozide, phenolic compounds and NAA have no flowering effect in durian, and gibberellins push leaf growth (Somsri 1973, as reported in the book). Root pruning made trees flower early in year 1 but they grew poorly and could die the next year (Maspol 1983). Fertiliser regimes alone show no clear link to flowering (Khaewrug 1973).", "evidence"),
       P("In Indonesia, PBZ combined with ethephon (800 ppm) gave the most flowers on 'Monthong' and lowered ABA; ethephon on its own is not a flowering agent in durian.", "evidence", ["sakhidin2012", "tran2023book"]),

@@ -672,6 +672,48 @@ export const SOURCES = {
     type: "Unverified lead",
     finding: "Search summary: anthers shed pollen at 19:00, at the same time as the flower opened, and pollen kept clinging to the anther afterwards. The repository returned server errors, so this is not verified.",
   },
+  hiranpradit1994: {
+    short: "Hiranpradit et al. 1994 (thiourea after PBZ)",
+    cite: "Hiranpradit, H., Chandraparnik, S., Kaewrak, C., Salakpetch, S. & Punnachit, U. (1994). Effects of thiourea and KNO3 on flower bud burst in durian, Durio zibethenus Murr., after paclobutrazol use. Thai Agricultural Research Journal 12(3): 184–194.",
+    url: "https://doi.org/10.14456/thaidoa-agres.1994.21",
+    type: "Peer-reviewed · Thai DOA",
+    finding: "Four seasons in Chanthaburi on trees given 1,000 ppm PBZ. 1988/89: thiourea 500–1,500 ppm raised flowers per tree with dose (r = 0.661); 1,500 ppm gave 75% more flowers than PBZ alone. 1989/90: thiourea 1,000–3,000 ppm and KNO3 1,500 ppm raised inflorescence numbers over untreated trees, but did not help PBZ when daily rain exceeded 35 mm. 1990/91, with rain above 10 mm a day at the dot (pinhead-bud) stage: thiourea 3,000 ppm alone or mixed with other products gave more inflorescences than PBZ alone. 1991/92, with under 10 mm a day: no gain. A little rain at the dot stage normally stops bud development (abstract read at the DOI registry).",
+  },
+  thien2021: {
+    short: "Thiện et al. 2021 (PBZ-degrading bacteria, field)",
+    cite: "Nguyễn Hửu Thiện, Đỗ Bá Tân, Nguyễn Văn Thảo & Nguyễn Khởi Nghĩa (2021). Hiện trạng sử dụng, lưu tồn và thử nghiệm xử lý paclobutrazol trong đất lúa tại huyện Châu Phú, tỉnh An Giang [Paclobutrazol use, residue and remediation in rice soil, An Giang]. Can Tho University Journal of Science 57(5B): 129–140.",
+    url: "https://doi.org/10.22144/ctu.jvn.2021.150",
+    type: "Peer-reviewed · Can Tho Univ. (rice soil)",
+    finding: "Field trial in sticky-rice soil (4 treatments × 4 replicates). A liquid product with three PBZ-degrading bacterial strains (CT3-92 from a Mekong mango orchard, B6-1 and B2-O; about 10⁸ CFU/mL) was sprayed at 5 L per 1,000 m². Ten days after farmers applied PBZ, soil (0–20 cm) with the product had no detectable PBZ, against 0.13 mg/kg without it. Organic manure at 2 t/ha alone did not lower PBZ at that point but had cleared it by harvest (day 105), when the NPK-only control still held 0.13 mg/kg. Yield was not raised after one crop. Farm soils surveyed held 0.09–1.11 mg/kg PBZ (full text read).",
+  },
+  safri2015: {
+    short: "Safri 2015 (Riau, PBZ dose trial)",
+    cite: "M. Tri Safri (2015). Induksi pembungaan durian (Durio zibethinus Murr) di luar musim menggunakan paklobutrazol [Off-season flowering induction of durian using paclobutrazol]. Undergraduate thesis, UIN Sultan Syarif Kasim Riau.",
+    url: "https://repository.uin-suska.ac.id/5808/",
+    type: "Undergraduate thesis · Indonesia",
+    finding: "Bantan, Bengkalis (Riau). PBZ at 0, 2, 4, 6 and 8 g per tree, randomised blocks, 3 replicates. Flower shoots appeared 56 days after application in all treatments. 6 g per tree gave the most shoots, panicles and flowers. The abstract does not say whether grams are active ingredient or product, or the application method (abstract read).",
+  },
+  suprianto2015: {
+    short: "Suprianto 2015 (Riau, 'Tembaga')",
+    cite: "Ricip Suprianto (2015). Induksi pembungaan durian (Durio zibethinus Murr) di luar musim menggunakan paklobutrazol dan KNO3 [Off-season flowering induction of durian using paclobutrazol and KNO3]. Undergraduate thesis, UIN Sultan Syarif Kasim Riau.",
+    url: "https://repository.uin-suska.ac.id/5781/",
+    type: "Undergraduate thesis · Indonesia",
+    finding: "Cultivar 'Tembaga', randomised blocks with several PBZ rates (and KNO3). PBZ significantly affected only the time to bloom; 4 g per tree was judged best. The abstract gives no day counts or flower numbers (abstract read).",
+  },
+  duong2024bact: {
+    short: "Phạm Thị Thùy Dương et al. 2024 (PBZ-degrading strains)",
+    cite: "Tuyển chọn một số chủng vi khuẩn phân giải paclobutrazol (PBZ) tồn dư trong đất trồng cây ăn quả tại miền Tây và Đông Nam Bộ [Selection of bacterial strains degrading residual PBZ in fruit-orchard soils of the Mekong Delta and South-East]. Vietnam Journal of Science and Technology – A, No. 5A (2024). Nong Lam University HCMC.",
+    url: "https://vjol.info.vn/khcn/article/view/95137",
+    type: "Unverified lead",
+    finding: "A ministry-level project at Nong Lam University isolated several PBZ-degrading bacterial strains from fruit-orchard soils. Only a truncated summary was readable; strain names and degradation rates were not seen, and the PDF server refused connections.",
+  },
+  smiarc_ph: {
+    short: "DA-SMIARC flower induction (Philippines)",
+    cite: "Armenio, R. Jr., Cantila, M. S. & Abad, M. 'Flower induction in durian'. Department of Agriculture, Southern Mindanao Integrated Agricultural Research Center. Known only from press and blog reports.",
+    url: "https://aremulta.blogspot.com/2008/03/flower-induction-in-durian.html",
+    type: "Unverified lead",
+    finding: "Press reports: on bearing-age trees with mature flushes, PBZ or the foliar product Multi-K induced off-season flowering 10–21 days after application, with about 80 fruit per tree (PBZ) and 64 (Multi-K). The original report, trial size and rates were not found.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

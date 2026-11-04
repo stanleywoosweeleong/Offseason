@@ -428,10 +428,11 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992a, as reported in the book, p. 141; checked against a clear rescan).",
+        "text": "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992a, as reported in the book, p. 141; checked against a clear rescan). A four-season follow-up by the same Thai DOA group found the rain matters most at the dot (pinhead-bud) stage: with more than 10 mm of rain a day then, 3,000 ppm thiourea still gave more inflorescences than PBZ alone, but in a drier year (under 10 mm a day) thiourea added nothing. KNO₃ at 1,500 ppm also raised inflorescence numbers over untreated trees.",
         "level": "evidence",
         "sources": [
-          "tran2023book"
+          "tran2023book",
+          "hiranpradit1994"
         ]
       },
       {
@@ -590,7 +591,8 @@ export const STAGES = [
         "text": "Break bud dormancy deliberately. Rice-grain-sized new buds go dormant, and more than 10 mm of rain stalls them. A foliar KNO₃ spray at 0.5–1.0% breaks dormancy and gives an even bloom, and the book recommends it even in the dry season. If more than 35 mm of rain hits newly emerging buds, they fall into a deep dormancy that even thiourea cannot break (Salakpetch 2005, as reported in the book).",
         "level": "expert",
         "sources": [
-          "tran2023book"
+          "tran2023book",
+          "hiranpradit1994"
         ]
       },
       {
@@ -969,10 +971,11 @@ export const STAGES = [
         ]
       },
       {
-        "text": "First field evidence that a microbial product works. In China, one spray of a Micrococcus bacterial agent cut PBZ residue in sandy soil by about 75% within 5 months compared with untreated soil, and halved it where PBZ had just been applied, while soil enzyme activity and yield rose. It was a herb crop, not a fruit tree, with one site, one season and a patented strain, so treat it as promising rather than proven for durian.",
+        "text": "Field evidence that microbial products work, so far outside orchards. In China, one spray of a Micrococcus bacterial agent cut PBZ residue in sandy soil by about 75% within 5 months compared with untreated soil, and halved it where PBZ had just been applied, while soil enzyme activity and yield rose. In Vietnamese rice soil, a liquid product of three local PBZ-degrading bacteria (one from a Mekong mango orchard), sprayed at 5 L per 1,000 m², left no detectable PBZ 10 days after farmers applied it, against 0.13 mg/kg without it; 2 t/ha of organic manure alone took until harvest to clear it. Neither was a fruit tree, and each was one site and one season, so treat this as promising rather than proven for durian.",
         "level": "evidence",
         "sources": [
-          "jiang2025"
+          "jiang2025",
+          "thien2021"
         ]
       },
       {
@@ -989,7 +992,8 @@ export const STAGES = [
         "sources": [
           "vaz2015",
           "aciar2022",
-          "bavutex2023"
+          "bavutex2023",
+          "thien2021"
         ]
       },
       {
@@ -1148,6 +1152,28 @@ export const PBZ_TRIALS = [
     "timing": "5 Nov vs 5 Dec",
     "result": "93.6–97% flowered; Dec spray gave June harvest and higher returns",
     "effect": "positive"
+  },
+  {
+    "source": "safri2015",
+    "place": "Riau, ID",
+    "cultivar": "not stated",
+    "age": "not stated",
+    "method": "not stated",
+    "rate": "0–8 g per tree (a.i. or product not stated)",
+    "timing": "not stated",
+    "result": "Flower shoots 56 days after application in all treatments; most shoots, panicles and flowers at 6 g per tree",
+    "effect": "mixed"
+  },
+  {
+    "source": "suprianto2015",
+    "place": "Riau, ID",
+    "cultivar": "Tembaga",
+    "age": "not stated",
+    "method": "not stated",
+    "rate": "several rates; best 4 g per tree",
+    "timing": "not stated",
+    "result": "Only time to bloom was significantly affected",
+    "effect": "mixed"
   }
 ];
 
@@ -1158,7 +1184,7 @@ export const GAPS = [
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
-  "Only one field trial has tested a PBZ-degrading microbial product, on a Chinese herb crop. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
+  "Two field trials have tested PBZ-degrading microbial products, on a Chinese herb crop and on Vietnamese rice. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
   "Sources identified but not recovered: MARDI's durian clone D24 PBZ study (Rushidah & Razak 2001; only a library catalogue entry exists), Hasan & Karim 1989 (Malaysia; repository unavailable), and a 2014 Thai university report on fertiliser + PBZ for off-season durian (Nanakorn et al., RMUTSV; the online file is an empty placeholder, so contact the authors). No Thai government study measuring PBZ residue in durian orchard soil was found; the Thai DOA's 2015 soil study covered mango."
 ];
 
