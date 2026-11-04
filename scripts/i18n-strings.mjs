@@ -6,7 +6,7 @@ import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "../sr
 import { LIBRARY } from "../src/library.js";
 import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS, TRIAZOLES, TRIAZOLE_ADVICE } from "../src/cleanup.js";
 import { buildTimeline } from "../src/planner.js";
-import { LEVEL, TAB_TITLE, EFFECT_LABEL, TEST_LABEL, TRI_LABEL } from "../src/labels.js";
+import { LEVEL, EFFECT_LABEL, TEST_LABEL, TRI_LABEL } from "../src/labels.js";
 
 const root = new URL("../", import.meta.url);
 const read = (f) => readFileSync(new URL(f, root), "utf8");
@@ -53,7 +53,7 @@ export function dataStrings() {
   for (const t of TRIAZOLES) push(t.malaysia, t.likePBZ, t.evidence);
   for (const s of Object.values(SOURCES)) push(s.short, s.type, s.finding);
   for (const t of buildTimeline("2026-01-01")) push(t.label, t.detail);
-  push(...Object.values(LEVEL), ...Object.values(TAB_TITLE), ...Object.values(EFFECT_LABEL), ...Object.values(TEST_LABEL), ...Object.values(TRI_LABEL).map((x) => x[0]));
+  push(...Object.values(LEVEL), ...Object.values(EFFECT_LABEL), ...Object.values(TEST_LABEL), ...Object.values(TRI_LABEL).map((x) => x[0]));
   const planner = read("src/planner.js");
   for (const m of planner.matchAll(/new Error\("((?:[^"\\]|\\.)*)"\)/g)) push(JSON.parse(`"${m[1]}"`));
   return out;

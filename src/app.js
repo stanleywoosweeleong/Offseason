@@ -2,7 +2,7 @@ import { SOURCES } from "./sources.js";
 import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "./guide.js";
 import { LIBRARY } from "./library.js";
 import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS, TRIAZOLES, TRIAZOLE_ADVICE } from "./cleanup.js";
-import { LEVEL, TAB_TITLE, EFFECT_LABEL, TEST_LABEL, TRI_LABEL } from "./labels.js";
+import { LEVEL, EFFECT_LABEL, TEST_LABEL, TRI_LABEL } from "./labels.js";
 import { LANGS, LANG_MENU, LOCALE, loadLang, lang, tr, trf, applyStatic } from "./i18n.js";
 import { planFromHarvest, planFromSpray, pbzMix, tankMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
@@ -39,7 +39,6 @@ let currentTab = "guide";
 function showTab(name, { scroll = true } = {}) {
   $$(".tabbar [role=tab]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
   $$("main [role=tabpanel]").forEach((p) => (p.hidden = p.id !== `tab-${name}`));
-  $("#sectionTitle").textContent = tr(TAB_TITLE[name]);
   currentTab = name;
   store.set("tab", name);
   if (scroll) window.scrollTo({ top: 0 });
