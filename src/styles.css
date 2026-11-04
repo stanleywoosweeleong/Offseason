@@ -287,3 +287,18 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
 .microbe.t-soil, .microbe.t-liquid, .microbe.t-unknown { border-top-color: var(--survey); }
 #noFungi { margin-top: 12px; }
 #otherCrops .plain li { margin-bottom: 10px; }
+
+/* Farmer tank calculator */
+.pickset { border: 0; padding: 0; margin: 14px 0 0; }
+.pickset legend { font-weight: 700; font-size: 0.95rem; margin-bottom: 8px; padding: 0; }
+.picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 8px; }
+.pick { position: relative; display: flex; }
+.pick input { position: absolute; opacity: 0; pointer-events: none; }
+.pick span { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 56px; padding: 8px 6px; border: 1.5px solid var(--line); border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; background: var(--surface); }
+.pick small { font-weight: 500; font-size: 0.75rem; color: var(--muted); }
+.pick input:checked + span { border-color: var(--brand); background: var(--evidence-bg); color: var(--brand); }
+.pick input:focus-visible + span { outline: 2px solid var(--brand); outline-offset: 2px; }
+.form-seg { margin-top: 10px; }
+.form-seg span { font-size: 0.82rem; }
+
+[hidden] { display: none !important; }

@@ -2,7 +2,7 @@ import { SOURCES } from "./sources.js";
 import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "./guide.js";
 import { LIBRARY } from "./library.js";
 import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS, TRIAZOLES, TRIAZOLE_ADVICE } from "./cleanup.js";
-import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
+import { planFromHarvest, planFromSpray, pbzMix, tankMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => [...document.querySelectorAll(sel)];
@@ -285,31 +285,55 @@ $("#tab-planner .form").addEventListener("input", renderPlan);
 $("#tab-planner .form").addEventListener("change", renderPlan);
 
 // ---------- Mix ----------
+const radio = (name) => document.querySelector(`input[name=${name}]:checked`)?.value;
+const num = (n, d = 0) => Number(n.toFixed(d)).toLocaleString(undefined, { maximumFractionDigits: d });
 function renderMix() {
-  const ppm = Number($("#m_ppm").value), litres = Number($("#m_l").value), ai = Number($("#m_ai").value);
+  const tankSel = radio("tank"), aiSel = radio("ai"), form = radio("form");
+  $("#tankOtherWrap").hidden = tankSel !== "other";
+  $("#aiOtherWrap").hidden = aiSel !== "other";
+  const tank = tankSel === "other" ? Number($("#m_tank").value) : Number(tankSel);
+  const ai = aiSel === "other" ? Number($("#m_ai").value) : Number(aiSel);
+  const ppm = Number($("#m_ppm").value), litres = Number($("#m_l").value);
   const trees = Math.max(1, Math.round(Number($("#m_trees").value) || 1));
+  const unit = form === "sc" ? "mL" : "g";
+  const what = form === "sc" ? `${ai}% liquid (SC)` : `${ai}% powder (WP)`;
+  const big = (x) => (x >= 1000 && unit === "g" ? `${num(x / 1000, 2)} kg` : x >= 1000 ? `${num(x / 1000, 2)} L` : `${num(x, x < 20 ? 1 : 0)} ${unit}`);
   const out = $("#mixOut");
   try {
-    const r = pbzMix({ ppm, litres, aiPercent: ai });
+    const r = tankMix({ ppm, tankLitres: tank, aiPercent: ai, litresPerTree: litres, trees });
     const msg = {
-      ok: `<p class="good">✓ Within the 1,000–1,500 ppm range recommended for mature trees.</p>${cites(["pham2022", "chandraparnik1993"])}`,
-      high: `<p class="warn">⚠ Above ${PBZ_RECOMMENDED_PPM.max.toLocaleString()} ppm. Overdosing is common, adds no proven benefit and builds up residue in the soil.</p>${cites(["pham2022"])}`,
-      low: `<p class="note">Below 1,000 ppm. Young 'Monthong' trees did well on 750 ppm; mature trees may respond less.</p>${cites(["wiangsamut2022", "chandraparnik1993"])}`,
+      ok: `<p class="good">✓ Within the rate recommended for mature trees (1,000–1,500 ppm).</p>${cites(["pham2022", "chandraparnik1993"])}`,
+      high: `<p class="warn">⚠ Stronger than recommended. Overdosing is common, adds no proven benefit and builds up residue in the soil.</p>${cites(["pham2022"])}`,
+      low: `<p class="note">Lighter than the mature-tree rate. Young 'Monthong' trees did well on this; mature trees may respond less.</p>${cites(["wiangsamut2022", "chandraparnik1993"])}`,
     }[r.status];
-    const lowDose = r.gramsAI < 12 ? `<p class="note">Only ${r.gramsAI.toFixed(1)} g a.i. per tree. The book's minimum for an 8–10-year tree is about 12–15 g (10–12 L).</p>` : "";
+    const perTree = (r.aiPerTank / tank) * litres;
+    const lowDose = perTree < 12 && r.status !== "low" ? `<p class="note">Each tree gets only ${num(perTree, 1)} g of active ingredient. For an 8–10-year tree the book's minimum is about 12–15 g, so spray 10–12 L per tree.</p>` : "";
+    const treesPerTank = r.treesPerTank >= 1 ? `One tank sprays about <b>${num(r.treesPerTank, 1)} trees</b> at ${num(litres, 1)} L each.` : `Each tree needs about <b>${num(1 / r.treesPerTank, 1)} tanks</b> (${num(litres, 1)} L).`;
+    const orchard = trees > 1 || r.tanks > 1
+      ? `<h3>For ${num(trees)} tree${trees > 1 ? "s" : ""}</h3>
+         <p>You need <b>${num(r.totalLitres)} L</b> of spray: mix <b>${num(r.tanks)} tank${r.tanks > 1 ? "s" : ""}</b> of ${num(tank)} L, using <b>${big(r.productTotal)}</b> of product in total.</p>`
+      : "";
+    const leftover = r.leftoverLitres >= 1 ? `<p class="hint">The last tank will have about ${num(r.leftoverLitres)} L left over. Mix a smaller last batch rather than pouring leftover PBZ on the ground: it stays in the soil for months.</p>` : "";
     out.innerHTML = `
       <div class="card result">
-        <h3>Per tree (${litres} L)</h3>
-        <p class="big">${r.gramsProduct.toFixed(1)} g <span>of ${ai}% product</span></p>
-        <p>= ${r.gramsAI.toFixed(1)} g active ingredient.${trees > 1 ? ` For ${trees} trees: <b>${(r.gramsProduct * trees).toFixed(0)} g</b> product in <b>${(litres * trees).toFixed(0)} L</b>.` : ""}</p>
-        ${lowDose}${msg}
-        <p class="hint">Liquid (SC) labels state g/L; convert to % first, or measure by weight.</p>
+        <h3>Put in each ${num(tank)} L tank of water</h3>
+        <p class="big">${big(r.productPerTank)} <span>of ${esc(what)}</span></p>
+        <p>${treesPerTank}</p>
+        ${orchard}${leftover}${lowDose}${msg}
+        <p class="hint">${form === "sc" ? "Measure liquid with a measuring cylinder or syringe. If the label gives g/L (for example 250 g/L), divide by 10 to get % (25%)." : "Weigh powder on a kitchen scale; spoon and bottle-cap measures vary a lot between products."} Mix the product in a little water first, then top up the tank. Wear gloves and a mask.</p>
+        <p class="hint"><b>Where to spray:</b> both sides of the mature leaves, plus the main branches inside the canopy, until the leaves are wet but not dripping. Lay the plastic over the beds about a week before, so drips land on plastic, not soil.</p>
+        <details class="adv"><summary>Scientist view</summary><p class="hint">${num(ppm)} ppm active ingredient = ${num(r.aiPerTank, 1)} g a.i. per ${num(tank)} L tank, about ${num(perTree, 1)} g a.i. per tree.</p></details>
       </div>`;
   } catch (err) {
     out.innerHTML = `<div class="card warn">${esc(err.message)}</div>`;
   }
 }
-$("#tab-pbz [data-subpanel=mix] .form").addEventListener("input", renderMix);
+const mixForm = $("#mixForm");
+mixForm.addEventListener("change", (e) => {
+  if (e.target.name === "dose") $("#m_ppm").value = e.target.value;
+  renderMix();
+});
+mixForm.addEventListener("input", renderMix);
 
 // ---------- Checklist ----------
 function renderChecklist() {

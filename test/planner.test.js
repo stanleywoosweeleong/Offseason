@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { pbzMix, planFromHarvest, planFromSpray, isoDate, rainRisk, DEFAULT_STAGES } from "../src/planner.js";
+import { pbzMix, tankMix, planFromHarvest, planFromSpray, isoDate, rainRisk, DEFAULT_STAGES } from "../src/planner.js";
 
 test("pbzMix reproduces the Wiangsamut 2022 recipe (750 ppm, 20 L, 25% WP → 60 g)", () => {
   const r = pbzMix({ ppm: 750, litres: 20, aiPercent: 25 });
@@ -104,4 +104,25 @@ test("book protocol (Table 9.2) becomes dated tasks in order, with cultivar-spec
   assert.ok(ri6.some((r) => r.early) && !ri6.some((r) => r.late));
   assert.ok(mt.some((r) => r.late) && !mt.some((r) => r.early));
   assert.equal(isoDate(ri6.find((r) => r.anchor === "spray" && r.from === 0).start), "2026-08-24");
+});
+
+test("tankMix: 16 L knapsack, 25% WP, 1,000 ppm → 64 g per tank", () => {
+  const r = tankMix({ ppm: 1000, tankLitres: 16, aiPercent: 25, litresPerTree: 12, trees: 1 });
+  assert.equal(r.productPerTank, 64);
+  assert.equal(r.aiPerTank, 16);
+  assert.equal(r.tanks, 1);
+  assert.equal(r.leftoverLitres, 4);
+});
+
+test("tankMix: 50 trees × 12 L from 200 L drums of 10% product", () => {
+  const r = tankMix({ ppm: 1000, tankLitres: 200, aiPercent: 10, litresPerTree: 12, trees: 50 });
+  assert.equal(r.productPerTank, 2000); // 200 g a.i. = 2 kg of 10% product per drum
+  assert.equal(r.totalLitres, 600);
+  assert.equal(r.tanks, 3);
+  assert.equal(r.leftoverLitres, 0);
+  assert.equal(r.productTotal, 6000);
+});
+
+test("tankMix rejects a zero tank", () => {
+  assert.throws(() => tankMix({ ppm: 1000, tankLitres: 0, aiPercent: 25, litresPerTree: 12 }));
 });

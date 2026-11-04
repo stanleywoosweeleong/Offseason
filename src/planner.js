@@ -212,6 +212,29 @@ export function pbzMix({ ppm, litres, aiPercent }) {
   return { gramsAI, gramsProduct, status };
 }
 
+/**
+ * Farmer's tank mix: product per tank of water, and how many tanks an orchard needs.
+ * Product amount is grams for a powder (WP) or mL for a liquid (SC, taking % as weight per volume).
+ */
+export function tankMix({ ppm, tankLitres, aiPercent, litresPerTree, trees = 1 }) {
+  if (![tankLitres, litresPerTree, trees].every((n) => Number.isFinite(n) && n > 0)) {
+    throw new Error("tank size, litres per tree and number of trees must be positive numbers");
+  }
+  const perTank = pbzMix({ ppm, litres: tankLitres, aiPercent });
+  const totalLitres = litresPerTree * trees;
+  const tanks = Math.ceil(totalLitres / tankLitres - 1e-9);
+  return {
+    productPerTank: perTank.gramsProduct,
+    aiPerTank: perTank.gramsAI,
+    treesPerTank: tankLitres / litresPerTree,
+    totalLitres,
+    tanks,
+    productTotal: perTank.gramsProduct * tanks,
+    leftoverLitres: tanks * tankLitres - totalLitres,
+    status: perTank.status,
+  };
+}
+
 /** Flag spray dates that fall in months the grower marked as rainy (0 = Jan). */
 export function rainRisk(date, rainyMonths = []) {
   return rainyMonths.includes(toUTCDate(date).getUTCMonth());
