@@ -302,3 +302,9 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
 .form-seg span { font-size: 0.82rem; }
 
 [hidden] { display: none !important; }
+.picks.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.picks.four span { font-size: 0.95rem; }
+.picks.four .wide { grid-column: 1 / -1; }
+.picks.four .wide span { min-height: 44px; }
+.picks.four span { white-space: nowrap; padding: 8px 4px; }
+@media (max-width: 379px) { .picks.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
