@@ -566,8 +566,13 @@ export const STAGES = [
         sources: ["tran2023book"],
       },
       {
-        text: "Harvest and ripening: in a Cai Lay survey, 13% of growers harvested in one synchronised pick to limit flesh disorders, over 80% dipped fruit in ethephon after harvest, and 11% used calcium carbide (Tham 2008). Ripening turns starch into sugar and softens the flesh, which prevents hard spots. For 'Monthong' the book suggests an ethephon dip of 0.1–0.2% for even ripening. Calcium carbide is banned for ripening fruit in several countries, so check local food-safety rules.",
+        text: "Harvest and ripening: in a Cai Lay survey, 13% of growers harvested in one synchronised pick to limit flesh disorders, over 80% dipped fruit in ethephon after harvest, and 11% used calcium carbide (Tham 2008). Ripening turns starch into sugar and softens the flesh, which prevents hard spots. The book gives three different ethephon dip rates for 'Monthong': 0.1–0.2 mL/L (text, p. 196), 10–40 mL/L (Figure 7.10 caption) and 0.1–0.2% (summary box, p. 199). These differ by up to 200 times, so follow the registered product label rather than any one figure. Calcium carbide is banned for ripening fruit in several countries, so check local food-safety rules.",
         level: "survey",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "'Monthong' hard flesh is a nutrition problem, and it can be almost eliminated. Hau et al. (2009) found that sequential foliar Ca, Mg and K sprays during fruit growth, plus ditch drainage and mulching before harvest, lowered starch and raised sugar in the flesh, which cut flesh disorders. Adding a post-harvest ethephon dip brought disorders below 1%; growers call what remains a 'minor' disorder (as reported in the book, p. 196). Calcium and potassium are the key nutrients.",
+        level: "evidence",
         sources: ["tran2023book"],
       },
     ],
