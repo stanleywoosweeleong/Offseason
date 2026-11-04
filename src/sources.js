@@ -225,7 +225,7 @@ export const SOURCES = {
     cite:
       "Tran Van Hau (lead author) & Tran Sy Hieu (2026). Flower Induction in Durian. Viet Nam National University " +
       "Ho Chi Minh City Press. English edition of Xử lý ra hoa cây sầu riêng (3rd Vietnamese ed. 2023, 263 pp.). " +
-      "Chapter 5, Flowering Induction Techniques, pp. 135–159, Chapter 6, Improving Fruit Set and Limiting Young Fruit Drop, pp. 161–174, Chapter 7 on flesh disorders (pp. 185, 195–196, 198–199), and Chapter 9, Durian Floral Induction Protocols (pp. 255–285) (pages photographed by the app author).",
+      "Chapter 5, Flowering Induction Techniques, pp. 135–159, Chapter 6, Improving Fruit Set and Limiting Young Fruit Drop, pp. 161–174, Chapter 7 on flesh disorders (pp. 185, 195–196, 198–199), and Chapter 9, Durian Floral Induction Protocols (pp. 255–303, including the Table 9.2 protocol and the month-by-month chart on p. 301) (pages photographed by the app author).",
     url: null,
     type: "Book · Can Tho Univ. (print only)",
     finding:
@@ -235,7 +235,7 @@ export const SOURCES = {
       "trenching and re-watering. It also covers weather (nights 20–22 °C, 50–60% humidity, monsoon direction), cultivar drought needs in the Mekong Delta (Ri6 and Monthong 30–35 days) and soil-moisture targets (Table 5.1). It reports Can Tho University trials: Table 5.2/5.4/5.6 on 'Kho Qua Xanh' " +
       "(Hau 2000; Hau et al. 2001, off-season, Cai Lay) and Table 5.3/5.5/5.7 on 'Sua Hat Lep' (Hau et al. 2001, " +
       "two years, CTU farm). It concludes that PBZ with raised-bed mulching does not affect fruit quality. Findings " +
-      "from other authors are cited in the app as reported in the book. Chapter 9 gives the integrated year-round off-season protocol: post-harvest liming and root care, flush synchronisation, pre-PBZ priming, PBZ technique, mulch removal at bud emergence, bud dormancy, forced leaf flush, flower thinning, pre-bloom water management, fruit thinning and crop load, harvest maturity and ripening. Chapter 6 covers hand pollination, cultivar mixes, boron, NAA, GA₃, flush control and 'matchstick' fruit drop. Note: the book cites the Vietnamese PBZ " +
+      "from other authors are cited in the app as reported in the book. The summary diagram legend (pp. 302–303) mentions a DAP + KCl mix, 'soil moisture 80–85%' during drought, and the 2:1:3 feed at 40–45 days after set. These contradict the book's own text and Table 9.2, which the app follows. Chapter 9 gives the integrated year-round off-season protocol: post-harvest liming and root care, flush synchronisation, pre-PBZ priming, PBZ technique, mulch removal at bud emergence, bud dormancy, forced leaf flush, flower thinning, pre-bloom water management, fruit thinning and crop load, harvest maturity and ripening. Chapter 6 covers hand pollination, cultivar mixes, boron, NAA, GA₃, flush control and 'matchstick' fruit drop. Note: the book cites the Vietnamese PBZ " +
       "survey as 'Duong et al. (2022)', which is the same paper listed here as Pham et al. 2022 (first author " +
       "Pham Thi Thuy Duong).",
   },

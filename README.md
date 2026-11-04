@@ -17,7 +17,7 @@ One topic: **how to produce durian off-season.** That means inducing flowering o
 
 ## Other tabs
 
-- **Planner:** pick a cultivar and work backwards from a target harvest date to a PBZ spray window, or forwards from a spray date. The timeline follows the same steps. Presets cover Monthong, Ri6, Musang King, Kho Qua Xanh, Sua Hat Lep and Central Highlands Monthong.
+- **Planner:** includes **Your dated protocol**, the book's day-by-day Table 9.2 converted to calendar dates. Pick a cultivar and work backwards from a target harvest date to a PBZ spray window, or forwards from a spray date. The timeline follows the same steps. Presets cover Monthong, Ri6, Musang King, Kho Qua Xanh, Sua Hat Lep and Central Highlands Monthong.
 - **PBZ evidence:** every durian PBZ trial side by side, plus residue and safety notes.
 - **PBZ mix:** grams of product per tank for a target ppm.
 - **Checklist:** in cycle order, saved on the device.

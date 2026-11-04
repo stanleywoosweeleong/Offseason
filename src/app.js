@@ -1,6 +1,6 @@
 import { SOURCES } from "./sources.js";
-import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY } from "./guide.js";
-import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS } from "./planner.js";
+import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "./guide.js";
+import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -125,6 +125,17 @@ $("#cultivar").addEventListener("change", (e) => { store.set("cultivar", e.targe
   $(id).addEventListener("input", () => { $("#cultivar").value = "custom"; store.set("cultivar", "custom"); })
 );
 
+function protocolHTML(sprayDate, stages) {
+  const stepNo = Object.fromEntries(STAGES.map((st, i) => [st.id, i + 1]));
+  const rows = buildProtocol(sprayDate, PROTOCOL, stages);
+  const when = (r) => (r.start ? fmt(r.start) + (isoDate(r.end) !== isoDate(r.start) ? ` – ${fmt(r.end)}` : "") : "After last harvest");
+  return `<div class="card"><h3>Your dated protocol</h3>
+    <p class="hint">The book's day-by-day off-season protocol for 'Monthong' and 'Ri6' (Table 9.2), placed on your calendar. Rows for the final fruit load switch automatically between early cultivars (≤ 100 days) and late cultivars such as 'Monthong'. ${cites(["tran2023book"])}</p>
+    <ol class="timeline protocol">${rows
+      .map((r) => `<li class="tl"><div class="when">${when(r)}</div><div><span class="step">Step ${stepNo[r.step]}</span> <b>${esc(r.title)}</b><p>${esc(r.actions)}</p></div></li>`)
+      .join("")}</ol></div>`;
+}
+
 function readStages() {
   const n = (id) => Number($(id).value);
   return {
@@ -165,7 +176,8 @@ function renderPlan() {
           <p>Most likely date: <b>${fmt(r.spray.typical)}</b>. The window is wide because weather drives flowering. Spray at the start of the window if your area tends to flower late.</p>
           ${risky.length ? `<p class="warn">⚠ Part of this window falls in a month you marked as rainy. Rain after spraying made PBZ unreliable in trials. ${cites(["kozai2024", "chandraparnik1993"])}</p>` : ""}
         </div>
-        <div class="card"><h3>Timeline (anchored on the most likely spray date)</h3>${timelineHTML(r.timeline)}</div>`;
+        <div class="card"><h3>Timeline (anchored on the most likely spray date)</h3>${timelineHTML(r.timeline)}</div>
+        ${protocolHTML(r.spray.typical, stages)}`;
     } else {
       const r = planFromSpray($("#planDate").value, stages);
       out.innerHTML = `
@@ -175,7 +187,8 @@ function renderPlan() {
           <p>Flowering likely ${fmt(r.anthesis.earliest)} – ${fmt(r.anthesis.latest)}. Most likely harvest: <b>${fmt(r.harvest.typical)}</b>.</p>
           ${rainRisk(r.spray, months) ? `<p class="warn">⚠ This spray date is in a month you marked as rainy. ${cites(["kozai2024", "chandraparnik1993"])}</p>` : ""}
         </div>
-        <div class="card"><h3>Timeline</h3>${timelineHTML(r.timeline)}</div>`;
+        <div class="card"><h3>Timeline</h3>${timelineHTML(r.timeline)}</div>
+        ${protocolHTML(r.spray, stages)}`;
     }
   } catch (err) {
     out.innerHTML = `<div class="card warn">${esc(err.message)}</div>`;

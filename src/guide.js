@@ -21,6 +21,13 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Think in 12-month cycles. The book's month-by-month chart for off-season 'Ri6' and 'Musang King' runs: harvest in months 1–2; liming, pruning and the first leaf flush in months 2–4; a second flush in months 5–6; priming, PBZ, mulch and drought in month 7; flower buds in month 8; fruit set in month 9; and fruit growth to harvest by month 12. That is one off-season crop per tree per year. Two leaf flushes plus about 6–7 months from PBZ to harvest leave no room for more (book p. 301; months read approximately from the chart).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
         "text": "In Vietnam's Mekong Delta, good irrigation and drainage let growers induce flowering year-round. Natural flowering is Dec–Jan, with harvest in May–Jun. Growers aiming for off-season fruit usually induce in June–July.",
         "level": "evidence",
         "sources": [
@@ -119,7 +126,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Fix soil pH straight after harvest. Apply 3–5 kg agricultural lime per tree (about 500–1,000 kg/ha), or dolomite where magnesium is short. Gypsum does not raise pH. Below pH 6.5, soluble cadmium rises and can accumulate in the flesh, which is a residue issue for export markets. Below pH 5, aluminium, iron, manganese and heavy metals start to poison the roots. Biochar (one application, at most 1–2% of the topsoil by weight) binds cadmium, but too much pushes pH too high (book Ch. 9).",
+        "text": "Fix soil pH straight after harvest. Apply 3–5 kg agricultural lime per tree (about 500–1,000 kg/ha), or dolomite where magnesium is short, to bring soil pH to 6.0–6.5. Gypsum does not raise pH. Below pH 6.5, soluble cadmium rises and can accumulate in the flesh, which is a residue issue for export markets. Below pH 5, aluminium, iron, manganese and heavy metals start to poison the roots. Biochar (one application, at most 1–2% of the topsoil by weight) binds cadmium, but too much pushes pH too high (book Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -170,7 +177,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Synchronise the flushes. Cai Lay growers push 2–3 flushes after harvest. To make each one emerge evenly, they harden the previous flush with an MKP spray (0.5–1%) and briefly withhold water, then trigger the next flush in one wave (book Ch. 9).",
+        "text": "Synchronise the flushes. Cai Lay growers push 2–3 flushes after harvest. To make each one emerge evenly, they harden the previous flush with an MKP spray (0.5–1%) and briefly withhold water, then trigger the next flush in one wave. The book's protocol table puts the pause at 5–7 days without water before fertilising the next flush, and keeps ditch water 60–80 cm below the beds (book Ch. 9, Table 9.2).",
         "level": "practice",
         "sources": [
           "tran2023book"
@@ -359,12 +366,19 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree. Surveyed growers sprayed 1,816 ppm but delivered only 11.8 g a.i. per tree (Tien Giang), or 1,240 ppm and 10.5 g (Ben Tre). The successful trials gave 20–32 g a.i. per tree (1,000–1,600 ppm × 20 L). Check the grams per tree in the PBZ mix tab.",
+        "text": "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree. Surveyed growers sprayed 1,816 ppm but delivered only 11.8 g a.i. per tree (Tien Giang), or 1,240 ppm and 10.5 g (Ben Tre). The successful trials gave 20–32 g a.i. per tree (1,000–1,600 ppm × 20 L). Check the grams per tree in the PBZ mix tab. The book's own protocol (Table 9.2) sets a floor: an 8–10-year tree needs at least 10–12 L of spray, about 12–15 g a.i. per tree.",
         "level": "expert",
         "sources": [
           "tran2023book",
           "pham2022",
           "tri2011"
+        ]
+      },
+      {
+        "text": "Adjust the dose to season and tree (book Table 9.2). Use the lower end (about 1,000 ppm) in the natural season and the higher end off-season. Vigorous or young bearing trees need more. Spray in the early morning or late afternoon. Do not induce very young trees, or trees that have lost leaves to Phytophthora. Without PBZ, off-season flowering typically reaches only 50–60% of trees, depending on rain.",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
         ]
       },
       {
@@ -660,6 +674,13 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Which calcium, where. Right after fruit set, the protocol table supplies soil calcium as gypsum or organic calcium, and warns against putting calcium nitrate or calcium chloride on the soil at this stage, because they can upset soil pH and trigger fruit drop. Foliar Ca–B sprays continue, and the calcium nitrate spray (0.2%) comes later, at 30–35 days after set (book Table 9.2).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
         "text": "Stop any new leaf flush during early fruit growth; this is the book's most important fruit-stage measure. Flushes 3–8 weeks after fruit set increase drop and cause misshapen fruit with hard, uneven flesh (Salakpetch et al. 1992). Spray KNO₃ at 1.0–1.5% once or twice, or MKP at 0.5–1.0%. If shoots are already well advanced, the Thai extension mix is 30 mL humic acid + 60 g NPK 15:30:15 or 10:20:30 + 50 mL mepiquat chloride (25%) in 20 L of water (book Ch. 6, Ch. 9).",
         "level": "evidence",
         "sources": [
@@ -731,6 +752,13 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Yield targets from the book's protocol: 7–8-year 'Ri6' carrying 30–50 fruit gives 100–110 kg per tree; 'Musang King' with 50–60 fruit gives 80–100 kg; 8–10-year 'Monthong' with 40–50 fruit gives 120–150 kg. Thin in three passes: 20–25 days after set (an 8–10-year tree may hold 80–100 for now), at 40–45 days when fruit are 9–10 cm (final spacing), and a final load check at 60–70 days ('Ri6', 'Musang King') or 80–85 days ('Monthong') (book Table 9.2).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
         "text": "Don't over-thin. Fruit, like flowers, hold back new shoots. If fruit set is poor, or you thin too hard, the spare carbohydrate triggers a leaf flush that then starves and drops the remaining fruit (book Ch. 9).",
         "level": "expert",
         "sources": [
@@ -790,7 +818,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Water during fruit growth, and the rain-at-harvest problem. Keep ditch water 60–80 cm below the beds and irrigate every 2–3 days, changing amounts gradually, because sudden changes cause fruit drop. Waterlogging triggers new flushes, soggy flesh and Phytophthora; too little water in the dry season scorches leaves and stunts fruit. 15–20 days before harvest, cut irrigation back, since mild stress helps the fruit mature. Off-season harvests often meet heavy rain, which causes mushy and soggy flesh. In that case, mulch the root zone and drain the ditches about a month before harvest. Mulching cut flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999). For 'Ri6', add Ca + B sprays during flesh growth (book Ch. 7, Ch. 9).",
+        "text": "Water during fruit growth, and the rain-at-harvest problem. Keep ditch water 60–80 cm below the beds and irrigate every 2–3 days, changing amounts gradually, because sudden changes cause fruit drop. Waterlogging triggers new flushes, soggy flesh and Phytophthora; too little water in the dry season scorches leaves and stunts fruit. 15–20 days before harvest, cut irrigation back, since mild stress helps the fruit mature. The protocol table pumps the ditches completely dry 10–15 days before harvest. Off-season harvests often meet heavy rain, which causes mushy and soggy flesh. In that case, mulch the root zone and drain the ditches about a month before harvest. Mulching cut flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999). For 'Ri6', add Ca + B sprays during flesh growth (book Ch. 7, Ch. 9).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -806,7 +834,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Pick at the right maturity. For the domestic market, tree-ripened fruit tastes best. For export, cut at about 85% maturity: tapping the rind gives a hollow, dull sound as the flesh starts to separate. Fruit cut below 75% maturity cannot be rescued by ripening treatment (Cheyglinted 1993, as reported in the book).",
+        "text": "Pick at the right maturity. For the domestic market, tree-ripened fruit tastes best. For export, cut at about 85% maturity: tapping the rind gives a hollow, dull sound as the flesh starts to separate. Fruit cut below 75% maturity cannot be rescued by ripening treatment (Cheyglinted 1993, as reported in the book). Other maturity signs: the rind turns from light brown to yellow-green, the stalk joint swells, the gaps between spines widen, and the spines become softer (Pascua & Cantila 1992). Don't harvest during heavy rain: pump the ditches dry and wait 3 days after the rain stops before cutting. Don't seal ripening fruit in, or the rind turns dark yellow (book Table 9.2).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -1221,5 +1249,222 @@ export const PBZ_SAFETY = [
       "subhadrabandhu1998",
       "singh2024"
     ]
+  }
+];
+
+// Book Table 9.2 (pp. 286–300) as dated tasks for the Planner. anchor: spray | buds | anthesis | set | harvest | null
+// (null = relative to the previous harvest, not dated). from/to are days relative to the anchor.
+// early: only for cultivars harvested ≤ 100 days after set; late: only for cultivars hanging > 100 days.
+export const PROTOCOL = [
+  {
+    "step": "prepare",
+    "anchor": null,
+    "from": null,
+    "to": null,
+    "title": "Straight after the previous harvest",
+    "actions": "Lime 3–5 kg per tree (CaCO₃, or dolomite if Mg is low; not gypsum) to bring soil pH to 6.0–6.5. Prune and clean up diseased wood, fruit and leaves. Irrigate every 2–3 days, keeping soil at 70–75% of field capacity."
+  },
+  {
+    "step": "prepare",
+    "anchor": null,
+    "from": null,
+    "to": null,
+    "title": "15–20 days after liming",
+    "actions": "Apply 20–30 kg compost per tree (with Trichoderma), plus a humic-acid drench. When new feeder roots show, apply 1–2 kg NPK 3:2:1 or 4:3:2 per tree. Spray GA₃ 5–10 ppm and amino acids or seaweed to push the leaf flush."
+  },
+  {
+    "step": "prepare",
+    "anchor": null,
+    "from": null,
+    "to": null,
+    "title": "For a second flush",
+    "actions": "Withhold water 5–7 days and spray MKP 0.5–1.0% to harden the current flush, then fertilise and water again. Spray against leafhoppers, psyllids, whiteflies and thrips as new shoots open. Keep ditch water 60–80 cm below the beds."
+  },
+  {
+    "step": "spray",
+    "anchor": "spray",
+    "from": -30,
+    "to": -30,
+    "title": "Soft-leaf stage of the last flush",
+    "actions": "Spray MKP (0-52-34) at 0.5–1.0% to harden the leaves evenly."
+  },
+  {
+    "step": "spray",
+    "anchor": "spray",
+    "from": -23,
+    "to": -20,
+    "title": "7–10 days later",
+    "actions": "Soil NPK 1:3:2 or 1:3:3, 1.0–1.5 kg per tree. Use DAP or MAP, not single superphosphate (cadmium risk)."
+  },
+  {
+    "step": "spray",
+    "anchor": "spray",
+    "from": -15,
+    "to": -5,
+    "title": "15–20 days later",
+    "actions": "Spray phosphorous acid (H₃PO₃) at 0.5–1.0%, 1–2 times at 10–15-day intervals. Remove water shoots on the fruiting branches."
+  },
+  {
+    "step": "water",
+    "anchor": "spray",
+    "from": -7,
+    "to": -7,
+    "title": "7 days before PBZ",
+    "actions": "Spray MKP 0.5–1.0% on both leaf surfaces. Start the drought: pump the ditches completely dry and keep them dry until flower buds clearly show."
+  },
+  {
+    "step": "spray",
+    "anchor": "spray",
+    "from": 0,
+    "to": 0,
+    "title": "PBZ day",
+    "actions": "Spray PBZ at 1,000–1,500 ppm (lower in the natural season), early morning or late afternoon, on both leaf surfaces. Use a 20–30% stronger mix on the trunk and main branches. An 8–10-year tree needs at least 10–12 L, about 12–15 g a.i. Stop all irrigation and cover the beds fully with plastic. Do not induce very young trees or trees defoliated by Phytophthora."
+  },
+  {
+    "step": "bloom",
+    "anchor": "buds",
+    "from": 0,
+    "to": 0,
+    "title": "Buds clearly visible (usually 20–30 days after PBZ)",
+    "actions": "Remove the mulch. Refill the ditches to 60–80 cm and resume watering gradually, every 2–3 days, aiming for 50–60% soil moisture and no waterlogging. If rain over 10 mm hits, or buds develop unevenly, spray KNO₃ 1.0–1.5% directly on the buds, and repeat if needed. Spray micronutrients and Ca on the buds."
+  },
+  {
+    "step": "bloom",
+    "anchor": "buds",
+    "from": 5,
+    "to": 7,
+    "title": "Buds rounded (confirmed flower, not leaf)",
+    "actions": "Apply 0.5–0.7 kg NPK 2:1:1 per tree to push one leaf flush that matures with the flowers."
+  },
+  {
+    "step": "bloom",
+    "anchor": "buds",
+    "from": 20,
+    "to": 40,
+    "title": "Flower thinning (only if flowering is over 40–50% and even)",
+    "actions": "Remove flowers at branch tips and near the trunk, crowded clusters, and those with thin stalks. Keep evenly spaced, thick-stalked clusters on the main branches. Apply 0.3–0.4 kg NPK 1:1:1 or 1:1:2 per tree at 25–30 days after bud emergence. Spray preventively against anthracnose if it rains, and give a foliar boron spray before the flowers open."
+  },
+  {
+    "step": "bloom",
+    "anchor": "anthesis",
+    "from": -7,
+    "to": 0,
+    "title": "Last week before flowers open",
+    "actions": "Cut irrigation by about 20–25% (soil 50–55%), but never withhold water completely, which cuts fruit set. Stop all pesticide sprays before bloom."
+  },
+  {
+    "step": "hold",
+    "anchor": "anthesis",
+    "from": 0,
+    "to": 3,
+    "title": "Flowers open",
+    "actions": "Hand-pollinate clusters on the middle of the branches, 18:00–21:00 (Ch. 9 text: 19:00–22:00), with pollen from a different cultivar. This is essential for 'Musang King'. Use one brush for only 2–3 trees. 3–5 days after opening, spray Ca–B to raise fruit set."
+  },
+  {
+    "step": "hold",
+    "anchor": "set",
+    "from": 0,
+    "to": 15,
+    "title": "Just after fruit set",
+    "actions": "Foliar NPK 1:2:1 at 0.5% with seaweed and amino acids, twice, 10–15 days apart. Apply soil calcium as gypsum or organic Ca; avoid calcium nitrate or calcium chloride on the soil now. Spray GA₃ 5–10 ppm twice, 10–15 days apart."
+  },
+  {
+    "step": "hold",
+    "anchor": "set",
+    "from": 15,
+    "to": 20,
+    "title": "15–20 days after set",
+    "actions": "Spray micronutrients with a low dose of auxin; too much or too-frequent NAA misshapes fruit. Keep soil at 70–75%; don't cut water for fear of a flush, and don't over-water. Spray Ca–B, and control fruit borer."
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 20,
+    "to": 25,
+    "title": "First fruit thinning",
+    "actions": "Remove misshapen fruit, thin-stalked fruit, fruit at branch tips, and crowded clusters; an 8–10-year tree can hold 80–100 fruit for now. If set is low (20–30 fruit), spray MKP 1.0–1.5% every 10–15 days to block new flushes."
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 25,
+    "to": 30,
+    "title": "First fruit feed",
+    "actions": "Soil NPK 1:1:1 (2:1:1 if the load is heavy), 1.0–1.5 kg per tree. Never use KCl / muriate of potash."
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 30,
+    "to": 35,
+    "title": "Calcium against soggy flesh",
+    "actions": "Spray Ca(NO₃)₂ 0.2% or Ca–B, which also prevents aril burn in 'Ri6'. 10–14 days later, spray MgSO₄ 0.2%."
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 40,
+    "to": 45,
+    "title": "Second fruit thinning (fruit 9–10 cm)",
+    "actions": "Set final spacing; a 10–15-year tree should end with 70–100 fruit."
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 55,
+    "to": 60,
+    "title": "Second fruit feed",
+    "actions": "Soil NPK 2:1:3, 0.5–1.0 kg per tree, plus a KNO₃ spray at 0.5–1.0%. Spray Ca–B, then MgSO₄ 0.2% 15–20 days later. Spray fungicide against fruit rot (Lasiodiplodia in the dry season; Phytophthora, Phomopsis and anthracnose in the wet). Remove all dropped fruit from the orchard."
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 60,
+    "to": 70,
+    "title": "Final load ('Ri6', 'Musang King')",
+    "actions": "Keep 1 fruit on a 2.5 cm branch, 2 on a 3.8 cm branch, and 3–4 on branches over 5 cm. Targets at 7–8 years: 'Ri6' 30–50 fruit for 100–110 kg; 'Musang King' 50–60 fruit for 80–100 kg.",
+    "early": true
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 75,
+    "to": 80,
+    "title": "Third fruit feed (late cultivars)",
+    "actions": "Repeat the 2:1:3 feed and the KNO₃ 0.5–1.0% spray.",
+    "late": true
+  },
+  {
+    "step": "harvest",
+    "anchor": "set",
+    "from": 80,
+    "to": 85,
+    "title": "Final load ('Monthong')",
+    "actions": "At 8–10 years, keep 40–50 fruit for 120–150 kg per tree.",
+    "late": true
+  },
+  {
+    "step": "harvest",
+    "anchor": "harvest",
+    "from": -25,
+    "to": -20,
+    "title": "20–25 days before harvest",
+    "actions": "If heavy rain comes, cover the root zone with plastic and pump the ditches to 60–80 cm to prevent mushy flesh."
+  },
+  {
+    "step": "harvest",
+    "anchor": "harvest",
+    "from": -15,
+    "to": -10,
+    "title": "10–15 days before harvest",
+    "actions": "Pump the ditches completely dry to finish maturation."
+  },
+  {
+    "step": "harvest",
+    "anchor": "harvest",
+    "from": 0,
+    "to": 0,
+    "title": "Harvest",
+    "actions": "Signs of maturity: days since fruit set; a dull, hollow sound when tapped; rind turning from light brown to yellow-green; a swollen stalk joint; wider gaps between spines; softer, more flexible spines. Do not harvest in heavy rain: pump the ditches dry and wait 3 days after the rain stops. For export, brush the stalk with ethephon 0.1–0.2% and ripen with good airflow; never seal fruit in."
   }
 ];

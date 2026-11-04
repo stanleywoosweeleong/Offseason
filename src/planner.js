@@ -216,3 +216,24 @@ export function pbzMix({ ppm, litres, aiPercent }) {
 export function rainRisk(date, rainyMonths = []) {
   return rainyMonths.includes(toUTCDate(date).getUTCMonth());
 }
+
+/**
+ * Turn the book's day-by-day protocol (Table 9.2) into calendar dates for one spray date.
+ * Anchors: spray; buds = anthesis − 55 days (bud → bloom ≈ 55 days, book Ch. 9); anthesis;
+ * set = anthesis + 3 days (fertilisation is complete within 3 days of opening); harvest = anthesis + harvest days.
+ */
+export function buildProtocol(sprayDate, protocol, stages = DEFAULT_STAGES) {
+  validateStages(stages);
+  const s = toUTCDate(sprayDate);
+  const { pbzToAnthesis: p, anthesisToHarvest: a } = stages;
+  const anthesis = addDays(s, p.typ);
+  const anchors = { spray: s, buds: addDays(anthesis, -55), anthesis, set: addDays(anthesis, 3), harvest: addDays(anthesis, a.typ) };
+  const late = a.typ > 100;
+  return protocol
+    .filter((r) => !(r.late && !late) && !(r.early && late))
+    .map((r) => ({
+      ...r,
+      start: r.anchor ? addDays(anchors[r.anchor], r.from) : null,
+      end: r.anchor ? addDays(anchors[r.anchor], r.to) : null,
+    }));
+}

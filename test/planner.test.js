@@ -92,3 +92,16 @@ test("timeline is in date order with bud-flush milestone before anthesis", async
   for (let i = 1; i < dated.length; i++) assert.ok(dated[i].date >= dated[i - 1].date, dated[i].id);
   assert.ok(dated.find((t) => t.id === "budflush"));
 });
+
+test("book protocol (Table 9.2) becomes dated tasks in order, with cultivar-specific rows", async () => {
+  const { buildProtocol, CULTIVAR_PRESETS } = await import("../src/planner.js");
+  const { PROTOCOL } = await import("../src/guide.js");
+  const st = (k) => ({ ...DEFAULT_STAGES, anthesisToHarvest: CULTIVAR_PRESETS[k].anthesisToHarvest });
+  const ri6 = buildProtocol("2026-08-24", PROTOCOL, st("ri6"));
+  const mt = buildProtocol("2026-08-24", PROTOCOL, st("monthong"));
+  const dated = ri6.filter((r) => r.start);
+  for (let i = 1; i < dated.length; i++) assert.ok(dated[i].start >= dated[i - 1].start, dated[i].title);
+  assert.ok(ri6.some((r) => r.early) && !ri6.some((r) => r.late));
+  assert.ok(mt.some((r) => r.late) && !mt.some((r) => r.early));
+  assert.equal(isoDate(ri6.find((r) => r.anchor === "spray" && r.from === 0).start), "2026-08-24");
+});
