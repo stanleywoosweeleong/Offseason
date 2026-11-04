@@ -93,3 +93,12 @@ test("languages: service worker caches every language file", async () => {
   const sw = readFileSync(new URL("../sw.js", import.meta.url), "utf8");
   for (const l of LANGS.filter((x) => x !== "en")) assert.ok(sw.includes(`src/i18n/${l}.json`), l);
 });
+
+test("fonts: the bundled Khmer font exists, is referenced by the stylesheet and cached offline", async () => {
+  const { readFileSync, existsSync } = await import("node:fs");
+  const font = "fonts/NotoSansKhmer-khmer.woff2";
+  assert.ok(existsSync(new URL(`../${font}`, import.meta.url)), font);
+  assert.ok(existsSync(new URL("../fonts/OFL.txt", import.meta.url)), "font licence");
+  assert.ok(readFileSync(new URL("../src/styles.css", import.meta.url), "utf8").includes(`../${font}`));
+  assert.ok(readFileSync(new URL("../sw.js", import.meta.url), "utf8").includes(font));
+});

@@ -27,7 +27,7 @@ The app is built for phones first. A bottom tab bar holds five sections, and it 
 
 ## Languages
 
-Like the Tigerstripe app, the app speaks English, 中文 (Simplified Chinese), Bahasa Malaysia, Tiếng Việt and ភាសាខ្មែរ (Khmer). A language picker opens on the first visit, and the button at the top right changes it later. Translations live in `src/i18n/<lang>.json`, keyed by the exact English text; anything missing falls back to English. Bibliographic citations stay in their original form.
+Like the Tigerstripe app, the app speaks English, 中文 (Simplified Chinese), Bahasa Malaysia, Tiếng Việt and ភាសាខ្មែរ (Khmer). A language picker opens on the first visit, and the button at the top right changes it later. Translations live in `src/i18n/<lang>.json`, keyed by the exact English text; anything missing falls back to English. Bibliographic citations stay in their original form. Khmer text uses a bundled copy of Noto Sans Khmer (`fonts/`, SIL Open Font License), loaded only when Khmer is on screen and cached for offline use, so Khmer displays correctly even on devices without a Khmer font.
 
 The translations were drafted by AI and should be reviewed by native speakers (for Vietnamese, ideally Prof. Trần Văn Hâu's group) before the app is used for extension work.
 

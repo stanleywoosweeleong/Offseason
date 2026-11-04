@@ -1,4 +1,16 @@
 /* Offseason Durian — mobile-first styles. Base rules target phones; min-width queries enhance larger screens. */
+
+/* Bundled Khmer font (Noto Sans Khmer, SIL Open Font License, see fonts/OFL.txt).
+   Loaded only when Khmer characters are on screen, and cached for offline use, so Khmer
+   always renders correctly even on phones and computers without a Khmer system font. */
+@font-face {
+  font-family: "Noto Sans Khmer";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/NotoSansKhmer-khmer.woff2") format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}
 :root {
   /* Paper white: warm, low-glare surfaces and soft-black ink for long reading */
   --bg: #f4f0e6;
@@ -327,7 +339,7 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
 .langbox .opts .tag { flex: none; min-width: 46px; padding: 3px 8px; border-radius: 6px; background: var(--brand); color: #fff; font-size: 0.8rem; text-align: center; }
 .langbox .opts .nm { flex: 1; }
 .langbox .opts .nm small { display: block; font-weight: 400; font-size: 0.8rem; color: var(--muted); }
-body[data-lang="km"], .langbox [lang="km"] { font-family: "Khmer UI", "Leelawadee UI", "Noto Sans Khmer", "Khmer OS System", "Khmer OS", "Khmer Sangam MN", system-ui, sans-serif; }
+body[data-lang="km"], .langbox [lang="km"], #langTitle { font-family: "Noto Sans Khmer", "Khmer UI", "Leelawadee UI", "Khmer OS System", "Khmer OS", "Khmer Sangam MN", system-ui, sans-serif; }
 body[data-lang="km"] { line-height: 1.7; }
 body[data-lang="zh"] { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
 
