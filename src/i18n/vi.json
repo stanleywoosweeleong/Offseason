@@ -156,6 +156,7 @@
 "Chanthaburi, TH": "Chanthaburi, TH",
 "Check product registration for durian with the Pesticides Board of Malaysia (Lembaga Racun Perosak) before use.": "Kiểm tra đăng ký sản phẩm dùng cho sầu riêng với Hội đồng Thuốc BVTV Malaysia (Lembaga Racun Perosak) trước khi sử dụng.",
 "Check the residue limit in your destination market before you spray. In the EU, durian has no specific PBZ limit, so the default of 0.01 mg/kg may apply. In mango, no residue was found in fruit at optimised rates.": "Kiểm tra giới hạn dư lượng tại thị trường đích trước khi phun. Ở EU, sầu riêng không có giới hạn PBZ riêng, nên mức mặc định 0,01 mg/kg có thể được áp dụng. Ở xoài, không tìm thấy dư lượng trong trái khi dùng liều tối ưu.",
+"Check the strength printed on your bottle. Choosing 10% when the bottle says 25% puts 2.5 times too much PBZ in the tank.": "Hãy kiểm tra nồng độ in trên chai. Chọn 10% trong khi chai ghi 25% sẽ cho lượng PBZ vào bình gấp 2,5 lần mức cần.",
 "Checklist": "Danh mục kiểm tra",
 "Chemical options remain laboratory tools: nano zero-valent iron cut soil PBZ by only 15%, and an enzyme mix removed 88% in 48 hours under controlled heat and peroxide.": "Các giải pháp hóa học vẫn chỉ là công cụ phòng thí nghiệm: sắt hóa trị không kích thước nano chỉ giảm PBZ trong đất 15%, và một hỗn hợp enzyme loại bỏ 88% trong 48 giờ trong điều kiện nhiệt và peroxide được kiểm soát.",
 "Chen et al. 2010 (sediment consortium)": "Chen et al. 2010 (quần thể vi khuẩn trầm tích)",
@@ -882,6 +883,8 @@
 "Timing within the season matters. In Indonesia, an August application flowered faster than June or July. In Thailand, a December spray earned more than a November one.": "Thời điểm trong mùa vụ có ý nghĩa. Ở Indonesia, xử lý tháng 8 ra hoa nhanh hơn tháng 6 hoặc tháng 7. Ở Thái Lan, phun tháng 12 thu lợi nhiều hơn phun tháng 11.",
 "To get the same effect as in peat, PBZ needed 4–10 times the concentration in bark and composted bark media, and petunia in 60% composted bark needed 14 times as much. Fine bark bound the most. Organic matter in the root zone buffers PBZ (abstract read by a research assistant).": "Để có cùng tác dụng như trong giá thể than bùn, PBZ cần nồng độ gấp 4–10 lần trong giá thể vỏ cây và vỏ cây ủ hoai, và cây dạ yên thảo trong giá thể 60% vỏ cây ủ hoai cần gấp 14 lần. Vỏ cây mịn giữ PBZ nhiều nhất. Chất hữu cơ trong vùng rễ đệm PBZ (tóm tắt do trợ lý nghiên cứu đọc).",
 "Tongdee 1989 (durian ripening)": "Tongdee 1989 (làm chín sầu riêng)",
+"Too much per tree. Each tree would get {g} g of active ingredient, more than any durian trial used (at most 32 g, on big trees sprayed with 20 L). Spray less per tree: wet the leaves, do not soak them.": "Quá nhiều trên mỗi cây. Mỗi cây sẽ nhận {g} g hoạt chất, nhiều hơn bất kỳ thí nghiệm sầu riêng nào (tối đa 32 g, trên cây lớn phun 20 L). Hãy phun ít hơn cho mỗi cây: làm ướt lá, không phun đẫm.",
+"Too strong. This mix is above 1,500 ppm, the highest rate recommended for durian. Overdosed durian trees can stop growing new leaves, decline slowly, or fail to flower well next season, and the extra PBZ stays in the soil. Go back to \"Mature trees\" unless an adviser has told you otherwise.": "Quá đậm đặc. Hỗn hợp này vượt 1.500 ppm, mức cao nhất được khuyến cáo cho sầu riêng. Cây sầu riêng bị quá liều có thể ngừng ra đọt non, suy dần, hoặc ra hoa kém vào vụ sau, và PBZ dư sẽ tồn lại trong đất. Hãy quay lại \"Cây trưởng thành\" trừ khi cán bộ kỹ thuật hướng dẫn khác.",
 "Trade news": "Tin thương mại",
 "Trade news reporting that Vietnamese off-season durian prices rise sharply as supply falls. Use it only as market context; prices change constantly.": "Tin thương mại cho biết giá sầu riêng nghịch vụ của Việt Nam tăng mạnh khi nguồn cung giảm. Chỉ dùng làm bối cảnh thị trường; giá cả thay đổi liên tục.",
 "Tran & Tran 2026 (book)": "Trần & Trần 2026 (sách)",
@@ -992,6 +995,7 @@
 "{p}% powder (WP)": "{p}% dạng bột (WP)",
 "≈ 90–150 days after bloom, by cultivar": "≈ 90–150 ngày sau khi hoa nở, tùy giống",
 "⚠ Falls in a month you marked as rainy. Rain after spraying made PBZ unreliable in trials.": "⚠ Rơi vào tháng bạn đã đánh dấu là mùa mưa. Mưa sau khi phun làm PBZ cho kết quả không ổn định trong các thí nghiệm.",
+"⚠ Risk of overdosing": "⚠ Nguy cơ quá liều",
 "⚠ Stronger than recommended. Overdosing is common, adds no proven benefit and builds up residue in the soil.": "⚠ Đậm hơn mức khuyến cáo. Dùng quá liều là phổ biến, không có lợi ích được chứng minh và làm tích lũy dư lượng trong đất.",
 "✓ Within the rate recommended for mature trees (1,000–1,500 ppm).": "✓ Trong mức khuyến cáo cho cây trưởng thành (1.000–1.500 ppm)."
 }

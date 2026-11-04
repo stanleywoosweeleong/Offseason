@@ -156,6 +156,7 @@
 "Chanthaburi, TH": "泰国尖竹汶",
 "Check product registration for durian with the Pesticides Board of Malaysia (Lembaga Racun Perosak) before use.": "使用前请向马来西亚农药局（Lembaga Racun Perosak）查询产品是否已登记用于榴梿。",
 "Check the residue limit in your destination market before you spray. In the EU, durian has no specific PBZ limit, so the default of 0.01 mg/kg may apply. In mango, no residue was found in fruit at optimised rates.": "喷施前请查明目的市场的残留限量。欧盟对榴梿没有专门的 PBZ 限量，因此可能适用 0.01 mg/kg 的默认值。在芒果上，按优化用量施用时果实中未检出残留。",
+"Check the strength printed on your bottle. Choosing 10% when the bottle says 25% puts 2.5 times too much PBZ in the tank.": "请核对瓶身标签上的含量。如果瓶子写 25% 却选了 10%，药桶里的 PBZ 会多出 2.5 倍。",
 "Checklist": "检查清单",
 "Chemical options remain laboratory tools: nano zero-valent iron cut soil PBZ by only 15%, and an enzyme mix removed 88% in 48 hours under controlled heat and peroxide.": "化学方法仍只是实验室手段：纳米零价铁只使土壤 PBZ 减少 15%，一种酶混合物在控制加热和过氧化物条件下 48 小时去除 88%。",
 "Chen et al. 2010 (sediment consortium)": "Chen et al. 2010（沉积物菌群）",
@@ -882,6 +883,8 @@
 "Timing within the season matters. In Indonesia, an August application flowered faster than June or July. In Thailand, a December spray earned more than a November one.": "季节内的时机很重要。在印尼，8 月施用比 6 月或 7 月开花更快。在泰国，12 月喷施比 11 月收益更高。",
 "To get the same effect as in peat, PBZ needed 4–10 times the concentration in bark and composted bark media, and petunia in 60% composted bark needed 14 times as much. Fine bark bound the most. Organic matter in the root zone buffers PBZ (abstract read by a research assistant).": "要达到与泥炭中相同的效果，树皮和腐熟树皮基质中需要 4–10 倍浓度的 PBZ，60% 腐熟树皮中的矮牵牛需要 14 倍。细树皮吸附最多。根区的有机质对 PBZ 有缓冲作用（摘要由研究助理阅读）。",
 "Tongdee 1989 (durian ripening)": "Tongdee 1989（榴梿后熟）",
+"Too much per tree. Each tree would get {g} g of active ingredient, more than any durian trial used (at most 32 g, on big trees sprayed with 20 L). Spray less per tree: wet the leaves, do not soak them.": "每株用量过多。每株树将得到 {g} g 有效成分，超过所有榴梿试验的用量（最多 32 g，用于喷 20 L 的大树）。请减少每株喷量：叶片喷湿即可，不要喷到湿透滴水。",
+"Too strong. This mix is above 1,500 ppm, the highest rate recommended for durian. Overdosed durian trees can stop growing new leaves, decline slowly, or fail to flower well next season, and the extra PBZ stays in the soil. Go back to \"Mature trees\" unless an adviser has told you otherwise.": "浓度过高。此配比超过 1,500 ppm，即榴梿的最高推荐浓度。用药过量的榴梿树可能停止抽新梢、慢慢衰退，或下一季开花不良，多余的 PBZ 还会留在土壤中。除非农业顾问另有指示，请改回“成年树”。",
 "Trade news": "行业新闻",
 "Trade news reporting that Vietnamese off-season durian prices rise sharply as supply falls. Use it only as market context; prices change constantly.": "行业新闻报道，越南反季节榴梿价格随供应减少而大幅上涨。仅作为市场背景参考；价格不断变化。",
 "Tran & Tran 2026 (book)": "Tran & Tran 2026（书籍）",
@@ -992,6 +995,7 @@
 "{p}% powder (WP)": "{p}% 粉剂（WP）",
 "≈ 90–150 days after bloom, by cultivar": "≈ 开花后 90–150 天，视品种而定",
 "⚠ Falls in a month you marked as rainy. Rain after spraying made PBZ unreliable in trials.": "⚠ 落在您标记为多雨的月份。试验中喷施后下雨使 PBZ 效果不稳定。",
+"⚠ Risk of overdosing": "⚠ 有用药过量的风险",
 "⚠ Stronger than recommended. Overdosing is common, adds no proven benefit and builds up residue in the soil.": "⚠ 超过推荐浓度。用药过量很常见，没有已证实的好处，还会在土壤中累积残留。",
 "✓ Within the rate recommended for mature trees (1,000–1,500 ppm).": "✓ 在成年树推荐用量范围内（1,000–1,500 ppm）。"
 }

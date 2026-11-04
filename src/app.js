@@ -310,6 +310,10 @@ function renderMix() {
       low: `<p class="note">${tr("Lighter than the mature-tree rate. Young 'Monthong' trees did well on this; mature trees may respond less.")}</p>${cites(["wiangsamut2022", "chandraparnik1993"])}`,
     }[r.status];
     const perTree = (r.aiPerTank / tank) * litres;
+    const overdose = [];
+    if (r.status === "high") overdose.push(tr("Too strong. This mix is above 1,500 ppm, the highest rate recommended for durian. Overdosed durian trees can stop growing new leaves, decline slowly, or fail to flower well next season, and the extra PBZ stays in the soil. Go back to \"Mature trees\" unless an adviser has told you otherwise."));
+    if (perTree > 32) overdose.push(trf("Too much per tree. Each tree would get {g} g of active ingredient, more than any durian trial used (at most 32 g, on big trees sprayed with 20 L). Spray less per tree: wet the leaves, do not soak them.", { g: num(perTree, 1) }));
+    const danger = overdose.length ? `<div class="danger" role="alert"><b>${tr("⚠ Risk of overdosing")}</b>${overdose.map((x) => `<p>${esc(x)}</p>`).join("")}${cites(["grewal2023", "subhadrabandhu1998", "tri2011"])}</div>` : "";
     const lowDose = perTree < 12 && r.status !== "low" ? `<p class="note">${trf("Each tree gets only {g} g of active ingredient. For an 8–10-year tree the book's minimum is about 12–15 g, so spray 10–12 L per tree.", { g: num(perTree, 1) })}</p>` : "";
     const treesPerTank = r.treesPerTank >= 1
       ? trf("One tank sprays about {n} trees at {l} L each.", { n: `<b>${num(r.treesPerTank, 1)}</b>`, l: num(litres, 1) })
@@ -320,7 +324,8 @@ function renderMix() {
       : "";
     const leftover = r.leftoverLitres >= 1 ? `<p class="hint">${trf("The last tank will have about {l} L left over. Mix a smaller last batch rather than pouring leftover PBZ on the ground: it stays in the soil for months.", { l: num(r.leftoverLitres) })}</p>` : "";
     out.innerHTML = `
-      <div class="card result">
+      <div class="card result${overdose.length ? " over" : ""}">
+        ${danger}
         <h3>${trf("Put in each {t} L tank of water", { t: num(tank) })}</h3>
         <p class="big">${big(r.productPerTank)} <span>${esc(trf("of {product}", { product: what }))}</span></p>
         <p>${treesPerTank}</p>

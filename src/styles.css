@@ -326,3 +326,11 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
 body[data-lang="km"], .langbox [lang="km"] { font-family: "Khmer UI", "Leelawadee UI", "Noto Sans Khmer", "Khmer OS System", "Khmer OS", "Khmer Sangam MN", system-ui, sans-serif; }
 body[data-lang="km"] { line-height: 1.7; }
 body[data-lang="zh"] { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
+
+/* Overdose warning (calculator) */
+.danger { background: var(--warn-bg); color: var(--warn); border: 2px solid var(--warn); border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; }
+.danger b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.danger p { margin: 6px 0 0; }
+.result.over { border-left-color: var(--warn); }
+.result.over .big { color: var(--warn); }
+.label-check { margin-top: 8px; color: var(--warn); }

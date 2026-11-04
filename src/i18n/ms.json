@@ -156,6 +156,7 @@
 "Chanthaburi, TH": "Chanthaburi, TH",
 "Check product registration for durian with the Pesticides Board of Malaysia (Lembaga Racun Perosak) before use.": "Semak pendaftaran produk untuk durian dengan Lembaga Racun Perosak Malaysia sebelum digunakan.",
 "Check the residue limit in your destination market before you spray. In the EU, durian has no specific PBZ limit, so the default of 0.01 mg/kg may apply. In mango, no residue was found in fruit at optimised rates.": "Semak had sisa di pasaran destinasi anda sebelum menyembur. Di EU, durian tiada had PBZ khusus, jadi had lalai 0.01 mg/kg mungkin terpakai. Pada mangga, tiada sisa ditemui dalam buah pada kadar yang dioptimumkan.",
+"Check the strength printed on your bottle. Choosing 10% when the bottle says 25% puts 2.5 times too much PBZ in the tank.": "Semak kekuatan yang tertera pada botol anda. Memilih 10% sedangkan botol tertulis 25% akan memasukkan PBZ 2.5 kali terlalu banyak ke dalam tangki.",
 "Checklist": "Senarai semak",
 "Chemical options remain laboratory tools: nano zero-valent iron cut soil PBZ by only 15%, and an enzyme mix removed 88% in 48 hours under controlled heat and peroxide.": "Pilihan kimia masih alat makmal: besi sifar-valens nano hanya mengurangkan PBZ tanah sebanyak 15%, dan campuran enzim menyingkirkan 88% dalam 48 jam di bawah haba dan peroksida terkawal.",
 "Chen et al. 2010 (sediment consortium)": "Chen et al. 2010 (konsortium sedimen)",
@@ -882,6 +883,8 @@
 "Timing within the season matters. In Indonesia, an August application flowered faster than June or July. In Thailand, a December spray earned more than a November one.": "Masa dalam musim adalah penting. Di Indonesia, aplikasi Ogos berbunga lebih cepat berbanding Jun atau Julai. Di Thailand, semburan Disember memberi pendapatan lebih tinggi berbanding semburan November.",
 "To get the same effect as in peat, PBZ needed 4–10 times the concentration in bark and composted bark media, and petunia in 60% composted bark needed 14 times as much. Fine bark bound the most. Organic matter in the root zone buffers PBZ (abstract read by a research assistant).": "Untuk mendapatkan kesan yang sama seperti dalam gambut, PBZ memerlukan 4–10 kali kepekatan dalam media kulit kayu dan kulit kayu yang dikompos, dan petunia dalam 60% kulit kayu yang dikompos memerlukan 14 kali lebih banyak. Kulit kayu halus paling banyak mengikat. Bahan organik dalam zon akar menampan PBZ (abstrak dibaca oleh pembantu penyelidik).",
 "Tongdee 1989 (durian ripening)": "Tongdee 1989 (pemasakan durian)",
+"Too much per tree. Each tree would get {g} g of active ingredient, more than any durian trial used (at most 32 g, on big trees sprayed with 20 L). Spray less per tree: wet the leaves, do not soak them.": "Terlalu banyak sepokok. Setiap pokok akan menerima {g} g bahan aktif, lebih daripada mana-mana ujian durian (paling banyak 32 g, pada pokok besar yang disembur 20 L). Kurangkan semburan sepokok: basahkan daun, jangan sampai menitis.",
+"Too strong. This mix is above 1,500 ppm, the highest rate recommended for durian. Overdosed durian trees can stop growing new leaves, decline slowly, or fail to flower well next season, and the extra PBZ stays in the soil. Go back to \"Mature trees\" unless an adviser has told you otherwise.": "Terlalu pekat. Bancuhan ini melebihi 1,500 ppm, kadar tertinggi yang disyorkan untuk durian. Pokok durian yang terlebih dos boleh berhenti mengeluarkan pucuk baharu, merosot perlahan-lahan, atau kurang berbunga pada musim berikutnya, dan PBZ yang berlebihan kekal dalam tanah. Kembali ke \"Pokok matang\" melainkan penasihat anda menyatakan sebaliknya.",
 "Trade news": "Berita perdagangan",
 "Trade news reporting that Vietnamese off-season durian prices rise sharply as supply falls. Use it only as market context; prices change constantly.": "Berita perdagangan yang melaporkan harga durian luar musim Vietnam meningkat mendadak apabila bekalan berkurang. Gunakan hanya sebagai konteks pasaran; harga sentiasa berubah.",
 "Tran & Tran 2026 (book)": "Tran & Tran 2026 (buku)",
@@ -992,6 +995,7 @@
 "{p}% powder (WP)": "{p}% serbuk (WP)",
 "≈ 90–150 days after bloom, by cultivar": "≈ 90–150 hari selepas bunga kembang, mengikut kultivar",
 "⚠ Falls in a month you marked as rainy. Rain after spraying made PBZ unreliable in trials.": "⚠ Jatuh pada bulan yang anda tandakan sebagai musim hujan. Hujan selepas semburan menjadikan PBZ tidak boleh diharap dalam ujian.",
+"⚠ Risk of overdosing": "⚠ Risiko terlebih dos",
 "⚠ Stronger than recommended. Overdosing is common, adds no proven benefit and builds up residue in the soil.": "⚠ Lebih kuat daripada yang disyorkan. Dos berlebihan adalah biasa, tidak menambah manfaat yang terbukti dan mengumpulkan sisa dalam tanah.",
 "✓ Within the rate recommended for mature trees (1,000–1,500 ppm).": "✓ Dalam kadar yang disyorkan untuk pokok matang (1,000–1,500 ppm)."
 }
