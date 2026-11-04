@@ -206,6 +206,18 @@
             <label><input type="radio" name="mfilter" value="farm" /><span>Field / pot</span></label>
             <label><input type="radio" name="mfilter" value="lab" /><span>Lab only</span></label>
           </div>
+          <div class="share-row">
+            <p class="hint">Share the full list of microbes, with references.</p>
+            <a class="share-btn wa" id="shareMicrobesWa" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2-1-1 1c-1-.4-2.2-1.6-2.6-2.6l1-1-1-2z"/></svg><span>Send via WhatsApp</span>
+            </a>
+            <button type="button" class="share-btn" id="shareMicrobes" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>Share…</span>
+            </button>
+            <button type="button" class="share-btn" id="copyMicrobes">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span id="copyMicrobesLabel">Copy list</span>
+            </button>
+          </div>
         </div>
         <h3 class="sec-h">Microbes that degrade PBZ <span id="microbeCount"></span></h3>
         <div id="microbes" class="trials"></div>

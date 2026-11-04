@@ -473,3 +473,10 @@ main.wrap { padding-bottom: 84px; }
 /* Long labels (Malay, Khmer) shrink a little to stay whole before they would ever break */
 .subnav button { container-type: inline-size; padding: 8px 3px; }
 .subnav button span { font-size: clamp(0.64rem, 12.5cqi, 0.82rem); overflow-wrap: break-word; hyphens: manual; }
+
+/* Share buttons (Clean-up microbe list) */
+.share-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.share-row .hint { flex-basis: 100%; margin: 0; }
+.share-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 0.92rem; font-weight: 650; text-decoration: none; cursor: pointer; }
+.share-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.share-btn.wa { background: #1f7a4d; border-color: #1f7a4d; color: #fff; }

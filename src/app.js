@@ -154,7 +154,58 @@ function renderPBZ() {
   ).join("");
   $("#pbzSafety").innerHTML = PBZ_SAFETY.map((p) => `<li>${esc(tr(p.text))} ${cites(p.sources)}</li>`).join("");
 }
+// ---------- Share the microbe list (WhatsApp / copy) ----------
+// Plain text with WhatsApp formatting (*bold*, _italic_), grouped by how each microbe was tested,
+// with the source and its link after every entry so a researcher can check each claim.
+const APP_URL = "https://stanleywoosweeleong.github.io/Offseason/";
+function microbeShareText() {
+  const groups = [
+    [tr("Tested in the field or in pots"), MICROBES.filter((m) => ["field", "pot"].includes(m.test) && m.level !== "lead")],
+    [tr("Laboratory only"), MICROBES.filter((m) => !["field", "pot"].includes(m.test) && m.level !== "lead")],
+    [tr("Leads still to be checked"), MICROBES.filter((m) => m.level === "lead")],
+  ];
+  let n = 0;
+  const lines = [`*${tr("Microbes that break down paclobutrazol (PBZ)")}*`, `${tr("Offseason Durian")} · ${MICROBES.length}`];
+  for (const [title, list] of groups) {
+    if (!list.length) continue;
+    lines.push("", `*${title}*`);
+    for (const m of list) {
+      n++;
+      lines.push(
+        "",
+        `${n}. _${tr(m.name)}_ (${tr(m.group)}) · ${tr(TEST_LABEL[m.test])}`,
+        `${tr("From:")} ${tr(m.from)}`,
+        `${tr("Result:")} ${tr(m.result)}`,
+        ...m.sources.map((id) => `${tr("Source:")} ${tr(SOURCES[id].short)}${SOURCES[id].url ? ` ${SOURCES[id].url}` : ""}`)
+      );
+    }
+  }
+  lines.push("", tr(NO_FUNGI), "", `⚠ ${tr("None has been tested in a durian orchard yet.")}`, `${tr("Full details and more sources:")} ${APP_URL}`);
+  return lines.join("\n");
+}
+function updateShareLinks() {
+  $("#shareMicrobesWa").href = `https://wa.me/?text=${encodeURIComponent(microbeShareText())}`;
+}
+// The phone's own share sheet (WhatsApp, Telegram, email…) handles long text better than a wa.me link.
+if (navigator.share) {
+  $("#shareMicrobes").hidden = false;
+  $("#shareMicrobes").addEventListener("click", () => {
+    navigator.share({ title: tr("Microbes that break down paclobutrazol (PBZ)"), text: microbeShareText() }).catch(() => {});
+  });
+}
+$("#copyMicrobes").addEventListener("click", async () => {
+  const label = $("#copyMicrobesLabel");
+  try {
+    await navigator.clipboard.writeText(microbeShareText());
+    label.textContent = tr("Copied");
+  } catch {
+    label.textContent = tr("Copy failed");
+  }
+  setTimeout(() => (label.textContent = tr("Copy list")), 2000);
+});
+
 function renderCleanup() {
+  updateShareLinks();
   const f = document.querySelector("input[name=mfilter]:checked")?.value || "all";
   const show = MICROBES.filter((m) => f === "all" || (f === "farm" ? ["field", "pot"].includes(m.test) : !["field", "pot"].includes(m.test)));
   $("#microbeCount").textContent = `(${show.length})`;
