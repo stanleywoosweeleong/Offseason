@@ -23,6 +23,11 @@ One topic: **how to produce durian off-season.** That means inducing flowering o
 - **Checklist:** in cycle order, saved on the device.
 - **Sources:** peer-reviewed papers, Thai DOA, JIRCAS, SOFRI, Can Tho University, ACIAR and EFSA, plus *Flower Induction in Durian* (Tran & Tran 2026).
 
+## Related apps
+
+- [Tiger Stripe](https://stanleywoosweeleong.github.io/Tigerstripe/): Musang King flesh-disorder management (Can Tho University).
+- [Crop Hormones](https://stanleywoosweeleong.github.io/crophormone/): hormone changes and regulator data for 13 tropical fruits; source of the durian hormone study, China MRL check and PBZ soil-persistence figures used here.
+
 ## Run it
 
 ```bash

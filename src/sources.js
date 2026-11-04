@@ -371,6 +371,27 @@ export const SOURCES = {
     type: "Peer-reviewed · University",
     finding: "Granular activated carbon filters removed 90–99% of PBZ from irrigation water within 12–59 seconds of contact. This works for water; no study was found that tested activated carbon or biochar against PBZ residue in orchard soil.",
   },
+  sakhidin2012: {
+    short: "Sakhidin & Suparto 2012 (durian hormones)",
+    cite: "Sakhidin & Suparto, S.R. (2012). Kandungan giberelin, kinetin, dan asam absisat pada tanaman durian yang diberi paklobutrazol dan etepon [Gibberellin, kinetin and abscisic acid in durian treated with paclobutrazol and ethephon]. Jurnal Hortikultura Indonesia 2(1): 21–26.",
+    url: "https://doi.org/10.29244/jhi.2.1.21-26",
+    type: "Peer-reviewed · IPB / Unsoed (Indonesia)",
+    finding: "10-year-old 'Monthong', PBZ at 0, 2 or 4 g a.i. per tree combined with ethephon at 0, 400 or 800 ppm. The PBZ × ethephon interaction affected flower number, gibberellin and ABA. 4 g PBZ gave the lowest gibberellin and the highest kinetin (a cytokinin); 4 g PBZ + 800 ppm ethephon gave the lowest gibberellin and ABA and the most flowers. This is the only durian study found that measured hormones under PBZ (abstract read).",
+  },
+  gb2763: {
+    short: "China GB 2763-2021 (MRLs)",
+    cite: "National Health Commission & Ministry of Agriculture and Rural Affairs of China. GB 2763-2021 National food safety standard: maximum residue limits for pesticides in food. Unofficial English translation by USDA FAS (report CH2021-0099).",
+    url: "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/arquivos/informacao-relevante/translation_of_maximum_residue_limits_for_pesticides_in_foods_beijing_china___people_s_republic_of_08_22_2021__5_-1-1.pdf",
+    type: "Regulatory · China (via USDA FAS)",
+    finding: "Paclobutrazol (Table 127) has fruit limits of 0.05 mg/kg for mango and 0.5 mg/kg for litchi, but NO durian entry. If China sets one, durian is tested on the pulp only. GB 2763-2021 was replaced by GB 2763-2026 (in force 1 March 2026), which has not been re-checked for durian. Taken from the author's Crop Hormones app (full text read there).",
+  },
+  ppdb: {
+    short: "PPDB (Univ. of Hertfordshire)",
+    cite: "Pesticide Properties DataBase (PPDB), Agriculture & Environment Research Unit, University of Hertfordshire. Entries for paclobutrazol (504), uniconazole (675) and sodium chlorate (1126).",
+    url: "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/504.htm",
+    type: "Regulatory database",
+    finding: "Paclobutrazol soil half-life: about 120 days in the lab (EU, 20 °C) and about 30 days in normalised EU field trials, so roughly 97% is gone in about 150 days on the field basis and about 600 days on the lab basis. The EU dossier range is wide (lab 27–618 days). Uniconazole: not approved in the EU or GB, with conflicting persistence data (field half-life 435 days in PPDB against 3 days in a Chinese wheat trial). Sodium chlorate: lab half-life 47–315 days. Taken from the author's Crop Hormones app.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

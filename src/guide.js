@@ -228,10 +228,11 @@ export const STAGES = [
         ]
       },
       {
-        "text": "How it works: PBZ blocks gibberellin, the hormone that drives shoot growth, and raises cytokinin. The tree puts its resources into flower buds instead of new leaves.",
+        "text": "How it works: PBZ blocks gibberellin, the hormone that drives shoot growth, and raises cytokinin. The tree puts its resources into flower buds instead of new leaves. In durian this has been measured: on 10-year-old 'Monthong', 4 g a.i. PBZ per tree gave the lowest gibberellin and the highest cytokinin (kinetin). Adding an 800 ppm ethephon spray also lowered ABA and gave the most flowers (Sakhidin & Suparto 2012).",
         "level": "evidence",
         "sources": [
-          "desta2021"
+          "desta2021",
+          "sakhidin2012"
         ]
       },
       {
@@ -403,10 +404,11 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Other options: uniconazole at 100–500 ppm brought flowering forward on 'Monthong' without reducing fruit size. At 2,500 ppm it shortened fruit stalks and made fruit smaller (Jutamanee et al. 2014). Ethephon, daminozide and NAA have no flowering effect, gibberellins push leaf growth, and root pruning harms or kills trees (as reported in the book).",
+        "text": "Other options: uniconazole at 100–500 ppm brought flowering forward on 'Monthong' without reducing fruit size. At 2,500 ppm it shortened fruit stalks and made fruit smaller (Jutamanee et al. 2014). Ethephon, daminozide and NAA have no flowering effect, gibberellins push leaf growth, and root pruning harms or kills trees (as reported in the book). Uniconazole is in the same chemical class as PBZ, is not approved in the EU or GB, and its persistence in soil is uncertain (database values range from days to more than a year), so it is no easy way around PBZ residue (PPDB).",
         "level": "evidence",
         "sources": [
-          "tran2023book"
+          "tran2023book",
+          "ppdb"
         ]
       }
     ]
@@ -872,12 +874,13 @@ export const STAGES = [
         ]
       },
       {
-        "text": "PBZ lingers. Its soil half-life ranges from about 2 months in mango orchard fields to more than a year in regulatory tests, and surveyed durian orchards held residue in the topsoil at the canopy edge after 5 or more years of use.",
+        "text": "PBZ lingers. Its soil half-life ranges from about 2 months in mango orchard fields to more than a year in regulatory tests, and surveyed durian orchards held residue in the topsoil at the canopy edge after 5 or more years of use. Regulatory data put PBZ's soil half-life at about 30 days in EU field trials and about 120 days in the lab, so roughly 97% disappears within about 5 months to 1.6 years depending on the soil. In mango, repeating the full dose the next year added to the soil residue, and an Indian review advises basing each year's dose on the residue already in the orchard soil.",
         "level": "evidence",
         "sources": [
           "singh2024",
           "kishore2015",
-          "pham2022"
+          "pham2022",
+          "ppdb"
         ]
       },
       {
@@ -1038,6 +1041,17 @@ export const PBZ_TRIALS = [
     "effect": "positive"
   },
   {
+    "source": "sakhidin2012",
+    "place": "Indonesia",
+    "cultivar": "Monthong",
+    "age": "10 yr",
+    "method": "PBZ (soil, g a.i./tree) × ethephon spray",
+    "rate": "PBZ 2–4 g a.i.; ethephon 400–800 ppm",
+    "timing": "Not in abstract",
+    "result": "4 g PBZ + 800 ppm ethephon: most flowers, lowest GA and ABA, highest kinetin (the only durian hormone measurements found)",
+    "effect": "positive"
+  },
+  {
     "source": "sakhidin2019",
     "place": "Central Java, ID",
     "cultivar": "Kani, Monthong",
@@ -1064,8 +1078,8 @@ export const PBZ_TRIALS = [
 export const GAPS = [
   "The trials do not all agree (see the tally on the PBZ evidence tab). Two found little or no effect (Rayong 1988–89, Chanthaburi 2007), and a Can Tho trial worked in its first year but not in its second off-season. The weak results point to weather, cultivar and application factors.",
   "No published trial compares soil drench with foliar spray on durian at matched doses. Foliar spraying is the only method with durian evidence.",
-  "No codified durian MRL for paclobutrazol was found in the EU review. Check each destination market's current rules, for example China's GB 2763 or Codex.",
-  "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian.",
+  "No durian-specific PBZ residue limit was found in China's GB 2763-2021, Codex or the EU review. China's GB 2763-2026 (in force since March 2026) has not been checked. Exporters should confirm the current limit with the importing country before each season.",
+  "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
   "No field trial has yet tested PBZ-degrading microbes, activated carbon or biochar in a durian orchard. Every degradation result so far comes from laboratory or mango studies."
@@ -1231,9 +1245,10 @@ export const PBZ_SAFETY = [
     ]
   },
   {
-    "text": "Food safety: ADI 0.022 mg/kg bw/day and ARfD 0.10 mg/kg bw. The EU has no durian-specific MRL, so the 0.01 mg/kg default may apply. No residue was found in mango fruit at optimised rates.",
+    "text": "Food safety: ADI 0.022 mg/kg bw/day and ARfD 0.10 mg/kg bw. No market checked sets a PBZ limit for durian. China's GB 2763-2021 lists PBZ for mango (0.05 mg/kg) and litchi (0.5 mg/kg) but not durian, and would test the pulp only. The 2026 revision has not been checked. Codex has no PBZ limit at all, and in the EU the 0.01 mg/kg default may apply. No residue was found in mango fruit at optimised rates.",
     "sources": [
       "efsa2017",
+      "gb2763",
       "singh2024"
     ]
   },
