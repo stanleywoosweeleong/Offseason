@@ -997,11 +997,12 @@ export const STAGES = [
         ]
       },
       {
-        "text": "There is no proven antidote. Activated carbon strips PBZ from irrigation water (90–99% removal), but nobody has tested it, or biochar, on orchard soil. Gibberellin sprays push leaf growth, but no durian trial shows they safely reverse a PBZ overdose. Prevention, through correct dose, foliar application and rest years, is the only tested approach.",
+        "text": "There is no proven antidote in soil. Activated carbon strips PBZ from irrigation water (90–99% removal), but nobody has tested it on orchard soil, and only a specially made biochar has been tested in pots. For an over-stunted tree, gibberellin (GA₃) reverses PBZ in other crops only if sprayed within 1–2 weeks, and no durian trial has tested it; it also pushes leaf flush. Prevention, through correct dose, foliar application and rest years, is the only approach tested on durian. Every microbe and other-crop method found is listed under PBZ › Clean-up.",
         "level": "evidence",
         "sources": [
           "grant2018",
-          "tran2023book"
+          "tran2023book",
+          "cox1991"
         ]
       },
       {
@@ -1184,7 +1185,7 @@ export const GAPS = [
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
-  "Two field trials have tested PBZ-degrading microbial products, on a Chinese herb crop and on Vietnamese rice. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
+  "Two field trials have tested PBZ-degrading microbial products, on a Chinese herb crop and on Vietnamese rice, and patents report pot tests on banana and herbs. About 15 degrading bacteria are known (PBZ › Clean-up), but none has been tested in a durian orchard, no fungus is known to degrade PBZ, and no field trial has tested activated carbon or biochar. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
   "Sources identified but not recovered: MARDI's durian clone D24 PBZ study (Rushidah & Razak 2001; only a library catalogue entry exists), Hasan & Karim 1989 (Malaysia; repository unavailable), and a 2014 Thai university report on fertiliser + PBZ for off-season durian (Nanakorn et al., RMUTSV; the online file is an empty placeholder, so contact the authors). No Thai government study measuring PBZ residue in durian orchard soil was found; the Thai DOA's 2015 soil study covered mango."
 ];
 

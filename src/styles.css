@@ -276,3 +276,14 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
   .sheet { left: 50%; right: auto; width: 560px; transform: translateX(-50%); bottom: 24px; border-radius: 18px; animation: none; }
   .big { font-size: 1.5rem; }
 }
+
+/* PBZ clean-up */
+.filter { margin-top: 10px; }
+.sec-h { font-size: 1rem; margin: 18px 4px 8px; }
+.sec-h span { color: var(--muted); font-weight: 500; }
+.microbe .m-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.microbe .m-name { font-size: 1rem; margin: 8px 0 0; font-style: italic; }
+.microbe.t-field, .microbe.t-pot { border-top-color: var(--evidence); }
+.microbe.t-soil, .microbe.t-liquid, .microbe.t-unknown { border-top-color: var(--survey); }
+#noFungi { margin-top: 12px; }
+#otherCrops .plain li { margin-bottom: 10px; }

@@ -115,6 +115,7 @@
         <button data-sub="evidence" aria-selected="true">Evidence</button>
         <button data-sub="mix">Mix</button>
         <button data-sub="safety">Safety</button>
+        <button data-sub="cleanup">Clean-up</button>
       </div>
       <div data-subpanel="evidence">
         <div class="card">
@@ -142,6 +143,22 @@
           <h2>Safety, residue and sustainability</h2>
           <ul id="pbzSafety" class="plain"></ul>
         </div>
+      </div>
+      <div data-subpanel="cleanup" hidden>
+        <div class="card">
+          <h2>Breaking PBZ down in the soil</h2>
+          <p class="hint">Every microbe reported to degrade PBZ, from any crop, and what mango, cherry, rice and nursery growers have learned about reducing residue. None has been tested in a durian orchard yet; try anything on a few trees first and keep untreated trees to compare.</p>
+          <div class="seg filter" role="radiogroup" aria-label="Show microbes">
+            <label><input type="radio" name="mfilter" value="all" checked /><span>All</span></label>
+            <label><input type="radio" name="mfilter" value="farm" /><span>Field / pot</span></label>
+            <label><input type="radio" name="mfilter" value="lab" /><span>Lab only</span></label>
+          </div>
+        </div>
+        <h3 class="sec-h">Microbes that degrade PBZ <span id="microbeCount"></span></h3>
+        <div id="microbes" class="trials"></div>
+        <p class="hint card" id="noFungi"></p>
+        <h3 class="sec-h">Lessons from other crops</h3>
+        <div id="otherCrops"></div>
       </div>
     </section>
 

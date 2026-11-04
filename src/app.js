@@ -1,6 +1,7 @@
 import { SOURCES } from "./sources.js";
 import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "./guide.js";
 import { LIBRARY } from "./library.js";
+import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS } from "./cleanup.js";
 import { planFromHarvest, planFromSpray, pbzMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
@@ -137,6 +138,36 @@ function renderPBZ() {
   ).join("");
   $("#pbzSafety").innerHTML = PBZ_SAFETY.map((p) => `<li>${esc(p.text)} ${cites(p.sources)}</li>`).join("");
 }
+const TEST_LABEL = { field: "Field trial", pot: "Pot / nursery", soil: "Lab soil", liquid: "Lab culture", unknown: "Not yet read" };
+function renderCleanup() {
+  const f = document.querySelector("input[name=mfilter]:checked")?.value || "all";
+  const show = MICROBES.filter((m) => f === "all" || (f === "farm" ? ["field", "pot"].includes(m.test) : !["field", "pot"].includes(m.test)));
+  $("#microbeCount").textContent = `(${show.length})`;
+  $("#microbes").innerHTML = show.map(
+    (m) => `
+  <article class="card trial microbe t-${m.test}">
+    <div class="m-tags"><span class="eff ${["field", "pot"].includes(m.test) ? "positive" : "mixed"}">${TEST_LABEL[m.test]}</span>${m.level === "lead" ? ` <span class="lvl lead">${LEVEL_LABEL.lead}</span>` : m.level === "expert" ? ` <span class="lvl expert">Not peer-reviewed</span>` : ""}</div>
+    <h3 class="m-name">${esc(m.name)}</h3>
+    <dl><dt>Type</dt><dd>${esc(m.group)}</dd><dt>From</dt><dd>${esc(m.from)}</dd></dl>
+    <p>${esc(m.result)}</p>
+    ${cites(m.sources)}
+  </article>`
+  ).join("");
+}
+function renderOtherCrops() {
+  $("#noFungi").textContent = NO_FUNGI;
+  $("#otherCrops").innerHTML = CLEANUP_GROUPS.map(
+    (g) => `
+  <details class="card lib-topic">
+    <summary><span class="st-title">${esc(g.title)}</span><span class="st-count">${esc(g.summary)}</span></summary>
+    <ul class="plain">${OTHER_CROPS.filter((p) => p.group === g.id)
+      .map((p) => `<li><span class="lvl ${p.level}">${LEVEL_LABEL[p.level]}</span> ${esc(p.text)} ${cites(p.sources)}</li>`)
+      .join("")}</ul>
+  </details>`
+  ).join("");
+}
+document.querySelectorAll("input[name=mfilter]").forEach((r) => r.addEventListener("change", renderCleanup));
+
 function showSub(name) {
   $$(".subnav button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.sub === name)));
   $$("[data-subpanel]").forEach((p) => (p.hidden = p.dataset.subpanel !== name));
@@ -341,6 +372,8 @@ $("#libSearch").addEventListener("input", (e) => {
 // ---------- Init ----------
 renderGuide();
 renderPBZ();
+renderCleanup();
+renderOtherCrops();
 renderPlan();
 renderMix();
 renderChecklist();

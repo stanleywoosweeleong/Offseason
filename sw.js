@@ -1,8 +1,8 @@
 // Offline support. Network first (so updates arrive when online), falling back to the cache in the orchard.
-const CACHE = "offseason-v2";
+const CACHE = "offseason-v3";
 const APP_FILES = [
   "./", "index.html", "manifest.webmanifest",
-  "src/styles.css", "src/app.js", "src/guide.js", "src/library.js", "src/planner.js", "src/sources.js",
+  "src/styles.css", "src/app.js", "src/cleanup.js", "src/guide.js", "src/library.js", "src/planner.js", "src/sources.js",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
 ];
 self.addEventListener("install", (e) => {
