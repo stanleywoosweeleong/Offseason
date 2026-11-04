@@ -506,10 +506,10 @@ export const SOURCES = {
   },
   honsho2007: {
     short: "Honsho et al. 2007 (pollination window)",
-    cite: "Honsho, C. et al. (2007). Effective pollination period in durian (Durio zibethinus Murr.) and the factors regulating it. Scientia Horticulturae 111: 193–196.",
+    cite: "Honsho, C., Somsri, S., Tetsumura, T., Yamashita, K. & Yonemori, K. (2007). Effective pollination period in durian (Durio zibethinus Murr.) and the factors regulating it. Scientia Horticulturae 111(2): 193–196.",
     url: "https://doi.org/10.1016/j.scienta.2006.10.016",
-    type: "Unverified lead",
-    finding: "Title and journal verified via Crossref; content not read. It is relevant to timing hand pollination (the book gives 18:00–21:00 and 19:00–22:00).",
+    type: "Peer-reviewed (abstract via secondary page)",
+    finding: "The effective pollination period is short, about one night from anthesis. Pollen applied at anthesis gave about 50% fruit set in one orchard; pollinating the next morning gave 0–3.4%, and 24 hours or more after anthesis gave none. Stigma-receptivity tests (hydrogen peroxide, Perex-Test) matched the measured window. Citation verified via Crossref; the abstract was read on a third-party page, not the journal.",
   },
   rushidah2001: {
     short: "Rushidah & Razak 2001 (MARDI, D24)",
@@ -537,7 +537,7 @@ export const SOURCES = {
     cite: "Department of Agriculture, Sri Lanka. Study of fruit set in five durian cultivars under self, natural and hand pollination. DOA digital library.",
     url: "https://dl-doa.nsf.gov.lk/bitstreams/fc3d4642-73a7-420d-a2c0-fb32c31d5e1c/download",
     type: "Unverified lead",
-    finding: "Search summary: self-pollinated set was 0–10% in five cultivars, hand pollination about 60% against 17% natural, and stored pollen worked between 13:00 and 17:00. The server returned an error, so this is not verified.",
+    finding: "Search summary: self-pollinated set was 0–10% in five cultivars, hand pollination about 60% against 17% natural, stored pollen worked between 13:00 and 17:00, the stigma became receptive around 11:00, full bloom started from 16:00 and anthers shed pollen at 18:00. The server returned an error, so this is not verified.",
   },
   itfnet: {
     short: "ITFNet durian maturity table",
@@ -650,6 +650,27 @@ export const SOURCES = {
     url: "https://2763.foodmate.net/pesticides/limit/132.html",
     type: "Regulatory · China",
     finding: "Paclobutrazol (多效唑) is classed as a plant growth regulator, with an ADI of 0.1 mg/kg body weight and the residue defined as paclobutrazol. Fruit limits are apple 0.5, litchi 0.5 and mango 0.05 mg/kg. Other limits are rice and wheat 0.5, rapeseed 0.2, soybean 0.05, peanut 0.5, rapeseed oil 0.5 and vegetable soybean 0.05. There is NO durian entry, so the 2026 revision still sets no PBZ limit for durian. Also checked in the 2026 text: ethephon (ADI 0.05) is set at 2 mg/kg for litchi, mango, banana and pineapple (pineapple is in the same 'spiny tropical fruit' group as durian), with no durian entry; uniconazole (ADI 0.02) is listed only for citrus. The standard contains 10,749 limits for 585 pesticides in total (USDA FAS report CH2026-0049). The official PDF on the ministry site (aqsc.agri.cn) could not be reached for a cross-check (DNS error).",
+  },
+  wayo2018: {
+    short: "Wayo 2018 (PSU, Monthong pollination)",
+    cite: "Kanuengnit Wayo (2018). The role of insects in the pollination of durian (Durio zibethinus Murray) cultivar 'Monthong'. M.Sc. thesis (Ecology), Prince of Songkla University. Advisor: Sara Bumrungsri.",
+    url: "https://kb.psu.ac.th/items/ba677cfe-700f-4e21-8eca-f82703660993/full",
+    type: "Thesis · Prince of Songkla Univ.",
+    finding: "'Monthong' stigmas were receptive by 17:00, and over 50% of anthers had shed pollen by 17:30. Bees started foraging in late afternoon, and the giant honey bee continued through the night. Fruit set at 4 weeks was 13.5% with hand cross-pollination, against 5.5% open-pollinated and 2.0% self-pollinated (abstract read).",
+  },
+  salakpetch1992: {
+    short: "Salakpetch et al. 1992 (durian pollen)",
+    cite: "Salakpetch, S., Chandraparnik, S. & Hiranpradit, H. (1992). Pollen grains and pollination in durian, Durio zibethinus Murr. Acta Horticulturae 321: 636–640.",
+    url: "https://doi.org/10.17660/ActaHortic.1992.321.76",
+    type: "Peer-reviewed · Thai DOA / ISHS",
+    finding: "Pollen is sticky and released in clumps, so wind plays little part. The stigma is moist and receptive before the flower opens, and receptivity drops considerably the next day. Pollen viability was 83–96% the day before and the day of opening in 'Monthong', 'Kradumthong', 'Chanee' and 'Kanyao'; two days later it was 75–93%. Pollen tubes emerged within 2 hours of pollination. Germination was best with 30–60 ppm boron and 50–90 ppm calcium (abstract read).",
+  },
+  thai_anther: {
+    short: "Thai study of durian male organs (anther timing)",
+    cite: "Study of anther dehiscence and pollen in durian (Thailand), PDF in the University of Miyazaki repository (record 731).",
+    url: "https://miyazaki-u.repo.nii.ac.jp/records/731",
+    type: "Unverified lead",
+    finding: "Search summary: anthers shed pollen at 19:00, at the same time as the flower opened, and pollen kept clinging to the anther afterwards. The repository returned server errors, so this is not verified.",
   },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",

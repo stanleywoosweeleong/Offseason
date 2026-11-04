@@ -665,9 +665,12 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Hand-pollinate where it matters. Hand pollination between 19:00 and 22:00 is part of the book's off-season protocol, and essential for self-incompatible cultivars such as 'Musang King'. Use a soft nylon duster on a telescopic pole (up to about 6 m) to carry pollen from another cultivar. Growers observe that 'Monthong' pollen gives 'Musang King' a longer fruit than 'Ri6' pollen does (book Ch. 6, Ch. 9).",
-        "level": "expert",
+        "text": "Hand-pollinate where it matters, on the evening the flowers open. Durian opens in the late afternoon; 'Monthong' stigmas are receptive by 17:00 and over half the anthers shed pollen by 17:30. Pollinating the next morning gave only 0–3.4% fruit set, so the window is that one night: from when pollen is shed (about 17:30–19:00, by cultivar and site) into the evening. The book's 18:00–21:00 and 19:00–22:00 both fall inside it, as does the Malaysian practice of pollinating after dinner. This is essential for self-incompatible cultivars such as 'Musang King'. Use a soft nylon duster on a telescopic pole (up to about 6 m) to carry pollen from another cultivar. 'Monthong' pollen gives 'Musang King' a longer fruit than 'Ri6' pollen (book Ch. 6, Ch. 9).",
+        "level": "evidence",
         "sources": [
+          "wayo2018",
+          "honsho2007",
+          "salakpetch1992",
           "tran2023book"
         ]
       },
@@ -1447,7 +1450,7 @@ export const PROTOCOL = [
     "from": 0,
     "to": 3,
     "title": "Flowers open",
-    "actions": "Hand-pollinate clusters on the middle of the branches, 18:00–21:00 (Ch. 9 text: 19:00–22:00), with pollen from a different cultivar. This is essential for 'Musang King'. Use one brush for only 2–3 trees. 3–5 days after opening, spray Ca–B to raise fruit set."
+    "actions": "Hand-pollinate clusters on the middle of the branches, the same evening they open, from when pollen is shed (about 17:30–19:00) into the night; next morning is too late, with pollen from a different cultivar. This is essential for 'Musang King'. Use one brush for only 2–3 trees. 3–5 days after opening, spray Ca–B to raise fruit set."
   },
   {
     "step": "hold",
