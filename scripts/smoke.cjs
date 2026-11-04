@@ -102,6 +102,14 @@ const txt = (p, sel) => p.evaluate((s) => document.querySelector(s).textContent.
   await p.fill("#libSearch", "3");
   await p.waitForTimeout(300);
   check("search shows no &#39; or &amp;", !/&#39;|&amp;/.test(await txt(p, "#tab-library")));
+
+  // Opening a PBZ section from deep in another one starts at the new section's top
+  await tap(p, "[data-tab=pbz]"); await tap(p, "[data-sub=evidence]");
+  await p.evaluate(() => window.scrollTo(0, 3000));
+  await tap(p, "[data-sub=safety]");
+  await p.waitForTimeout(150);
+  const at = await p.evaluate(() => ({ h: Math.round(document.querySelector("[data-subpanel=safety] h2").getBoundingClientRect().top), nav: Math.round(document.querySelector(".subnav").getBoundingClientRect().bottom) }));
+  check("PBZ section opens at its top", at.h >= at.nav - 2 && at.h < at.nav + 60, JSON.stringify(at));
   await ctx.close();
 
   // 6. Two quick language taps: the last one wins

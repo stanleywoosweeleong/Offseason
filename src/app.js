@@ -256,7 +256,18 @@ function showSub(name) {
   $$("[data-subpanel]").forEach((p) => (p.hidden = p.dataset.subpanel !== name));
   store.set("pbzSub", name);
 }
-$$(".subnav button").forEach((b) => b.addEventListener("click", () => showSub(b.dataset.sub)));
+// Opening a PBZ section starts at its top (just under the section tabs), not at the old scroll position.
+$$(".subnav button").forEach((b) =>
+  b.addEventListener("click", () => {
+    showSub(b.dataset.sub);
+    const panel = document.querySelector(`[data-subpanel="${b.dataset.sub}"]`);
+    // Where the section tabs sit once pinned (below the header, and below the main tab bar on wide screens).
+    const nav = $(".subnav");
+    const below = parseFloat(getComputedStyle(nav).top) + nav.getBoundingClientRect().height + 12;
+    const y = window.scrollY + panel.getBoundingClientRect().top - below;
+    if (window.scrollY > y) window.scrollTo({ top: Math.max(0, y) });
+  })
+);
 
 // ---------- Planner ----------
 function renderRainMonths() {
