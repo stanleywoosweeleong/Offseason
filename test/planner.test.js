@@ -168,3 +168,13 @@ test("regions: presets are sensible and seasons can cross the year end", async (
   assert.deepEqual(monthRuns([0, 1, 11]), [[11, 1]]);
   assert.deepEqual(monthRuns([]), []);
 });
+
+test("stage lengths shorter than 60 days from spray to flowering are rejected (buds would come before the spray)", async () => {
+  const { planFromSpray } = await import("../src/planner.js");
+  const short = { pbzToAnthesis: { min: 30, typ: 40, max: 50 }, anthesisToHarvest: { min: 120, typ: 124, max: 127 } };
+  assert.throws(() => planFromSpray("2027-01-01", short), /at least 60 days/);
+  const ok = { pbzToAnthesis: { min: 60, typ: 78, max: 122 }, anthesisToHarvest: { min: 120, typ: 124, max: 127 } };
+  const r = planFromSpray("2027-01-01", ok);
+  const buds = r.timeline.find((t) => t.id === "budflush");
+  assert.ok(buds.date >= r.spray, "buds must not be placed before the spray date");
+});

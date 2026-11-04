@@ -40,6 +40,8 @@ export const CULTIVAR_PRESETS = {
 
 /** PBZ concentration band recommended in Vietnam (Tran et al. 2001, via Pham et al. 2022). */
 export const PBZ_RECOMMENDED_PPM = { min: 1000, max: 1500 };
+/** Shortest PBZ → flowering interval accepted (shortest seen in the trials; buds alone take ~55 days to open). */
+export const MIN_PBZ_TO_ANTHESIS = 60;
 
 export function toUTCDate(input) {
   if (input instanceof Date) return new Date(Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), input.getUTCDate()));
@@ -66,6 +68,11 @@ function validateStages(stages) {
       throw new Error("Stage lengths need a positive min, typ and max.");
     }
     if (!(s.min <= s.typ && s.typ <= s.max)) throw new Error("Stage lengths must be in order: min ≤ typ ≤ max.");
+  }
+  // Buds are placed 55 days before flowering (bud → bloom, Hâu & Hiếu 2026), so a shorter spray → flowering
+  // interval would put buds before the spray. The shortest interval seen in the trials was 60 days.
+  if (stages.pbzToAnthesis.min < MIN_PBZ_TO_ANTHESIS) {
+    throw new Error("PBZ → flowering must be at least 60 days: flower buds take about 55 days to open, and the shortest interval in the trials was 60 days.");
   }
 }
 

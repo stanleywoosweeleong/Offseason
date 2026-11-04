@@ -4,7 +4,7 @@
 //    page can never replace a working copy;
 //  - if the network is slow (weak signal), the cached copy is shown after 3.5 s;
 //  - requests bypass the browser's HTTP cache, so a phone never mixes old and new files after an update.
-const CACHE = "offseason-v9";
+const CACHE = "offseason-v10";
 const NETWORK_WAIT_MS = 3500;
 const APP_FILES = [
   "./", "index.html", "manifest.webmanifest",
@@ -23,7 +23,8 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())
+    // Only remove this app's own old caches: other projects on the same github.io origin keep theirs.
+    caches.keys().then((keys) => Promise.all(keys.filter((k) => k.startsWith("offseason-") && k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())
   );
 });
 

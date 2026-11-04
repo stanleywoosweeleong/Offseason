@@ -341,7 +341,8 @@ function renderPlan() {
     if (mode === "harvest") {
       const r = planFromHarvest($("#planDate").value, stages);
       // Check every month the window touches, not just its ends.
-      const risky = rainWarn(rainyMonthsInWindow(r.spray.earliest, r.spray.latest, months));
+      // Include the 14 days after the latest spray date, as in spray mode: rain then is what weakened PBZ.
+      const risky = rainWarn(rainyMonthsInWindow(r.spray.earliest, addDays(r.spray.latest, 14), months));
       const past = r.spray.latest < today()
         ? `<p class="warn">${tr("⚠ This whole spray window is already in the past. Choose a later harvest date.")}</p>`
         : r.spray.earliest < today() ? `<p class="note">${tr("Part of this spray window has already passed.")}</p>` : "";

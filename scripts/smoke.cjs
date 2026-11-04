@@ -75,6 +75,17 @@ const txt = (p, sel) => p.evaluate((s) => document.querySelector(s).textContent.
   await p.fill("#planDate", "2020-03-01");
   check("past spray window is flagged", (await txt(p, "#planOut")).includes("already in the past"));
 
+  // Codex review #2: harvest mode also checks the 14 days after the latest spray date
+  await p.evaluate(() => { document.querySelectorAll('#rainMonths input').forEach((c) => (c.checked = c.value === "1")); document.querySelector('#rainMonths').dispatchEvent(new Event("change", { bubbles: true })); });
+  await p.fill("#planDate", "2027-07-30");
+  const harvestPlan = await txt(p, "#planOut");
+  check("harvest mode warns about rain right after the window (Feb)", /marked as rainy: [^.]*Feb 2027/.test(harvestPlan), harvestPlan.match(/Spray PBZ between[^M]*/)?.[0]);
+
+  // Codex review #3: impossible stage lengths are refused instead of producing buds before the spray
+  await p.evaluate(() => { for (const [id, v] of [["p_min", "30"], ["p_typ", "40"], ["p_max", "50"]]) { const el = document.getElementById(id); el.value = v; el.dispatchEvent(new Event("input", { bubbles: true })); } });
+  check("spray → flowering under 60 days is refused", (await txt(p, "#planOut")).includes("at least 60 days"));
+  await p.evaluate(() => { for (const [id, v] of [["p_min", "60"], ["p_typ", "78"], ["p_max", "122"]]) { const el = document.getElementById(id); el.value = v; el.dispatchEvent(new Event("input", { bubbles: true })); } });
+
   // 7. Search highlight shows no entity codes
   await tap(p, "[data-tab=library]");
   await p.fill("#libSearch", "3");
@@ -109,7 +120,12 @@ const txt = (p, sel) => p.evaluate((s) => document.querySelector(s).textContent.
   ctx = await browser.newContext({ ...devices["iPhone 13"] });
   p = await newPage(ctx);
   await p.goto(base);
+  // Codex review #1: another project's cache on the same origin must survive our service worker's cleanup
+  await p.evaluate(async () => { await caches.open("other-app-v1"); await caches.open("offseason-v0-old"); });
   await p.evaluate(() => navigator.serviceWorker.ready);
+  await p.waitForTimeout(500);
+  const names = await p.evaluate(() => caches.keys());
+  check("SW keeps other apps' caches and removes only old offseason caches", names.includes("other-app-v1") && !names.includes("offseason-v0-old"), names.join(", "));
   await p.reload(); // now controlled by the service worker
   await tap(p, "#langOpts [data-l=en]");
   await p.waitForTimeout(800);
