@@ -75,14 +75,16 @@ button { font: inherit; color: inherit; }
 /* Bottom tab bar */
 .tabbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
   background: var(--surface); border-top: 1px solid var(--line);
   padding-bottom: env(safe-area-inset-bottom); height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
 }
 .tabbar button {
   border: 0; background: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
   min-height: 48px; color: var(--muted); font-size: 0.7rem; font-weight: 600; cursor: pointer; position: relative;
+  min-width: 0; padding: 0 2px;
 }
+.tabbar button span { display: block; max-width: 100%; text-align: center; line-height: 1.15; overflow-wrap: anywhere; }
 .tabbar svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .tabbar button[aria-selected="true"] { color: var(--brand); }
 .tabbar button[aria-selected="true"]::before {
@@ -158,10 +160,10 @@ input[type="date"], input[type="number"], input[type="search"], select {
   font: inherit; font-size: max(16px, 1rem); /* 16px or more stops iOS zooming on focus */
   min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); color: var(--ink); width: 100%; min-width: 0;
 }
-.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
-.seg label, .seg button { position: relative; display: flex; }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+.seg label, .seg button { position: relative; display: flex; min-width: 0; }
 .seg input { position: absolute; opacity: 0; pointer-events: none; }
-.seg span, .seg button { flex: 1; text-align: center; padding: 10px 6px; border-radius: 9px; font-weight: 600; font-size: 0.88rem; cursor: pointer; border: 0; background: none; min-height: 42px; }
+.seg span, .seg button { flex: 1; text-align: center; padding: 10px 6px; border-radius: 9px; font-weight: 600; font-size: 0.88rem; cursor: pointer; border: 0; background: none; min-height: 42px; min-width: 0; line-height: 1.25; overflow-wrap: break-word; hyphens: auto; display: flex; align-items: center; justify-content: center; }
 .seg input:checked + span, .seg button[aria-selected="true"] { background: var(--surface); color: var(--brand); box-shadow: var(--shadow); }
 .seg input:focus-visible + span { outline: 2px solid var(--brand); }
 .subnav { margin-bottom: 12px; position: sticky; top: calc(var(--appbar-h) + 6px); z-index: 10; }
@@ -395,4 +397,10 @@ body[data-lang="km"] .lvl, body[data-lang="zh"] .lvl { text-transform: none; let
 @media (min-width: 720px) {
   html { font-size: 109.375%; } /* 17.5px */
   .pt, .stage .summary, .trial p, .tl p, .src .finding { max-width: 68ch; }
+}
+
+/* Narrow phones: the four PBZ sections sit in two rows so long words (Malay, Khmer, Vietnamese) stay whole */
+@media (max-width: 379px) {
+  .subnav { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .subnav button { min-height: 38px; padding: 6px 4px; }
 }
