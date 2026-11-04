@@ -235,7 +235,7 @@ function protocolHTML(sprayDate, stages) {
   const when = (r) => (r.start ? fmt(r.start) + (isoDate(r.end) !== isoDate(r.start) ? ` – ${fmt(r.end)}` : "") : tr("After last harvest"));
   return `<details class="card" ${store.get("protoOpen", false) ? "open" : ""} id="protoBlock">
     <summary>${trf("Your dated protocol · {n} tasks", { n: rows.length })}</summary>
-    <p class="hint">${tr("The book's day-by-day off-season protocol (Table 9.2), placed on your calendar. Final-load rows switch between early cultivars (≤ 100 days) and late ones such as 'Monthong'.")}</p>
+    <p class="hint">${tr("Hâu & Hiếu's day-by-day off-season protocol (Table 9.2), placed on your calendar. Final-load rows switch between early cultivars (≤ 100 days) and late ones such as 'Monthong'.")}</p>
     ${cites(["tran2023book"])}
     <ol class="timeline protocol">${rows
       .map((r) => `<li class="tl"><div class="when">${when(r)}</div><span class="step">${trf("Step {n}", { n: stepNo[r.step] })}</span> <b>${esc(tr(r.title))}</b><p>${esc(tr(r.actions))}</p></li>`)
@@ -312,7 +312,7 @@ function renderMix() {
     if (r.status === "high") overdose.push(tr("Too strong. This mix is above 1,500 ppm, the highest rate recommended for durian. Overdosed durian trees can stop growing new leaves, decline slowly, or fail to flower well next season, and the extra PBZ stays in the soil. Go back to \"Mature trees\" unless an adviser has told you otherwise."));
     if (perTree > 32) overdose.push(trf("Too much per tree. Each tree would get {g} g of active ingredient, more than any durian trial used (at most 32 g, on big trees sprayed with 20 L). Spray less per tree: wet the leaves, do not soak them.", { g: num(perTree, 1) }));
     const danger = overdose.length ? `<div class="danger" role="alert"><b>${tr("⚠ Risk of overdosing")}</b>${overdose.map((x) => `<p>${esc(x)}</p>`).join("")}${cites(["grewal2023", "subhadrabandhu1998", "tri2011"])}</div>` : "";
-    const lowDose = perTree < 12 && r.status !== "low" ? `<p class="note">${trf("Each tree gets only {g} g of active ingredient. For an 8–10-year tree the book's minimum is about 12–15 g, so spray 10–12 L per tree.", { g: num(perTree, 1) })}</p>` : "";
+    const lowDose = perTree < 12 && r.status !== "low" ? `<p class="note">${trf("Each tree gets only {g} g of active ingredient. For an 8–10-year tree Hâu & Hiếu's minimum is about 12–15 g, so spray 10–12 L per tree.", { g: num(perTree, 1) })}</p>` : "";
     const treesPerTank = r.treesPerTank >= 1
       ? trf("One tank sprays about {n} trees at {l} L each.", { n: `<b>${num(r.treesPerTank, 1)}</b>`, l: num(litres, 1) })
       : trf("Each tree needs about {n} tanks ({l} L).", { n: `<b>${num(1 / r.treesPerTank, 1)}</b>`, l: num(litres, 1) });

@@ -21,7 +21,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Think in 12-month cycles. The book's month-by-month chart for off-season 'Ri6' and 'Musang King' runs: harvest in months 1–2; liming, pruning and the first leaf flush in months 2–4; a second flush in months 5–6; priming, PBZ, mulch and drought in month 7; flower buds in month 8; fruit set in month 9; and fruit growth to harvest by month 12. That is one off-season crop per tree per year. Two leaf flushes plus about 6–7 months from PBZ to harvest leave no room for more (book p. 301; months read approximately from the chart).",
+        "text": "Think in 12-month cycles. Hâu & Hiếu's month-by-month chart for off-season 'Ri6' and 'Musang King' runs: harvest in months 1–2; liming, pruning and the first leaf flush in months 2–4; a second flush in months 5–6; priming, PBZ, mulch and drought in month 7; flower buds in month 8; fruit set in month 9; and fruit growth to harvest by month 12. That is one off-season crop per tree per year. Two leaf flushes plus about 6–7 months from PBZ to harvest leave no room for more (Hâu & Hiếu 2026, p. 301; months read approximately from the chart).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -142,21 +142,21 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Leaves are durian's food store. Unlike mango or longan, durian keeps its carbohydrate reserves mainly in its leaves. A weak flush, or one stripped by pests or Phytophthora, means poor flowering and poor fruit next season (book Ch. 9).",
+        "text": "Leaves are durian's food store. Unlike mango or longan, durian keeps its carbohydrate reserves mainly in its leaves. A weak flush, or one stripped by pests or Phytophthora, means poor flowering and poor fruit next season (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Fix soil pH straight after harvest. Apply 3–5 kg agricultural lime per tree (about 500–1,000 kg/ha), or dolomite where magnesium is short, to bring soil pH to 6.0–6.5. Gypsum does not raise pH. Below pH 6.5, soluble cadmium rises and can accumulate in the flesh, which is a residue issue for export markets. Below pH 5, aluminium, iron, manganese and heavy metals start to poison the roots. Biochar (one application, at most 1–2% of the topsoil by weight) binds cadmium, but too much pushes pH too high (book Ch. 9).",
+        "text": "Fix soil pH straight after harvest. Apply 3–5 kg agricultural lime per tree (about 500–1,000 kg/ha), or dolomite where magnesium is short, to bring soil pH to 6.0–6.5. Gypsum does not raise pH. Below pH 6.5, soluble cadmium rises and can accumulate in the flesh, which is a residue issue for export markets. Below pH 5, aluminium, iron, manganese and heavy metals start to poison the roots. Biochar (one application, at most 1–2% of the topsoil by weight) binds cadmium, but too much pushes pH too high (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Then regrow the roots. 15–20 days after liming, apply 20–30 kg of well-rotted compost per tree, ideally with Trichoderma against Phytophthora and Fusarium, plus a humic-acid drench. When new feeder-root tips appear, apply 1–2 kg NPK 3:2:1 or 4:3:2 per tree. Water every 1–2 days, keeping soil at 70–75% of field capacity and never waterlogged (book Ch. 9).",
+        "text": "Then regrow the roots. 15–20 days after liming, apply 20–30 kg of well-rotted compost per tree, ideally with Trichoderma against Phytophthora and Fusarium, plus a humic-acid drench. When new feeder-root tips appear, apply 1–2 kg NPK 3:2:1 or 4:3:2 per tree. Water every 1–2 days, keeping soil at 70–75% of field capacity and never waterlogged (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -186,21 +186,21 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Post-harvest pruning: remove diseased, weak, crossing and low branches and the vertical 'water shoots', and thin small shaded branches so light reaches the large inner branches where durian flowers and fruits. Collect and destroy diseased wood, fruit and leaves; borer larvae can survive in it (book Ch. 9).",
+        "text": "Post-harvest pruning: remove diseased, weak, crossing and low branches and the vertical 'water shoots', and thin small shaded branches so light reaches the large inner branches where durian flowers and fruits. Collect and destroy diseased wood, fruit and leaves; borer larvae can survive in it (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Push and protect the flush. Use foliar NPK (1:1:1, 2:1:1 or 3:1:1 depending on vigour), with GA₃ at 5–10 ppm, amino acids or seaweed extract to speed shoot growth. Once leaves expand, give micronutrient sprays every 2–3 weeks. Watch for Phytophthora on young leaves in the rainy season, and for psyllids, leafhoppers and thrips in the dry season (book Ch. 9).",
+        "text": "Push and protect the flush. Use foliar NPK (1:1:1, 2:1:1 or 3:1:1 depending on vigour), with GA₃ at 5–10 ppm, amino acids or seaweed extract to speed shoot growth. Once leaves expand, give micronutrient sprays every 2–3 weeks. Watch for Phytophthora on young leaves in the rainy season, and for psyllids, leafhoppers and thrips in the dry season (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Synchronise the flushes. Cai Lay growers push 2–3 flushes after harvest. To make each one emerge evenly, they harden the previous flush with an MKP spray (0.5–1%) and briefly withhold water, then trigger the next flush in one wave. The book's protocol table puts the pause at 5–7 days without water before fertilising the next flush, and keeps ditch water 60–80 cm below the beds (book Ch. 9, Table 9.2).",
+        "text": "Synchronise the flushes. Cai Lay growers push 2–3 flushes after harvest. To make each one emerge evenly, they harden the previous flush with an MKP spray (0.5–1%) and briefly withhold water, then trigger the next flush in one wave. Hâu & Hiếu's protocol table puts the pause at 5–7 days without water before fertilising the next flush, and keeps ditch water 60–80 cm below the beds (Hâu & Hiếu 2026, Ch. 9, Table 9.2).",
         "level": "practice",
         "sources": [
           "tran2023book"
@@ -231,7 +231,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Prune to open the canopy. Thai trials found well-pruned trees with open, light-filled canopies flowered more than dense ones. Sunlit outer branches store more starch and form flower buds more readily than shaded inner branches (Salakpetch 2005, as reported in the book).",
+        "text": "Prune to open the canopy. Thai trials found well-pruned trees with open, light-filled canopies flowered more than dense ones. Sunlit outer branches store more starch and form flower buds more readily than shaded inner branches (Salakpetch 2005, as reported in Hâu & Hiếu 2026).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -253,7 +253,7 @@ export const STAGES = [
     "summary": "PBZ is the main off-season tool. It works when the dose, the leaves and the weather are right, and fails or harms when they are not.",
     "points": [
       {
-        "text": "Prime the tree before PBZ (book Ch. 9). (1) When the last flush is fully expanded but still soft and light green, spray MKP (0-52-34) at 0.5–1.0% to harden it evenly. (2) 7–10 days later, apply 1.0–1.5 kg per tree of a high-phosphorus NPK (1:3:2 or 1:3:3), using refined DAP or MAP, because low-grade phosphate can carry cadmium. (3) 15–20 days later, spray phosphorous acid (H₃PO₃) at 0.5–1.0%, once or twice at 10–15-day intervals, as a mild stress. Then spray PBZ on the mature leaves.",
+        "text": "Prime the tree before PBZ (Hâu & Hiếu 2026, Ch. 9). (1) When the last flush is fully expanded but still soft and light green, spray MKP (0-52-34) at 0.5–1.0% to harden it evenly. (2) 7–10 days later, apply 1.0–1.5 kg per tree of a high-phosphorus NPK (1:3:2 or 1:3:3), using refined DAP or MAP, because low-grade phosphate can carry cadmium. (3) 15–20 days later, spray phosphorous acid (H₃PO₃) at 0.5–1.0%, once or twice at 10–15-day intervals, as a mild stress. Then spray PBZ on the mature leaves.",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -390,7 +390,7 @@ export const STAGES = [
         "sources": []
       },
       {
-        "text": "Order of plastic and spray: this app follows the tested SOFRI/JIRCAS trial. Lay the plastic over the beds about 1 week before spraying, then spray PBZ on the leaves with the plastic already down, and lift it gradually at bud break, 3–4 weeks after spraying. Over two years this brought harvest forward 19–24 days and raised yield 25–60%. It also keeps spray off the soil, which matters because surveyed orchards held PBZ residue only at the uncovered drip line. The book instead suggests spraying before mulching, so roots can take up the drip. That is expert advice, not a tested comparison, and it adds to soil residue (see step 8).",
+        "text": "Order of plastic and spray: this app follows the tested SOFRI/JIRCAS trial. Lay the plastic over the beds about 1 week before spraying, then spray PBZ on the leaves with the plastic already down, and lift it gradually at bud break, 3–4 weeks after spraying. Over two years this brought harvest forward 19–24 days and raised yield 25–60%. It also keeps spray off the soil, which matters because surveyed orchards held PBZ residue only at the uncovered drip line. Hâu & Hiếu (2026) instead suggest spraying before mulching, so roots can take up the drip. That is expert advice, not a tested comparison, and it adds to soil residue (see step 8).",
         "level": "evidence",
         "sources": [
           "tri2011",
@@ -407,7 +407,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree. Surveyed growers sprayed 1,816 ppm but delivered only 11.8 g a.i. per tree (Tien Giang), or 1,240 ppm and 10.5 g (Ben Tre). The successful trials gave 20–32 g a.i. per tree (1,000–1,600 ppm × 20 L). Check the grams per tree in the PBZ mix tab. The book's own protocol (Table 9.2) sets a floor: an 8–10-year tree needs at least 10–12 L of spray, about 12–15 g a.i. per tree.",
+        "text": "Use enough spray volume. Many growers mix a high concentration but apply too little liquid per tree. Surveyed growers sprayed 1,816 ppm but delivered only 11.8 g a.i. per tree (Tien Giang), or 1,240 ppm and 10.5 g (Ben Tre). The successful trials gave 20–32 g a.i. per tree (1,000–1,600 ppm × 20 L). Check the grams per tree in the PBZ mix tab. Hâu & Hiếu's own protocol (Table 9.2) sets a floor: an 8–10-year tree needs at least 10–12 L of spray, about 12–15 g a.i. per tree.",
         "level": "expert",
         "sources": [
           "tran2023book",
@@ -416,28 +416,28 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Adjust the dose to season and tree (book Table 9.2). Use the lower end (about 1,000 ppm) in the natural season and the higher end off-season. Vigorous or young bearing trees need more. Spray in the early morning or late afternoon. Do not induce very young trees, or trees that have lost leaves to Phytophthora. Without PBZ, off-season flowering typically reaches only 50–60% of trees, depending on rain.",
+        "text": "Adjust the dose to season and tree (Hâu & Hiếu 2026, Table 9.2). Use the lower end (about 1,000 ppm) in the natural season and the higher end off-season. Vigorous or young bearing trees need more. Spray in the early morning or late afternoon. Do not induce very young trees, or trees that have lost leaves to Phytophthora. Without PBZ, off-season flowering typically reaches only 50–60% of trees, depending on rain.",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Spray inside the canopy too. Spray both leaf surfaces and the main branches inside the canopy. Inner branches get less carbohydrate and are harder to induce, so growers use a concentration 20–30% higher there than on the outer leaves. Some instead lightly mist the outer canopy at a low concentration. The book reports these as standard practice, but no trial has tested the exact rates (book Ch. 5, Ch. 9).",
+        "text": "Spray inside the canopy too. Spray both leaf surfaces and the main branches inside the canopy. Inner branches get less carbohydrate and are harder to induce, so growers use a concentration 20–30% higher there than on the outer leaves. Some instead lightly mist the outer canopy at a low concentration. Hâu & Hiếu (2026) report these as standard practice, but no trial has tested the exact rates (Hâu & Hiếu 2026, Ch. 5, Ch. 9).",
         "level": "practice",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Cultivars differ in how they respond. 'Kho Qua Xanh' (off-season, Cai Lay): with PBZ, buds appeared 19 days after spraying instead of 26, but flowering came only 3–4 days earlier. Flower clusters roughly doubled (72 → 152–163 per tree), and yield rose from 120 to 186–191 kg per tree, although fruit were lighter (2.2 vs 2.5 kg). 'Sua Hat Lep' responded 4–22 days earlier, in several drawn-out flushes. In year 1 its off-season yield rose from 24.6 to 41.5–55.5 kg per tree, but in year 2 the off-season gain was not significant (Hau 2000; Hau et al. 2001; book Tables 5.2–5.7).",
+        "text": "Cultivars differ in how they respond. 'Kho Qua Xanh' (off-season, Cai Lay): with PBZ, buds appeared 19 days after spraying instead of 26, but flowering came only 3–4 days earlier. Flower clusters roughly doubled (72 → 152–163 per tree), and yield rose from 120 to 186–191 kg per tree, although fruit were lighter (2.2 vs 2.5 kg). 'Sua Hat Lep' responded 4–22 days earlier, in several drawn-out flushes. In year 1 its off-season yield rose from 24.6 to 41.5–55.5 kg per tree, but in year 2 the off-season gain was not significant (Hau 2000; Hau et al. 2001; Hâu & Hiếu 2026, Tables 5.2–5.7).",
         "level": "evidence",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992a, as reported in the book, p. 141; checked against a clear rescan). A four-season follow-up by the same Thai DOA group found the rain matters most at the dot (pinhead-bud) stage: with more than 10 mm of rain a day then, 3,000 ppm thiourea still gave more inflorescences than PBZ alone, but in a drier year (under 10 mm a day) thiourea added nothing. KNO₃ at 1,500 ppm also raised inflorescence numbers over untreated trees.",
+        "text": "Thiourea can wake dormant buds after PBZ. On 'Chanee', 500–1,500 ppm thiourea applied after 1,000 ppm PBZ gave 20 times more flowers than untreated trees and 75% more than PBZ alone. It does not work if daily rain exceeds 35 mm (Chandraparnik et al. 1992a, as reported in Hâu & Hiếu 2026, p. 141; checked against a clear rescan). A four-season follow-up by the same Thai DOA group found the rain matters most at the dot (pinhead-bud) stage: with more than 10 mm of rain a day then, 3,000 ppm thiourea still gave more inflorescences than PBZ alone, but in a drier year (under 10 mm a day) thiourea added nothing. KNO₃ at 1,500 ppm also raised inflorescence numbers over untreated trees.",
         "level": "evidence",
         "sources": [
           "tran2023book",
@@ -445,7 +445,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Other options: uniconazole at 100–500 ppm brought flowering forward on 'Monthong' without reducing fruit size. At 2,500 ppm it shortened fruit stalks and made fruit smaller (Jutamanee et al. 2014). Ethephon, daminozide and NAA have no flowering effect, gibberellins push leaf growth, and root pruning harms or kills trees (as reported in the book). Uniconazole is in the same chemical class as PBZ, is not approved in the EU or GB, and its persistence in soil is uncertain (database values range from days to more than a year), so it is no easy way around PBZ residue (PPDB).",
+        "text": "Other options: uniconazole at 100–500 ppm brought flowering forward on 'Monthong' without reducing fruit size. At 2,500 ppm it shortened fruit stalks and made fruit smaller (Jutamanee et al. 2014). Ethephon, daminozide and NAA have no flowering effect, gibberellins push leaf growth, and root pruning harms or kills trees (as reported in Hâu & Hiếu 2026). Uniconazole is in the same chemical class as PBZ, is not approved in the EU or GB, and its persistence in soil is uncertain (database values range from days to more than a year), so it is no easy way around PBZ residue (PPDB).",
         "level": "evidence",
         "sources": [
           "tran2023book",
@@ -461,28 +461,28 @@ export const STAGES = [
     "summary": "The tree needs a real but controlled drought. In Mekong Delta orchards that means plastic mulch and dry ditches for weeks, not days, but never severe stress.",
     "points": [
       {
-        "text": "Expect buds 25–30 days after induction on average. They can appear in 20–25 days in good conditions, or take 35–40 days. Timing depends on cultivar, weather and technique. Under the book's Mekong Delta protocol, PBZ is sprayed, the beds are mulched and the ditches pumped completely dry (book Ch. 9).",
+        "text": "Expect buds 25–30 days after induction on average. They can appear in 20–25 days in good conditions, or take 35–40 days. Timing depends on cultivar, weather and technique. Under Hâu & Hiếu's Mekong Delta protocol, PBZ is sprayed, the beds are mulched and the ditches pumped completely dry (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "End the stress the moment buds are clearly visible: roll up the mulch, then fertilise and irrigate straight away. Leave the mulch too long and the buds abort from dehydration. Remove it too early, just as buds break, and a sudden rain can turn them back into leaf buds (book Ch. 9).",
+        "text": "End the stress the moment buds are clearly visible: roll up the mulch, then fertilise and irrigate straight away. Leave the mulch too long and the buds abort from dehydration. Remove it too early, just as buds break, and a sudden rain can turn them back into leaf buds (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Drought needs differ by cultivar in the Mekong Delta. 'Kho Qua Xanh' flowers after 20–25 days counted from when the ditches are completely dry (about 26 days from first withholding water). 'Ri6' and 'Monthong' need 30–35 days and still flower unevenly, in 2–3 waves. 'Sua Hat Lep' flowers reliably only in the dry season; with incomplete drought its buds take about 3 months and few appear. This is much longer than the 7–14 days (Salakpetch 2000) or 10–14 days (Chandraparnik et al. 1992b) found in Thailand. The book concludes that Mekong Delta durians need a longer drought, and that how well mulching works depends on cultivar, weather and ditch-water management (book pp. 142, 152).",
+        "text": "Drought needs differ by cultivar in the Mekong Delta. 'Kho Qua Xanh' flowers after 20–25 days counted from when the ditches are completely dry (about 26 days from first withholding water). 'Ri6' and 'Monthong' need 30–35 days and still flower unevenly, in 2–3 waves. 'Sua Hat Lep' flowers reliably only in the dry season; with incomplete drought its buds take about 3 months and few appear. This is much longer than the 7–14 days (Salakpetch 2000) or 10–14 days (Chandraparnik et al. 1992b) found in Thailand. Hâu & Hiếu (2026) conclude that Mekong Delta durians need a longer drought, and that how well mulching works depends on cultivar, weather and ditch-water management (Hâu & Hiếu 2026, pp. 142, 152).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "How much drought is enough (Thai benchmark): a continuous dry spell of about 7–14 days (the book's summary says 10–14), bringing leaf water potential to about −0.7 to −0.8 MPa (Salakpetch 2005). Compare the JIRCAS trial, where plastic mulch reached −0.9 MPa and flowering was suppressed. The useful range is narrow.",
+        "text": "How much drought is enough (Thai benchmark): a continuous dry spell of about 7–14 days (Hâu & Hiếu's summary says 10–14), bringing leaf water potential to about −0.7 to −0.8 MPa (Salakpetch 2005). Compare the JIRCAS trial, where plastic mulch reached −0.9 MPa and flowering was suppressed. The useful range is narrow.",
         "level": "evidence",
         "sources": [
           "tran2023book",
@@ -505,14 +505,14 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Other drought benchmarks: in Chanthaburi, trees flowered about 50 days after the rain stopped, at a soil moisture of −100 kPa at 15 cm depth. Temperatures below 20 °C were not needed. 'Musang King' growers in Raub, Malaysia, say at least 14 dry days are needed (as reported in the book).",
+        "text": "Other drought benchmarks: in Chanthaburi, trees flowered about 50 days after the rain stopped, at a soil moisture of −100 kPa at 15 cm depth. Temperatures below 20 °C were not needed. 'Musang King' growers in Raub, Malaysia, say at least 14 dry days are needed (as reported in Hâu & Hiếu 2026).",
         "level": "evidence",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Measure soil moisture, don't guess. On the Can Tho University farm soil (0–30 cm: field capacity 57.3%, wilting point 18.9%), trees flowered at 30% soil moisture in the first flush and well at 28.6% in the second. That is roughly a quarter of the available water left. The book's rule of thumb is 30–40% moisture held for 3–4 weeks, adjusted for soil texture (Hau et al. 2001, book Table 5.1).",
+        "text": "Measure soil moisture, don't guess. On the Can Tho University farm soil (0–30 cm: field capacity 57.3%, wilting point 18.9%), trees flowered at 30% soil moisture in the first flush and well at 28.6% in the second. That is roughly a quarter of the available water left. Hâu & Hiếu's rule of thumb is 30–40% moisture held for 3–4 weeks, adjusted for soil texture (Hau et al. 2001, Hâu & Hiếu 2026, Table 5.1).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -563,7 +563,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Trenching (root cutting) is contested. Advanced growers in Cai Lay and Cho Lach dig a ring trench about 30–40 cm wide and 30–40 cm deep, 2.5–3.0 m from the trunk, on top of PBZ and drought, and the book's protocol chapter calls it a powerful trigger. The same book notes that no durian study has tested it, and that cutting roots may open the way to root disease. Treat it as unproven (book Ch. 5, Ch. 9).",
+        "text": "Trenching (root cutting) is contested. Advanced growers in Cai Lay and Cho Lach dig a ring trench about 30–40 cm wide and 30–40 cm deep, 2.5–3.0 m from the trunk, on top of PBZ and drought, and Hâu & Hiếu's protocol chapter calls it a powerful trigger. Hâu & Hiếu (2026) also note that no durian study has tested it, and that cutting roots may open the way to root disease. Treat it as unproven (Hâu & Hiếu 2026, Ch. 5, Ch. 9).",
         "level": "practice",
         "sources": [
           "tran2023book"
@@ -590,14 +590,14 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Feed and water the developing flowers. After the mulch comes off, Cho Lach growers apply 0.5–1.0 kg NPK 1:1:1 per tree. The book also suggests 0.5–0.7 kg of NPK 1:1:1 blended 3:1 with urea. Irrigate every 2–3 days, because flower expansion needs water like a leaf flush does, and keep ditch water 60–80 cm below the beds from now on. Control flower borer, and anthracnose if it rains (book Ch. 9).",
+        "text": "Feed and water the developing flowers. After the mulch comes off, Cho Lach growers apply 0.5–1.0 kg NPK 1:1:1 per tree. Hâu & Hiếu (2026) also suggest 0.5–0.7 kg of NPK 1:1:1 blended 3:1 with urea. Irrigate every 2–3 days, because flower expansion needs water like a leaf flush does, and keep ditch water 60–80 cm below the beds from now on. Control flower borer, and anthracnose if it rains (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Break bud dormancy deliberately. Rice-grain-sized new buds go dormant, and more than 10 mm of rain stalls them. A foliar KNO₃ spray at 0.5–1.0% breaks dormancy and gives an even bloom, and the book recommends it even in the dry season. If more than 35 mm of rain hits newly emerging buds, they fall into a deep dormancy that even thiourea cannot break (Salakpetch 2005, as reported in the book).",
+        "text": "Break bud dormancy deliberately. Rice-grain-sized new buds go dormant, and more than 10 mm of rain stalls them. A foliar KNO₃ spray at 0.5–1.0% breaks dormancy and gives an even bloom, and Hâu & Hiếu (2026) recommend it even in the dry season. If more than 35 mm of rain hits newly emerging buds, they fall into a deep dormancy that even thiourea cannot break (Salakpetch 2005, as reported in Hâu & Hiếu 2026).",
         "level": "expert",
         "sources": [
           "tran2023book",
@@ -605,7 +605,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Force ONE leaf flush 7–10 days after buds appear, then no more. From bud to open flower takes about 55 days in 'Ri6' and 'Bi Ro Hat Lep', and a leaf flush matures in about 45 days. Starting the flush when buds are 2–3 cm long means the new leaves are mature when the flowers open, and they then feed the fruit. Use foliar urea 1.0–1.5%, KNO₃ 0.5–1.0% or GA₃ 5–10 ppm, with a high-N NPK (2:1:1 or 3:1:1). Too late, and the flush steals from the flowers and fruitlets; with no flush at all, the fruit runs short of carbohydrate. Trees given too much PBZ may refuse to flush (book Ch. 7, Ch. 9).",
+        "text": "Force ONE leaf flush 7–10 days after buds appear, then no more. From bud to open flower takes about 55 days in 'Ri6' and 'Bi Ro Hat Lep', and a leaf flush matures in about 45 days. Starting the flush when buds are 2–3 cm long means the new leaves are mature when the flowers open, and they then feed the fruit. Use foliar urea 1.0–1.5%, KNO₃ 0.5–1.0% or GA₃ 5–10 ppm, with a high-N NPK (2:1:1 or 3:1:1). Too late, and the flush steals from the flowers and fruitlets; with no flush at all, the fruit runs short of carbohydrate. Trees given too much PBZ may refuse to flush (Hâu & Hiếu 2026, Ch. 7, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -626,7 +626,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Flower buds ('crab eyes') can go dormant if even light rain (about 10 mm a day) falls while they develop. Some buds then resume and others stall, giving several waves of fruit (Chandraparnik et al. 1992b; Janick & Paull 2008, as reported in the book). Buds take 6–8 weeks to develop, and some up to 32 weeks.",
+        "text": "Flower buds ('crab eyes') can go dormant if even light rain (about 10 mm a day) falls while they develop. Some buds then resume and others stall, giving several waves of fruit (Chandraparnik et al. 1992b; Janick & Paull 2008, as reported in Hâu & Hiếu 2026). Buds take 6–8 weeks to develop, and some up to 32 weeks.",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -640,21 +640,21 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Don't over-dry during flowering. On 'D24' in Malaysia, 50–75 L per tree per day gave the best flowering. At 25 L per day, all young fruit dropped within 5 weeks of fruit set, and 100 L per day was too wet (Masri 1999, as reported in the book).",
+        "text": "Don't over-dry during flowering. On 'D24' in Malaysia, 50–75 L per tree per day gave the best flowering. At 25 L per day, all young fruit dropped within 5 weeks of fruit set, and 100 L per day was too wet (Masri 1999, as reported in Hâu & Hiếu 2026).",
         "level": "evidence",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Thin flowers where flowering is heavy. Thai practice is to thin about 5 weeks after buds appear if there are more than 6 clusters per metre of branch, leaving 3–6 clusters per metre about 30 cm apart. Remove clusters under 2 cm wide and those at branch tips. On 'Monthong', thinning at full bloom to just 10% of flowers gave the most harvested fruit (Subhadrabandhu & Shoda 1997), and removing 66% of clusters 20 days after emergence raised yield and fruit quality (Udomsriyothin 1991). Do NOT thin sparse flowering: the spare carbohydrate triggers a leaf flush that strips the fruit (as reported in the book).",
+        "text": "Thin flowers where flowering is heavy. Thai practice is to thin about 5 weeks after buds appear if there are more than 6 clusters per metre of branch, leaving 3–6 clusters per metre about 30 cm apart. Remove clusters under 2 cm wide and those at branch tips. On 'Monthong', thinning at full bloom to just 10% of flowers gave the most harvested fruit (Subhadrabandhu & Shoda 1997), and removing 66% of clusters 20 days after emergence raised yield and fruit quality (Udomsriyothin 1991). Do NOT thin sparse flowering: the spare carbohydrate triggers a leaf flush that strips the fruit (as reported in Hâu & Hiếu 2026).",
         "level": "evidence",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Cut water in the week before bloom. About one week before the flowers open (7 weeks after buds appear), reduce irrigation to 20–25% of daily pan evaporation, keeping soil at about 55–60% of field capacity, until the flowers are fully open. Still irrigate if temperatures exceed 36 °C. In Thailand, flowers fully open by 15:00 are taken as a sign the water was managed well. Fertilisation is complete within 3 days of opening (Salakpetch 2005, as reported in the book).",
+        "text": "Cut water in the week before bloom. About one week before the flowers open (7 weeks after buds appear), reduce irrigation to 20–25% of daily pan evaporation, keeping soil at about 55–60% of field capacity, until the flowers are fully open. Still irrigate if temperatures exceed 36 °C. In Thailand, flowers fully open by 15:00 are taken as a sign the water was managed well. Fertilisation is complete within 3 days of opening (Salakpetch 2005, as reported in Hâu & Hiếu 2026).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -669,14 +669,14 @@ export const STAGES = [
     "summary": "Off-season fruit often grows into the rainy season. Ending the induction drought correctly and keeping soil moisture steady stops the sudden 'matchstick' drop.",
     "points": [
       {
-        "text": "Raise water again once fruit has set: bring irrigation back up to 60–70% of daily evaporation to drive young-fruit growth and prevent drought drop (Salakpetch 2005, as reported in the book).",
+        "text": "Raise water again once fruit has set: bring irrigation back up to 60–70% of daily evaporation to drive young-fruit growth and prevent drought drop (Salakpetch 2005, as reported in Hâu & Hiếu 2026).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Hand-pollinate where it matters, on the evening the flowers open. Durian opens in the late afternoon; 'Monthong' stigmas are receptive by 17:00 and over half the anthers shed pollen by 17:30. Pollinating the next morning gave only 0–3.4% fruit set, so the window is that one night: from when pollen is shed (about 17:30–19:00, by cultivar and site) into the evening. The book's 18:00–21:00 and 19:00–22:00 both fall inside it, as does the Malaysian practice of pollinating after dinner. This is essential for self-incompatible cultivars such as 'Musang King'. Use a soft nylon duster on a telescopic pole (up to about 6 m) to carry pollen from another cultivar. 'Monthong' pollen gives 'Musang King' a longer fruit than 'Ri6' pollen (book Ch. 6, Ch. 9).",
+        "text": "Hand-pollinate where it matters, on the evening the flowers open. Durian opens in the late afternoon; 'Monthong' stigmas are receptive by 17:00 and over half the anthers shed pollen by 17:30. Pollinating the next morning gave only 0–3.4% fruit set, so the window is that one night: from when pollen is shed (about 17:30–19:00, by cultivar and site) into the evening. Hâu & Hiếu's 18:00–21:00 and 19:00–22:00 both fall inside it, as does the Malaysian practice of pollinating after dinner. This is essential for self-incompatible cultivars such as 'Musang King'. Use a soft nylon duster on a telescopic pole (up to about 6 m) to carry pollen from another cultivar. 'Monthong' pollen gives 'Musang King' a longer fruit than 'Ri6' pollen (Hâu & Hiếu 2026, Ch. 6, Ch. 9).",
         "level": "evidence",
         "sources": [
           "wayo2018",
@@ -686,21 +686,21 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Two sprays to hold fruit: NAA at 20–40 ppm with a high-P foliar feed (NPK 15:30:15) 7 days after fruit set, then GA₃ at 5–10 ppm 3–6 weeks after set, which thickens fruit stalks and reduces drop. NAA, GA₃ and mepiquat chloride must be registered for fruit use where you farm, and some export markets restrict them (book Ch. 6, Ch. 9).",
+        "text": "Two sprays to hold fruit: NAA at 20–40 ppm with a high-P foliar feed (NPK 15:30:15) 7 days after fruit set, then GA₃ at 5–10 ppm 3–6 weeks after set, which thickens fruit stalks and reduces drop. NAA, GA₃ and mepiquat chloride must be registered for fruit use where you farm, and some export markets restrict them (Hâu & Hiếu 2026, Ch. 6, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Feeding the young fruit (book protocol): at petal fall, spray a high-P foliar feed (NPK 15:30:15 at 0.5%) twice, 10–15 days apart. From 20–25 days after fruit set, spray MKP at 1.0–1.5% every 10–15 days to keep new flushes down. Also give the first soil feed: NPK 1:1:1 blended 3:1 with urea, 0.5–1.0 kg per tree, adjusted for tree age and crop load (book Ch. 9).",
+        "text": "Feeding the young fruit (Hâu & Hiếu 2026 protocol): at petal fall, spray a high-P foliar feed (NPK 15:30:15 at 0.5%) twice, 10–15 days apart. From 20–25 days after fruit set, spray MKP at 1.0–1.5% every 10–15 days to keep new flushes down. Also give the first soil feed: NPK 1:1:1 blended 3:1 with urea, 0.5–1.0 kg per tree, adjusted for tree age and crop load (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "When fruit drop happens: unpollinated flowers fall 7–10 days after opening. Young-fruit drop peaks about 3 weeks after fruit set and settles by about 6 weeks. In 'Sua Hat Lep' fewer than 10% of fruit remained after the 3-week drop (Hau & Lam 2008, as reported in the book).",
+        "text": "When fruit drop happens: unpollinated flowers fall 7–10 days after opening. Young-fruit drop peaks about 3 weeks after fruit set and settles by about 6 weeks. In 'Sua Hat Lep' fewer than 10% of fruit remained after the 3-week drop (Hau & Lam 2008, as reported in Hâu & Hiếu 2026).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -721,14 +721,14 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Which calcium, where. Right after fruit set, the protocol table supplies soil calcium as gypsum or organic calcium, and warns against putting calcium nitrate or calcium chloride on the soil at this stage, because they can upset soil pH and trigger fruit drop. Foliar Ca–B sprays continue, and the calcium nitrate spray (0.2%) comes later, at 30–35 days after set (book Table 9.2).",
+        "text": "Which calcium, where. Right after fruit set, the protocol table supplies soil calcium as gypsum or organic calcium, and warns against putting calcium nitrate or calcium chloride on the soil at this stage, because they can upset soil pH and trigger fruit drop. Foliar Ca–B sprays continue, and the calcium nitrate spray (0.2%) comes later, at 30–35 days after set (Hâu & Hiếu 2026, Table 9.2).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Stop any new leaf flush during early fruit growth; this is the book's most important fruit-stage measure. Flushes 3–8 weeks after fruit set increase drop and cause misshapen fruit with hard, uneven flesh (Salakpetch et al. 1992). Spray KNO₃ at 1.0–1.5% once or twice, or MKP at 0.5–1.0%. If shoots are already well advanced, the Thai extension mix is 30 mL humic acid + 60 g NPK 15:30:15 or 10:20:30 + 50 mL mepiquat chloride (25%) in 20 L of water (book Ch. 6, Ch. 9).",
+        "text": "Stop any new leaf flush during early fruit growth; this is Hâu & Hiếu's most important fruit-stage measure. Flushes 3–8 weeks after fruit set increase drop and cause misshapen fruit with hard, uneven flesh (Salakpetch et al. 1992). Spray KNO₃ at 1.0–1.5% once or twice, or MKP at 0.5–1.0%. If shoots are already well advanced, the Thai extension mix is 30 mL humic acid + 60 g NPK 15:30:15 or 10:20:30 + 50 mL mepiquat chloride (25%) in 20 L of water (Hâu & Hiếu 2026, Ch. 6, Ch. 9).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -750,7 +750,7 @@ export const STAGES = [
     "summary": "Off-season fruit is prone to flesh disorders, and the harvest often meets rain. Time the pick by cultivar, cut nitrogen as the fruit grows, and dry the roots before harvest.",
     "points": [
       {
-        "text": "Fruit timing by cultivar, counted in days after fruit set: 'Kho Qua Xanh', 'Ri6' and 'Musang King' about 90–100; 'Sua Hat Lep' about 100–110; 'Monthong' about 115–120. In the cooler Central Highlands, add 20–30 days; at 700–800 m altitude, harvest can stretch to 135–150 days. Growth is slow for the first 30 days, fast from week 6 to week 12 as the flesh fills, then about 30 days of maturation (book Ch. 9).",
+        "text": "Fruit timing by cultivar, counted in days after fruit set: 'Kho Qua Xanh', 'Ri6' and 'Musang King' about 90–100; 'Sua Hat Lep' about 100–110; 'Monthong' about 115–120. In the cooler Central Highlands, add 20–30 days; at 700–800 m altitude, harvest can stretch to 135–150 days. Growth is slow for the first 30 days, fast from week 6 to week 12 as the flesh fills, then about 30 days of maturation (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -778,42 +778,42 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Thin the fruit; it decides both this crop and next year's. An overloaded tree runs out of carbohydrate, leading to branch dieback, a skipped crop the following year (biennial bearing) or even tree death. When fruit set is high, thinning is mandatory. Mekong Delta growers thin in 2–3 passes 4–6 weeks after fruit set, when fruitlets are cup to bowl size. Thai schedules thin at weeks 4–5 (keeping 2–3 times the target), week 6 and weeks 7–10; an alternative thins at days 30, 45 and 60, keeping 1.2–1.5 times the target at day 30 (Salakpetch 2005; Ketsa et al. 2020; as reported in the book).",
+        "text": "Thin the fruit; it decides both this crop and next year's. An overloaded tree runs out of carbohydrate, leading to branch dieback, a skipped crop the following year (biennial bearing) or even tree death. When fruit set is high, thinning is mandatory. Mekong Delta growers thin in 2–3 passes 4–6 weeks after fruit set, when fruitlets are cup to bowl size. Thai schedules thin at weeks 4–5 (keeping 2–3 times the target), week 6 and weeks 7–10; an alternative thins at days 30, 45 and 60, keeping 1.2–1.5 times the target at day 30 (Salakpetch 2005; Ketsa et al. 2020; as reported in Hâu & Hiếu 2026).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Keep fruit in the right place. Fruit at branch tips and the top of the tree grow fast but get little calcium (it travels to the leaves), so they are prone to soggy flesh. Fruit on the trunk get calcium but too little carbohydrate, and stay small. Keep fruit on the middle section of the main branches, 1–2 per cluster, and none on small, weak side branches, which tend to die back after harvest (book Ch. 9).",
+        "text": "Keep fruit in the right place. Fruit at branch tips and the top of the tree grow fast but get little calcium (it travels to the leaves), so they are prone to soggy flesh. Fruit on the trunk get calcium but too little carbohydrate, and stay small. Keep fruit on the middle section of the main branches, 1–2 per cluster, and none on small, weak side branches, which tend to die back after harvest (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "How many fruit a tree can carry: a 2 kg 'Chanee' fruit needs the output of 150–200 mature leaves (Palakul 1987), or about 330 leaves on a conservative estimate (Salakpetch 2005). As a branch rule, a 2.5 cm branch carries 1 fruit, a 3.8 cm branch 2, and branches over 5 cm 3–4 (Philippine 'Puyat' guidelines). Typical final loads are 50–150 fruit per tree. 7-year-old 'Ri6' carried 32–52 fruit (2.2–3.6 kg each) with the same total yield of about 113 kg per tree (Hieu et al. 2026). Mature elite trees aged 16–20 years carried up to 80–120 ('Ri6') and 140–150 ('Kho Qua Xanh'). Thai guidance for 'Monthong' is about 30 fruit at 6–7 years, 50 at 8–10 and 70 at 15–20 years (as reported in the book).",
+        "text": "How many fruit a tree can carry: a 2 kg 'Chanee' fruit needs the output of 150–200 mature leaves (Palakul 1987), or about 330 leaves on a conservative estimate (Salakpetch 2005). As a branch rule, a 2.5 cm branch carries 1 fruit, a 3.8 cm branch 2, and branches over 5 cm 3–4 (Philippine 'Puyat' guidelines). Typical final loads are 50–150 fruit per tree. 7-year-old 'Ri6' carried 32–52 fruit (2.2–3.6 kg each) with the same total yield of about 113 kg per tree (Hieu et al. 2026). Mature elite trees aged 16–20 years carried up to 80–120 ('Ri6') and 140–150 ('Kho Qua Xanh'). Thai guidance for 'Monthong' is about 30 fruit at 6–7 years, 50 at 8–10 and 70 at 15–20 years (as reported in Hâu & Hiếu 2026).",
         "level": "evidence",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Yield targets from the book's protocol: 7–8-year 'Ri6' carrying 30–50 fruit gives 100–110 kg per tree; 'Musang King' with 50–60 fruit gives 80–100 kg; 8–10-year 'Monthong' with 40–50 fruit gives 120–150 kg. Thin in three passes: 20–25 days after set (an 8–10-year tree may hold 80–100 for now), at 40–45 days when fruit are 9–10 cm (final spacing), and a final load check at 60–70 days ('Ri6', 'Musang King') or 80–85 days ('Monthong') (book Table 9.2).",
+        "text": "Yield targets from Hâu & Hiếu's protocol: 7–8-year 'Ri6' carrying 30–50 fruit gives 100–110 kg per tree; 'Musang King' with 50–60 fruit gives 80–100 kg; 8–10-year 'Monthong' with 40–50 fruit gives 120–150 kg. Thin in three passes: 20–25 days after set (an 8–10-year tree may hold 80–100 for now), at 40–45 days when fruit are 9–10 cm (final spacing), and a final load check at 60–70 days ('Ri6', 'Musang King') or 80–85 days ('Monthong') (Hâu & Hiếu 2026, Table 9.2).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Don't over-thin. Fruit, like flowers, hold back new shoots. If fruit set is poor, or you thin too hard, the spare carbohydrate triggers a leaf flush that then starves and drops the remaining fruit (book Ch. 9).",
+        "text": "Don't over-thin. Fruit, like flowers, hold back new shoots. If fruit set is poor, or you thin too hard, the spare carbohydrate triggers a leaf flush that then starves and drops the remaining fruit (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Second and third feeds (book protocol): at 55–60 days after set, apply 0.5–1.0 kg high-K NPK 2:1:3 per tree with a 0.2% calcium nitrate spray against soggy flesh. For cultivars hanging over 100 days, repeat at 75–80 days and add a 0.2% MgSO₄ spray. One month before harvest, spray KNO₃ at 1.0%. The Can Tho 'Musang King' trial schedule below is similar but tested specifically on that cultivar (book Ch. 9).",
+        "text": "Second and third feeds (Hâu & Hiếu 2026 protocol): at 55–60 days after set, apply 0.5–1.0 kg high-K NPK 2:1:3 per tree with a 0.2% calcium nitrate spray against soggy flesh. For cultivars hanging over 100 days, repeat at 75–80 days and add a 0.2% MgSO₄ spray. One month before harvest, spray KNO₃ at 1.0%. The Can Tho 'Musang King' trial schedule below is similar but tested specifically on that cultivar (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -872,7 +872,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Water during fruit growth, and the rain-at-harvest problem. Keep ditch water 60–80 cm below the beds and irrigate every 2–3 days, changing amounts gradually, because sudden changes cause fruit drop. Waterlogging triggers new flushes, soggy flesh and Phytophthora; too little water in the dry season scorches leaves and stunts fruit. 15–20 days before harvest, cut irrigation back, since mild stress helps the fruit mature. The protocol table pumps the ditches completely dry 10–15 days before harvest. Off-season harvests often meet heavy rain, which causes mushy and soggy flesh. In that case, mulch the root zone and drain the ditches about a month before harvest. Mulching cut flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999). For 'Ri6', add Ca + B sprays during flesh growth (book Ch. 7, Ch. 9).",
+        "text": "Water during fruit growth, and the rain-at-harvest problem. Keep ditch water 60–80 cm below the beds and irrigate every 2–3 days, changing amounts gradually, because sudden changes cause fruit drop. Waterlogging triggers new flushes, soggy flesh and Phytophthora; too little water in the dry season scorches leaves and stunts fruit. 15–20 days before harvest, cut irrigation back, since mild stress helps the fruit mature. The protocol table pumps the ditches completely dry 10–15 days before harvest. Off-season harvests often meet heavy rain, which causes mushy and soggy flesh. In that case, mulch the root zone and drain the ditches about a month before harvest. Mulching cut flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999). For 'Ri6', add Ca + B sprays during flesh growth (Hâu & Hiếu 2026, Ch. 7, Ch. 9).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -888,14 +888,14 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Pick at the right maturity. For the domestic market, tree-ripened fruit tastes best. For export, cut at about 85% maturity: tapping the rind gives a hollow, dull sound as the flesh starts to separate. Fruit cut below 75% maturity cannot be rescued by ripening treatment (Cheyglinted 1993, as reported in the book). Other maturity signs: the rind turns from light brown to yellow-green, the stalk joint swells, the gaps between spines widen, and the spines become softer (Pascua & Cantila 1992). Don't harvest during heavy rain: pump the ditches dry and wait 3 days after the rain stops before cutting. Don't seal ripening fruit in, or the rind turns dark yellow (book Table 9.2).",
+        "text": "Pick at the right maturity. For the domestic market, tree-ripened fruit tastes best. For export, cut at about 85% maturity: tapping the rind gives a hollow, dull sound as the flesh starts to separate. Fruit cut below 75% maturity cannot be rescued by ripening treatment (Cheyglinted 1993, as reported in Hâu & Hiếu 2026). Other maturity signs: the rind turns from light brown to yellow-green, the stalk joint swells, the gaps between spines widen, and the spines become softer (Pascua & Cantila 1992). Don't harvest during heavy rain: pump the ditches dry and wait 3 days after the rain stops before cutting. Don't seal ripening fruit in, or the rind turns dark yellow (Hâu & Hiếu 2026, Table 9.2).",
         "level": "expert",
         "sources": [
           "tran2023book"
         ]
       },
       {
-        "text": "Ripening 'Monthong' and 'Ri6' without disorders: Hau et al. (2009) combined Ca(NO₃)₂ 0.2% at 2 months after set, MgSO₄ 0.2% at 2.5 months and KNO₃ 1.0% one month before harvest with a 0.1–0.2% ethephon treatment after harvest. This virtually eliminated hard, colourless flesh. At 0.4% ethephon, ripening peaked too early (day 4 against day 6); overdosing yellows the rind and makes the flesh mushy. Thai packhouses paint ethephon only on the freshly re-cut stalk and fan the stacked fruit, avoiding rind yellowing. 'Ri6' treated with 200–500 ppm ethylene ripened in 2 days instead of 5. Local cultivars ('Kho Qua Xanh', 'Chuong Bo Hat Lep', 'Sau Huu') ripen evenly without ethylene (book Ch. 7, Ch. 9).",
+        "text": "Ripening 'Monthong' and 'Ri6' without disorders: Hau et al. (2009) combined Ca(NO₃)₂ 0.2% at 2 months after set, MgSO₄ 0.2% at 2.5 months and KNO₃ 1.0% one month before harvest with a 0.1–0.2% ethephon treatment after harvest. This virtually eliminated hard, colourless flesh. At 0.4% ethephon, ripening peaked too early (day 4 against day 6); overdosing yellows the rind and makes the flesh mushy. Thai packhouses paint ethephon only on the freshly re-cut stalk and fan the stacked fruit, avoiding rind yellowing. 'Ri6' treated with 200–500 ppm ethylene ripened in 2 days instead of 5. Local cultivars ('Kho Qua Xanh', 'Chuong Bo Hat Lep', 'Sau Huu') ripen evenly without ethylene (Hâu & Hiếu 2026, Ch. 7, Ch. 9).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -919,7 +919,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Overloading is the other way to lose next year's crop. The book links excessive fruit load to branch dieback, biennial bearing and tree collapse. Thinning to the tree's leaf and branch capacity in step 7 protects next season's flowering as much as limiting PBZ does (book Ch. 9).",
+        "text": "Overloading is the other way to lose next year's crop. Hâu & Hiếu (2026) link excessive fruit load to branch dieback, biennial bearing and tree collapse. Thinning to the tree's leaf and branch capacity in step 7 protects next season's flowering as much as limiting PBZ does (Hâu & Hiếu 2026, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -1015,7 +1015,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Flushing with water does not neutralise PBZ. It dissolves poorly (about 23 mg/L) and binds moderately to soil, so irrigation moves only a little. Water does not break it down: PBZ is stable in water, with a half-life of 164 days in water and 787 days with sediment. What is washed out ends up in ditches and canals, where PBZ is very toxic to aquatic life. Watering right after a soil application actually increases root uptake; the book irrigates 2–3 days for that purpose. What water does help is the soil microbes that degrade PBZ, which need a moist but well-aired root zone (about 70–75% of field capacity after harvest), not flooding.",
+        "text": "Flushing with water does not neutralise PBZ. It dissolves poorly (about 23 mg/L) and binds moderately to soil, so irrigation moves only a little. Water does not break it down: PBZ is stable in water, with a half-life of 164 days in water and 787 days with sediment. What is washed out ends up in ditches and canals, where PBZ is very toxic to aquatic life. Watering right after a soil application actually increases root uptake; Hâu & Hiếu (2026) irrigate 2–3 days for that purpose. What water does help is the soil microbes that degrade PBZ, which need a moist but well-aired root zone (about 70–75% of field capacity after harvest), not flooding.",
         "level": "evidence",
         "sources": [
           "ppdb",
@@ -1193,7 +1193,7 @@ export const GAPS = [
   "No durian-specific PBZ residue limit exists in China's GB 2763-2026 (checked: apple, litchi and mango are listed, durian is not), Codex or the EU review. How China treats a pesticide with no listed limit for a food should be confirmed with the importer or China Customs (GACC) before export.",
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
-  "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
+  "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from Hâu & Hiếu's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
   "Two field trials have tested PBZ-degrading microbial products, on a Chinese herb crop and on Vietnamese rice, and patents report pot tests on banana and herbs. About 15 degrading bacteria are known (PBZ › Clean-up), but none has been tested in a durian orchard, no fungus is known to degrade PBZ, and no field trial has tested activated carbon or biochar. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
   "Sources identified but not recovered: MARDI's durian clone D24 PBZ study (Rushidah & Razak 2001; only a library catalogue entry exists), Hasan & Karim 1989 (Malaysia; repository unavailable), and a 2014 Thai university report on fertiliser + PBZ for off-season durian (Nanakorn et al., RMUTSV; the online file is an empty placeholder, so contact the authors). No Thai government study measuring PBZ residue in durian orchard soil was found; the Thai DOA's 2015 soil study covered mango."
 ];

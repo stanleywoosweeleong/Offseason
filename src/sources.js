@@ -221,7 +221,7 @@ export const SOURCES = {
       "14 and 7 days before anthesis, at full bloom, and 7 days after.",
   },
   tran2023book: {
-    short: "Tran & Tran 2026 (book)",
+    short: "Hâu & Hiếu 2026 (book)",
     cite:
       "Tran Van Hau (lead author) & Tran Sy Hieu (2026). Flower Induction in Durian. Viet Nam National University " +
       "Ho Chi Minh City Press. English edition of Xử lý ra hoa cây sầu riêng (3rd Vietnamese ed. 2023, 263 pp.). " +
@@ -235,7 +235,7 @@ export const SOURCES = {
       "trenching and re-watering. It also covers weather (nights 20–22 °C, 50–60% humidity, monsoon direction), cultivar drought needs in the Mekong Delta (Ri6 and Monthong 30–35 days) and soil-moisture targets (Table 5.1). It reports Can Tho University trials: Table 5.2/5.4/5.6 on 'Kho Qua Xanh' " +
       "(Hau 2000; Hau et al. 2001, off-season, Cai Lay) and Table 5.3/5.5/5.7 on 'Sua Hat Lep' (Hau et al. 2001, " +
       "two years, CTU farm). It concludes that PBZ with raised-bed mulching does not affect fruit quality. Findings " +
-      "from other authors are cited in the app as reported in the book. The summary diagram legend (pp. 302–303) mentions a DAP + KCl mix, 'soil moisture 80–85%' during drought, and the 2:1:3 feed at 40–45 days after set. These contradict the book's own text and Table 9.2, which the app follows. Chapter 9 gives the integrated year-round off-season protocol: post-harvest liming and root care, flush synchronisation, pre-PBZ priming, PBZ technique, mulch removal at bud emergence, bud dormancy, forced leaf flush, flower thinning, pre-bloom water management, fruit thinning and crop load, harvest maturity and ripening. Chapter 6 covers hand pollination, cultivar mixes, boron, NAA, GA₃, flush control and 'matchstick' fruit drop. Note: the book cites the Vietnamese PBZ " +
+      "from other authors are cited in the app as reported in Hâu & Hiếu 2026. The summary diagram legend (pp. 302–303) mentions a DAP + KCl mix, 'soil moisture 80–85%' during drought, and the 2:1:3 feed at 40–45 days after set. These contradict Hâu & Hiếu's own text and Table 9.2, which the app follows. Chapter 9 gives the integrated year-round off-season protocol: post-harvest liming and root care, flush synchronisation, pre-PBZ priming, PBZ technique, mulch removal at bud emergence, bud dormancy, forced leaf flush, flower thinning, pre-bloom water management, fruit thinning and crop load, harvest maturity and ripening. Chapter 6 covers hand pollination, cultivar mixes, boron, NAA, GA₃, flush control and 'matchstick' fruit drop. Note: Hâu & Hiếu (2026) cite the Vietnamese PBZ " +
       "survey as 'Duong et al. (2022)', which is the same paper listed here as Pham et al. 2022 (first author " +
       "Pham Thi Thuy Duong).",
   },
@@ -441,7 +441,7 @@ export const SOURCES = {
     cite: "Honsho, C., Yonemori, K., Somsri, S., Subhadrabandhu, S. & Sugiura, A. (2004). Marked improvement of fruit set in Thai durian by artificial cross-pollination. Scientia Horticulturae 101: 399–406.",
     url: "https://doi.org/10.1016/j.scienta.2003.11.019",
     type: "Peer-reviewed",
-    finding: "Under self-pollination, harvest fruit set was 7.7% in 'Monthong', 3.6% in 'Chanee' and 0% in 'Phuang Manee'. Using 'Kradumthong' as the pollen donor gave 27.2% ('Monthong') and 16.3% ('Chanee'). Open-pollinated set in that experiment was only 0–1.4%. The authors describe late-acting self-incompatibility. (Citation verified via Crossref; figures as reported in the book and a secondary summary.)",
+    finding: "Under self-pollination, harvest fruit set was 7.7% in 'Monthong', 3.6% in 'Chanee' and 0% in 'Phuang Manee'. Using 'Kradumthong' as the pollen donor gave 27.2% ('Monthong') and 16.3% ('Chanee'). Open-pollinated set in that experiment was only 0–1.4%. The authors describe late-acting self-incompatibility. (Citation verified via Crossref; figures as reported in Hâu & Hiếu 2026 and a secondary summary.)",
   },
   jiang2019: {
     short: "Jiang et al. 2019 (PBZ in soil, potato/taro)",
@@ -497,7 +497,7 @@ export const SOURCES = {
     cite: "Somsri, S. (1987). Hand pollination in durian (Thai Agricultural Research Journal).",
     url: "https://li01.tci-thaijo.org/index.php/thaiagriculturalresearch/article/view/245086",
     type: "Unverified lead",
-    finding: "As summarised in the book and a secondary report: two weeks after pollination, natural set in 'Chanee' was 0–6% against 30–64% with cross-pollination, and in 'Kanyao' about 21% against 87–89%. These are two-week figures, not harvest set. Not opened.",
+    finding: "As summarised in Hâu & Hiếu 2026 and a secondary report: two weeks after pollination, natural set in 'Chanee' was 0–6% against 30–64% with cross-pollination, and in 'Kanyao' about 21% against 87–89%. These are two-week figures, not harvest set. Not opened.",
   },
   honsho2007: {
     short: "Honsho et al. 2007 (pollination window)",
@@ -518,7 +518,7 @@ export const SOURCES = {
     cite: "Hasan, M. & Karim, M.Z. (1989/1990). Application of paclobutrazol to lengthen fruiting season in durian. In: Off-season production of horticultural crops. FFTC, Taipei.",
     url: "https://psasir.upm.edu.my/id/eprint/17847/",
     type: "Unverified lead",
-    finding: "A UPM repository abstract (per a secondary summary) reports increased flowering and fruiting after PBZ and calls for more work. The book reports that PBZ mainly affects flower formation rather than flower development, and raises the number of flowers per cluster. The repository was unavailable when checked.",
+    finding: "A UPM repository abstract (per a secondary summary) reports increased flowering and fruiting after PBZ and calls for more work. Hâu & Hiếu (2026) report that PBZ mainly affects flower formation rather than flower development, and raises the number of flowers per cluster. The repository was unavailable when checked.",
   },
   nanakorn2014: {
     short: "Nanakorn et al. 2014 (RMUTSV, fertiliser + PBZ)",
