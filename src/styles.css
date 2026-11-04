@@ -155,7 +155,6 @@ details.card > summary { margin: -2px 0; }
 .pts { list-style: none; padding: 0; margin: 0; }
 .pt { padding: 12px 0; border-top: 1px solid var(--line); font-size: 0.95rem; }
 .pt .lvl { margin-right: 4px; }
-.next-step { display: flex; justify-content: flex-end; padding-top: 10px; border-top: 1px solid var(--line); }
 .gaps ul { margin: 8px 0 0; padding-left: 18px; }
 .gaps li { margin: 6px 0; font-size: 0.92rem; }
 

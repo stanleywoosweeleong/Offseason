@@ -103,7 +103,6 @@ function renderGuide() {
     <div class="stage-body">
       <p class="summary">${esc(tr(s.summary))}</p>
       <ul class="pts">${s.points.map(pointHTML).join("")}</ul>
-      ${i < STAGES.length - 1 ? `<div class="next-step"><button type="button" class="ghost small" data-step="${STAGES[i + 1].id}">${trf("Next: step {n} →", { n: i + 2 })}</button></div>` : `<div class="next-step"><button type="button" class="ghost small" data-step="${STAGES[1].id}">${tr("Back to step 2 for next season ↺")}</button></div>`}
     </div>
   </details>`
   ).join("");
@@ -433,21 +432,57 @@ function renderAll() {
   $("#langBtn").textContent = LANG_MENU.find(([c]) => c === lang)[1];
   showTab(currentTab, { scroll: false });
 }
+let pickerPlace = null;
 function openLangPicker() {
   $("#langOpts").innerHTML = LANG_MENU.map(
     ([c, tag, name, en]) => `<button type="button" data-l="${c}" lang="${c}" aria-pressed="${c === lang}"><span class="tag">${tag}</span><span class="nm">${name}<small>${en}</small></span></button>`
   ).join("");
   $("#langModal").hidden = false;
-  $("#langOpts button[aria-pressed=true]")?.focus();
+  pickerPlace = readingPlace();
+  $("#langOpts button[aria-pressed=true]")?.focus({ preventScroll: true });
 }
 $("#langBtn").addEventListener("click", openLangPicker);
+// Keep the reader's place when the language changes: the same paragraph stays at the top of the
+// screen and every open section stays open, even though translations change the page length.
+const pathOf = (el) => {
+  const path = [];
+  for (; el && el !== document.body; el = el.parentElement) path.unshift([...el.parentElement.children].indexOf(el));
+  return path;
+};
+const atPath = (path) => path.reduce((el, i) => el?.children[i], document.body);
+function readingPlace() {
+  const subnav = document.querySelector("#tab-pbz:not([hidden]) .subnav");
+  const top = $(".appbar").getBoundingClientRect().bottom + (subnav ? subnav.getBoundingClientRect().height : 0);
+  const anchor = $$("main .pt, main li, main p, main h2, main h3, main summary, main article, main label")
+    .find((el) => el.offsetParent && el.getBoundingClientRect().bottom > top + 2);
+  const r = anchor?.getBoundingClientRect();
+  return {
+    anchor: anchor ? pathOf(anchor) : null,
+    top,
+    offset: r ? r.top : 0,
+    hidden: r && r.top < top ? (top - r.top) / r.height : 0, // share of the paragraph already scrolled past
+    open: $$("main details[open]").map(pathOf),
+    y: window.scrollY,
+  };
+}
+function restorePlace(place) {
+  for (const path of place.open) { const d = atPath(path); if (d?.tagName === "DETAILS") d.open = true; }
+  const el = place.anchor && atPath(place.anchor);
+  if (!el) { window.scrollTo(0, place.y); return; }
+  const r = el.getBoundingClientRect();
+  const want = place.hidden ? place.top - place.hidden * r.height : place.offset;
+  window.scrollTo(0, window.scrollY + r.top - want);
+}
 $("#langOpts").addEventListener("click", async (e) => {
   const b = e.target.closest("[data-l]");
   if (!b) return;
+  const place = pickerPlace || readingPlace();
+  pickerPlace = null;
   store.set("lang", b.dataset.l);
   await loadLang(b.dataset.l);
   $("#langModal").hidden = true;
   renderAll();
+  restorePlace(place);
 });
 $("#langModal").addEventListener("click", (e) => { if (e.target.id === "langModal" && store.get("lang", null)) $("#langModal").hidden = true; });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#langModal").hidden && store.get("lang", null)) $("#langModal").hidden = true; });
