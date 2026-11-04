@@ -42,6 +42,17 @@ const txt = (p, sel) => p.evaluate((s) => document.querySelector(s).textContent.
   await p.goto(base);
   await tap(p, "#langOpts [data-l=en]");
   await tap(p, "[data-tab=pbz]"); await tap(p, "[data-sub=mix]");
+  // No pre-filled figures: nothing chosen, no dose shown until every input is filled
+  const prefilled = await p.evaluate(() => ({
+    radios: [...document.querySelectorAll("#mixForm input[type=radio]:checked")].map((r) => r.name).filter((n) => n !== "form"),
+    numbers: ["m_tank", "m_ai", "m_ppm", "m_trees", "m_l"].filter((id) => document.getElementById(id).value !== ""),
+  }));
+  check("calculator starts with no pre-filled figures", !prefilled.radios.length && !prefilled.numbers.length, JSON.stringify(prefilled));
+  check("no dose until all inputs are chosen", (await txt(p, "#mixOut")).includes("To see your dose"));
+  await tap(p, "#mixForm input[name=ai][value='25']");
+  await tap(p, "#mixForm input[name=dose][value='1000']");
+  await p.fill("#m_trees", "1");
+  await p.fill("#m_l", "12");
   await tap(p, "#mixForm input[name=tank][value=other]");
   await p.fill("#m_tank", "1.5");
   const mix = await txt(p, "#mixOut");

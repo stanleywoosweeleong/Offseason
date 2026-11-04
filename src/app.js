@@ -318,8 +318,7 @@ $("#rainRegion").addEventListener("change", (e) => {
   renderPlan();
 });
 $("#rainMonths").addEventListener("change", renderRainInfo);
-const defaultDate = (() => { const d = new Date(); d.setUTCMonth(d.getUTCMonth() + 10, 15); return isoDate(d); })();
-$("#planDate").value = store.get("planDate", defaultDate);
+$("#planDate").value = store.get("planDate", ""); // no pre-filled date: the grower picks one
 document.querySelector(`input[name=mode][value=${store.get("mode", "harvest")}]`).checked = true;
 
 function applyCultivar(key) {
@@ -384,7 +383,7 @@ function renderPlan() {
   store.set("mode", mode);
   store.set("planDate", $("#planDate").value);
   const out = $("#planOut");
-  if (!$("#planDate").value) { out.innerHTML = ""; return; }
+  if (!$("#planDate").value) { out.innerHTML = `<div class="card mix-missing"><p>${esc(tr("Choose a date above to see your plan."))}</p></div>`; return; }
   try {
     const stages = readStages();
     // Name each rainy month with its year, so a season that runs into the next year reads clearly.
@@ -436,10 +435,24 @@ function renderMix() {
   const tankSel = radio("tank"), aiSel = radio("ai"), form = radio("form");
   $("#tankOtherWrap").hidden = tankSel !== "other";
   $("#aiOtherWrap").hidden = aiSel !== "other";
+  saveMix();
+  // No pre-filled figures: the dose appears only once the farmer has chosen every input.
+  const filled = (sel) => $(sel).value.trim() !== "";
+  const missing = [
+    (!tankSel || (tankSel === "other" && !filled("#m_tank"))) && tr("your tank size"),
+    (!aiSel || (aiSel === "other" && !filled("#m_ai"))) && tr("the strength on your PBZ label"),
+    !filled("#m_ppm") && tr("which trees you are spraying"),
+    !filled("#m_trees") && tr("the number of trees"),
+    !filled("#m_l") && tr("the litres you spray per tree"),
+  ].filter(Boolean);
+  if (missing.length) {
+    $("#mixOut").innerHTML = `<div class="card mix-missing"><p><b>${esc(tr("To see your dose, choose:"))}</b></p><ul>${missing.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div>`;
+    return;
+  }
   const tank = tankSel === "other" ? Number($("#m_tank").value) : Number(tankSel);
   const ai = aiSel === "other" ? Number($("#m_ai").value) : Number(aiSel);
   const ppm = Number($("#m_ppm").value), litres = Number($("#m_l").value);
-  const trees = Math.max(1, Math.round(Number($("#m_trees").value) || 1));
+  const trees = Math.round(Number($("#m_trees").value));
   const unit = form === "sc" ? "mL" : "g";
   const what = form === "sc" ? trf("{p}% liquid (SC)", { p: num(ai, 1) }) : trf("{p}% powder (WP)", { p: num(ai, 1) });
   const big = (x) => (x >= 1000 && unit === "g" ? `${num(x / 1000, 2)} kg` : x >= 1000 ? `${num(x / 1000, 2)} L` : `${num(x, x < 20 ? 1 : 0)} ${unit}`);
@@ -480,9 +493,29 @@ function renderMix() {
     out.innerHTML = `<div class="card warn">${esc(tr(err.message))}</div>`;
   }
 }
+// Remember the farmer's own entries (never defaults) so the next visit starts where they left off.
+const MIX_RADIOS = ["tank", "ai", "form", "dose"];
+const MIX_FIELDS = ["m_tank", "m_ai", "m_ppm", "m_trees", "m_l"];
+function saveMix() {
+  store.set("mix", {
+    ...Object.fromEntries(MIX_RADIOS.map((n) => [n, radio(n) || ""])),
+    ...Object.fromEntries(MIX_FIELDS.map((id) => [id, $(`#${id}`).value])),
+  });
+}
+(function restoreMix() {
+  const m = store.get("mix", null);
+  if (!m) return;
+  for (const n of MIX_RADIOS) {
+    const el = m[n] && document.querySelector(`#mixForm input[name=${n}][value="${m[n]}"]`);
+    if (el) el.checked = true;
+  }
+  for (const id of MIX_FIELDS) if (m[id] != null) $(`#${id}`).value = m[id];
+})();
 const mixForm = $("#mixForm");
 mixForm.addEventListener("change", (e) => {
   if (e.target.name === "dose") $("#m_ppm").value = e.target.value;
+  // A ppm typed in the Scientist view selects the matching tree type, or none if it matches no preset.
+  if (e.target.id === "m_ppm") document.querySelectorAll("#mixForm input[name=dose]").forEach((r) => (r.checked = r.value === e.target.value));
   renderMix();
 });
 mixForm.addEventListener("input", renderMix);

@@ -480,3 +480,11 @@ main.wrap { padding-bottom: 84px; }
 .share-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 0.92rem; font-weight: 650; text-decoration: none; cursor: pointer; }
 .share-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .share-btn.wa { background: #1f7a4d; border-color: #1f7a4d; color: #fff; }
+
+/* Calculator choice buttons: every group uses the same equal-size cards */
+.picks.two { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 10px; }
+.picks { align-items: stretch; }
+.pick span { height: 100%; }
+.mix-missing { border-left: 4px solid var(--line); }
+.mix-missing ul { margin: 6px 0 0; padding-left: 20px; }
+.mix-missing li { margin: 2px 0; }
