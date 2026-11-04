@@ -123,10 +123,10 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
     {
       id: "dry",
       date: addDays(s, 3),
-      endDate: addDays(s, 7),
-      label: "Mild dry spell: 3–7 days",
-      detail: "Treated trees need only 3–7 dry days, compared with 10–14 for untreated trees. Do not push the tree into severe drought.",
-      sources: ["chandraparnik1993", "kozai2024"],
+      endDate: addDays(s, 35),
+      label: "Controlled drought until flower buds show",
+      detail: "Length depends on cultivar and region: 3–7 dry days after PBZ in Thai 'Chanee' trials. With mulch and dry ditches in the Mekong Delta, 'Kho Qua Xanh' needs 20–25 days and 'Ri6' / 'Monthong' 30–35. Stop short of severe stress (leaf water potential beyond about −0.8 MPa).",
+      sources: ["chandraparnik1993", "tran2023book", "kozai2024"],
     },
     {
       id: "budflush",
@@ -147,8 +147,8 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       id: "fruitset",
       date: anthesis,
       endDate: addDays(anthesis, 42),
-      label: "Fruit-set window (first 6 weeks)",
-      detail: "Hand-pollinate 18:00–21:00 with another cultivar's pollen. Keep irrigation steady, with no water cut-off. Spray Ca (7–21 days after set) and watch for leaf flushes. Young-fruit drop peaks about 3 weeks after set.",
+      label: "Hold the crop (first 6 weeks after fruit set)",
+      detail: "Keep irrigation steady, with no water cut-off, because off-season fruit often meets heavy rain. Spray Ca 7–21 days after set and stop new leaf flushes. Young-fruit drop peaks about 3 weeks after set.",
       sources: ["tran2023book"],
     },
     {
