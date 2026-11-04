@@ -1,11 +1,12 @@
 /* Offseason Durian — mobile-first styles. Base rules target phones; min-width queries enhance larger screens. */
 :root {
-  --bg: #f5f3ec;
-  --surface: #ffffff;
-  --surface-2: #f0eee5;
-  --ink: #1f2a1f;
-  --muted: #5d6a5c;
-  --line: #e2e0d4;
+  /* Paper white: warm, low-glare surfaces and soft-black ink for long reading */
+  --bg: #f4f0e6;
+  --surface: #fcfaf4;
+  --surface-2: #efeadd;
+  --ink: #2b2822;
+  --muted: #565046;
+  --line: #e4ddcc;
   --brand: #2f5d34;
   --brand-ink: #ffffff;
   --brand-soft: #e3efe2;
@@ -45,10 +46,11 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--appbar-h) + 12px); }
+html { font-size: 106.25%; /* 17px, still follows the phone's text-size setting */ -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--appbar-h) + 12px); }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 400 1rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-kerning: normal;
   padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
   -webkit-tap-highlight-color: transparent;
 }
@@ -153,7 +155,7 @@ details.card > summary { margin: -2px 0; }
 .ghost.small { min-height: 36px; padding: 0 12px; font-size: 0.85rem; }
 .form .field { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 0.9rem; margin: 12px 0; }
 input[type="date"], input[type="number"], input[type="search"], select {
-  font: inherit; font-size: 16px; /* 16px stops iOS zooming on focus */
+  font: inherit; font-size: max(16px, 1rem); /* 16px or more stops iOS zooming on focus */
   min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); color: var(--ink); width: 100%; min-width: 0;
 }
 .seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
@@ -334,3 +336,63 @@ body[data-lang="zh"] { font-family: system-ui, -apple-system, "PingFang SC", "Mi
 .result.over { border-left-color: var(--warn); }
 .result.over .big { color: var(--warn); }
 .label-check { margin-top: 8px; color: var(--warn); }
+
+/* ---------- Reading comfort (mobile first) ----------
+   17px body text, 1.65 line height, nothing below ~12.5px, and lighter headings so long passages read calmly. */
+h2 { font-size: 1.2rem; font-weight: 650; letter-spacing: -0.005em; }
+h3 { font-size: 1.06rem; font-weight: 650; }
+b, strong { font-weight: 650; }
+details > summary { font-weight: 650; }
+.hint { font-size: 0.92rem; line-height: 1.6; }
+.brand h1 { font-size: 1.12rem; font-weight: 700; }
+.brand p { font-size: 0.82rem; }
+@media (max-width: 719px) { .tabbar button { font-size: 0.74rem; } }
+.hero h2 { font-size: 1.06rem; font-weight: 600; line-height: 1.4; }
+.hero-kicker { font-size: 0.76rem; font-weight: 650; }
+.cycle b { font-size: 0.9rem; font-weight: 650; line-height: 1.25; }
+.cycle small { font-size: 0.78rem; }
+.lvl { font-size: 0.72rem; font-weight: 650; letter-spacing: 0.02em; }
+.cite-chip { font-size: 0.8rem; line-height: 1.3; }
+.stage > summary .st-title { font-size: 1.06rem; line-height: 1.35; }
+.stage > summary .st-when { font-size: 0.86rem; }
+.stage > summary .st-count, .lib-topic .st-count { font-size: 0.82rem; }
+.stage .summary { font-size: 1rem; line-height: 1.6; }
+.pt { font-size: 1rem; line-height: 1.65; padding: 14px 0; }
+.gaps li { font-size: 0.98rem; line-height: 1.6; }
+.legend-list { font-size: 0.92rem; }
+.form .field { font-size: 0.95rem; }
+.seg span, .seg button { font-size: 0.92rem; }
+.chip { font-size: 0.9rem; }
+.grid3 { font-size: 0.9rem; }
+.big { font-size: 1.5rem; }
+.big span { font-size: 1rem; }
+.tl p { font-size: 0.96rem; line-height: 1.6; }
+.when { font-size: 0.86rem; }
+.step { font-size: 0.72rem; }
+.eff { font-size: 0.8rem; font-weight: 650; }
+.trial dl { font-size: 0.94rem; }
+.trial p { font-size: 0.98rem; line-height: 1.6; }
+.check-group h3 { font-size: 0.98rem; }
+.check-group label { font-size: 1rem; line-height: 1.55; }
+.src .type, .sheet .type { font-size: 0.74rem; }
+.src .cite { font-size: 0.94rem; font-weight: 600; }
+.src .finding { font-size: 0.95rem; line-height: 1.6; }
+.sheet h3 { font-size: 1.12rem; }
+.sheet .cite { font-size: 0.94rem; }
+.sheet .finding { font-size: 1rem; line-height: 1.65; color: var(--ink); }
+.foot { font-size: 0.86rem; line-height: 1.6; }
+.pickset legend { font-size: 1rem; font-weight: 650; }
+.pick span { font-weight: 650; }
+.pick small { font-size: 0.78rem; }
+.form-seg span { font-size: 0.86rem; }
+.danger p { line-height: 1.6; }
+.langbox .opts button { font-weight: 650; }
+/* Scripts that need more vertical room */
+body[data-lang="zh"] { line-height: 1.75; }
+body[data-lang="km"] { line-height: 1.85; }
+body[data-lang="km"] .lvl, body[data-lang="zh"] .lvl { text-transform: none; letter-spacing: 0; }
+/* Comfortable line length on tablets and desktop */
+@media (min-width: 720px) {
+  html { font-size: 109.375%; } /* 17.5px */
+  .pt, .stage .summary, .trial p, .tl p, .src .finding { max-width: 68ch; }
+}
