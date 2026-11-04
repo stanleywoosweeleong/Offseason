@@ -42,8 +42,15 @@ function showTab(name, { scroll = true } = {}) {
   currentTab = name;
   store.set("tab", name);
   if (scroll) window.scrollTo({ top: 0 });
+  if (typeof updateFab === "function") updateFab();
 }
-$$(".tabbar [role=tab]").forEach((b) => b.addEventListener("click", () => showTab(b.dataset.tab)));
+// Tapping the tab you are already on scrolls back to the top, as in most phone apps.
+$$(".tabbar [role=tab]").forEach((b) =>
+  b.addEventListener("click", () => {
+    if (b.dataset.tab === currentTab && window.scrollY > 0) scrollToTop();
+    else showTab(b.dataset.tab);
+  })
+);
 
 // ---------- Citation sheet ----------
 let lastFocus = null;
@@ -349,7 +356,7 @@ function renderChecklist() {
   const groups = STAGES.map((s) => ({ s, items: CHECKLIST.filter((c) => c.stage === s.id) })).filter((g) => g.items.length);
   $("#checklist").innerHTML = groups
     .map(
-      ({ s, items }) => `<div class="card check-group">
+      ({ s, items }) => `<div class="card check-group" id="check-${s.id}">
         <h3><span class="num">${stepNo[s.id]}</span>${esc(tr(s.title))}</h3>
         <ul>${items
           .map((c) => `<li><label><input type="checkbox" value="${c.id}" ${done.has(c.id) ? "checked" : ""}/> <span>${esc(tr(c.text))}</span></label></li>`)
@@ -387,7 +394,7 @@ function renderLibrary(q = "") {
   $("#library").innerHTML = topics.length
     ? topics
         .map(
-          ({ t, pts }) => `<details class="card lib-topic" ${query ? "open" : ""}>
+          ({ t, pts }) => `<details class="card lib-topic" id="lib-${t.id}" ${query ? "open" : ""}>
         <summary><span><span class="st-title">${esc(tr(t.title))}</span><span class="st-count">${trf("{n} points", { n: pts.length })}</span></span></summary>
         <div class="stage-body"><p class="summary">${esc(tr(t.summary))}</p>
         <ul class="pts">${pts
@@ -414,6 +421,92 @@ let searchTimer;
 $("#libSearch").addEventListener("input", (e) => {
   clearTimeout(searchTimer);
   searchTimer = setTimeout(() => renderLibrary(e.target.value), 150);
+});
+
+// ---------- Navigation: back to top + contents ----------
+const smooth = () => (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
+function scrollToTop() { window.scrollTo({ top: 0, behavior: smooth() }); }
+
+// What the Contents sheet lists on each tab: [element id, label, sub-label]
+function tocEntries() {
+  if (currentTab === "guide")
+    return [
+      ...STAGES.map((s, i) => [`stage-${s.id}`, `${i + 1}. ${tr(s.title)}`, tr(s.when)]),
+      ["gapsBlock", tr("What the evidence does not tell us"), ""],
+    ];
+  if (currentTab === "library")
+    return [
+      ...LIBRARY.filter((t) => document.getElementById(`lib-${t.id}`)).map((t) => [`lib-${t.id}`, tr(t.title), tr(t.summary)]),
+      ["sourcesBlock", tr("All sources"), ""],
+    ];
+  if (currentTab === "checklist")
+    return STAGES.filter((s) => document.getElementById(`check-${s.id}`)).map((s) => [`check-${s.id}`, `${stepNo[s.id]}. ${tr(s.title)}`, ""]);
+  return [];
+}
+const TOC_TABS = new Set(["guide", "library", "checklist"]);
+const tocTitle = () => (currentTab === "library" ? tr("Topics") : tr("Steps"));
+
+function updateFab() {
+  const scrolled = window.scrollY > window.innerHeight * 0.8;
+  $("#fab").hidden = !scrolled;
+  $("#tocBtn").hidden = !TOC_TABS.has(currentTab);
+  if (TOC_TABS.has(currentTab)) $("#tocBtn span").textContent = tocTitle();
+}
+let fabTick = false;
+window.addEventListener("scroll", () => {
+  if (fabTick) return;
+  fabTick = true;
+  requestAnimationFrame(() => { updateFab(); fabTick = false; });
+}, { passive: true });
+$("#topBtn").addEventListener("click", scrollToTop);
+
+function currentSectionId(entries) {
+  const line = $(".appbar").getBoundingClientRect().bottom + 24;
+  let cur = entries[0]?.[0];
+  for (const [id] of entries) {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= line) cur = id;
+  }
+  return cur;
+}
+function openToc() {
+  const entries = tocEntries();
+  if (!entries.length) return;
+  const cur = currentSectionId(entries);
+  $("#tocTitle").textContent = tocTitle();
+  $("#tocList").innerHTML = entries
+    .map(([id, label, sub]) => `<li><button type="button" data-jump="${id}" ${id === cur ? 'aria-current="true"' : ""}><span class="toc-l">${esc(label)}</span>${sub ? `<small>${esc(sub)}</small>` : ""}</button></li>`)
+    .join("");
+  $("#tocCollapse").hidden = currentTab === "checklist";
+  $("#tocSheet").hidden = false;
+  $("#tocBackdrop").hidden = false;
+  document.body.style.overflow = "hidden";
+  $("#tocSheet").scrollTop = 0;
+  $("#tocList [aria-current]")?.scrollIntoView({ block: "center" });
+  $("#tocTitle").focus({ preventScroll: true });
+}
+function closeToc() {
+  $("#tocSheet").hidden = true;
+  $("#tocBackdrop").hidden = true;
+  document.body.style.overflow = "";
+}
+$("#tocBtn").addEventListener("click", openToc);
+$("#tocClose").addEventListener("click", closeToc);
+$("#tocBackdrop").addEventListener("click", closeToc);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#tocSheet").hidden) closeToc(); });
+$("#tocList").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-jump]");
+  if (!b) return;
+  const el = document.getElementById(b.dataset.jump);
+  closeToc();
+  if (!el) return;
+  if (el.tagName === "DETAILS") el.open = true;
+  el.scrollIntoView({ behavior: smooth(), block: "start" });
+});
+$("#tocCollapse").addEventListener("click", () => {
+  $$(`#tab-${currentTab} details[open]`).forEach((d) => (d.open = false));
+  closeToc();
+  scrollToTop();
 });
 
 // ---------- Language ----------
@@ -493,6 +586,7 @@ await loadLang(savedLang || "en");
 currentTab = store.get("tab", "guide");
 renderAll();
 showSub(store.get("pbzSub", "evidence"));
+updateFab();
 if (!savedLang) openLangPicker();
 
 // Offline support: cache the app so it works in the orchard without signal.

@@ -63,7 +63,7 @@
         <p class="hint">Tap any grey source tag to see the reference.</p>
       </details>
       <div id="stages" class="stages"></div>
-      <details class="card gaps">
+      <details class="card gaps" id="gapsBlock">
         <summary>What the evidence does not tell us</summary>
         <ul id="gaps"></ul>
       </details>
@@ -239,6 +239,28 @@
       <p>Educational summary of published research, not agronomic advice for your orchard. Follow local regulations and product labels, and talk to your agricultural extension office before using plant growth regulators.</p>
     </footer>
   </main>
+
+  <!-- Navigation: contents + back to top (appear after scrolling) -->
+  <div class="fab" id="fab" hidden>
+    <button type="button" class="fab-btn" id="tocBtn" aria-label="Contents">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg><span>Contents</span>
+    </button>
+    <button type="button" class="fab-btn round" id="topBtn" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+  <div class="sheet-backdrop" id="tocBackdrop" hidden></div>
+  <div class="sheet" id="tocSheet" role="dialog" aria-modal="true" aria-labelledby="tocTitle" hidden>
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-body">
+      <h3 id="tocTitle" tabindex="-1">Contents</h3>
+      <ol class="toc" id="tocList"></ol>
+      <div class="sheet-actions">
+        <button type="button" class="ghost" id="tocCollapse">Close all sections</button>
+        <button type="button" class="ghost" id="tocClose">Close</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Citation bottom sheet -->
   <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
