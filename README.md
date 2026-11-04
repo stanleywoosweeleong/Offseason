@@ -7,11 +7,11 @@ One topic: **how to produce durian off-season.** That means inducing flowering o
 | Step | When | What the evidence says |
 |---|---|---|
 | 1. Decide your off-season window | Months ahead | Off-season prices are 2–3 times the peak price (Vietnam). The Mekong Delta can induce year-round. An August–September harvest is the hardest window. Induce in dry, Northeast-monsoon weather (nights 20–22 °C, 50–60% humidity). |
-| 2. Prepare the tree | Post-harvest | Drainage and Phytophthora control first. Prune, then push two leaf flushes; spray when the second flush turns dark green. |
-| 3. Induce: spray PBZ | Day 0 | 1,000–1,500 ppm foliar, about 20–30 g a.i. per tree. Spray before mulching, in dry weather. Overdosing is common, residue builds up, and trees need rest years. |
+| 2. Prepare the tree | Post-harvest | Drainage and Phytophthora control first. Lime 3–5 kg per tree (not gypsum), compost with Trichoderma, and roots before shoots. Prune, then push 2–3 synchronised leaf flushes. |
+| 3. Induce: spray PBZ | Day 0 | Prime first: MKP to harden the flush, high-P NPK, then phosphorous acid. Then 1,000–1,500 ppm foliar, about 20–30 g a.i. per tree. Spray before mulching, in dry weather. Overdosing is common, residue builds up, and trees need rest years. |
 | 4. Induce: dry the root zone | Day 0 → buds | Thai trials: 3–7 dry days after PBZ. Mekong Delta: mulch plus dry ditches for 20–25 days (Kho Qua Xanh) or 30–35 days (Ri6, Monthong). Severe drought (beyond about −0.8 MPa) blocks flowering. |
-| 5. From flower buds to bloom | ≈ 50–57 days | Re-water once buds show, feed one leaf flush about 10 days after buds, and protect buds from rain-induced dormancy. |
-| 6. Hold the off-season crop | First 6 weeks after set | Don't cut water after fruit set. Calcium at 7–21 days. Stop new leaf flushes (KNO₃ 1.5% or MKP 0.5–1%). |
+| 5. From flower buds to bloom | ≈ 55 days | Buds show 25–30 days after induction. Mulch off, feed and water the same day. KNO₃ to break bud dormancy. Force one leaf flush 7–10 days later. Thin heavy flowering to 3–6 clusters per metre. Cut water to 20–25% of evaporation in the last week before bloom. |
+| 6. Hold the off-season crop | First 6 weeks after set | Raise water to 60–70% of evaporation. Hand-pollinate 19:00–22:00 (essential for Musang King). NAA at day 7, GA₃ at 3–6 weeks. Calcium at 7–21 days. Stop new leaf flushes. |
 | 7. Harvest | ≈ 90–150 days after bloom | Timing by cultivar. Cut nitrogen as fruit grows (NPK 2:1:1 → 2:1:3 → 1:1:3 at 0.75 kg). Ca(NO₃)₂ 0.4% + MgSO₄ 0.2%. Drain ditches and mulch before an off-season harvest. |
 | 8. Reset for next year | After harvest → step 2 | PBZ persists, and repeated use faded and killed mango trees after 5 years. Rest 1–2 seasons after every 3–4 (SOFRI); mango kept yields with 3 years on, 3 off. Dose by canopy, spray foliar, and feed soil microbes, which break PBZ down (lab studies in Vietnam, India and Brazil). No proven antidote. |
 

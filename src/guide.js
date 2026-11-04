@@ -112,6 +112,27 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Leaves are durian's food store. Unlike mango or longan, durian keeps its carbohydrate reserves mainly in its leaves. A weak flush, or one stripped by pests or Phytophthora, means poor flowering and poor fruit next season (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Fix soil pH straight after harvest. Apply 3–5 kg agricultural lime per tree (about 500–1,000 kg/ha), or dolomite where magnesium is short. Gypsum does not raise pH. Below pH 6.5, soluble cadmium rises and can accumulate in the flesh, which is a residue issue for export markets. Below pH 5, aluminium, iron, manganese and heavy metals start to poison the roots. Biochar (one application, at most 1–2% of the topsoil by weight) binds cadmium, but too much pushes pH too high (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Then regrow the roots. 15–20 days after liming, apply 20–30 kg of well-rotted compost per tree, ideally with Trichoderma against Phytophthora and Fusarium, plus a humic-acid drench. When new feeder-root tips appear, apply 1–2 kg NPK 3:2:1 or 4:3:2 per tree. Water every 1–2 days, keeping soil at 70–75% of field capacity and never waterlogged (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
         "text": "Phytophthora was linked to flooding and poor drainage. Mounding, drainage channels and organic mulch or manure all reduced disease. Fix drainage before you add any extra stress.",
         "level": "evidence",
         "sources": [
@@ -132,6 +153,27 @@ export const STAGES = [
         "level": "evidence",
         "sources": [
           "chandraparnik1993"
+        ]
+      },
+      {
+        "text": "Post-harvest pruning: remove diseased, weak, crossing and low branches and the vertical 'water shoots', and thin small shaded branches so light reaches the large inner branches where durian flowers and fruits. Collect and destroy diseased wood, fruit and leaves; borer larvae can survive in it (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Push and protect the flush. Use foliar NPK (1:1:1, 2:1:1 or 3:1:1 depending on vigour), with GA₃ at 5–10 ppm, amino acids or seaweed extract to speed shoot growth. Once leaves expand, give micronutrient sprays every 2–3 weeks. Watch for Phytophthora on young leaves in the rainy season, and for psyllids, leafhoppers and thrips in the dry season (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Synchronise the flushes. Cai Lay growers push 2–3 flushes after harvest. To make each one emerge evenly, they harden the previous flush with an MKP spray (0.5–1%) and briefly withhold water, then trigger the next flush in one wave (book Ch. 9).",
+        "level": "practice",
+        "sources": [
+          "tran2023book"
         ]
       },
       {
@@ -171,6 +213,13 @@ export const STAGES = [
     "when": "Day 0",
     "summary": "PBZ is the main off-season tool. It works when the dose, the leaves and the weather are right, and fails or harms when they are not.",
     "points": [
+      {
+        "text": "Prime the tree before PBZ (book Ch. 9). (1) When the last flush is fully expanded but still soft and light green, spray MKP (0-52-34) at 0.5–1.0% to harden it evenly. (2) 7–10 days later, apply 1.0–1.5 kg per tree of a high-phosphorus NPK (1:3:2 or 1:3:3), using refined DAP or MAP, because low-grade phosphate can carry cadmium. (3) 15–20 days later, spray phosphorous acid (H₃PO₃) at 0.5–1.0%, once or twice at 10–15-day intervals, as a mild stress. Then spray PBZ on the mature leaves.",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
       {
         "text": "How it works: PBZ blocks gibberellin, the hormone that drives shoot growth, and raises cytokinin. The tree puts its resources into flower buds instead of new leaves.",
         "level": "evidence",
@@ -301,10 +350,12 @@ export const STAGES = [
         "sources": []
       },
       {
-        "text": "Spray PBZ before laying the plastic. Spray that lands on impermeable mulch washes into the ditches and is wasted. Spray that falls on bare soil before mulching can be taken up by the roots. Surveyed orchards had PBZ residue only at the canopy drip line (0–20 cm deep), consistent with spray running off plastic laid beforehand.",
+        "text": "Before or after the plastic? The book recommends spraying BEFORE mulching. PBZ is readily taken up by roots, so spray that drips onto bare soil still works, whereas spray landing on plastic washes into the ditches. If PBZ is applied to the soil, irrigate for 2–3 days so the roots take it up. Many growers spray over the plastic precisely to avoid soil residue. This is a real trade-off: more soil uptake means more PBZ building up in the soil (see step 8, and the warning against soil drenches in durian). Surveyed orchards held residue only at the drip line.",
         "level": "expert",
         "sources": [
-          "tran2023book"
+          "tran2023book",
+          "pham2022",
+          "subhadrabandhu1998"
         ]
       },
       {
@@ -317,7 +368,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Grower technique for even flowering: inner primary branches are harder to induce than outer branches. Growers lightly mist the outer canopy at a low concentration and spray the inner primary branches at a higher one. No trial has tested specific rates for this yet.",
+        "text": "Spray inside the canopy too. Spray both leaf surfaces and the main branches inside the canopy. Inner branches get less carbohydrate and are harder to induce, so growers use a concentration 20–30% higher there than on the outer leaves. Some instead lightly mist the outer canopy at a low concentration. The book reports these as standard practice, but no trial has tested the exact rates (book Ch. 5, Ch. 9).",
         "level": "practice",
         "sources": [
           "tran2023book"
@@ -352,6 +403,20 @@ export const STAGES = [
     "when": "Day 0 → buds (Thai 3–7 days, Mekong 20–35 days)",
     "summary": "The tree needs a real but controlled drought. In Mekong Delta orchards that means plastic mulch and dry ditches for weeks, not days, but never severe stress.",
     "points": [
+      {
+        "text": "Expect buds 25–30 days after induction on average. They can appear in 20–25 days in good conditions, or take 35–40 days. Timing depends on cultivar, weather and technique. Under the book's Mekong Delta protocol, PBZ is sprayed, the beds are mulched and the ditches pumped completely dry (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "End the stress the moment buds are clearly visible: roll up the mulch, then fertilise and irrigate straight away. Leave the mulch too long and the buds abort from dehydration. Remove it too early, just as buds break, and a sudden rain can turn them back into leaf buds (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
       {
         "text": "Drought needs differ by cultivar in the Mekong Delta. 'Kho Qua Xanh' flowers after 20–25 days counted from when the ditches are completely dry (about 26 days from first withholding water). 'Ri6' and 'Monthong' need 30–35 days and still flower unevenly, in 2–3 waves. 'Sua Hat Lep' flowers reliably only in the dry season; with incomplete drought its buds take about 3 months and few appear. This is much longer than the 7–14 days (Salakpetch 2000) or 10–14 days (Chandraparnik et al. 1992b) found in Thailand. The book concludes that Mekong Delta durians need a longer drought, and that how well mulching works depends on cultivar, weather and ditch-water management (book pp. 142, 152).",
         "level": "expert",
@@ -441,7 +506,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Trenching 30–40 cm deep near the trunk, as done in Cai Lay, is a grower practice with no durian trials behind it. It may encourage root disease. Treat it as unproven.",
+        "text": "Trenching (root cutting) is contested. Advanced growers in Cai Lay and Cho Lach dig a ring trench about 30–40 cm wide and 30–40 cm deep, 2.5–3.0 m from the trunk, on top of PBZ and drought, and the book's protocol chapter calls it a powerful trigger. The same book notes that no durian study has tested it, and that cutting roots may open the way to root disease. Treat it as unproven (book Ch. 5, Ch. 9).",
         "level": "practice",
         "sources": [
           "tran2023book"
@@ -468,7 +533,21 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Feed ONE leaf flush just before bloom, then no more. As soon as flower buds clearly appear, end the induction drought and fertilise (NPK 2:2:1 or 2:1:1) to push a single new leaf flush. A flush takes about 40–45 days, and 'Ri6' buds take 56.7 ± 0.8 days to open, so start about 10 days after the buds appear. Those leaves are then mature by flowering and feed the young fruit. Start too late and the shoots compete with flowers and fruit, causing drop. Trees given heavy PBZ doses often struggle to flush at this stage.",
+        "text": "Feed and water the developing flowers. After the mulch comes off, Cho Lach growers apply 0.5–1.0 kg NPK 1:1:1 per tree. The book also suggests 0.5–0.7 kg of NPK 1:1:1 blended 3:1 with urea. Irrigate every 2–3 days, because flower expansion needs water like a leaf flush does, and keep ditch water 60–80 cm below the beds from now on. Control flower borer, and anthracnose if it rains (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Break bud dormancy deliberately. Rice-grain-sized new buds go dormant, and more than 10 mm of rain stalls them. A foliar KNO₃ spray at 0.5–1.0% breaks dormancy and gives an even bloom, and the book recommends it even in the dry season. If more than 35 mm of rain hits newly emerging buds, they fall into a deep dormancy that even thiourea cannot break (Salakpetch 2005, as reported in the book).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Force ONE leaf flush 7–10 days after buds appear, then no more. From bud to open flower takes about 55 days in 'Ri6' and 'Bi Ro Hat Lep', and a leaf flush matures in about 45 days. Starting the flush when buds are 2–3 cm long means the new leaves are mature when the flowers open, and they then feed the fruit. Use foliar urea 1.0–1.5%, KNO₃ 0.5–1.0% or GA₃ 5–10 ppm, with a high-N NPK (2:1:1 or 3:1:1). Too late, and the flush steals from the flowers and fruitlets; with no flush at all, the fruit runs short of carbohydrate. Trees given too much PBZ may refuse to flush (book Ch. 7, Ch. 9).",
         "level": "expert",
         "sources": [
           "tran2023book"
@@ -508,6 +587,20 @@ export const STAGES = [
         "sources": [
           "tran2023book"
         ]
+      },
+      {
+        "text": "Thin flowers where flowering is heavy. Thai practice is to thin about 5 weeks after buds appear if there are more than 6 clusters per metre of branch, leaving 3–6 clusters per metre about 30 cm apart. Remove clusters under 2 cm wide and those at branch tips. On 'Monthong', thinning at full bloom to just 10% of flowers gave the most harvested fruit (Subhadrabandhu & Shoda 1997), and removing 66% of clusters 20 days after emergence raised yield and fruit quality (Udomsriyothin 1991). Do NOT thin sparse flowering: the spare carbohydrate triggers a leaf flush that strips the fruit (as reported in the book).",
+        "level": "evidence",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Cut water in the week before bloom. About one week before the flowers open (7 weeks after buds appear), reduce irrigation to 20–25% of daily pan evaporation, keeping soil at about 55–60% of field capacity, until the flowers are fully open. Still irrigate if temperatures exceed 36 °C. In Thailand, flowers fully open by 15:00 are taken as a sign the water was managed well. Fertilisation is complete within 3 days of opening (Salakpetch 2005, as reported in the book).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
       }
     ]
   },
@@ -517,6 +610,27 @@ export const STAGES = [
     "when": "First 6 weeks after fruit set",
     "summary": "Off-season fruit often grows into the rainy season. Ending the induction drought correctly and keeping soil moisture steady stops the sudden 'matchstick' drop.",
     "points": [
+      {
+        "text": "Raise water again once fruit has set: bring irrigation back up to 60–70% of daily evaporation to drive young-fruit growth and prevent drought drop (Salakpetch 2005, as reported in the book).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Hand-pollinate where it matters. Hand pollination between 19:00 and 22:00 is part of the book's off-season protocol, and essential for self-incompatible cultivars such as 'Musang King'. Use a soft nylon duster on a telescopic pole (up to about 6 m) to carry pollen from another cultivar. Growers observe that 'Monthong' pollen gives 'Musang King' a longer fruit than 'Ri6' pollen does (book Ch. 6, Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Two sprays to hold fruit: NAA at 20–40 ppm with a high-P foliar feed (NPK 15:30:15) 7 days after fruit set, then GA₃ at 5–10 ppm 3–6 weeks after set, which thickens fruit stalks and reduces drop. NAA, GA₃ and mepiquat chloride must be registered for fruit use where you farm, and some export markets restrict them (book Ch. 6, Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
       {
         "text": "When fruit drop happens: unpollinated flowers fall 7–10 days after opening. Young-fruit drop peaks about 3 weeks after fruit set and settles by about 6 weeks. In 'Sua Hat Lep' fewer than 10% of fruit remained after the 3-week drop (Hau & Lam 2008, as reported in the book).",
         "level": "evidence",
@@ -539,7 +653,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Stop new leaf flushes from competing with young fruit. This is the book's most important fruit-stage measure. Flushes 3–8 weeks after fruit set increase drop and cause misshapen fruit with hard, uneven flesh (Salakpetch et al. 1992). Spray KNO₃ at 1.5% or MKP at 0.5–1.0% on both sides of the leaves; mepiquat chloride (about 600 ppm) also delays new leaves (Punnachit et al. 1992; as reported in the book).",
+        "text": "Stop any new leaf flush during early fruit growth; this is the book's most important fruit-stage measure. Flushes 3–8 weeks after fruit set increase drop and cause misshapen fruit with hard, uneven flesh (Salakpetch et al. 1992). Spray KNO₃ at 1.0–1.5% once or twice, or MKP at 0.5–1.0%. If shoots are already well advanced, the Thai extension mix is 30 mL humic acid + 60 g NPK 15:30:15 or 10:20:30 + 50 mL mepiquat chloride (25%) in 20 L of water (book Ch. 6, Ch. 9).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -856,7 +970,7 @@ export const GAPS = [
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
-  "No field trial has yet tested PBZ-degrading microbes, activated carbon or biochar in a durian orchard. Every degradation result so far comes from laboratory or mango studies.",
+  "No field trial has yet tested PBZ-degrading microbes, activated carbon or biochar in a durian orchard. Every degradation result so far comes from laboratory or mango studies."
 ];
 
 export const CHECKLIST = [
@@ -876,6 +990,11 @@ export const CHECKLIST = [
     "stage": "prepare"
   },
   {
+    "id": "limeph",
+    "text": "Right after harvest: soil pH checked; 3–5 kg lime (or dolomite) per tree, not gypsum",
+    "stage": "prepare"
+  },
+  {
     "id": "canker",
     "text": "Trunks inspected; Phytophthora cankers treated",
     "stage": "prepare"
@@ -889,6 +1008,11 @@ export const CHECKLIST = [
     "id": "flush2",
     "text": "Second post-harvest flush fully expanded (leaves hardened, dark green)",
     "stage": "prepare"
+  },
+  {
+    "id": "prime",
+    "text": "Last flush hardened with MKP; high-P NPK then phosphorous acid applied before PBZ",
+    "stage": "spray"
   },
   {
     "id": "product",
@@ -921,13 +1045,28 @@ export const CHECKLIST = [
     "stage": "water"
   },
   {
+    "id": "mulchoff",
+    "text": "Buds visible: mulch rolled up and tree fertilised and irrigated the same day",
+    "stage": "bloom"
+  },
+  {
     "id": "rewater",
     "text": "Re-watering plan ready: about 10 mm when leaves droop, then every 3 days after day 7 until buds show",
     "stage": "bloom"
   },
   {
+    "id": "prebloom",
+    "text": "One week before bloom: irrigation cut to 20–25% of pan evaporation (still water if >36 °C); flowers thinned to 3–6 clusters/m unless flowering is sparse",
+    "stage": "bloom"
+  },
+  {
     "id": "tag",
     "text": "Flower clusters tagged with their opening date",
+    "stage": "bloom"
+  },
+  {
+    "id": "kno3buds",
+    "text": "KNO₃ 0.5–1% ready to break bud dormancy; leaf flush forced 7–10 days after buds appear",
     "stage": "bloom"
   },
   {
@@ -954,7 +1093,7 @@ export const CHECKLIST = [
     "id": "organic",
     "text": "After harvest: organic matter or manure returned to the root zone to support soil microbes",
     "stage": "reset"
-  },
+  }
 ];
 
 export const PBZ_SAFETY = [
