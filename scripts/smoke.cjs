@@ -69,7 +69,7 @@ const txt = (p, sel) => p.evaluate((s) => document.querySelector(s).textContent.
   await p.fill("#planDate", "2027-10-07");
   await p.evaluate(() => { const c = document.querySelector('#rainMonths input[value="1"]'); c.checked = true; c.dispatchEvent(new Event("change", { bubbles: true })); });
   const plan = await txt(p, "#planOut");
-  check("rainy February inside the window is flagged", plan.includes("month you marked as rainy"), plan.slice(0, 70));
+  check("rainy February inside the window is flagged", plan.includes("marked as rainy"), plan.slice(0, 70));
 
   // 8. Past spray window is flagged
   await p.fill("#planDate", "2020-03-01");

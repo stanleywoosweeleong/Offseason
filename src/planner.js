@@ -250,6 +250,17 @@ export function rainInWindow(start, end, rainyMonths = []) {
   return false;
 }
 
+/** The rainy months (with their year) that a window from start to end touches, e.g. [{ year: 2026, month: 11 }, { year: 2027, month: 0 }]. */
+export function rainyMonthsInWindow(start, end, rainyMonths = []) {
+  const out = [];
+  if (!rainyMonths.length) return out;
+  const a = toUTCDate(start), b = toUTCDate(end);
+  for (let d = new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), 1)); d <= b; d.setUTCMonth(d.getUTCMonth() + 1)) {
+    if (rainyMonths.includes(d.getUTCMonth())) out.push({ year: d.getUTCFullYear(), month: d.getUTCMonth() });
+  }
+  return out;
+}
+
 /** Flag spray dates that fall in months the grower marked as rainy (0 = Jan). */
 export function rainRisk(date, rainyMonths = []) {
   return rainyMonths.includes(toUTCDate(date).getUTCMonth());

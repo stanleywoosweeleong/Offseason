@@ -954,6 +954,13 @@ export const SOURCES = {
     type: "Peer-reviewed (abstract via search summary)",
     finding: "The triazole fungicide metconazole inhibited gibberellin biosynthesis in mango, though it affected different gibberellins differently. The authors say it could potentially be used in mango flowering management but that further studies are needed. Citation verified on Crossref; the abstract was seen only in a search summary.",
   },
+  nasapower: {
+    short: "NASA POWER rainfall averages (1991–2020)",
+    cite: "NASA Langley Research Center. POWER (Prediction Of Worldwide Energy Resources) Climatology API v2.10: corrected precipitation (PRECTOTCORR, MERRA-2), monthly means January 1991–December 2020, for one representative durian district per region.",
+    url: "https://power.larc.nasa.gov/",
+    type: "Climate dataset · NASA",
+    finding: "Average rainfall for each month at durian districts in Malaysia, Thailand, Vietnam, Cambodia and the Philippines. The app marks a month as a typical heavy-rain month when it is at least 15% wetter than that district's monthly average. The data come from a global model at about 50 km resolution: the timing of the rainy season matched the national weather services' descriptions for most regions, but amounts are approximate, and hilly or coastal farms can differ. Davao and Tawau have rain spread through the year, so their presets are rough.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

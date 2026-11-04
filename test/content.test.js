@@ -4,6 +4,7 @@ import { SOURCES } from "../src/sources.js";
 import { STAGES, PBZ_TRIALS, PBZ_SAFETY, CHECKLIST } from "../src/guide.js";
 import { buildTimeline, CULTIVAR_PRESETS } from "../src/planner.js";
 import { LIBRARY } from "../src/library.js";
+import { RAIN_SOURCES } from "../src/regions.js";
 import { MICROBES, OTHER_CROPS, CLEANUP_GROUPS, TRIAZOLES } from "../src/cleanup.js";
 
 test("every cited source ID exists in sources.js", () => {
@@ -14,6 +15,7 @@ test("every cited source ID exists in sources.js", () => {
     ...buildTimeline("2026-01-01").flatMap((t) => t.sources),
     ...Object.values(CULTIVAR_PRESETS).flatMap((c) => c.sources),
     ...LIBRARY.flatMap((t) => t.points.flatMap((p) => p.sources)),
+    ...RAIN_SOURCES,
     ...MICROBES.flatMap((m) => m.sources),
     ...OTHER_CROPS.flatMap((p) => p.sources),
     ...TRIAZOLES.flatMap((t) => t.sources),
@@ -37,6 +39,7 @@ test("one topic: every source is cited somewhere, every point and checklist item
     ...buildTimeline("2026-01-01").flatMap((t) => t.sources),
     ...Object.values(CULTIVAR_PRESETS).flatMap((c) => c.sources),
     ...LIBRARY.flatMap((t) => t.points.flatMap((p) => p.sources)),
+    ...RAIN_SOURCES,
     ...MICROBES.flatMap((m) => m.sources),
     ...OTHER_CROPS.flatMap((p) => p.sources),
     ...TRIAZOLES.flatMap((t) => t.sources),

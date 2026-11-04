@@ -4,11 +4,11 @@
 //    page can never replace a working copy;
 //  - if the network is slow (weak signal), the cached copy is shown after 3.5 s;
 //  - requests bypass the browser's HTTP cache, so a phone never mixes old and new files after an update.
-const CACHE = "offseason-v8";
+const CACHE = "offseason-v9";
 const NETWORK_WAIT_MS = 3500;
 const APP_FILES = [
   "./", "index.html", "manifest.webmanifest",
-  "src/styles.css", "src/app.js", "src/cleanup.js", "src/i18n.js", "src/labels.js", "src/i18n/zh.json", "src/i18n/ms.json", "src/i18n/vi.json", "src/i18n/km.json", "src/guide.js", "src/library.js", "src/planner.js", "src/sources.js",
+  "src/styles.css", "src/app.js", "src/cleanup.js", "src/i18n.js", "src/labels.js", "src/i18n/zh.json", "src/i18n/ms.json", "src/i18n/vi.json", "src/i18n/km.json", "src/guide.js", "src/library.js", "src/planner.js", "src/regions.js", "src/sources.js",
   "fonts/NotoSansKhmer-khmer.woff2", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
 ];
 

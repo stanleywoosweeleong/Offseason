@@ -2,9 +2,10 @@ import { SOURCES } from "./sources.js";
 import { STAGES, GAPS, CHECKLIST, PBZ_TRIALS, PBZ_SAFETY, PROTOCOL } from "./guide.js";
 import { LIBRARY } from "./library.js";
 import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS, TRIAZOLES, TRIAZOLE_ADVICE } from "./cleanup.js";
+import { REGIONS, RAIN_SOURCES, wetMonths, monthRuns } from "./regions.js";
 import { LEVEL, EFFECT_LABEL, TEST_LABEL, TRI_LABEL } from "./labels.js";
 import { LANGS, LANG_MENU, LOCALE, loadLang, lang, tr, trf, applyStatic } from "./i18n.js";
-import { planFromHarvest, planFromSpray, pbzMix, tankMix, rainRisk, rainInWindow, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
+import { planFromHarvest, planFromSpray, pbzMix, tankMix, rainyMonthsInWindow, addDays, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => [...document.querySelectorAll(sel)];
@@ -202,7 +203,60 @@ function renderRainMonths() {
   $("#rainMonths").innerHTML = Array.from({ length: 12 }, (_, i) =>
     `<label class="chip"><input type="checkbox" value="${i}" ${rainy.has(i) ? "checked" : ""}/> ${esc(monthName(i))}</label>`
   ).join("");
+  renderRegionPicker();
 }
+
+// ---------- Rainy-season presets by region ----------
+// "Dec – Feb (into the next year)", "May, Aug – Nov", or a note when no month stands out.
+function seasonText(months) {
+  const runs = monthRuns(months);
+  if (!runs.length) return tr("No month stands out: rain is spread through the year.");
+  if (months.length === 12) return tr("All year");
+  const parts = runs.map(([a, b]) => (a === b ? monthName(a) : `${monthName(a)} – ${monthName(b)}`));
+  const wraps = runs.some(([a, b]) => a > b);
+  return parts.join(", ") + (wraps ? ` ${tr("(into the next year)")}` : "");
+}
+function renderRegionPicker() {
+  const sel = $("#rainRegion");
+  const saved = store.get("rainRegion", "");
+  const countries = [...new Set(REGIONS.map((r) => r.country))];
+  sel.innerHTML =
+    `<option value="">${esc(tr("Choose your region"))}</option>` +
+    countries
+      .map((c) => `<optgroup label="${esc(tr(c))}">${REGIONS.filter((r) => r.country === c)
+        .map((r) => `<option value="${r.id}">${esc(tr(r.region))}</option>`).join("")}</optgroup>`)
+      .join("");
+  sel.value = REGIONS.some((r) => r.id === saved) ? saved : "";
+  renderRainInfo();
+}
+function renderRainInfo() {
+  const r = REGIONS.find((x) => x.id === $("#rainRegion").value);
+  if (!r) { $("#rainInfo").innerHTML = ""; return; }
+  const wet = new Set(wetMonths(r));
+  const max = Math.max(...r.mm);
+  const ticked = $$("#rainMonths input:checked").map((c) => Number(c.value));
+  const edited = ticked.length !== wet.size || ticked.some((m) => !wet.has(m));
+  $("#rainInfo").innerHTML = `
+    <div class="rain-card">
+      <p class="rain-season"><b>${esc(tr("Typical heavy-rain months:"))}</b> ${esc(seasonText([...wet]))}</p>
+      <div class="rain-bars" role="img" aria-label="${esc(tr("Average rainfall by month"))}">
+        ${r.mm.map((v, i) => `<span class="rb${wet.has(i) ? " wet" : ""}" title="${esc(monthName(i))}: ${v} mm"><i style="height:${Math.max(4, Math.round((v / max) * 100))}%"></i><small>${esc(monthName(i).slice(0, 1))}</small></span>`).join("")}
+      </div>
+      <p class="hint">${esc(trf("Average rainfall at {place}, 1991–2020 (estimate). Adjust the ticks to your own farm.", { place: r.place }))}${edited ? ` <b>${esc(tr("You have edited these months."))}</b>` : ""}</p>
+      ${cites(RAIN_SOURCES)}
+    </div>`;
+}
+$("#rainRegion").addEventListener("change", (e) => {
+  store.set("rainRegion", e.target.value);
+  const r = REGIONS.find((x) => x.id === e.target.value);
+  if (r) {
+    const wet = new Set(wetMonths(r));
+    $$("#rainMonths input").forEach((c) => (c.checked = wet.has(Number(c.value))));
+  }
+  renderRainInfo();
+  renderPlan();
+});
+$("#rainMonths").addEventListener("change", renderRainInfo);
 const defaultDate = (() => { const d = new Date(); d.setUTCMonth(d.getUTCMonth() + 10, 15); return isoDate(d); })();
 $("#planDate").value = store.get("planDate", defaultDate);
 document.querySelector(`input[name=mode][value=${store.get("mode", "harvest")}]`).checked = true;
@@ -272,11 +326,15 @@ function renderPlan() {
   if (!$("#planDate").value) { out.innerHTML = ""; return; }
   try {
     const stages = readStages();
-    const rainWarn = `<p class="warn">${tr("⚠ Falls in a month you marked as rainy. Rain after spraying made PBZ unreliable in trials.")}</p>${cites(["kozai2024", "chandraparnik1993"])}`;
+    // Name each rainy month with its year, so a season that runs into the next year reads clearly.
+    const monthYear = ({ year, month }) => new Date(Date.UTC(year, month, 1)).toLocaleDateString(loc(), { month: "short", year: "numeric", timeZone: "UTC" });
+    const rainWarn = (hits) => hits.length
+      ? `<p class="warn">${esc(trf("⚠ Touches months you marked as rainy: {months}. Rain after spraying made PBZ unreliable in trials.", { months: hits.map(monthYear).join(", ") }))}</p>${cites(["kozai2024", "chandraparnik1993"])}`
+      : "";
     if (mode === "harvest") {
       const r = planFromHarvest($("#planDate").value, stages);
       // Check every month the window touches, not just its ends.
-      const risky = rainInWindow(r.spray.earliest, r.spray.latest, months);
+      const risky = rainWarn(rainyMonthsInWindow(r.spray.earliest, r.spray.latest, months));
       const past = r.spray.latest < today()
         ? `<p class="warn">${tr("⚠ This whole spray window is already in the past. Choose a later harvest date.")}</p>`
         : r.spray.earliest < today() ? `<p class="note">${tr("Part of this spray window has already passed.")}</p>` : "";
@@ -285,7 +343,7 @@ function renderPlan() {
           <h3>${tr("Spray PBZ between")}</h3>
           <p class="big">${fmt(r.spray.earliest)} <span>→</span><br />${fmt(r.spray.latest)}</p>
           <p>${trf("Most likely: {date}. The window is wide because weather drives flowering; spray early in it if your area flowers late.", { date: `<b>${fmt(r.spray.typical)}</b>` })}</p>
-          ${past}${risky ? rainWarn : ""}
+          ${past}${risky}
         </div>
         <div class="card"><h3>${tr("Timeline")}</h3>${timelineHTML(r.timeline)}</div>
         ${protocolHTML(r.spray.typical, stages)}`;
@@ -296,7 +354,7 @@ function renderPlan() {
           <h3>${tr("Expected harvest")}</h3>
           <p class="big">${fmt(r.harvest.earliest)} <span>→</span><br />${fmt(r.harvest.latest)}</p>
           <p>${trf("Flowering likely {from} – {to}. Most likely harvest: {date}.", { from: fmt(r.anthesis.earliest), to: fmt(r.anthesis.latest), date: `<b>${fmt(r.harvest.typical)}</b>` })}</p>
-          ${r.spray < today() ? `<p class="note">${tr("This spray date is in the past.")}</p>` : ""}${rainRisk(r.spray, months) ? rainWarn : ""}
+          ${r.spray < today() ? `<p class="note">${tr("This spray date is in the past.")}</p>` : ""}${rainWarn(rainyMonthsInWindow(r.spray, addDays(r.spray, 14), months))}
         </div>
         <div class="card"><h3>${tr("Timeline")}</h3>${timelineHTML(r.timeline)}</div>
         ${protocolHTML(r.spray, stages)}`;

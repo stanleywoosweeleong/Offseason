@@ -148,3 +148,23 @@ test("tankMix keeps fractional tank sizes exact (1.5 L tank, 25% product, 1,000 
   assert.equal(r.productPerTank, 6); // 1.5 g a.i. in 1.5 L = 6 mL of 25%
   assert.equal(r.tanks, 8);
 });
+
+test("rainyMonthsInWindow names each rainy month with its year when a window crosses the new year", async () => {
+  const { rainyMonthsInWindow } = await import("../src/planner.js");
+  // Sarawak-style season Dec–Feb, spray window 20 Nov 2026 → 15 Jan 2027
+  assert.deepEqual(rainyMonthsInWindow("2026-11-20", "2027-01-15", [11, 0, 1]), [{ year: 2026, month: 11 }, { year: 2027, month: 0 }]);
+});
+
+test("regions: presets are sensible and seasons can cross the year end", async () => {
+  const { REGIONS, wetMonths, monthRuns } = await import("../src/regions.js");
+  for (const r of REGIONS) {
+    assert.equal(r.mm.length, 12, r.id);
+    assert.ok(r.mm.every((v) => Number.isFinite(v) && v >= 0), r.id);
+  }
+  const by = (id) => REGIONS.find((r) => r.id === id);
+  assert.deepEqual(monthRuns(wetMonths(by("my-sarawak"))), [[11, 1]]); // Dec–Feb, into the next year
+  assert.deepEqual(monthRuns(wetMonths(by("my-pahang"))), [[9, 11]]); // Oct–Dec
+  assert.deepEqual(monthRuns(wetMonths(by("vn-mekong"))), [[4, 9]]); // May–Oct
+  assert.deepEqual(monthRuns([0, 1, 11]), [[11, 1]]);
+  assert.deepEqual(monthRuns([]), []);
+});

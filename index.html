@@ -92,7 +92,11 @@
         </label>
         <details class="adv">
           <summary>Rainy months</summary>
-          <p class="hint">Mark your heavy-rain months to flag risky spray dates.</p>
+          <label class="field">Your region
+            <select id="rainRegion"></select>
+          </label>
+          <div id="rainInfo" aria-live="polite"></div>
+          <p class="hint">Heavy-rain months are ticked for your region. Tick or untick months to match your own farm.</p>
           <div id="rainMonths" class="chips"></div>
         </details>
         <details class="adv">
