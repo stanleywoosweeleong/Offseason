@@ -32,6 +32,7 @@ Like the Tigerstripe app, the app speaks English, 中文 (Simplified Chinese), B
 The translations were drafted by AI and should be reviewed by native speakers (for Vietnamese, ideally Prof. Trần Văn Hâu's group) before the app is used for extension work.
 
 To update after changing any text: `node scripts/i18n-strings.mjs > strings.json` lists every English string; add the new ones to each `src/i18n/<lang>.json`. `npm test` fails until every language covers every string with its `{placeholders}` intact.
+npm run devtools-audit  # Chrome DevTools Issues/console/network check of the live site (or pass a URL)
 npm run smoke    # browser smoke test (needs Playwright + Chromium: npm i -D playwright && npx playwright install chromium)
 
 ## Run it
