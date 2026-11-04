@@ -488,3 +488,12 @@ main.wrap { padding-bottom: 84px; }
 .mix-missing { border-left: 4px solid var(--line); }
 .mix-missing ul { margin: 6px 0 0; padding-left: 20px; }
 .mix-missing li { margin: 2px 0; }
+
+/* Lighthouse contrast fixes */
+.brand h1 span { color: #8f6c0c; } /* gold "Durian": 4.6:1 on paper (was 2.8:1) */
+.cycle small { opacity: 1; color: #fff; } /* step subtitles: 5.4:1 on the step cards (was 4.4:1) */
+
+/* Avoid a visible layout jump on first load: keep the main area hidden until the app has drawn it.
+   The animation reveals it after 3 s anyway, so a failure can never leave the page blank. */
+html.loading main { visibility: hidden; animation: reveal-anyway 0s 3s forwards; }
+@keyframes reveal-anyway { to { visibility: visible; } }

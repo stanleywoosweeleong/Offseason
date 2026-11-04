@@ -716,7 +716,10 @@ function renderAll() {
   renderMix();
   renderChecklist();
   renderLibrary($("#libSearch").value);
-  $("#langBtn").textContent = LANG_MENU.find(([c]) => c === lang)[1];
+  const tag = LANG_MENU.find(([c]) => c === lang)[1];
+  $("#langBtn").textContent = tag;
+  // The spoken name must include the visible text ("EN"), not just "Language".
+  $("#langBtn").setAttribute("aria-label", `${tag} · ${tr("Language")}`);
   showTab(currentTab, { scroll: false });
 }
 let pickerPlace = null;
@@ -803,6 +806,7 @@ currentTab = document.getElementById(`tab-${savedTab}`) ? savedTab : "guide";
 renderAll();
 showSub(store.get("pbzSub", "evidence"));
 updateFab();
+document.documentElement.classList.remove("loading");
 if (!savedLang) openLangPicker();
 
 // Offline support: cache the app so it works in the orchard without signal.
