@@ -85,3 +85,10 @@ test("Kho Qua Xanh preset reproduces book Table 5.2 (spray ≈31 Aug → harvest
   assert.equal(isoDate(r.anthesis.typical), "2000-11-08");
   assert.ok(isoDate(r.harvest.typical) >= "2001-02-13" && isoDate(r.harvest.typical) <= "2001-02-17", isoDate(r.harvest.typical));
 });
+
+test("timeline is in date order with bud-flush milestone before anthesis", async () => {
+  const { buildTimeline } = await import("../src/planner.js");
+  const dated = buildTimeline("2026-06-01").filter((t) => t.date);
+  for (let i = 1; i < dated.length; i++) assert.ok(dated[i].date >= dated[i - 1].date, dated[i].id);
+  assert.ok(dated.find((t) => t.id === "budflush"));
+});

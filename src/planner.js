@@ -129,6 +129,14 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       sources: ["chandraparnik1993", "kozai2024"],
     },
     {
+      id: "budflush",
+      date: addDays(anthesis, -54),
+      endDate: addDays(anthesis, -44),
+      label: "Flower buds visible: end drought, feed one leaf flush",
+      detail: "Buds take about 50–57 days to open. Once they show, restore watering and give NPK 2:2:1 or 2:1:1 about 10 days later, so one leaf flush matures before bloom. Allow no further flushes after that.",
+      sources: ["tran2023book", "kozai2024"],
+    },
+    {
       id: "anthesis",
       date: anthesis,
       label: "Flowering (anthesis)",

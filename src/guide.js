@@ -342,6 +342,16 @@ export const STAGES = [
     summary: "Time the harvest from flower opening, not from the spray date.",
     points: [
       {
+        text: "Feed ONE leaf flush just before bloom, then no more. As soon as flower buds clearly appear, end the induction drought and fertilise (NPK 2:2:1 or 2:1:1) to push a single new leaf flush. A flush takes about 40–45 days, and 'Ri6' buds take 56.7 ± 0.8 days to open, so start about 10 days after the buds appear. Those leaves are then mature by flowering and feed the young fruit. Start too late and the shoots compete with flowers and fruit, causing drop. Trees given heavy PBZ doses often struggle to flush at this stage.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Concentrated flowering means less competition. Uneven flowering leaves the tree carrying flowers, small fruit and large fruit at once, all competing for nutrients. Strict orchard water management gives earlier, more concentrated flowering than leaving trees to the weather, which usually gives two or more waves.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
         text: "In the JIRCAS trial, the first buds appeared about 10 weeks after spraying and the first flowers about 7 weeks after that.",
         level: "evidence",
         sources: ["kozai2024"],
@@ -473,6 +483,11 @@ export const STAGES = [
         level: "practice",
         sources: [],
       },
+      {
+        text: "Restricting leaf flushes during fruit growth is the book's single most important fruit-stage measure. Spray MKP at 0.5–1.0% or KNO₃ at 1.5%, covering both sides of the leaves.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
     ],
   },
   {
@@ -533,6 +548,26 @@ export const STAGES = [
       {
         text: "Boron and calcium near flowering and harvest: Philippine guidance treats tip burn as a boron-deficiency symptom and suggests 10 g of borax per tree at flowering. It also suggests 2 kg of calcium nitrate per tree one month before harvest to correct uneven ripening (Armenio & Rfu-Xi 2006, as reported in the book). These are recommendations, not trial results; never exceed product label rates.",
         level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Keep ditch water 60–80 cm below the bed surface after fruit set. Then drain the ditches completely about one month before harvest, which helped overcome soggy flesh (Tan & Chau 2004). Mulching the beds before harvest to keep rain off the roots reduced flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999; both as reported in the book).",
+        level: "evidence",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Fix flesh disorders by cultivar. 'Sua Hat Lep' (soft or soggy flesh): mulch and fully dry the ditches 25 days before harvest. 'Ri6' (tip burn and soggy flesh, worst with rain near harvest): Ca + B sprays after fruit set and during flesh growth. 'Musang King' (translucent flesh): the Can Tho NPK 2:1:1 → 2:1:3 → 1:1:3 at 0.75 kg plus Ca(NO₃)₂ 0.4% at 40 DAFS and MgSO₄ 0.2% at 50 DAFS. 'Monthong' (hard, discoloured, unevenly ripening or soft flesh): soil Ca (CaSO₄ or organic Ca) plus foliar Ca 0.2% two months after set, Mg 0.2% 15 days later, KNO₃ 1% one month before harvest, and mulching 20–25 days before harvest.",
+        level: "expert",
+        sources: ["tran2023book", "duong2026swj", "hau2026talk"],
+      },
+      {
+        text: "Potassium for sweetness and colour: a 1% potassium spray one month before maturity improves flesh sweetness and colour. Avoid excess nitrogen during fruit growth. Also reported: KNO₃ at 40 g/L at 1, 6, 8 and 10 weeks after set for yellower flesh (Hau 2000), and for 'Monthong', KNO₃ + Ca₃(PO₄)₂ (16 g/L) at 8–10 weeks after anthesis, Ca₃(PO₄)₂ alone (120 g in 8 L per tree) at 11–13 weeks, and 1 kg KNO₃ per tree in the soil a month before harvest (Tan & Chau 2004). Note that 40 g/L is 4%, far stronger than the 1–1.5% KNO₃ leaf sprays that already caused leaf burn, so test on a few trees first.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
+      {
+        text: "Harvest and ripening: in a Cai Lay survey, 13% of growers harvested in one synchronised pick to limit flesh disorders, over 80% dipped fruit in ethephon after harvest, and 11% used calcium carbide (Tham 2008). Ripening turns starch into sugar and softens the flesh, which prevents hard spots. For 'Monthong' the book suggests an ethephon dip of 0.1–0.2% for even ripening. Calcium carbide is banned for ripening fruit in several countries, so check local food-safety rules.",
+        level: "survey",
         sources: ["tran2023book"],
       },
     ],
@@ -639,6 +674,7 @@ export const CHECKLIST = [
   { id: "noWaterCut", text: "Irrigation steady after fruit set (no water cut-off); Ca spray planned for 7–21 days after set; leaf flushes watched for 3–8 weeks", stage: "fruitset" },
   { id: "fruitcare", text: "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled", stage: "quality" },
   { id: "noKCl", text: "Fertiliser labels checked: potassium from K₂SO₄ or KNO₃, never KCl / muriate of potash", stage: "quality" },
+  { id: "ditch", text: "Ditch water held 60–80 cm below the bed after fruit set; ditches drained about a month before harvest", stage: "quality" },
   { id: "lime", text: "After harvest: soil pH checked and limed to 5.8–6.5", stage: "quality" },
 ];
 
