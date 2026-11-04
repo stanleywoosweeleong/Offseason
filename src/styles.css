@@ -41,22 +41,8 @@
   --hero-bg: #2f5d34; --hero-ink: #ffffff;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #121712; --surface: #1b221b; --surface-2: #222a22; --ink: #e8ece4; --muted: #a3ae9f; --line: #2f3a2f;
-    --brand: #74b56f; --brand-ink: #0f160f; --brand-soft: #24331f; --accent: #e0c15a; --accent-ink: #e0c15a;
-    --evidence: #8fd39a; --evidence-bg: #1f3424; --survey: #f0cf6a; --survey-bg: #3a3218;
-    --practice: #c3c8d6; --practice-bg: #2a2e38; --lead: #ffb48a; --lead-bg: #3d2318; --warn: #ffb48a; --warn-bg: #3d2318;
-    --shadow: none; color-scheme: dark; --hero-bg: #1f3a22; --hero-ink: #e8ece4;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #121712; --surface: #1b221b; --surface-2: #222a22; --ink: #e8ece4; --muted: #a3ae9f; --line: #2f3a2f;
-  --brand: #74b56f; --brand-ink: #0f160f; --brand-soft: #24331f; --accent: #e0c15a; --accent-ink: #e0c15a;
-  --evidence: #8fd39a; --evidence-bg: #1f3424; --survey: #f0cf6a; --survey-bg: #3a3218;
-  --practice: #c3c8d6; --practice-bg: #2a2e38; --lead: #ffb48a; --lead-bg: #3d2318; --warn: #ffb48a; --warn-bg: #3d2318;
-  --shadow: none; color-scheme: dark; --hero-bg: #1f3a22; --hero-ink: #e8ece4;
-}
+/* Always the light, paper-white theme: easier on the eyes for long reading, and it looks the same
+   whatever the phone or tablet's dark-mode setting. */
 
 * { box-sizing: border-box; }
 html { font-size: 106.25%; /* 17px, still follows the phone's text-size setting */ -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--appbar-h) + 12px); }
@@ -464,3 +450,4 @@ main.wrap { padding-bottom: 84px; }
 .langbox .lang-msg { margin: 0 0 10px; }
 .langbox .opts button:focus:not(:focus-visible) { outline: none; }
 .langbox .opts button:focus-visible { outline: 3px solid var(--brand); outline-offset: -3px; }
+.langbtn:focus:not(:focus-visible), .fab-btn:focus:not(:focus-visible) { outline: none; }
