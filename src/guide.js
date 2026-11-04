@@ -914,6 +914,15 @@ export const STAGES = [
         ]
       },
       {
+        "text": "If you test your soil, ask how sensitive the test is. A Thai Department of Agriculture study found 'no PBZ' in 20 mango-orchard soils, but its method (GC-FID) could not detect anything below about 0.15 mg/kg and was only reliable near 1 mg/kg. Residues measured in Mekong Delta durian orchards (0.48–1.04 mg/kg at the drip line) sit right around that limit. Ask the laboratory for LC-MS/MS or an equivalent method with a reporting limit of 0.05 mg/kg or lower, and sample the top 0–20 cm at the canopy edge, where residue concentrates. The same report notes that Thai 'Nam Dok Mai' and 'Sitong' mango growers suspected soil-drenched PBZ residue of causing flower-cluster deformities and up to 100% crop loss, although this was not proven.",
+        "level": "evidence",
+        "sources": [
+          "doa2015",
+          "pham2022",
+          "singh2024"
+        ]
+      },
+      {
         "text": "Build rest years into the plan. SOFRI advises pausing PBZ for 1–2 seasons after every 3–4 seasons in durian. In 'Alphonso' mango, three years of PBZ followed by three years off kept yields doubled across all six years, because the soil-applied dose kept working for three years after it stopped. With foliar-only durian sprays the carry-over is likely smaller, so expect a lighter rest-year crop.",
         "level": "evidence",
         "sources": [
@@ -1139,7 +1148,7 @@ export const GAPS = [
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
   "Only one field trial has tested a PBZ-degrading microbial product, on a Chinese herb crop. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
-  "Sources identified but not recovered: MARDI's durian clone D24 PBZ study (Rushidah & Razak 2001; only a library catalogue entry exists), Hasan & Karim 1989 (Malaysia; repository unavailable), the Thai Department of Agriculture PBZ residue report (server certificate failed), and a 2014 Thai university report on fertiliser + PBZ for off-season durian (Nanakorn et al., RMUTSV; the online file is an empty placeholder, so contact the authors)."
+  "Sources identified but not recovered: MARDI's durian clone D24 PBZ study (Rushidah & Razak 2001; only a library catalogue entry exists), Hasan & Karim 1989 (Malaysia; repository unavailable), and a 2014 Thai university report on fertiliser + PBZ for off-season durian (Nanakorn et al., RMUTSV; the online file is an empty placeholder, so contact the authors). No Thai government study measuring PBZ residue in durian orchard soil was found; the Thai DOA's 2015 soil study covered mango."
 ];
 
 export const CHECKLIST = [

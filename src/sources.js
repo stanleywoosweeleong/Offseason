@@ -434,6 +434,13 @@ export const SOURCES = {
     type: "Peer-reviewed · Can Tho Univ.",
     finding: "Three Mekong Delta orchards of 6-year-old 'Ri6' over two seasons (2022–2024); the season type is not stated. Treatments: 5 t/ha sugarcane filter-cake manure 15 days after fruit set, a K + Ca foliar product (4% K₂O, 4.3% Ca) at 40, 60 and 80 days after set, both together, or neither. All trees also got NPK 15-15-15. The combination cut flesh disorders from about 12–14% to 1–2%, raised yield about 10% and soluble solids about 13%, and raised leaf K and Ca and soil pH, organic carbon and P. Disorder rate tracked leaf Ca (r = −0.91) and K (r = −0.88).",
   },
+  doa2015: {
+    short: "Thai DOA 2015 (PBZ soil residue method)",
+    cite: "Satida Phonoi, Jitima Yathaphutanon, Supitsa Thongkhiao, Nanthakan Khunhor, Supha Phothichan & Monchai Inta-it (2015). การศึกษาปริมาณสารควบคุมการเจริญเติบโตพืช paclobutrazol ที่ตกค้างในดินสำหรับการปลูกพืช [The study quantitative for residues paclobutrazol in soil for plant]. Final experiment report, fiscal year 2558 (2015). Department of Agriculture, Thailand.",
+    url: "https://www.doa.go.th/plan/wp-content/uploads/2021/04/2321.2.1การศึกษาปริมาณสารควบคุมการเจริญเติบโตพืช-paclobutrazol-ที่ตกค้าง.pdf",
+    type: "Govt. research report · Thai DOA",
+    finding: "The study tested 20 soil samples from mango orchards in Nakhon Ratchasima, Suphan Buri and Chachoengsao (orchards under 10, 10–20 and over 20 years old; 0–10 and 10–20 cm). PBZ was not detected in any of them. The authors note this may mean no residue, or that their GC-FID method could not see it: its detection limit was 0.146 mg/kg and its reporting limit 0.485 mg/kg, and it was reliable only at about 1.0 mg/kg. Methanol extraction of soil sieved below 1 mm worked best. The study was prompted by flower-cluster abnormalities with no fruit set in 'Nam Dok Mai No. 4' and 'Sitong' mango (up to 100% loss in some areas), for which soil-drenched PBZ residue was suspected but not proven. PBZ was Thailand's most imported plant growth regulator in 2014. The server omits an intermediate certificate, so some tools need the GlobalSign AlphaSSL 2025 intermediate to download it.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:
