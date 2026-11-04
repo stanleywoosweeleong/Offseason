@@ -225,7 +225,7 @@ export const SOURCES = {
     cite:
       "Tran Van Hau (lead author) & Tran Sy Hieu (2026). Flower Induction in Durian. Viet Nam National University " +
       "Ho Chi Minh City Press. English edition of Xử lý ra hoa cây sầu riêng (3rd Vietnamese ed. 2023, 263 pp.). " +
-      "Chapter 5, Flowering Induction Techniques, pp. 135–159, and Chapter 6, Improving Fruit Set and Limiting Young Fruit Drop, pp. 161–174 (pages photographed by the app author).",
+      "Chapter 5, Flowering Induction Techniques, pp. 135–159, Chapter 6, Improving Fruit Set and Limiting Young Fruit Drop, pp. 161–174, and part of Chapter 7 on flesh disorders (§7.2.3–7.2.4) (pages photographed by the app author).",
     url: null,
     type: "Book · Can Tho Univ. (print only)",
     finding:

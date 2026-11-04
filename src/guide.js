@@ -525,6 +525,16 @@ export const STAGES = [
         level: "expert",
         sources: ["hau2026talk"],
       },
+      {
+        text: "Never use chloride fertilisers. Researchers and extension officers warn that muriate of potash (KCl/MOP), or NPK blends made with it, causes soggy, watery flesh, probably because chloride makes the flesh take up water as harvest nears. Check that the potassium in any NPK blend comes from sulphate of potash (K₂SO₄) or potassium nitrate (KNO₃). In a Cai Lay survey, 100% of durian growers avoided chloride fertilisers (Tham 2008, as reported in the book). The Can Tho Musang King trials also used K₂SO₄.",
+        level: "expert",
+        sources: ["tran2023book", "duong2026swj"],
+      },
+      {
+        text: "Boron and calcium near flowering and harvest: Philippine guidance treats tip burn as a boron-deficiency symptom and suggests 10 g of borax per tree at flowering. It also suggests 2 kg of calcium nitrate per tree one month before harvest to correct uneven ripening (Armenio & Rfu-Xi 2006, as reported in the book). These are recommendations, not trial results; never exceed product label rates.",
+        level: "expert",
+        sources: ["tran2023book"],
+      },
     ],
   },
 ];
@@ -628,6 +638,7 @@ export const CHECKLIST = [
   { id: "pollen", text: "Pollen-donor cultivar identified; brushes ready for hand pollination at 18:00–21:00 (essential for Ri6, Sua Hat Lep, Musang King)", stage: "fruitset" },
   { id: "noWaterCut", text: "Irrigation steady after fruit set (no water cut-off); Ca spray planned for 7–21 days after set; leaf flushes watched for 3–8 weeks", stage: "fruitset" },
   { id: "fruitcare", text: "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled", stage: "quality" },
+  { id: "noKCl", text: "Fertiliser labels checked: potassium from K₂SO₄ or KNO₃, never KCl / muriate of potash", stage: "quality" },
   { id: "lime", text: "After harvest: soil pH checked and limed to 5.8–6.5", stage: "quality" },
 ];
 
