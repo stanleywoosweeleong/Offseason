@@ -413,6 +413,27 @@ export const SOURCES = {
     type: "Govt. news page (summary only; page not opened)",
     finding: "Describes a six-strain microbial product developed by Nguyen Ngoc Thanh (Cai Be, Tien Giang), granted Vietnamese utility patent No. 3266 (7 July 2023). It reportedly broke down 99.77% of soil PBZ in 9 months in a mango test, and growers in Tien Giang use it on mango, plum and durian soils. No durian data are published. The site could not be opened from this app's research environment, so this summary comes from search results."
   },
+  eguchi2025: {
+    short: "Eguchi et al. 2025 (Malaysia, dry spells)",
+    cite: "Eguchi, A., Hassan, N. & Numata, S. (2025). Dry spells trigger durian flowering in aseasonal tropics. International Journal of Biometeorology 69(2): 403–409.",
+    url: "https://doi.org/10.1007/s00484-024-02819-x",
+    type: "Peer-reviewed · observational (Malaysia)",
+    finding: "110 trees aged 20–30 years in a Johor orchard (half grafted, half seedling), observed January 2023 to April 2024. Of the rainfall windows tested, the 15-day moving average explained flowering best. Peak flowering came 48–52 days (about 50) after that average fell below 1 mm per day. Dry spells as short as 4 days preceded flowering, and the longest was 15 days. There were five flowering events in 16 months, only the first of which led to a harvest. Minimum temperature did not explain flowering, but no night fell below 20 °C during the study. Grafted and seedling trees behaved alike. Cultivars are unknown and no soil-moisture data were recorded.",
+  },
+  kozai2014: {
+    short: "Kozai et al. 2014 (Monthong cold nights)",
+    cite: "Kozai, N., Higuchi, H., Tongtao, S. & Ogata, T. (2014). Low night temperature inhibits fertilization in 'Monthong' durian (Durio zibethinus Murr.). Tropical Agriculture and Development 58(3): 102–108. JIRCAS / Kyoto University / Chanthaburi Horticultural Research Centre.",
+    url: "https://doi.org/10.11248/jsta.58.102",
+    type: "Peer-reviewed · JIRCAS",
+    finding: "'Monthong' flower clusters were held at 15 °C or 25 °C night temperature for 7 nights after pollination, in Peltier-cooled boxes on the tree. At 25 °C about 30% of flowers set fruit at 28 days; at 15 °C every flower had dropped by day 21. Pollen tubes grew normally at both temperatures, but at 15 °C the ovules did not develop and no fertilisation occurred. The study followed a cold spell in Chanthaburi in 2014 (record lows below 17 °C for about a week) that ruined 'Monthong' fruit set.",
+  },
+  dang2025: {
+    short: "Dang et al. 2025 (Ri6, organic + foliar)",
+    cite: "Le Van Dang, Nguyen Kim Quyen, Ngo Phuong Ngoc, Le Minh Ly, Pham Thi Phuong Thao & Ngo Ngoc Hung (2025). Combining organic and foliar fertilization to enhance soil fertility and mitigate physiological disorders of durian (Durio zibethinus Murr.) fruit in the tropics. Plants 14(8): 1185. Can Tho University.",
+    url: "https://doi.org/10.3390/plants14081185",
+    type: "Peer-reviewed · Can Tho Univ.",
+    finding: "Three Mekong Delta orchards of 6-year-old 'Ri6' over two seasons (2022–2024); the season type is not stated. Treatments: 5 t/ha sugarcane filter-cake manure 15 days after fruit set, a K + Ca foliar product (4% K₂O, 4.3% Ca) at 40, 60 and 80 days after set, both together, or neither. All trees also got NPK 15-15-15. The combination cut flesh disorders from about 12–14% to 1–2%, raised yield about 10% and soluble solids about 13%, and raised leaf K and Ca and soil pH, organic carbon and P. Disorder rate tracked leaf Ca (r = −0.91) and K (r = −0.88).",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

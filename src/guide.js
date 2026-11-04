@@ -100,6 +100,21 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Natural dry spells can trigger flowering you didn't plan. In a Malaysian orchard, flowering peaked about 50 days (48–52) after the 15-day average rainfall fell below 1 mm per day. Dry spells as short as 4 days were enough, giving five flowering events in 16 months, only one of which produced a harvest. Off-season growers can use this rule to anticipate an unwanted natural bloom after a dry fortnight, or to time induction to coincide with one (an observational study with unknown cultivars).",
+        "level": "evidence",
+        "sources": [
+          "eguchi2025"
+        ]
+      },
+      {
+        "text": "Keep a 'Monthong' bloom out of cold nights. When flower clusters were held at 15 °C nights for a week after pollination, every flower dropped within 21 days, against about 30% fruit set at 25 °C: pollen tubes grew, but the ovules were not fertilised. A 2014 cold spell in Chanthaburi (lows below 17 °C for about a week) wrecked 'Monthong' fruit set. 'Chanee' tolerates 15 °C better. When back-planning, avoid putting 'Monthong' anthesis into the coolest weeks (December–January), or into cool Central Highlands nights.",
+        "level": "evidence",
+        "sources": [
+          "kozai2014",
+          "tran2023book"
+        ]
+      },
+      {
         "text": "Light changes through the year. Mekong Delta radiation is about 17–21 MJ/m²/day and dips in the rainy Sep–Nov. The Central Highlands get about 18–22, with a bigger seasonal swing. High dry-season light helps flowering, but the heat of late April–May works against it, and the dull, rainy Aug–Oct favours leaves.",
         "level": "expert",
         "sources": [
@@ -813,11 +828,18 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Spray calcium, then magnesium: Ca(NO₃)₂ at 0.4% at 40 DAFS and MgSO₄ at 0.2% at 50 DAFS, 10 L per tree, early morning on a dry, sunny day. In the published main-season trial this gave 0% affected fruit, against 30% for unsprayed trees, and Ca raised yield 4–9%. Off-season slides show Ca raising yield from 85 to 93 kg per tree.",
+        "text": "Spray calcium, then magnesium: Ca(NO₃)₂ at 0.4% at 40 DAFS and MgSO₄ at 0.2% at 50 DAFS, 10 L per tree, early morning on a dry, sunny day. In the published main-season trial this gave 0% affected fruit, against 30% for unsprayed trees, and Ca raised yield 4–9%. Off-season slides show Ca raising yield from 85 to 93 kg per tree. Mixing: the trials used 99% pure salts, so 0.4% Ca(NO₃)₂ = 4 g/L and 0.2% MgSO₄ = 2 g/L. Matched on calcium and magnesium content, farm-shop granular calcium nitrate (19% Ca) needs about 5 g/L, and Epsom salt (MgSO₄·7H₂O, about 10% Mg) about 4 g/L. Spray them on separate days, as the trial did (40 and 50 days); mixed in one tank, calcium and sulphate can precipitate as gypsum.",
         "level": "evidence",
         "sources": [
           "duong2026swj",
           "hau2026talk"
+        ]
+      },
+      {
+        "text": "Organic matter plus a K + Ca foliar feed cut flesh disorders in 'Ri6'. Across three Mekong Delta orchards over two seasons, 5 t/ha of sugarcane filter-cake manure at 15 days after set, plus a K + Ca foliar product at 40, 60 and 80 days, lowered disordered fruit from about 12–14% to 1–2%. Yield rose about 10% and soluble solids about 13%. Disorders tracked leaf calcium and potassium closely (Dang et al. 2025; whether the crops were off-season is not stated).",
+        "level": "evidence",
+        "sources": [
+          "dang2025"
         ]
       },
       {
@@ -1116,7 +1138,8 @@ export const GAPS = [
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
-  "Only one field trial has tested a PBZ-degrading microbial product, on a Chinese herb crop. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering."
+  "Only one field trial has tested a PBZ-degrading microbial product, on a Chinese herb crop. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering.",
+  "Sources identified but not recovered: MARDI's durian clone D24 PBZ study (Rushidah & Razak 2001; only a library catalogue entry exists), Hasan & Karim 1989 (Malaysia; repository unavailable), the Thai Department of Agriculture PBZ residue report (server certificate failed), and a 2014 Thai university report on fertiliser + PBZ for off-season durian (Nanakorn et al., RMUTSV; the online file is an empty placeholder, so contact the authors)."
 ];
 
 export const CHECKLIST = [
