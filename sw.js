@@ -4,7 +4,7 @@
 //    page can never replace a working copy;
 //  - if the network is slow (weak signal), the cached copy is shown after 3.5 s;
 //  - requests bypass the browser's HTTP cache, so a phone never mixes old and new files after an update.
-const CACHE = "offseason-v15";
+const CACHE = "offseason-v16";
 const NETWORK_WAIT_MS = 3500;
 const APP_FILES = [
   "./", "index.html", "manifest.webmanifest",

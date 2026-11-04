@@ -158,22 +158,25 @@ function renderPBZ() {
 // Plain text with WhatsApp formatting (*bold*, _italic_), grouped by how each microbe was tested,
 // with the source and its link after every entry so a researcher can check each claim.
 const APP_URL = "https://stanleywoosweeleong.github.io/Offseason/";
-function microbeShareText() {
+// whatsapp: bold headings with *…* (WhatsApp renders them). Otherwise plain text with no markers,
+// because the share sheet and Copy can end up in email, notes or documents.
+function microbeShareText({ whatsapp = false } = {}) {
+  const bold = (t) => (whatsapp ? `*${t}*` : t);
   const groups = [
     [tr("Tested in the field or in pots"), MICROBES.filter((m) => ["field", "pot"].includes(m.test) && m.level !== "lead")],
     [tr("Laboratory only"), MICROBES.filter((m) => !["field", "pot"].includes(m.test) && m.level !== "lead")],
     [tr("Leads still to be checked"), MICROBES.filter((m) => m.level === "lead")],
   ];
   let n = 0;
-  const lines = [`*${tr("Microbes that break down paclobutrazol (PBZ)")}*`, `${tr("Offseason Durian")} · ${MICROBES.length}`];
+  const lines = [bold(tr("Microbes that break down paclobutrazol (PBZ)")), `${tr("Offseason Durian")} · ${MICROBES.length}`];
   for (const [title, list] of groups) {
     if (!list.length) continue;
-    lines.push("", `*${title}*`);
+    lines.push("", bold(title));
     for (const m of list) {
       n++;
       lines.push(
         "",
-        `${n}. _${tr(m.name)}_ (${tr(m.group)}) · ${tr(TEST_LABEL[m.test])}`,
+        `${n}. ${tr(m.name)} (${tr(m.group)}) · ${tr(TEST_LABEL[m.test])}`,
         `${tr("From:")} ${tr(m.from)}`,
         `${tr("Result:")} ${tr(m.result)}`,
         ...m.sources.map((id) => `${tr("Source:")} ${tr(SOURCES[id].short)}${SOURCES[id].url ? ` ${SOURCES[id].url}` : ""}`)
@@ -184,7 +187,7 @@ function microbeShareText() {
   return lines.join("\n");
 }
 function updateShareLinks() {
-  $("#shareMicrobesWa").href = `https://wa.me/?text=${encodeURIComponent(microbeShareText())}`;
+  $("#shareMicrobesWa").href = `https://wa.me/?text=${encodeURIComponent(microbeShareText({ whatsapp: true }))}`;
 }
 // The phone's own share sheet (WhatsApp, Telegram, email…) handles long text better than a wa.me link.
 if (navigator.share) {
