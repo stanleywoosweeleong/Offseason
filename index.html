@@ -285,8 +285,8 @@
   <!-- Language picker (shown on first visit, then from the header button) -->
   <div class="langmodal" id="langModal" hidden>
     <div class="langbox" role="dialog" aria-modal="true" aria-labelledby="langTitle">
-      <h3 id="langTitle" data-notr>Language · 语言 · Bahasa · Ngôn ngữ · ភាសា</h3>
-      <p class="hello" data-notr>Choose your language. You can change it any time with the button at the top right.</p>
+      <!-- Shown before anyone has chosen a language, so every reader must find their own word here. -->
+      <h3 id="langTitle" data-notr><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span class="lt-words"><span lang="en">Language</span><span lang="zh">语言</span><span lang="ms">Bahasa</span><span lang="vi">Ngôn ngữ</span><span lang="km">ភាសា</span></span></h3>
       <p class="lang-msg" id="langMsg" role="alert" data-notr hidden></p>
       <div class="opts" id="langOpts"></div>
     </div>

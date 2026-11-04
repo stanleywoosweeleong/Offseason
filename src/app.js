@@ -624,7 +624,7 @@ function renderAll() {
 let pickerPlace = null;
 function openLangPicker() {
   $("#langOpts").innerHTML = LANG_MENU.map(
-    ([c, tag, name, en]) => `<button type="button" data-l="${c}" lang="${c}" aria-pressed="${c === lang}"><span class="tag">${tag}</span><span class="nm">${name}<small>${en}</small></span></button>`
+    ([c, , name, en]) => `<button type="button" data-l="${c}" aria-pressed="${c === lang}"><span class="nm" lang="${c}">${name}</span>${en !== name ? `<span class="en">${en}</span>` : ""}<span class="tick" aria-hidden="true">✓</span></button>`
   ).join("");
   $("#langMsg").hidden = true;
   $("#langModal").hidden = false;

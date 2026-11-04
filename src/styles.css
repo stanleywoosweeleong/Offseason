@@ -447,3 +447,20 @@ main.wrap { padding-bottom: 84px; }
 .rain-bars .rb.wet i { background: var(--brand); }
 .rain-bars .rb small { font-size: 0.72rem; color: var(--muted); line-height: 1; }
 .rain-card .hint { margin: 8px 0 4px; }
+
+/* Language picker: one quiet list (native name, small English name, check on the current one) */
+.langbox { padding: 18px 16px 12px; text-align: left; }
+.langbox h3#langTitle { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 12px; font-size: 1rem; font-weight: 600; }
+.langbox h3#langTitle .lt-words { display: flex; flex-wrap: wrap; gap: 2px 14px; line-height: 1.5; }
+.langbox h3#langTitle svg { width: 22px; height: 22px; fill: none; stroke: var(--brand); stroke-width: 1.8; stroke-linecap: round; }
+.langbox .opts { gap: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.langbox .opts button { border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 0 14px; min-height: 52px; gap: 10px; font-weight: 600; background: var(--surface); }
+.langbox .opts button:first-child { border-top: 0; }
+.langbox .opts button[aria-pressed="true"] { background: var(--evidence-bg); border-color: var(--line); }
+.langbox .opts .nm { flex: 1; font-size: 1.05rem; }
+.langbox .opts .en { color: var(--muted); font-size: 0.85rem; font-weight: 400; }
+.langbox .opts .tick { width: 18px; color: var(--brand); font-weight: 700; visibility: hidden; }
+.langbox .opts button[aria-pressed="true"] .tick { visibility: visible; }
+.langbox .lang-msg { margin: 0 0 10px; }
+.langbox .opts button:focus:not(:focus-visible) { outline: none; }
+.langbox .opts button:focus-visible { outline: 3px solid var(--brand); outline-offset: -3px; }
