@@ -305,6 +305,11 @@ export const STAGES = [
         sources: ["tran2023book"],
       },
       {
+        text: "Don't clear the grass before mulching. Cai Lay growers find that laying plastic over the grass works better, probably because the grass keeps transpiring and pulls more water out of the soil, which speeds up the drought.",
+        level: "practice",
+        sources: ["tran2023book"],
+      },
+      {
         text: "Mulch style: tent-style plastic over the raised bed lowers soil moisture more than plastic laid flat, because condensation runs off the bed instead of back into it. In Cai Lay, where trees grow on individual mounds, growers wrap each tree's root zone instead.",
         level: "practice",
         sources: ["tran2023book"],
@@ -315,7 +320,7 @@ export const STAGES = [
         sources: ["tran2023book"],
       },
       {
-        text: "Drought needs differ by cultivar in the Mekong Delta. 'Kho Qua Xanh' flowers after about 26 days of mulching and withheld water. 'Ri6' and 'Monthong' need 30–35 days and still flower unevenly, in 2–3 waves. 'Sua Hat Lep' flowers reliably only in the dry season; with incomplete drought its buds take about 3 months and few appear. This is much longer than the 10–14 days quoted from Thai 'Chanee' work.",
+        text: "Drought needs differ by cultivar in the Mekong Delta. 'Kho Qua Xanh' flowers after 20–25 days counted from when the ditches are completely dry (about 26 days from first withholding water). 'Ri6' and 'Monthong' need 30–35 days and still flower unevenly, in 2–3 waves. 'Sua Hat Lep' flowers reliably only in the dry season; with incomplete drought its buds take about 3 months and few appear. This is much longer than the 7–14 days (Salakpetch 2000) or 10–14 days (Chandraparnik et al. 1992b) found in Thailand. The book concludes that Mekong Delta durians need a longer drought, and that how well mulching works depends on cultivar, weather and ditch-water management (book pp. 142, 152).",
         level: "expert",
         sources: ["tran2023book"],
       },
