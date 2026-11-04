@@ -688,7 +688,7 @@ $("#langOpts").addEventListener("click", async (e) => {
   $("#langModal").hidden = true;
   renderAll();
   restorePlace(place);
-  $("#langBtn").focus({ preventScroll: true });
+  if (e.detail === 0) $("#langBtn").focus({ preventScroll: true }); // keyboard only: a tap leaves no ring
 });
 // The picker can be dismissed once any language has been chosen (also when storage is blocked).
 let langChosen = false;
