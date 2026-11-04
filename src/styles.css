@@ -139,3 +139,8 @@ input[type="date"], input[type="number"], select {
 .trial p { margin: 0; font-size: 0.92rem; }
 .plain { padding-left: 18px; margin: 0; }
 .plain li { margin: 6px 0; }
+
+/* Off-season focus toggle */
+.focus { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; border-left: 4px solid var(--brand); }
+.focus .ghost { margin-left: auto; }
+.gen { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 1px 7px; border-radius: 99px; border: 1px dashed var(--muted); color: var(--muted); }

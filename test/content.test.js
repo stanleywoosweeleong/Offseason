@@ -22,3 +22,10 @@ test("every source has a URL and a finding", () => {
     assert.ok(s.finding.length > 40, id);
   }
 });
+
+test("off-season essentials remain the majority and every stage keeps at least one essential point", () => {
+  const all = STAGES.flatMap((s) => s.points);
+  const general = all.filter((p) => p.general);
+  assert.ok(general.length < all.length / 2, `${general.length} of ${all.length} general`);
+  for (const s of STAGES) assert.ok(s.points.some((p) => !p.general), `stage ${s.id} has no off-season point`);
+});

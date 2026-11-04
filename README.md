@@ -2,6 +2,10 @@
 
 An evidence-based guide and planner for producing durian outside the main season. It runs as a static web app with no build step, no tracking and no backend.
 
+## Focus
+
+The app is about **off-season production**: inducing flowering out of season, timing it to the market, and carrying that crop to harvest. The Guide shows off-season essentials by default. General durian care (hand pollination, flesh-disorder fixes from main-season trials, fertiliser choice) is kept but hidden behind a "Show general durian care" toggle, and marked `general: true` in `src/guide.js`.
+
 ## Features
 
 | Tab | What it does |

@@ -43,16 +43,30 @@ document.addEventListener("click", (e) => {
 });
 
 // ---------- Guide ----------
-$("#stages").innerHTML = STAGES.map(
-  (s, i) => `
+// Default view: off-season essentials only. Points flagged `general: true` (general durian care) are hidden
+// unless the viewer opts in.
+function renderGuide() {
+  const showGeneral = store.get("showGeneral", false);
+  const hiddenCount = STAGES.reduce((n, s) => n + s.points.filter((p) => p.general).length, 0);
+  $("#focusBar").innerHTML = showGeneral
+    ? `<span>Showing everything, including general durian care (marked <span class="gen">General care</span>).</span> <button id="toggleGeneral" class="ghost">Off-season essentials only</button>`
+    : `<span>Showing <b>off-season essentials</b> only.</span> <button id="toggleGeneral" class="ghost">Show general durian care (+${hiddenCount})</button>`;
+  $("#toggleGeneral").onclick = () => { store.set("showGeneral", !showGeneral); renderGuide(); renderChecklist(); };
+  let n = 0;
+  $("#stages").innerHTML = STAGES.map((s) => {
+    const pts = s.points.filter((p) => showGeneral || !p.general);
+    if (!pts.length) return "";
+    n += 1;
+    return `
   <li class="card stage" id="stage-${s.id}">
-    <h2><span class="num">${i + 1}</span>${esc(s.title)}</h2>
+    <h2><span class="num">${n}</span>${esc(s.title)}</h2>
     <p class="summary">${esc(s.summary)}</p>
-    <ul>${s.points
-      .map((p) => `<li class="pt ${p.level}"><span class="lvl ${p.level}">${LEVEL_LABEL[p.level]}</span> ${esc(p.text)} ${cites(p.sources)}</li>`)
+    <ul>${pts
+      .map((p) => `<li class="pt ${p.level}"><span class="lvl ${p.level}">${LEVEL_LABEL[p.level]}</span>${p.general ? ' <span class="gen">General care</span>' : ""} ${esc(p.text)} ${cites(p.sources)}</li>`)
       .join("")}</ul>
-  </li>`
-).join("");
+  </li>`;
+  }).join("");
+}
 $("#gaps").innerHTML = GAPS.map((g) => `<li>${esc(g)}</li>`).join("");
 
 // ---------- PBZ evidence ----------
@@ -207,7 +221,8 @@ renderMix();
 // ---------- Checklist ----------
 function renderChecklist() {
   const done = new Set(store.get("checklist", []));
-  $("#checklist").innerHTML = CHECKLIST.map(
+  const showGeneral = store.get("showGeneral", false);
+  $("#checklist").innerHTML = CHECKLIST.filter((c) => showGeneral || !c.general).map(
     (c) => `<li><label><input type="checkbox" value="${c.id}" ${done.has(c.id) ? "checked" : ""}/> ${esc(c.text)}</label></li>`
   ).join("");
 }
@@ -217,4 +232,5 @@ $("#checklist").addEventListener("change", () => {
 $("#resetChecklist").addEventListener("click", () => { store.set("checklist", []); renderChecklist(); });
 renderChecklist();
 
+renderGuide();
 showTab(store.get("tab", "guide"));
