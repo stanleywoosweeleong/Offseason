@@ -36,6 +36,14 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Only start if you control water. Off-season induction needs water you can switch on and off: drain the ditches to create drought, re-water the day buds appear, keep irrigation steady through fruit set, and drain before a rainy harvest. Where buds dry out with no irrigation, they stall. Growers say 'only use PBZ if you have enough water', and that is sound advice, but the reason is this water control, not washing PBZ out of the soil (see step 8).",
+        "level": "expert",
+        "sources": [
+          "tran2023book",
+          "hau2017"
+        ]
+      },
+      {
         "text": "Regional calendars in Vietnam: the Mekong Delta flowers in Dec–Jan and harvests in Apr–May; the Southeast flowers Jan–Mar and harvests Jun–Aug; the Central Highlands mostly flowers Jan–Mar and harvests Jul–Aug. Only the Mekong Delta, with controllable irrigation and drainage, does full off-season induction. The other regions mainly support natural flowering.",
         "level": "expert",
         "sources": [
@@ -936,7 +944,11 @@ export const STAGES = [
       {
         "text": "Feed the soil biology after harvest. A diverse soil microbiota speeds PBZ breakdown, and organic mulch and manure also reduced Phytophthora in durian. Adding organic matter after harvest serves both. Microbial 'PBZ detox' products are sold in the Mekong Delta, including one with a Vietnamese utility patent (No. 3266, 2023) reported for mango, plum and durian soils. None has a published durian field trial. If you try one, leave a few untreated trees as a comparison and compare flowering and soil residue the next season.",
         "level": "expert",
-        "sources": ["vaz2015", "aciar2022", "bavutex2023"]
+        "sources": [
+          "vaz2015",
+          "aciar2022",
+          "bavutex2023"
+        ]
       },
       {
         "text": "There is no proven antidote. Activated carbon strips PBZ from irrigation water (90–99% removal), but nobody has tested it, or biochar, on orchard soil. Gibberellin sprays push leaf growth, but no durian trial shows they safely reverse a PBZ overdose. Prevention, through correct dose, foliar application and rest years, is the only tested approach.",
@@ -944,6 +956,16 @@ export const STAGES = [
         "sources": [
           "grant2018",
           "tran2023book"
+        ]
+      },
+      {
+        "text": "Flushing with water does not neutralise PBZ. It dissolves poorly (about 23 mg/L) and binds moderately to soil, so irrigation moves only a little. Water does not break it down: PBZ is stable in water, with a half-life of 164 days in water and 787 days with sediment. What is washed out ends up in ditches and canals, where PBZ is very toxic to aquatic life. Watering right after a soil application actually increases root uptake; the book irrigates 2–3 days for that purpose. What water does help is the soil microbes that degrade PBZ, which need a moist but well-aired root zone (about 70–75% of field capacity after harvest), not flooding.",
+        "level": "evidence",
+        "sources": [
+          "ppdb",
+          "santos2014",
+          "tran2023book",
+          "kishore2015"
         ]
       }
     ]
