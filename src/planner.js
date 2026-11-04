@@ -28,8 +28,8 @@ export const DEFAULT_STAGES = {
 export const CULTIVAR_PRESETS = {
   monthong: { label: "Monthong", anthesisToHarvest: { min: 120, typ: 124, max: 127 }, sources: ["sangwanangkul1998"] },
   ri6: { label: "Ri6", anthesisToHarvest: { min: 90, typ: 97, max: 104 }, sources: ["tran2019"] },
-  // Musang King: about 90 days after fruit set (Duong et al. 2025). The ±5-day band is our planning buffer.
-  musangking: { label: "Musang King", anthesisToHarvest: { min: 85, typ: 90, max: 95 }, sources: ["duong2025"] },
+  // Musang King: about 90 days after fruit set (Duong et al. 2025); the book gives 90–100 days.
+  musangking: { label: "Musang King", anthesisToHarvest: { min: 85, typ: 90, max: 100 }, sources: ["duong2025", "tran2023book"] },
   // Kho Qua Xanh: 94.5–101.2 days flowering → harvest, off-season (Hau 2000, book Table 5.2).
   khoquaxanh: { label: "Kho Qua Xanh", anthesisToHarvest: { min: 94, typ: 99, max: 102 }, sources: ["tran2023book"] },
   // Sua Hat Lep: 103–114 days flowering → harvest across two seasons (Hau et al. 2001, book Table 5.3).
@@ -160,12 +160,28 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
       sources: ["tran2023book"],
     },
     {
+      id: "thinning",
+      date: addDays(anthesis, 28),
+      endDate: addDays(anthesis, 42),
+      label: "Thin the fruit (2–3 passes)",
+      detail: "4–6 weeks after fruit set: keep fruit on the middle of the main branches, 1–2 per cluster, and match the load to tree age and branch size. Overloading costs next year's crop; over-thinning triggers a leaf flush.",
+      sources: ["tran2023book"],
+    },
+    {
       id: "fruitcare",
       date: addDays(anthesis, 30),
       endDate: addDays(anthesis, 60),
       label: "Fruit-care window (30–60 days after fruit set)",
       detail: "Reduce nitrogen as the fruit grows: NPK 2:1:1 → 2:1:3 → 1:1:3 at 30 / 45 / 60 days, 0.75 kg per tree each time. Spray Ca(NO₃)₂ 0.4% at 40 days and MgSO₄ 0.2% at 50 days. Tested on 'Musang King' (main-season papers; off-season results so far from conference slides).",
       sources: ["duong2025huaf", "duong2026swj", "hau2026talk"],
+    },
+    {
+      id: "preharvest",
+      date: addDays(anthesis, a.typ - 30),
+      endDate: addDays(anthesis, a.typ),
+      label: "Last month: KNO₃, cut water, guard against rain",
+      detail: "Spray KNO₃ 1% about a month before harvest. 15–20 days before, reduce irrigation. If heavy rain comes, mulch the root zone and keep the ditches drained to prevent soggy, mushy flesh.",
+      sources: ["tran2023book"],
     },
     {
       id: "harvest",

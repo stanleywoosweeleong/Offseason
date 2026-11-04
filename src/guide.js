@@ -632,6 +632,13 @@ export const STAGES = [
         ]
       },
       {
+        "text": "Feeding the young fruit (book protocol): at petal fall, spray a high-P foliar feed (NPK 15:30:15 at 0.5%) twice, 10–15 days apart. From 20–25 days after fruit set, spray MKP at 1.0–1.5% every 10–15 days to keep new flushes down. Also give the first soil feed: NPK 1:1:1 blended 3:1 with urea, 0.5–1.0 kg per tree, adjusted for tree age and crop load (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
         "text": "When fruit drop happens: unpollinated flowers fall 7–10 days after opening. Young-fruit drop peaks about 3 weeks after fruit set and settles by about 6 weeks. In 'Sua Hat Lep' fewer than 10% of fruit remained after the 3-week drop (Hau & Lam 2008, as reported in the book).",
         "level": "evidence",
         "sources": [
@@ -675,6 +682,13 @@ export const STAGES = [
     "summary": "Off-season fruit is prone to flesh disorders, and the harvest often meets rain. Time the pick by cultivar, cut nitrogen as the fruit grows, and dry the roots before harvest.",
     "points": [
       {
+        "text": "Fruit timing by cultivar, counted in days after fruit set: 'Kho Qua Xanh', 'Ri6' and 'Musang King' about 90–100; 'Sua Hat Lep' about 100–110; 'Monthong' about 115–120. In the cooler Central Highlands, add 20–30 days; at 700–800 m altitude, harvest can stretch to 135–150 days. Growth is slow for the first 30 days, fast from week 6 to week 12 as the flesh fills, then about 30 days of maturation (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
         "text": "'Monthong' fruit matures 120–127 days after anthesis. Tag each flower cluster with its opening date.",
         "level": "evidence",
         "sources": [
@@ -691,6 +705,41 @@ export const STAGES = [
       {
         "text": "In the cooler Central Highlands, 'Monthong' can take 135–150 days from flowering to harvest, much longer than in the lowlands. The Planner has a preset for this.",
         "level": "evidence",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Thin the fruit; it decides both this crop and next year's. An overloaded tree runs out of carbohydrate, leading to branch dieback, a skipped crop the following year (biennial bearing) or even tree death. When fruit set is high, thinning is mandatory. Mekong Delta growers thin in 2–3 passes 4–6 weeks after fruit set, when fruitlets are cup to bowl size. Thai schedules thin at weeks 4–5 (keeping 2–3 times the target), week 6 and weeks 7–10; an alternative thins at days 30, 45 and 60, keeping 1.2–1.5 times the target at day 30 (Salakpetch 2005; Ketsa et al. 2020; as reported in the book).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Keep fruit in the right place. Fruit at branch tips and the top of the tree grow fast but get little calcium (it travels to the leaves), so they are prone to soggy flesh. Fruit on the trunk get calcium but too little carbohydrate, and stay small. Keep fruit on the middle section of the main branches, 1–2 per cluster, and none on small, weak side branches, which tend to die back after harvest (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "How many fruit a tree can carry: a 2 kg 'Chanee' fruit needs the output of 150–200 mature leaves (Palakul 1987), or about 330 leaves on a conservative estimate (Salakpetch 2005). As a branch rule, a 2.5 cm branch carries 1 fruit, a 3.8 cm branch 2, and branches over 5 cm 3–4 (Philippine 'Puyat' guidelines). Typical final loads are 50–150 fruit per tree. 7-year-old 'Ri6' carried 32–52 fruit (2.2–3.6 kg each) with the same total yield of about 113 kg per tree (Hieu et al. 2026). Mature elite trees aged 16–20 years carried up to 80–120 ('Ri6') and 140–150 ('Kho Qua Xanh'). Thai guidance for 'Monthong' is about 30 fruit at 6–7 years, 50 at 8–10 and 70 at 15–20 years (as reported in the book).",
+        "level": "evidence",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Don't over-thin. Fruit, like flowers, hold back new shoots. If fruit set is poor, or you thin too hard, the spare carbohydrate triggers a leaf flush that then starves and drops the remaining fruit (book Ch. 9).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Second and third feeds (book protocol): at 55–60 days after set, apply 0.5–1.0 kg high-K NPK 2:1:3 per tree with a 0.2% calcium nitrate spray against soggy flesh. For cultivars hanging over 100 days, repeat at 75–80 days and add a 0.2% MgSO₄ spray. One month before harvest, spray KNO₃ at 1.0%. The Can Tho 'Musang King' trial schedule below is similar but tested specifically on that cultivar (book Ch. 9).",
+        "level": "expert",
         "sources": [
           "tran2023book"
         ]
@@ -741,7 +790,7 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Rain at harvest is the off-season grower's enemy: soggy flesh and tip burn are worst when heavy rain falls near harvest. Keep ditch water 60–80 cm below the bed after fruit set, drain the ditches completely about a month before harvest (Tan & Chau 2004), and mulch the beds 20–25 days before harvest to keep rain off the roots; mulching cut flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999). For 'Ri6', add Ca + B sprays during flesh growth (as reported in the book).",
+        "text": "Water during fruit growth, and the rain-at-harvest problem. Keep ditch water 60–80 cm below the beds and irrigate every 2–3 days, changing amounts gradually, because sudden changes cause fruit drop. Waterlogging triggers new flushes, soggy flesh and Phytophthora; too little water in the dry season scorches leaves and stunts fruit. 15–20 days before harvest, cut irrigation back, since mild stress helps the fruit mature. Off-season harvests often meet heavy rain, which causes mushy and soggy flesh. In that case, mulch the root zone and drain the ditches about a month before harvest. Mulching cut flesh disorders to 8.0% and watercore to 4.3% (Loquias & Pascua 1999). For 'Ri6', add Ca + B sprays during flesh growth (book Ch. 7, Ch. 9).",
         "level": "evidence",
         "sources": [
           "tran2023book"
@@ -754,6 +803,20 @@ export const STAGES = [
           "duong2025huaf",
           "duong2026swj",
           "hau2026talk"
+        ]
+      },
+      {
+        "text": "Pick at the right maturity. For the domestic market, tree-ripened fruit tastes best. For export, cut at about 85% maturity: tapping the rind gives a hollow, dull sound as the flesh starts to separate. Fruit cut below 75% maturity cannot be rescued by ripening treatment (Cheyglinted 1993, as reported in the book).",
+        "level": "expert",
+        "sources": [
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Ripening 'Monthong' and 'Ri6' without disorders: Hau et al. (2009) combined Ca(NO₃)₂ 0.2% at 2 months after set, MgSO₄ 0.2% at 2.5 months and KNO₃ 1.0% one month before harvest with a 0.1–0.2% ethephon treatment after harvest. This virtually eliminated hard, colourless flesh. At 0.4% ethephon, ripening peaked too early (day 4 against day 6); overdosing yellows the rind and makes the flesh mushy. Thai packhouses paint ethephon only on the freshly re-cut stalk and fan the stacked fruit, avoiding rind yellowing. 'Ri6' treated with 200–500 ppm ethylene ripened in 2 days instead of 5. Local cultivars ('Kho Qua Xanh', 'Chuong Bo Hat Lep', 'Sau Huu') ripen evenly without ethylene (book Ch. 7, Ch. 9).",
+        "level": "evidence",
+        "sources": [
+          "tran2023book"
         ]
       }
     ]
@@ -770,6 +833,13 @@ export const STAGES = [
         "sources": [
           "grewal2023",
           "subhadrabandhu1998",
+          "tran2023book"
+        ]
+      },
+      {
+        "text": "Overloading is the other way to lose next year's crop. The book links excessive fruit load to branch dieback, biennial bearing and tree collapse. Thinning to the tree's leaf and branch capacity in step 7 protects next season's flowering as much as limiting PBZ does (book Ch. 9).",
+        "level": "expert",
+        "sources": [
           "tran2023book"
         ]
       },
@@ -1075,6 +1145,11 @@ export const CHECKLIST = [
     "stage": "hold"
   },
   {
+    "id": "thin",
+    "text": "Fruit thinned in 2–3 passes 4–6 weeks after set: middle of main branches, 1–2 per cluster, load matched to tree age and branch size",
+    "stage": "harvest"
+  },
+  {
     "id": "fruitcare",
     "text": "Fruit-set date recorded; NPK 30/45/60 DAFS and Ca 40 / Mg 50 DAFS sprays scheduled",
     "stage": "harvest"
@@ -1082,6 +1157,16 @@ export const CHECKLIST = [
   {
     "id": "ditch",
     "text": "Ditch water held 60–80 cm below the bed after fruit set; ditches drained and beds mulched before an off-season harvest",
+    "stage": "harvest"
+  },
+  {
+    "id": "preharvest",
+    "text": "One month before harvest: KNO₃ 1% spray; 15–20 days before, irrigation cut back (mulch the roots if heavy rain)",
+    "stage": "harvest"
+  },
+  {
+    "id": "maturity",
+    "text": "Harvest maturity checked (about 85% for export, tap test); ethephon at 0.1–0.2% only if needed",
     "stage": "harvest"
   },
   {
