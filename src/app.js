@@ -4,7 +4,7 @@ import { LIBRARY } from "./library.js";
 import { MICROBES, NO_FUNGI, CLEANUP_GROUPS, OTHER_CROPS, TRIAZOLES, TRIAZOLE_ADVICE } from "./cleanup.js";
 import { LEVEL, EFFECT_LABEL, TEST_LABEL, TRI_LABEL } from "./labels.js";
 import { LANGS, LANG_MENU, LOCALE, loadLang, lang, tr, trf, applyStatic } from "./i18n.js";
-import { planFromHarvest, planFromSpray, pbzMix, tankMix, rainRisk, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
+import { planFromHarvest, planFromSpray, pbzMix, tankMix, rainRisk, rainInWindow, isoDate, PBZ_RECOMMENDED_PPM, CULTIVAR_PRESETS, buildProtocol } from "./planner.js";
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => [...document.querySelectorAll(sel)];
@@ -213,12 +213,23 @@ function applyCultivar(key) {
   const a = preset.anthesisToHarvest;
   $("#a_min").value = a.min; $("#a_typ").value = a.typ; $("#a_max").value = a.max;
 }
+// Stage lengths are saved, so a grower's own records survive a reload.
+const STAGE_IDS = ["p_min", "p_typ", "p_max", "a_min", "a_typ", "a_max"];
+const saveStages = () => store.set("stages", Object.fromEntries(STAGE_IDS.map((id) => [id, $(`#${id}`).value])));
 $("#cultivar").value = store.get("cultivar", "monthong");
+if (!$("#cultivar").value) $("#cultivar").value = "monthong";
+const savedStages = store.get("stages", null);
+if (savedStages) {
+  // PBZ → flowering is the grower's own; flowering → harvest comes from the preset unless set to Custom.
+  const ids = $("#cultivar").value === "custom" ? STAGE_IDS : STAGE_IDS.slice(0, 3);
+  ids.forEach((id) => { if (savedStages[id]) $(`#${id}`).value = savedStages[id]; });
+}
 if ($("#cultivar").value !== "custom") applyCultivar($("#cultivar").value);
-$("#cultivar").addEventListener("change", (e) => { store.set("cultivar", e.target.value); applyCultivar(e.target.value); renderPlan(); });
+$("#cultivar").addEventListener("change", (e) => { store.set("cultivar", e.target.value); applyCultivar(e.target.value); saveStages(); renderPlan(); });
 ["#a_min", "#a_typ", "#a_max"].forEach((id) =>
   $(id).addEventListener("input", () => { $("#cultivar").value = "custom"; store.set("cultivar", "custom"); })
 );
+STAGE_IDS.forEach((id) => $(`#${id}`).addEventListener("input", saveStages));
 
 function readStages() {
   const n = (id) => Number($(id).value);
@@ -248,6 +259,8 @@ function protocolHTML(sprayDate, stages) {
       .map((r) => `<li class="tl"><div class="when">${when(r)}</div><span class="step">${trf("Step {n}", { n: stepNo[r.step] })}</span> <b>${esc(tr(r.title))}</b><p>${esc(tr(r.actions))}</p></li>`)
       .join("")}</ol></details>`;
 }
+// Today as a UTC date (the planner works in whole UTC days).
+const today = () => { const n = new Date(); return new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())); };
 function renderPlan() {
   const mode = document.querySelector("input[name=mode]:checked").value;
   $("#dateLabel").textContent = mode === "harvest" ? tr("Target harvest date") : tr("Planned PBZ spray date");
@@ -262,13 +275,17 @@ function renderPlan() {
     const rainWarn = `<p class="warn">${tr("⚠ Falls in a month you marked as rainy. Rain after spraying made PBZ unreliable in trials.")}</p>${cites(["kozai2024", "chandraparnik1993"])}`;
     if (mode === "harvest") {
       const r = planFromHarvest($("#planDate").value, stages);
-      const risky = ["earliest", "typical", "latest"].some((k) => rainRisk(r.spray[k], months));
+      // Check every month the window touches, not just its ends.
+      const risky = rainInWindow(r.spray.earliest, r.spray.latest, months);
+      const past = r.spray.latest < today()
+        ? `<p class="warn">${tr("⚠ This whole spray window is already in the past. Choose a later harvest date.")}</p>`
+        : r.spray.earliest < today() ? `<p class="note">${tr("Part of this spray window has already passed.")}</p>` : "";
       out.innerHTML = `
         <div class="card result">
           <h3>${tr("Spray PBZ between")}</h3>
           <p class="big">${fmt(r.spray.earliest)} <span>→</span><br />${fmt(r.spray.latest)}</p>
           <p>${trf("Most likely: {date}. The window is wide because weather drives flowering; spray early in it if your area flowers late.", { date: `<b>${fmt(r.spray.typical)}</b>` })}</p>
-          ${risky ? rainWarn : ""}
+          ${past}${risky ? rainWarn : ""}
         </div>
         <div class="card"><h3>${tr("Timeline")}</h3>${timelineHTML(r.timeline)}</div>
         ${protocolHTML(r.spray.typical, stages)}`;
@@ -279,7 +296,7 @@ function renderPlan() {
           <h3>${tr("Expected harvest")}</h3>
           <p class="big">${fmt(r.harvest.earliest)} <span>→</span><br />${fmt(r.harvest.latest)}</p>
           <p>${trf("Flowering likely {from} – {to}. Most likely harvest: {date}.", { from: fmt(r.anthesis.earliest), to: fmt(r.anthesis.latest), date: `<b>${fmt(r.harvest.typical)}</b>` })}</p>
-          ${rainRisk(r.spray, months) ? rainWarn : ""}
+          ${r.spray < today() ? `<p class="note">${tr("This spray date is in the past.")}</p>` : ""}${rainRisk(r.spray, months) ? rainWarn : ""}
         </div>
         <div class="card"><h3>${tr("Timeline")}</h3>${timelineHTML(r.timeline)}</div>
         ${protocolHTML(r.spray, stages)}`;
@@ -325,19 +342,19 @@ function renderMix() {
       : trf("Each tree needs about {n} tanks ({l} L).", { n: `<b>${num(1 / r.treesPerTank, 1)}</b>`, l: num(litres, 1) });
     const orchard = trees > 1 || r.tanks > 1
       ? `<h3>${trees > 1 ? trf("For {n} trees", { n: num(trees) }) : tr("For 1 tree")}</h3>
-         <p>${trf(r.tanks > 1 ? "You need {l} L of spray: mix {n} tanks of {t} L, using {p} of product in total." : "You need {l} L of spray: mix 1 tank of {t} L, using {p} of product in total.", { l: `<b>${num(r.totalLitres)}</b>`, n: `<b>${num(r.tanks)}</b>`, t: num(tank), p: `<b>${big(r.productTotal)}</b>` })}</p>`
+         <p>${trf(r.tanks > 1 ? "You need {l} L of spray: mix {n} tanks of {t} L, using {p} of product in total." : "You need {l} L of spray: mix 1 tank of {t} L, using {p} of product in total.", { l: `<b>${num(r.totalLitres, 2)}</b>`, n: `<b>${num(r.tanks)}</b>`, t: num(tank, 2), p: `<b>${big(r.productTotal)}</b>` })}</p>`
       : "";
-    const leftover = r.leftoverLitres >= 1 ? `<p class="hint">${trf("The last tank will have about {l} L left over. Mix a smaller last batch rather than pouring leftover PBZ on the ground: it stays in the soil for months.", { l: num(r.leftoverLitres) })}</p>` : "";
+    const leftover = r.leftoverLitres >= 1 ? `<p class="hint">${trf("The last tank will have about {l} L left over. Mix a smaller last batch rather than pouring leftover PBZ on the ground: it stays in the soil for months.", { l: num(r.leftoverLitres, 1) })}</p>` : "";
     out.innerHTML = `
       <div class="card result${overdose.length ? " over" : ""}">
         ${danger}
-        <h3>${trf("Put in each {t} L tank of water", { t: num(tank) })}</h3>
+        <h3>${trf("Put in each {t} L tank of water", { t: num(tank, 2) })}</h3>
         <p class="big">${big(r.productPerTank)} <span>${esc(trf("of {product}", { product: what }))}</span></p>
         <p>${treesPerTank}</p>
         ${orchard}${leftover}${lowDose}${msg}
         <p class="hint">${form === "sc" ? tr("Measure liquid with a measuring cylinder or syringe. If the label gives g/L (for example 250 g/L), divide by 10 to get % (25%).") : tr("Weigh powder on a kitchen scale; spoon and bottle-cap measures vary a lot between products.")} ${tr("Mix the product in a little water first, then top up the tank. Wear gloves and a mask.")}</p>
         <p class="hint"><b>${tr("Where to spray:")}</b> ${tr("both sides of the mature leaves, plus the main branches inside the canopy, until the leaves are wet but not dripping. Lay the plastic over the beds about a week before, so drips land on plastic, not soil.")}</p>
-        <details class="adv"><summary>${tr("Scientist view")}</summary><p class="hint">${trf("{ppm} ppm active ingredient = {g} g a.i. per {t} L tank, about {gt} g a.i. per tree.", { ppm: num(ppm), g: num(r.aiPerTank, 1), t: num(tank), gt: num(perTree, 1) })}</p></details>
+        <details class="adv"><summary>${tr("Scientist view")}</summary><p class="hint">${trf("{ppm} ppm active ingredient = {g} g a.i. per {t} L tank, about {gt} g a.i. per tree.", { ppm: num(ppm), g: num(r.aiPerTank, 1), t: num(tank, 2), gt: num(perTree, 1) })}</p></details>
       </div>`;
   } catch (err) {
     out.innerHTML = `<div class="card warn">${esc(tr(err.message))}</div>`;
@@ -381,10 +398,10 @@ $("#resetChecklist").addEventListener("click", () => {
 // ---------- Library & sources (searchable) ----------
 const norm = (s) => s.toLowerCase();
 function highlight(text, q) {
-  const safe = esc(text);
-  if (!q) return safe;
+  if (!q) return esc(text);
+  // Split the raw text on the query, then escape each piece, so the highlight never shows entity codes.
   const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
-  return safe.replace(re, "<mark>$1</mark>");
+  return String(text).split(re).map((part, i) => (i % 2 ? `<mark>${esc(part)}</mark>` : esc(part))).join("");
 }
 function renderLibrary(q = "") {
   const query = norm(q.trim());
@@ -489,7 +506,20 @@ function closeToc() {
   $("#tocSheet").hidden = true;
   $("#tocBackdrop").hidden = true;
   document.body.style.overflow = "";
+  if (!$("#fab").hidden) $("#tocBtn").focus({ preventScroll: true });
 }
+
+// Keep keyboard focus inside whichever dialog is open (language picker, contents, citation).
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Tab") return;
+  const box = !$("#langModal").hidden ? $(".langbox") : !$("#tocSheet").hidden ? $("#tocSheet") : !$("#sheet").hidden ? $("#sheet") : null;
+  if (!box) return;
+  const f = [...box.querySelectorAll("button, a[href], input, [tabindex]:not([tabindex='-1'])")].filter((el) => !el.hidden && el.offsetParent !== null);
+  if (!f.length) return;
+  const first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && (document.activeElement === first || !box.contains(document.activeElement))) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && (document.activeElement === last || !box.contains(document.activeElement))) { e.preventDefault(); first.focus(); }
+});
 $("#tocBtn").addEventListener("click", openToc);
 $("#tocClose").addEventListener("click", closeToc);
 $("#tocBackdrop").addEventListener("click", closeToc);
@@ -530,6 +560,7 @@ function openLangPicker() {
   $("#langOpts").innerHTML = LANG_MENU.map(
     ([c, tag, name, en]) => `<button type="button" data-l="${c}" lang="${c}" aria-pressed="${c === lang}"><span class="tag">${tag}</span><span class="nm">${name}<small>${en}</small></span></button>`
   ).join("");
+  $("#langMsg").hidden = true;
   $("#langModal").hidden = false;
   pickerPlace = readingPlace();
   $("#langOpts button[aria-pressed=true]")?.focus({ preventScroll: true });
@@ -570,20 +601,41 @@ $("#langOpts").addEventListener("click", async (e) => {
   const b = e.target.closest("[data-l]");
   if (!b) return;
   const place = pickerPlace || readingPlace();
+  const opts = $("#langOpts");
+  opts.setAttribute("aria-busy", "true");
+  const result = await loadLang(b.dataset.l);
+  opts.removeAttribute("aria-busy");
+  if (result === "stale") return; // a newer tap won
+  langChosen = true;
+  if (result === "failed") {
+    // Stay in English rather than mixing languages, and say why.
+    store.set("lang", "en");
+    renderAll();
+    const name = LANG_MENU.find(([c]) => c === b.dataset.l)?.[2] || b.dataset.l;
+    openLangPicker();
+    $("#langMsg").textContent = `Could not load ${name}. Check your connection and try again.`;
+    $("#langMsg").hidden = false;
+    return;
+  }
   pickerPlace = null;
   store.set("lang", b.dataset.l);
-  await loadLang(b.dataset.l);
   $("#langModal").hidden = true;
   renderAll();
   restorePlace(place);
+  $("#langBtn").focus({ preventScroll: true });
 });
-$("#langModal").addEventListener("click", (e) => { if (e.target.id === "langModal" && store.get("lang", null)) $("#langModal").hidden = true; });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#langModal").hidden && store.get("lang", null)) $("#langModal").hidden = true; });
+// The picker can be dismissed once any language has been chosen (also when storage is blocked).
+let langChosen = false;
+const canCloseLang = () => langChosen || store.get("lang", null);
+$("#langModal").addEventListener("click", (e) => { if (e.target.id === "langModal" && canCloseLang()) $("#langModal").hidden = true; });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#langModal").hidden && canCloseLang()) $("#langModal").hidden = true; });
 
 // ---------- Init ----------
 const savedLang = store.get("lang", null);
-await loadLang(savedLang || "en");
-currentTab = store.get("tab", "guide");
+// Never keep the screen blank for long on a weak signal: fall back to English after 2.5 s.
+if ((await loadLang(savedLang || "en", { timeoutMs: 2500 })) === "ok" && savedLang) langChosen = true;
+const savedTab = store.get("tab", "guide");
+currentTab = document.getElementById(`tab-${savedTab}`) ? savedTab : "guide";
 renderAll();
 showSub(store.get("pbzSub", "evidence"));
 updateFab();

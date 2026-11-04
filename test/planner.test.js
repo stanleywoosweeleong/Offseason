@@ -126,3 +126,25 @@ test("tankMix: 50 trees × 12 L from 200 L drums of 10% product", () => {
 test("tankMix rejects a zero tank", () => {
   assert.throws(() => tankMix({ ppm: 1000, tankLitres: 0, aiPercent: 25, litresPerTree: 12 }));
 });
+
+test("rainInWindow flags a rainy month in the middle of the spray window, not just at its ends", async () => {
+  const { rainInWindow } = await import("../src/planner.js");
+  // Review repro: window 31 Jan → 10 Apr 2027 with only February marked rainy
+  assert.equal(rainInWindow("2027-01-31", "2027-04-10", [1]), true);
+  assert.equal(rainInWindow("2027-01-31", "2027-04-10", [5, 6]), false);
+  assert.equal(rainInWindow("2027-11-20", "2028-01-05", [11]), true); // across a year end
+  assert.equal(rainInWindow("2027-01-31", "2027-04-10", []), false);
+});
+
+test("dates: half-typed years are rejected instead of becoming 19xx", async () => {
+  const { isoDate } = await import("../src/planner.js");
+  assert.throws(() => isoDate("0002-03-01"), /complete date/);
+  assert.throws(() => isoDate("0099-03-01"), /complete date/);
+  assert.equal(isoDate("2027-03-01"), "2027-03-01");
+});
+
+test("tankMix keeps fractional tank sizes exact (1.5 L tank, 25% product, 1,000 ppm)", () => {
+  const r = tankMix({ ppm: 1000, tankLitres: 1.5, aiPercent: 25, litresPerTree: 12, trees: 1 });
+  assert.equal(r.productPerTank, 6); // 1.5 g a.i. in 1.5 L = 6 mL of 25%
+  assert.equal(r.tanks, 8);
+});

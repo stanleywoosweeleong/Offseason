@@ -15,15 +15,29 @@ export const LOCALE = { en: "en-GB", zh: "zh-CN", ms: "ms-MY", vi: "vi-VN", km: 
 let dict = {};
 export let lang = "en";
 
-export async function loadLang(code) {
-  lang = LANGS.includes(code) ? code : "en";
-  if (lang === "en") { dict = {}; return; }
+let latest = 0;
+/**
+ * Load a language. Resolves to "ok", "failed" (fell back to English) or "stale" (a newer request
+ * started meanwhile, so this one is ignored). Gives up after `timeoutMs` so a weak signal never
+ * leaves the app blank.
+ */
+export async function loadLang(code, { timeoutMs = 4000 } = {}) {
+  const ticket = ++latest;
+  const want = LANGS.includes(code) ? code : "en";
+  if (want === "en") { dict = {}; lang = "en"; return "ok"; }
+  const ctrl = typeof AbortController === "function" ? new AbortController() : null;
+  const timer = setTimeout(() => ctrl?.abort(), timeoutMs);
+  let next = null;
   try {
-    const res = await fetch(`src/i18n/${lang}.json`);
-    dict = res.ok ? await res.json() : {};
-  } catch {
-    dict = {};
-  }
+    const res = await fetch(`src/i18n/${want}.json`, ctrl ? { signal: ctrl.signal } : undefined);
+    if (res.ok) next = await res.json();
+  } catch { /* offline, timed out or aborted */ }
+  clearTimeout(timer);
+  if (ticket !== latest) return "stale";
+  if (!next) { dict = {}; lang = "en"; return "failed"; }
+  dict = next;
+  lang = want;
+  return "ok";
 }
 
 /** Translate one English string (falls back to English). */

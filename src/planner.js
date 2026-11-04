@@ -44,8 +44,11 @@ export const PBZ_RECOMMENDED_PPM = { min: 1000, max: 1500 };
 export function toUTCDate(input) {
   if (input instanceof Date) return new Date(Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), input.getUTCDate()));
   const [y, m, d] = String(input).split("-").map(Number);
-  if (!y || !m || !d) throw new Error(`Invalid date: ${input}`);
-  return new Date(Date.UTC(y, m - 1, d));
+  // Years below 1900 are half-typed input (Date.UTC would read "0002" as 1902), so reject them.
+  if (!y || !m || !d || y < 1900) throw new Error("Enter a complete date.");
+  const date = new Date(Date.UTC(2000, m - 1, d));
+  date.setUTCFullYear(y);
+  return date;
 }
 
 export function addDays(date, days) {
@@ -60,9 +63,9 @@ function validateStages(stages) {
   for (const key of ["pbzToAnthesis", "anthesisToHarvest"]) {
     const s = stages[key];
     if (!s || ![s.min, s.typ, s.max].every((n) => Number.isFinite(n) && n > 0)) {
-      throw new Error(`Stage ${key} needs positive min/typ/max`);
+      throw new Error("Stage lengths need a positive min, typ and max.");
     }
-    if (!(s.min <= s.typ && s.typ <= s.max)) throw new Error(`Stage ${key} must satisfy min ≤ typ ≤ max`);
+    if (!(s.min <= s.typ && s.typ <= s.max)) throw new Error("Stage lengths must be in order: min ≤ typ ≤ max.");
   }
 }
 
@@ -203,9 +206,9 @@ export function buildTimeline(sprayDate, stages = DEFAULT_STAGES) {
  */
 export function pbzMix({ ppm, litres, aiPercent }) {
   if (![ppm, litres, aiPercent].every((n) => Number.isFinite(n) && n > 0)) {
-    throw new Error("ppm, litres and aiPercent must be positive numbers");
+    throw new Error("Concentration, litres and label strength must be positive numbers.");
   }
-  if (aiPercent > 100) throw new Error("aiPercent cannot exceed 100");
+  if (aiPercent > 100) throw new Error("Label strength cannot be more than 100%.");
   const gramsAI = (ppm * litres) / 1000;
   const gramsProduct = gramsAI / (aiPercent / 100);
   let status = "ok";
@@ -220,7 +223,7 @@ export function pbzMix({ ppm, litres, aiPercent }) {
  */
 export function tankMix({ ppm, tankLitres, aiPercent, litresPerTree, trees = 1 }) {
   if (![tankLitres, litresPerTree, trees].every((n) => Number.isFinite(n) && n > 0)) {
-    throw new Error("tank size, litres per tree and number of trees must be positive numbers");
+    throw new Error("Tank size, litres per tree and number of trees must be positive numbers.");
   }
   const perTank = pbzMix({ ppm, litres: tankLitres, aiPercent });
   const totalLitres = litresPerTree * trees;
@@ -235,6 +238,16 @@ export function tankMix({ ppm, tankLitres, aiPercent, litresPerTree, trees = 1 }
     leftoverLitres: tanks * tankLitres - totalLitres,
     status: perTank.status,
   };
+}
+
+/** True if any day from start to end (inclusive) falls in a month the grower marked as rainy (0 = Jan). */
+export function rainInWindow(start, end, rainyMonths = []) {
+  if (!rainyMonths.length) return false;
+  const a = toUTCDate(start), b = toUTCDate(end);
+  for (let d = new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), 1)); d <= b; d.setUTCMonth(d.getUTCMonth() + 1)) {
+    if (rainyMonths.includes(d.getUTCMonth())) return true;
+  }
+  return false;
 }
 
 /** Flag spray dates that fall in months the grower marked as rainy (0 = Jan). */
