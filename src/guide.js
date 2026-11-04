@@ -381,12 +381,20 @@ export const STAGES = [
         "sources": []
       },
       {
-        "text": "Before or after the plastic? The book recommends spraying BEFORE mulching. PBZ is readily taken up by roots, so spray that drips onto bare soil still works, whereas spray landing on plastic washes into the ditches. If PBZ is applied to the soil, irrigate for 2–3 days so the roots take it up. Many growers spray over the plastic precisely to avoid soil residue. This is a real trade-off: more soil uptake means more PBZ building up in the soil (see step 8, and the warning against soil drenches in durian). Surveyed orchards held residue only at the drip line.",
+        "text": "Before or after the plastic? The book recommends spraying BEFORE mulching. PBZ is readily taken up by roots, so spray that drips onto bare soil still works, whereas spray landing on plastic washes into the ditches. If PBZ is applied to the soil, irrigate for 2–3 days so the roots take it up. Many growers spray over the plastic precisely to avoid soil residue. This is a real trade-off: more soil uptake means more PBZ building up in the soil (see step 8, and the warning against soil drenches in durian). Surveyed orchards held residue only at the drip line. Where the plastic stays on all season, as many growers do, the order no longer matters: spray never reaches the soil directly. Every spray's runoff then drains off the plastic into the ditches instead (see the next point).",
         "level": "expert",
         "sources": [
           "tran2023book",
           "pham2022",
           "subhadrabandhu1998"
+        ]
+      },
+      {
+        "text": "Runoff under a permanent cover ends up in the ditches. PBZ does not break down in water (half-life about 164 days in water and 787 days in water with sediment) and is very toxic to aquatic plants and fish. With several sprays a season, spray until leaves are wet but not dripping, and don't release the first ditch water after spraying into canals or fish ponds.",
+        "level": "evidence",
+        "sources": [
+          "ppdb",
+          "kishore2015"
         ]
       },
       {
@@ -454,6 +462,15 @@ export const STAGES = [
         "level": "expert",
         "sources": [
           "tran2023book"
+        ]
+      },
+      {
+        "text": "Season-long cover (grower practice): many growers leave the plastic on through the whole season, spraying several times, and lift it only when preparing for the next season. Two things then matter. (1) The tree still needs water and feed from bud emergence onwards, so irrigation and fertiliser must reach the roots under or through the cover, by drip or fertigation, or through opened edges. The published protocols lift the plastic at bud break for this reason, and in the JIRCAS trial a cover kept dry for about 8 weeks caused severe drought that suppressed flowering. (2) The cover keeps rain off the roots all season, which also helps against bud dormancy after rain and soggy flesh at harvest.",
+        "level": "practice",
+        "sources": [
+          "tran2023book",
+          "tri2011",
+          "kozai2024"
         ]
       },
       {
@@ -1407,7 +1424,7 @@ export const PROTOCOL = [
     "from": 0,
     "to": 0,
     "title": "Buds clearly visible (usually 20–30 days after PBZ)",
-    "actions": "Remove the mulch. Refill the ditches to 60–80 cm and resume watering gradually, every 2–3 days, aiming for 50–60% soil moisture and no waterlogging. If rain over 10 mm hits, or buds develop unevenly, spray KNO₃ 1.0–1.5% directly on the buds, and repeat if needed. Spray micronutrients and Ca on the buds."
+    "actions": "Remove the mulch, or if your cover stays on all season, restart water and fertiliser under it (drip, fertigation or opened edges). Refill the ditches to 60–80 cm and resume watering gradually, every 2–3 days, aiming for 50–60% soil moisture and no waterlogging. If rain over 10 mm hits, or buds develop unevenly, spray KNO₃ 1.0–1.5% directly on the buds, and repeat if needed. Spray micronutrients and Ca on the buds."
   },
   {
     "step": "bloom",
