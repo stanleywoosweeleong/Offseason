@@ -11,8 +11,15 @@ const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => [...document.querySelectorAll(sel)];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const loc = () => LOCALE[lang];
-const monthName = (i) => new Date(Date.UTC(2026, i, 1)).toLocaleDateString(loc(), { month: "short", timeZone: "UTC" });
-const fmt = (d) => d.toLocaleDateString(loc(), { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+// Khmer month names are built in, because many browsers have no Khmer date data and would show English.
+const KM_MONTHS = ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា", "កក្កដា", "សីហា", "កញ្ញា", "តុលា", "វិច្ឆិកា", "ធ្នូ"];
+const monthName = (i) => (lang === "km" ? KM_MONTHS[i] : new Date(Date.UTC(2026, i, 1)).toLocaleDateString(loc(), { month: "short", timeZone: "UTC" }));
+const fmt = (d) => (lang === "km"
+  ? `${d.getUTCDate()} ${KM_MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`
+  : d.toLocaleDateString(loc(), { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }));
+const fmtMonthYear = (year, month) => (lang === "km"
+  ? `${KM_MONTHS[month]} ${year}`
+  : new Date(Date.UTC(year, month, 1)).toLocaleDateString(loc(), { month: "short", year: "numeric", timeZone: "UTC" }));
 const lvl = (k) => tr(LEVEL[k]);
 const stepNo = Object.fromEntries(STAGES.map((s, i) => [s.id, i + 1]));
 
@@ -327,7 +334,7 @@ function renderPlan() {
   try {
     const stages = readStages();
     // Name each rainy month with its year, so a season that runs into the next year reads clearly.
-    const monthYear = ({ year, month }) => new Date(Date.UTC(year, month, 1)).toLocaleDateString(loc(), { month: "short", year: "numeric", timeZone: "UTC" });
+    const monthYear = ({ year, month }) => fmtMonthYear(year, month);
     const rainWarn = (hits) => hits.length
       ? `<p class="warn">${esc(trf("⚠ Touches months you marked as rainy: {months}. Rain after spraying made PBZ unreliable in trials.", { months: hits.map(monthYear).join(", ") }))}</p>${cites(["kozai2024", "chandraparnik1993"])}`
       : "";
