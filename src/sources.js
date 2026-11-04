@@ -392,6 +392,27 @@ export const SOURCES = {
     type: "Regulatory database",
     finding: "Paclobutrazol soil half-life: about 120 days in the lab (EU, 20 °C) and about 30 days in normalised EU field trials, so roughly 97% is gone in about 150 days on the field basis and about 600 days on the lab basis. The EU dossier range is wide (lab 27–618 days). Uniconazole: not approved in the EU or GB, with conflicting persistence data (field half-life 435 days in PPDB against 3 days in a Chinese wheat trial). Sodium chlorate: lab half-life 47–315 days. Taken from the author's Crop Hormones app.",
   },
+  jiang2025: {
+    short: "Jiang et al. 2025 (field, microbial agent)",
+    cite: "Jiang, X., Wang, H., Huang, Y., Jin, H., Ding, J., Ma, L. & Zheng, L. (2025). A novel microbial agent reduces soil paclobutrazol residue, enhances enzyme activities and increases Ophiopogon japonicus production. PeerJ 13: e19008.",
+    url: "https://doi.org/10.7717/peerj.19008",
+    type: "Peer-reviewed · field trial (China)",
+    finding: "The first field trial found in which a microbial product cut PBZ residue in soil. One spray of Micrococcus yunnanensis HY001 (about 10⁹ CFU/g) on sandy soil already holding 0.55 mg/kg PBZ left 0.067 mg/kg after 5 months, against 0.270 mg/kg untreated (about 75% lower). Where PBZ was also applied, residue halved (2.54 → 1.27 mg/kg). Soil enzyme activity and yield rose. Caveats: it is a herb crop, not a fruit tree; one site and season with 3 plots per treatment; some reported percentages do not match the paper's own tables; and the strain is patented with an industry co-author.",
+  },
+  santos2014: {
+    short: "Santos et al. 2014 (Brazil, nutrients + microbes)",
+    cite: "Santos, E., Vaz, F. & Gouveia, E. (2014). Increase in biodegradation of paclobutrazol in soils. BMC Proceedings 8(Suppl 4): P203. Universidade Federal de Pernambuco.",
+    url: "https://doi.org/10.1186/1753-6561-8-S4-P203",
+    type: "Conference abstract · lab study",
+    finding: "Two mango-orchard soils with a history of PBZ use, in lab flasks for 40 days. Native microbes alone degraded 8–14% of the PBZ; adding three Pseudomonas strains raised this to 29–38%; adding a mineral nutrient medium raised it to about 95% in both soils. Low soil moisture limited the added bacteria. Not tested in the field.",
+  },
+  bavutex2023: {
+    short: "Ba Ria–Vung Tau DOST (microbial PBZ product)",
+    cite: "Department of Science and Technology, Ba Ria–Vung Tau. Quy trình phân giải Paclobutrazol trong đất bằng chế phẩm vi sinh vật [Process for degrading paclobutrazol in soil with a microbial product]. Provincial news page.",
+    url: "https://bavutex.baria-vungtau.gov.vn/public/tin-tuc/quy-trinh-phan-giai-paclobutrazol-trong-dat-bang-che-pham-vi-sinh-vat.html",
+    type: "Govt. news page (summary only; page not opened)",
+    finding: "Describes a six-strain microbial product developed by Nguyen Ngoc Thanh (Cai Be, Tien Giang), granted Vietnamese utility patent No. 3266 (7 July 2023). It reportedly broke down 99.77% of soil PBZ in 9 months in a mango test, and growers in Tien Giang use it on mango, plum and durian soils. No durian data are published. The site could not be opened from this app's research environment, so this summary comes from search results."
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

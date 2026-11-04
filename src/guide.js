@@ -919,12 +919,24 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Feed the soil biology after harvest. A diverse soil microbiota speeds PBZ breakdown, and organic mulch and manure also reduced Phytophthora in durian. Adding organic matter after harvest serves both. Microbial products sold in the Mekong Delta to 'detox' PBZ have no published durian field trial yet, so treat their claims with care.",
-        "level": "expert",
+        "text": "First field evidence that a microbial product works. In China, one spray of a Micrococcus bacterial agent cut PBZ residue in sandy soil by about 75% within 5 months compared with untreated soil, and halved it where PBZ had just been applied, while soil enzyme activity and yield rose. It was a herb crop, not a fruit tree, with one site, one season and a patented strain, so treat it as promising rather than proven for durian.",
+        "level": "evidence",
         "sources": [
-          "vaz2015",
-          "aciar2022"
+          "jiang2025"
         ]
+      },
+      {
+        "text": "Feed the microbes, not just the tree. In mango-orchard soils, adding a mineral nutrient solution raised PBZ breakdown from 8–14% to about 95% in 40 days, far more than adding Pseudomonas bacteria alone (29–38%). Dry soil held the added bacteria back. In practice, a well-fed, moist (not waterlogged) root zone after harvest, with organic matter, is what lets native PBZ-degrading microbes work. This is a lab result.",
+        "level": "evidence",
+        "sources": [
+          "santos2014",
+          "vaz2015"
+        ]
+      },
+      {
+        "text": "Feed the soil biology after harvest. A diverse soil microbiota speeds PBZ breakdown, and organic mulch and manure also reduced Phytophthora in durian. Adding organic matter after harvest serves both. Microbial 'PBZ detox' products are sold in the Mekong Delta, including one with a Vietnamese utility patent (No. 3266, 2023) reported for mango, plum and durian soils. None has a published durian field trial. If you try one, leave a few untreated trees as a comparison and compare flowering and soil residue the next season.",
+        "level": "expert",
+        "sources": ["vaz2015", "aciar2022", "bavutex2023"]
       },
       {
         "text": "There is no proven antidote. Activated carbon strips PBZ from irrigation water (90–99% removal), but nobody has tested it, or biochar, on orchard soil. Gibberellin sprays push leaf growth, but no durian trial shows they safely reverse a PBZ overdose. Prevention, through correct dose, foliar application and rest years, is the only tested approach.",
@@ -1082,7 +1094,7 @@ export const GAPS = [
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
-  "No field trial has yet tested PBZ-degrading microbes, activated carbon or biochar in a durian orchard. Every degradation result so far comes from laboratory or mango studies."
+  "Only one field trial has tested a PBZ-degrading microbial product, on a Chinese herb crop. None has been run in a durian or other fruit orchard, and no field trial has tested activated carbon or biochar against PBZ. Nobody has yet shown that 'detoxing' the soil improves next year's flowering."
 ];
 
 export const CHECKLIST = [
