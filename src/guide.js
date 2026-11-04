@@ -1151,7 +1151,7 @@ export const PBZ_TRIALS = [
 export const GAPS = [
   "The trials do not all agree (see the tally on the PBZ evidence tab). Two found little or no effect (Rayong 1988–89, Chanthaburi 2007), and a Can Tho trial worked in its first year but not in its second off-season. The weak results point to weather, cultivar and application factors.",
   "No published trial compares soil drench with foliar spray on durian at matched doses. Foliar spraying is the only method with durian evidence.",
-  "No durian-specific PBZ residue limit was found in China's GB 2763-2021, Codex or the EU review. China's GB 2763-2026 (in force since March 2026) has not been checked. Exporters should confirm the current limit with the importing country before each season.",
+  "No durian-specific PBZ residue limit exists in China's GB 2763-2026 (checked: apple, litchi and mango are listed, durian is not), Codex or the EU review. How China treats a pesticide with no listed limit for a food should be confirmed with the importer or China Customs (GACC) before export.",
   "Potassium chlorate (KClO₃) is well documented for longan, but no peer-reviewed durian trial was found. Treat it as untested on durian. It also persists in soil (lab half-life about 47–315 days), and the EU withdrew chlorate plant-protection uses in 2008 and regulates chlorate residues in food.",
   "Results vary a lot with weather, even in controlled trials. JIRCAS concluded that more research is needed on the conditions that make PBZ reliable.",
   "Published induction trials cover Thai 'Chanee' and 'Monthong' and Vietnamese 'Dona', 'Sua Hat Lep' and 'Kho Qua Xanh'. Off-season protocols for 'Ri6' and 'Monthong' in the Mekong Delta come from the book's expert guidance, and off-season 'Musang King' fruit data only from conference slides; none yet has a published induction trial.",
@@ -1319,10 +1319,10 @@ export const PBZ_SAFETY = [
     ]
   },
   {
-    "text": "Food safety: ADI 0.022 mg/kg bw/day and ARfD 0.10 mg/kg bw. No market checked sets a PBZ limit for durian. China's GB 2763-2021 lists PBZ for mango (0.05 mg/kg) and litchi (0.5 mg/kg) but not durian, and would test the pulp only. The 2026 revision has not been checked. Codex has no PBZ limit at all, and in the EU the 0.01 mg/kg default may apply. No residue was found in mango fruit at optimised rates.",
+    "text": "Food safety: no market checked sets a PBZ limit for durian. China's current standard, GB 2763-2026 (in force 1 March 2026), lists PBZ for apple and litchi (0.5 mg/kg) and mango (0.05 mg/kg), but still not durian. China's ADI is 0.1 mg/kg body weight; EFSA's is 0.022, with an ARfD of 0.10. Codex has no PBZ limit, and in the EU the 0.01 mg/kg default may apply. No residue was found in mango fruit at optimised rates. Confirm with the importer before each season, as limits change.",
     "sources": [
+      "gb2763_2026",
       "efsa2017",
-      "gb2763",
       "singh2024"
     ]
   },

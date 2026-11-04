@@ -98,8 +98,8 @@ export const LIBRARY = [
     title: "Residue limits for other chemicals",
     summary: "Background for export planning. Durian-specific limits are rare; check the importing country every season.",
     points: [
-      P("Ethephon (China GB 2763-2021): 2 mg/kg for mango, litchi, banana and pineapple; no durian entry found. United States: tolerance only for pineapple (2.0 mg/kg); none for mango or banana. Codex: pineapple 1.5 mg/kg. EU: pineapple lowered from 19 August 2026 (Reg. (EU) 2026/215); other tropical fruit probably at the default limit (compiled in Crop Hormones).", "evidence", ["crophormone", "gb2763"]),
-      P("NAA: United States 0.05 mg/kg for mango, 2 mg/kg for rambutan; China 0.05 mg/kg for litchi. Uniconazole: China 0.3 mg/kg for citrus, no tropical-fruit entry (compiled in Crop Hormones).", "evidence", ["crophormone"]),
+      P("Ethephon (China GB 2763-2026, checked): 2 mg/kg for mango, litchi, banana and pineapple; no durian entry, although pineapple sits in the same 'spiny tropical fruit' group. United States: tolerance only for pineapple (2.0 mg/kg); none for mango or banana. Codex: pineapple 1.5 mg/kg. EU: pineapple lowered from 19 August 2026 (Reg. (EU) 2026/215); other tropical fruit probably at the default limit (compiled in Crop Hormones).", "evidence", ["crophormone", "gb2763_2026"]),
+      P("NAA: United States 0.05 mg/kg for mango, 2 mg/kg for rambutan; China 0.05 mg/kg for litchi (2021 text). Uniconazole: China lists it only for citrus, in both the 2021 and 2026 texts (compiled in Crop Hormones; 2026 checked).", "evidence", ["crophormone", "gb2763_2026"]),
       P("Soil persistence of other regulators (PPDB values via Crop Hormones): ethephon half-life about 8 days (lab) to 13.5 days (field); NAA about 42 days (lab); GA₃ under a day; potassium chlorate about 47–315 days (lab); thiourea and KNO₃ not found.", "evidence", ["crophormone", "ppdb"]),
       P("The Philippines drafted a durian pesticide MRL standard in 2026; check it for Philippine-bound fruit.", "lead", ["phil_pns"]),
     ],

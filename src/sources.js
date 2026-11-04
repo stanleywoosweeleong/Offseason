@@ -383,7 +383,7 @@ export const SOURCES = {
     cite: "National Health Commission & Ministry of Agriculture and Rural Affairs of China. GB 2763-2021 National food safety standard: maximum residue limits for pesticides in food. Unofficial English translation by USDA FAS (report CH2021-0099).",
     url: "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/arquivos/informacao-relevante/translation_of_maximum_residue_limits_for_pesticides_in_foods_beijing_china___people_s_republic_of_08_22_2021__5_-1-1.pdf",
     type: "Regulatory · China (via USDA FAS)",
-    finding: "Paclobutrazol (Table 127) has fruit limits of 0.05 mg/kg for mango and 0.5 mg/kg for litchi, but NO durian entry. If China sets one, durian is tested on the pulp only. GB 2763-2021 was replaced by GB 2763-2026 (in force 1 March 2026), which has not been re-checked for durian. Taken from the author's Crop Hormones app (full text read there).",
+    finding: "Paclobutrazol (Table 127) has fruit limits of 0.05 mg/kg for mango and 0.5 mg/kg for litchi, but NO durian entry. If China sets one, durian is tested on the pulp only. GB 2763-2021 was replaced by GB 2763-2026 (in force 1 March 2026); the 2026 paclobutrazol entry has been checked (see 'China GB 2763-2026') and still has no durian limit. Ethephon, NAA and uniconazole values here are from the 2021 text. Taken from the author's Crop Hormones app (full text read there).",
   },
   ppdb: {
     short: "PPDB (Univ. of Hertfordshire)",
@@ -643,6 +643,13 @@ export const SOURCES = {
     url: "https://bafs.da.gov.ph/wp-content/uploads/2026/05/Working-Draft_PNS-Durian-%E2%80%94-Product-Standard-%E2%80%94-Maximum-Residue-Limits-MRL-of-Pesticides.pdf",
     type: "Unverified lead",
     finding: "A 2026 working draft listing pesticide MRLs for durian. Whether paclobutrazol is listed was not visible in search results. Worth checking for Philippine-bound fruit.",
+  },
+  gb2763_2026: {
+    short: "China GB 2763-2026 (PBZ limits)",
+    cite: "National Health Commission, Ministry of Agriculture and Rural Affairs & State Administration for Market Regulation (2026). GB 2763-2026 National food safety standard: maximum residue limits for pesticides in food. Published 12 February 2026, in force 1 March 2026. Paclobutrazol entry (4.132), read via the Foodmate GB 2763-2026 database.",
+    url: "https://2763.foodmate.net/pesticides/limit/132.html",
+    type: "Regulatory · China",
+    finding: "Paclobutrazol (多效唑) is classed as a plant growth regulator, with an ADI of 0.1 mg/kg body weight and the residue defined as paclobutrazol. Fruit limits are apple 0.5, litchi 0.5 and mango 0.05 mg/kg. Other limits are rice and wheat 0.5, rapeseed 0.2, soybean 0.05, peanut 0.5, rapeseed oil 0.5 and vegetable soybean 0.05. There is NO durian entry, so the 2026 revision still sets no PBZ limit for durian. Also checked in the 2026 text: ethephon (ADI 0.05) is set at 2 mg/kg for litchi, mango, banana and pineapple (pineapple is in the same 'spiny tropical fruit' group as durian), with no durian entry; uniconazole (ADI 0.02) is listed only for citrus. The standard contains 10,749 limits for 585 pesticides in total (USDA FAS report CH2026-0049). The official PDF on the ministry site (aqsc.agri.cn) could not be reached for a cross-check (DNS error).",
   },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
