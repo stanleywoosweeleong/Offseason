@@ -29,11 +29,6 @@ export const MICROBES = [
     level: "evidence", sources: ["zhang2024s3"],
   },
   {
-    name: "Klebsiella pneumoniae M6", group: "Bacterium", from: "Mango rhizosphere, Lucknow, India", test: "soil",
-    result: "98% of 50 mg/L degraded in 15 days; soil half-life estimated at 4.5–14 days. Caution: K. pneumoniae can cause human infections, so it is a poor choice for a farm product.",
-    level: "evidence", sources: ["kumar2021"],
-  },
-  {
     name: "Pseudomonas spp. (native, Brazil)", group: "Bacteria", from: "Mango orchard soils, São Francisco valley, Brazil", test: "soil",
     result: "Soil with a PBZ history left about 1% after 63 days. Adding Pseudomonas raised breakdown from 8–14% to 29–38% in 40 days; adding mineral nutrients raised it to about 95%.",
     level: "evidence", sources: ["vaz2015", "santos2014"],

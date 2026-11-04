@@ -343,13 +343,7 @@ export const SOURCES = {
     type: "Book chapter · Embrapa / UFPE (lab study)",
     finding: "Mango orchard soils from Brazil's São Francisco valley. Soil with a history of PBZ use broke PBZ down much faster than unexposed soil: about 1% remained after 63 days, against 64% remaining after 14 days. The authors credit native microbes, mainly Pseudomonas, that had adapted to PBZ, and a diverse soil microbiota. The work was done in the laboratory.",
   },
-  kumar2021: {
-    short: "Kumar et al. 2021 (Klebsiella M6)",
-    cite: "Kumar, G., Lal, S., Maurya, S.K., Bhattacherjee, A.K., Chaudhary, P., Gangola, S. & Rajan, S. (2021). Exploration of Klebsiella pneumoniae M6 for paclobutrazol degradation, plant growth attributes, and biocontrol action under subtropical ecosystem. PLOS ONE 16(12): e0261338. ICAR-CISH.",
-    url: "https://doi.org/10.1371/journal.pone.0261338",
-    type: "Peer-reviewed · ICAR (lab study)",
-    finding: "A bacterium isolated from mango soil broke down 98% of PBZ (50 mg/L) in 15 days in liquid culture, and gave a theoretical half-life of 4.5 days in soil. It also promoted plant growth and suppressed some pathogens. The authors propose it for restoring land affected by persistent PBZ use. No orchard field trial has been reported.",
-  },
+
   pham2023: {
     short: "Pham et al. 2023 (Mekong Delta bacteria)",
     cite: "Pham, D.T.T., Bui, T.M., Thai, H.D.N., Vo, H.T.T., Vo, D.T. & Vu, L.M.T. (2023). Paclobutrazol biodegradation of native bacteria in mango orchards in Mekong Delta, Vietnam. Indian Journal of Agricultural Research 57(6): 796–801. Nong Lam University.",

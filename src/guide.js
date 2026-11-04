@@ -961,13 +961,13 @@ export const STAGES = [
         ]
       },
       {
-        "text": "Soil microbes are the natural clean-up crew. Orchard soils with a PBZ history broke it down much faster (about 1% left after 63 days) than unexposed soil (64% left after 14 days), thanks to adapted bacteria such as Pseudomonas. Bacteria isolated from Mekong Delta orchards (Burkholderia, Pseudomonas, Acinetobacter) degraded 15–37% of PBZ in 15–30 days in the lab. An Indian Klebsiella strain degraded 98% in 15 days, with a 4.5-day soil half-life.",
+        "text": "Soil microbes are the natural clean-up crew. Orchard soils with a PBZ history broke it down much faster (about 1% left after 63 days) than unexposed soil (64% left after 14 days), thanks to adapted bacteria such as Pseudomonas. Bacteria isolated from Mekong Delta orchards (Burkholderia, Pseudomonas, Acinetobacter) degraded 15–37% of PBZ in 15–30 days in the lab. An Indian Pseudomonas putida strain degraded 98% in 15 days in the lab.",
         "level": "evidence",
         "sources": [
           "vaz2015",
           "thao2014",
           "pham2023",
-          "kumar2021"
+          "kumar2021t7"
         ]
       },
       {
