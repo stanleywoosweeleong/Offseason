@@ -912,6 +912,48 @@ export const SOURCES = {
     type: "Peer-reviewed · Italy",
     finding: "In peach, PBZ effects lasted 2–3 years depending on dose (abstract read by a research assistant).",
   },
+  matysiak2013: {
+    short: "Matysiak & Kaczmarek 2013 (tebuconazole shortens oilseed rape)",
+    cite: "Matysiak, K. & Kaczmarek, S. (2013). Effect of chlorocholine chloride and triazoles – tebuconazole and flusilazole on winter oilseed rape in response to the application term and sowing density. Journal of Plant Protection Research 53(1).",
+    url: "https://doi.org/10.2478/jppr-2013-0012",
+    type: "Peer-reviewed · Poland",
+    finding: "Field trials 2006–2008. Some triazole fungicides act both as fungicides and as growth regulators, blocking gibberellin in the plant; tebuconazole and metconazole have this dual action, while flusilazole is only fungicidal. In the second year, tebuconazole alone made plants 18–26 cm (13–18%) shorter, about as much as the growth retardant chlormequat (CCC); in the first year it had no significant effect alone. Flusilazole made plants taller at the lower density. Triazole fungicides have been sold for growth regulation in oilseed rape since the 1990s (full text read).",
+  },
+  mitkowski2013: {
+    short: "Mitkowski & Chaves 2013 (DMI fungicides on turf)",
+    cite: "Mitkowski, N.A. & Chaves, A. (2013). Impact of demethylation inhibitor (DMI) fungicides on clipping yield and rooting depth of creeping bentgrass. HortScience 48(8): 1052–1055.",
+    url: "https://doi.org/10.21273/HORTSCI.48.8.1052",
+    type: "Peer-reviewed · Univ. of Rhode Island",
+    finding: "Two-year field trial: six triazole-type (DMI) fungicides, including propiconazole, sprayed 5–6 times at 14-day intervals. Paclobutrazol clearly reduced grass growth; the fungicides had very little effect (propiconazole even raised clippings on two dates in year 1). Rooting depth was unaffected. At label rates, these fungicides are unlikely to slow growth noticeably (abstract read).",
+  },
+  hartwig2012: {
+    short: "Hartwig et al. 2012 (propiconazole blocks brassinosteroids)",
+    cite: "Hartwig, T., Corvalan, C., Best, N.B., Budka, J.S., Zhu, J.-Y., Choe, S. & Schulz, B. (2012). Propiconazole is a specific and accessible brassinosteroid (BR) biosynthesis inhibitor for Arabidopsis and maize. PLoS ONE 7(5): e36625.",
+    url: "https://doi.org/10.1371/journal.pone.0036625",
+    type: "Peer-reviewed · Purdue Univ.",
+    finding: "Propiconazole dwarfed seedlings: maize was 29–45% shorter at 0.2–5 µM. The cause was a block in brassinosteroids (another growth hormone), not gibberellin: brassinosteroid restored growth but GA₃ did not, and no evidence of gibberellin inhibition was found. So propiconazole stunts by a different route from PBZ (full text read).",
+  },
+  na2011: {
+    short: "Na et al. 2011 (hexaconazole on rice)",
+    cite: "Na, C.I., Hamayun, M., Khan, A.L., Kim, Y.H., Choi, K.I., Kang, S.M., Kim, S.I., Kim, J.T., Won, J.G. & Lee, I.J. (2011). Influence of prohexadione-calcium, trinexapac-ethyl and hexaconazole on lodging characteristic and gibberellin biosynthesis of rice (Oryza sativa L.). African Journal of Biotechnology 10(61): 13097–13106.",
+    url: "https://research.knu.ac.kr/en/publications/influence-of-prohexadione-calcium-trinexapac-ethyl-and-hexaconazo/",
+    type: "Peer-reviewed · Kyungpook Natl Univ., Korea",
+    finding: "Hexaconazole (20 and 40 µM, before heading) was tested as a growth retardant against prohexadione-calcium and trinexapac-ethyl. It lowered the active gibberellin GA₁ less than the two retardants did, and was less effective at shortening rice and preventing lodging; all effects faded quickly in the field (abstract read).",
+  },
+  kim1998: {
+    short: "Kim et al. 1998 (hexaconazole on watermelon)",
+    cite: "Kim, S.-J., Lee, J.-M. & Kang, C.-K. (1998). Effects of hexaconazole on growth of watermelon and ethylene evolution of gourd. Korean Journal of Pesticide Science 2(2): 108–112.",
+    url: "https://koreascience.kr/article/JAKO199814364027493.do",
+    type: "Peer-reviewed · Korea",
+    finding: "A hexaconazole leaf spray significantly shortened watermelon plants and internodes 7 days after treatment, but by 42 days there was no difference from untreated plants. A soil drench had little or no effect. It also raised ethylene in gourd for a few days (abstract read).",
+  },
+  cavalcante2020: {
+    short: "Cavalcante et al. 2020 (metconazole on mango)",
+    cite: "Cavalcante, Í.H.L., Nogueira e Silva, ... et al. (2020). Metconazole on inhibition of gibberellin biosynthesis and flowering management in mango. Erwerbs-Obstbau 62: 89–95.",
+    url: "https://doi.org/10.1007/s10341-019-00466-w",
+    type: "Peer-reviewed (abstract via search summary)",
+    finding: "The triazole fungicide metconazole inhibited gibberellin biosynthesis in mango, though it affected different gibberellins differently. The authors say it could potentially be used in mango flowering management but that further studies are needed. Citation verified on Crossref; the abstract was seen only in a search summary.",
+  },
   aciar2022: {
     short: "ACIAR HORT/2007/067-2",
     cite:

@@ -1368,6 +1368,17 @@ export const PBZ_SAFETY = [
       "subhadrabandhu1998",
       "singh2024"
     ]
+  },
+  {
+    "text": "Triazole fungicides are PBZ's chemical cousins, but they are not PBZ. Some, such as tebuconazole and metconazole, also block gibberellin: in oilseed rape, tebuconazole shortened plants by up to 18%, and metconazole cut gibberellin in mango, though no flowering protocol exists. Others act weakly or differently: hexaconazole lowered gibberellin in rice less than true growth retardants did, and on watermelon a leaf spray shortened plants for about a week before they caught up; propiconazole dwarfs seedlings by blocking a different hormone (brassinosteroids), and at label rates on turf neither it nor five other triazole fungicides slowed growth noticeably, unlike PBZ. No study shows a triazole fungicide inducing durian flowering. The practical risk is stacking: many strong or frequent triazole sprays on top of PBZ, especially on the post-harvest flush, add more growth suppression. Keep to label rates, rotate with other fungicide groups, and remember that triazoles do not control Phytophthora.",
+    "sources": [
+      "matysiak2013",
+      "cavalcante2020",
+      "na2011",
+      "kim1998",
+      "hartwig2012",
+      "mitkowski2013"
+    ]
   }
 ];
 
