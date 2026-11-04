@@ -96,7 +96,7 @@ export const MICROBES = [
 ];
 
 export const NO_FUNGI =
-  "No fungus has been shown to break PBZ down. PBZ is itself a fungicide and lowers soil fungal diversity, and the Brazilian enrichments found no fungi. Every degrader so far is a bacterium or actinomycete.";
+  "No fungus has been shown to break PBZ down. PBZ is a triazole with some antifungal activity (it is registered as a growth regulator, not a fungicide) and lowers soil fungal diversity, and the Brazilian enrichments found no fungi. Every degrader so far is a bacterium or actinomycete.";
 
 // What other crops teach. group: rescue | less | help | lasts
 export const CLEANUP_GROUPS = [

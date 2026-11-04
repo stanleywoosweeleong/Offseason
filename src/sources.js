@@ -274,8 +274,9 @@ export const SOURCES = {
     type: "Review · Peer-reviewed",
     finding:
       "PBZ is a triazole that blocks gibberellin biosynthesis and raises cytokinin levels, which slows shoot " +
-      "elongation and moves the tree's resources from leaf growth into flowering. It is also a systemic fungicide " +
-      "and can protect plants against stress.",
+      "elongation and moves the tree's resources from leaf growth into flowering. The review also describes it as " +
+      "having systemic fungicidal activity (it is a triazole, though registered as a growth regulator) and as " +
+      "protecting plants against stress.",
   },
   kishore2015: {
     short: "Kishore et al. 2015 (ICAR review)",
@@ -482,7 +483,7 @@ export const SOURCES = {
     cite: "Silva, C.M.M.S., Fay, E.F. & Vieira, R.F. (2003). Degradação do paclobutrazol em solos tropicais [Paclobutrazol degradation in tropical soils]. Pesquisa Agropecuária Brasileira 38(10): 1223–1227. Embrapa.",
     url: "https://doi.org/10.1590/S0100-204X2003001000012",
     type: "Peer-reviewed · Embrapa, Brazil",
-    finding: "Bacterial communities from mango soils at Petrolina (with a PBZ history) and Lins, dominated by Stenotrophomonas, Bacillus and Brevibacillus, removed at most 42% of PBZ in liquid culture; the best came from 20–40 cm depth in the PBZ-history soil. In soil, about 55% had gone by day 60, a half-life of about 95 days. No fungi were enriched, consistent with PBZ being a fungicide (full text read by a research assistant).",
+    finding: "Bacterial communities from mango soils at Petrolina (with a PBZ history) and Lins, dominated by Stenotrophomonas, Bacillus and Brevibacillus, removed at most 42% of PBZ in liquid culture; the best came from 20–40 cm depth in the PBZ-history soil. In soil, about 55% had gone by day 60, a half-life of about 95 days. No fungi were enriched, consistent with PBZ, a triazole, having some antifungal activity (full text read by a research assistant).",
   },
   embrapa_mouco: {
     short: "Mouco et al. (Embrapa, orchard soil residue)",
